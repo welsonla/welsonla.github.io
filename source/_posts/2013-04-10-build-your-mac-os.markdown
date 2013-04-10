@@ -20,9 +20,9 @@ categories: 技术随笔
 9. [Evernote](http://evernote.com/) 这个大家都懂的
 
 ####安装HomeBrew
-**bold**
+
 Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包
-__bold__
+
 比如安装mysql，你只需要
 
 ```ruby
@@ -38,9 +38,9 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
 
 ####安装oh-my-Zsh
-**bold**
+
 Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，
-__bold__
+
 
 安装步骤
 ```ruby
