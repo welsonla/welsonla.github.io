@@ -4,7 +4,7 @@
   <title><![CDATA[Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-04-10T17:13:02+08:00</updated>
+  <updated>2013-04-10T17:15:14+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -130,10 +130,9 @@
 
 <h4>安装HomeBrew</h4>
 
-<p><strong>bold</strong>
-Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包
-<strong>bold</strong>
-比如安装mysql，你只需要</p>
+<p>Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包</p>
+
+<p>比如安装mysql，你只需要</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">brew</span> <span class="n">install</span> <span class="n">mysql</span>  
@@ -151,9 +150,7 @@ Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需
 
 <h4>安装oh-my-Zsh</h4>
 
-<p><strong>bold</strong>
-Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，
-<strong>bold</strong></p>
+<p>Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，</p>
 
 <p>安装步骤</p>
 

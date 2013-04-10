@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术随笔 | Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/blog/categories/ji-zhu-sui-bi/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-04-10T17:13:02+08:00</updated>
+  <updated>2013-04-10T17:15:14+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -80,10 +80,9 @@ curl -L https://get.rvm.io | bash -s stable --ruby
 
 <h4>安装HomeBrew</h4>
 
-<p><strong>bold</strong>
-Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包
-<strong>bold</strong>
-比如安装mysql，你只需要</p>
+<p>Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包</p>
+
+<p>比如安装mysql，你只需要</p>
 
 <p><code>ruby
 brew install mysql  
@@ -98,9 +97,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
 <h4>安装oh-my-Zsh</h4>
 
-<p><strong>bold</strong>
-Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，
-<strong>bold</strong></p>
+<p>Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，</p>
 
 <p>安装步骤
 ```ruby
