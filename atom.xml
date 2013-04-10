@@ -4,7 +4,7 @@
   <title><![CDATA[Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-04-10T17:15:14+08:00</updated>
+  <updated>2013-04-10T17:25:33+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[use rvm install ruby]]></title>
+    <title type="html"><![CDATA[是用RVM安装ruby]]></title>
     <link href="http://welsonla.github.io/blog/2013/04/10/use-rvm-install-ruby/"/>
     <updated>2013-04-10T16:58:00+08:00</updated>
     <id>http://welsonla.github.io/blog/2013/04/10/use-rvm-install-ruby</id>
@@ -71,12 +71,25 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>就会安装成功，你可以rvm -v查看下版本</p>
 
+<p>安装并设置1.9.3为你的默认版本</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rvm</span> <span class="n">install</span> <span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">3</span>
+</span><span class='line'><span class="n">rvm</span> <span class="n">use</span> <span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">3</span>
+</span><span class='line'><span class="n">rvm</span> <span class="n">rubygems</span> <span class="n">latest</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finish</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[use cocoapods]]></title>
+    <title type="html"><![CDATA[Cocoapods 使用]]></title>
     <link href="http://welsonla.github.io/blog/2013/04/10/use-cocoapods/"/>
     <updated>2013-04-10T16:48:00+08:00</updated>
     <id>http://welsonla.github.io/blog/2013/04/10/use-cocoapods</id>
