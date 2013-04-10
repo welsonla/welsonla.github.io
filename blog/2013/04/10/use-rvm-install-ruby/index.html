@@ -5,14 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>一个码农的Mac配置 - Welsonla on the way</title>
+  <title>use rvm install ruby - Welsonla on the way</title>
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="我常用的一些Mac工具 iTerm2 一个增强的命令终端
-SourceTree git代码控制工具
-WunderList 一个出色的Todo工具，提供云同步，我把它当做我的任务列表
-TextMate2 号称&#8221;The Missing Editor for Mac OS X&#8221; &hellip;">
+  <meta name="description" content="今天突然发现ruby版本不小心又回到了1.8.7，可能是我修改了rvm的配置文件导致的，于是开始折腾安装rvm和ruby 首先还是先安装Homebrew吧
+很简单，一行代码搞定 1
+ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +20,7 @@ TextMate2 号称&#8221;The Missing Editor for Mac OS X&#8221; &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://welsonla.github.io/blog/2013/04/10/build-your-mac-os">
+  <link rel="canonical" href="http://welsonla.github.io/blog/2013/04/10/use-rvm-install-ruby">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Welsonla on the way" type="application/atom+xml">
@@ -83,7 +82,7 @@ TextMate2 号称&#8221;The Missing Editor for Mac OS X&#8221; &hellip;">
   
   <header>
     
-      <h1 class="entry-title">一个码农的Mac配置</h1>
+      <h1 class="entry-title">Use Rvm Install Ruby</h1>
     
     
       <p class="meta">
@@ -99,7 +98,7 @@ TextMate2 号称&#8221;The Missing Editor for Mac OS X&#8221; &hellip;">
   
 
 
-<time datetime="2013-04-10T14:14:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+<time datetime="2013-04-10T16:58:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -108,49 +107,24 @@ TextMate2 号称&#8221;The Missing Editor for Mac OS X&#8221; &hellip;">
   </header>
 
 
-<div class="entry-content"><h4>我常用的一些Mac工具</h4>
+<div class="entry-content"><p>今天突然发现ruby版本不小心又回到了1.8.7，可能是我修改了rvm的配置文件导致的，于是开始折腾安装rvm和ruby</p>
 
-<ol>
-<li><a href="http://www.iterm2.com/">iTerm2</a> 一个增强的命令终端</li>
-<li><a href="http://www.sourcetreeapp.com/">SourceTree</a> git代码控制工具</li>
-<li><a href="https://www.wunderlist.com/">WunderList</a> 一个出色的Todo工具，提供云同步，我把它当做我的任务列表</li>
-<li><a href="https://github.com/textmate/textmate/tags">TextMate2</a> 号称&#8221;The Missing Editor for Mac OS X&#8221;</li>
-<li><a href="http://www.sublimetext.com/2">SublimeText2</a> 另一个特别出色的Editor</li>
-<li><a href="http://www.alfredapp.com/">Alfred</a> Option+Space,唤出，提高你打开软件的效率，购买Powerpack还可以使用很多强大的拓展</li>
-<li><a href="http://www.i-funbox.com/">iFunBox</a> 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面</li>
-<li><a href="https://jianguoyun.com/">坚果云</a> 国内一个特别出色的网盘，可以右键添加要同步的文件</li>
-<li><a href="http://evernote.com/">Evernote</a> 这个大家都懂的</li>
-</ol>
-
-
-<h4>安装HomeBrew</h4>
-
-<p><strong>bold</strong>
-Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包
-<strong>bold</strong>
-比如安装mysql，你只需要</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">brew</span> <span class="n">install</span> <span class="n">mysql</span>  
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Homebrew 安装特别简单，只需要键入</p>
+<p>首先还是先安装Homebrew吧
+很简单，一行代码搞定</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>相关的文档可以到官方去查看<a href="http://mxcl.github.io/homebrew/">http://mxcl.github.io/homebrew/</a></p>
+<p>安装RVM</p>
 
-<h4>安装oh-my-Zsh</h4>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">get</span><span class="o">.</span><span class="n">rvm</span><span class="o">.</span><span class="n">io</span> <span class="o">|</span> <span class="n">bash</span> <span class="o">-</span><span class="n">s</span> <span class="n">stable</span> <span class="o">--</span><span class="n">ruby</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p><strong>bold</strong>
-Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，
-<strong>bold</strong></p>
 
-<p>安装步骤</p>
+<p>走着走着发现出错了</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -158,45 +132,34 @@ Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，�
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">robbyrussell</span><span class="o">/</span><span class="n">oh</span><span class="o">-</span><span class="n">my</span><span class="o">-</span><span class="n">zsh</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#备份你的.zshrc文件</span>
-</span><span class='line'><span class="n">cp</span> <span class="o">~</span><span class="sr">/.zshrc ~/</span><span class="o">.</span><span class="n">zshrc</span><span class="o">.</span><span class="n">orig</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#创建zsh配置</span>
-</span><span class='line'><span class="n">cp</span> <span class="o">~</span><span class="sr">/.oh-my-zsh/</span><span class="n">templates</span><span class="o">/</span><span class="n">zshrc</span><span class="o">.</span><span class="n">zsh</span><span class="o">-</span><span class="n">template</span> <span class="o">~</span><span class="sr">/.zshrc</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">#设置zsh为你的默认shell</span>
-</span><span class='line'><span class="sr">chsh -s /</span><span class="n">bin</span><span class="o">/</span><span class="n">zsh</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#重启终端就会生效</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Missing</span> <span class="n">required</span> <span class="ss">packages</span><span class="p">:</span> <span class="n">autoconf</span><span class="p">,</span> <span class="n">automake</span><span class="p">,</span> <span class="n">libtool</span><span class="p">,</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="p">,</span> <span class="n">libyaml</span><span class="p">,</span> <span class="nb">readline</span><span class="p">,</span> <span class="n">libxml2</span><span class="p">,</span> <span class="n">libxslt</span><span class="p">,</span> <span class="n">libksba</span><span class="p">,</span> <span class="n">openssl</span><span class="p">,</span> <span class="n">sqlite</span><span class="o">.</span>
+</span><span class='line'><span class="no">RVM</span> <span class="n">autolibs</span> <span class="n">is</span> <span class="n">now</span> <span class="n">configured</span> <span class="n">with</span> <span class="n">mode</span> <span class="s1">&#39;2&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;check and stop if missing&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="n">please</span> <span class="n">run</span> <span class="sb">`rvm autolibs enable`</span> <span class="n">to</span> <span class="n">let</span> <span class="no">RVM</span> <span class="k">do</span> <span class="n">it</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">job</span> <span class="ow">or</span> <span class="n">run</span> <span class="ow">and</span> <span class="n">read</span> <span class="sb">`rvm autolibs [help]`</span>
+</span><span class='line'><span class="ow">or</span> <span class="n">visit</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">rvm</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">rvm</span><span class="o">/</span><span class="n">autolibs</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+</span><span class='line'><span class="no">There</span> <span class="n">were</span> <span class="n">package</span> <span class="n">installation</span> <span class="n">errors</span><span class="p">,</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">to</span> <span class="n">read</span> <span class="n">the</span> <span class="n">log</span><span class="o">.</span>
+</span><span class='line'><span class="no">Check</span> <span class="no">Homebrew</span> <span class="n">requirements</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mxcl</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="no">Installation</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>这里还有一些主题<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">https://github.com/robbyrussell/oh-my-zsh/wiki/themes</a></p>
-
-<p>如果你要修改zsh的默认主题</p>
+<p>透过错误信息，发现缺少一写依赖的包，和rvm的autolibs没打开，这时候我们就通过Homebrew先安装上（具体你要看清楚你缺少的是什么）</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">vi</span> <span class="o">~</span><span class="sr">/.zshrc</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">修改ZSH_THEME为你喜欢的主题名即可</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rvm</span> <span class="n">autolibs</span> <span class="n">enable</span>
+</span><span class='line'><span class="n">rvm</span> <span class="n">reload</span>
+</span><span class='line'><span class="n">brew</span> <span class="n">install</span> <span class="n">autoconf</span> <span class="n">automake</span> <span class="n">libtool</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="n">libyaml</span> <span class="nb">readline</span> <span class="n">libxml2</span> <span class="n">libxslt</span> <span class="n">libksba</span> <span class="n">openssl</span> <span class="n">sqlite</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>如果不想继续使用，可以使用以下命令卸载</p>
+<p>漫长的等带后，依赖包终于装完了
+再次安装RVM</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">uninstall_oh_my_zsh</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">get</span><span class="o">.</span><span class="n">rvm</span><span class="o">.</span><span class="n">io</span> <span class="o">|</span> <span class="n">bash</span> <span class="o">-</span><span class="n">s</span> <span class="n">stable</span> <span class="o">--</span><span class="n">ruby</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
 
 </div>
 
@@ -220,7 +183,7 @@ Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，�
   
 
 
-<time datetime="2013-04-10T14:14:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+<time datetime="2013-04-10T16:58:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
       
 
 <span class="categories">
@@ -234,7 +197,7 @@ Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，�
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://welsonla.github.io/blog/2013/04/10/build-your-mac-os/" data-via="welsonla" data-counturl="http://welsonla.github.io/blog/2013/04/10/build-your-mac-os/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://welsonla.github.io/blog/2013/04/10/use-rvm-install-ruby/" data-via="welsonla" data-counturl="http://welsonla.github.io/blog/2013/04/10/use-rvm-install-ruby/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -245,8 +208,8 @@ Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，�
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2013/04/10/use-cocoapods/" title="Previous Post: use cocoapods">&laquo; use cocoapods</a>
       
-        <a class="basic-alignment right" href="/blog/2013/04/10/use-cocoapods/" title="Next Post: use cocoapods">use cocoapods &raquo;</a>
       
     </p>
   </footer>
@@ -333,8 +296,8 @@ Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，�
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://welsonla.github.io/blog/2013/04/10/build-your-mac-os/';
-        var disqus_url = 'http://welsonla.github.io/blog/2013/04/10/build-your-mac-os/';
+        var disqus_identifier = 'http://welsonla.github.io/blog/2013/04/10/use-rvm-install-ruby/';
+        var disqus_url = 'http://welsonla.github.io/blog/2013/04/10/use-rvm-install-ruby/';
         var disqus_script = 'embed.js';
       
     (function () {
