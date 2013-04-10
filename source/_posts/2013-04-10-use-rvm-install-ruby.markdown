@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "use rvm install ruby"
+title: "是用RVM安装ruby"
 date: 2013-04-10 16:58
 comments: true
 categories: 技术随笔
@@ -44,4 +44,15 @@ brew install autoconf automake libtool pkg-config libyaml readline libxml2 libxs
 curl -L https://get.rvm.io | bash -s stable --ruby
 ```
 
+就会安装成功，你可以rvm -v查看下版本
+
+
+安装并设置1.9.3为你的默认版本
+```ruby
+rvm install 1.9.3
+rvm use 1.9.3
+rvm rubygems latest
+```
+
+Finish
 
