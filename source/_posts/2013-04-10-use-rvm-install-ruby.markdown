@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "是用RVM安装ruby"
+title: "使用RVM安装ruby"
 date: 2013-04-10 16:58
 comments: true
 categories: 技术随笔
