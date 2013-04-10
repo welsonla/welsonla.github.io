@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://welsonla.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Welsonla on the way
+subtitle: 这是一个码农生活的点点滴滴
+author: Welsonla
 simple_search: http://google.com/search
 description:
 
@@ -58,13 +58,13 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
-github_repo_count: 0
+github_user: welsonla
+github_repo_count: 5
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: welsonla
 twitter_tweet_button: true
 
 # Google +1
@@ -89,7 +89,8 @@ disqus_short_name:
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-19152389-6
+
 
 # Facebook Like
 facebook_like: false
