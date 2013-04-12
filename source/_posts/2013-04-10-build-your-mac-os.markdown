@@ -18,6 +18,7 @@ categories: 技术随笔
 7. [iFunBox](http://www.i-funbox.com/) 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面
 8. [坚果云](https://jianguoyun.com/) 国内一个特别出色的网盘，可以右键添加要同步的文件
 9. [Evernote](http://evernote.com/) 这个大家都懂的
+10. [XtraFinder](http://www.trankynam.com/xtrafinder/) 为你的Finder增加Tab，剪切等功能
 
 ####安装HomeBrew
 
