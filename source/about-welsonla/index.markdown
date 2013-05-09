@@ -27,7 +27,6 @@ Object-c , PHP ,Ruby
 2. [github](https://github.com/welsonla)
 3. [twitter](https://twitter.com/welsonla)
 
-
 ###我的iOS作品
 
 [晴天](https://itunes.apple.com/cn/app/qing-tian/id585544395?mt=8) 一款简洁的天气应用
