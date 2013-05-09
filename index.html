@@ -9,27 +9,12 @@
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="当需要重写父类中的方法时，这时候定义子类 1
+  <meta name="description" content="开始之前 1.安装Git
+2.使用rbenv或者RVM安装ruby 1.9.3 安装完后确保你的ruby版本是1.9.3 1
+ruby -v 设置Octopress 1
 2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-@interface JADanSideController : JASidePanelController @end @implementation &hellip;">
+git clone git://github.com/imathis/octopress.git octopress
+cd &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +83,83 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/10/blog-with-github/">Blog With Github</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-10T01:18:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/05/10/blog-with-github/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>开始之前</h2>
+
+<p>1.<a href="http://git-scm.com/">安装Git</a>
+2.使用<a href="http://octopress.org/docs/setup/rbenv">rbenv</a>或者<a href="http://octopress.org/docs/setup/rvm">RVM</a>安装ruby 1.9.3</p>
+
+<p>安装完后确保你的ruby版本是1.9.3</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">v</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>设置Octopress</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="nb">clone</span> <span class="ss">git</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">imathis</span><span class="o">/</span><span class="n">octopress</span><span class="o">.</span><span class="n">git</span> <span class="n">octopress</span>
+</span><span class='line'><span class="n">cd</span> <span class="n">octopress</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>接下来安装一些依赖</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">bundler</span>
+</span><span class='line'><span class="n">rbenv</span> <span class="n">rehash</span>
+</span><span class='line'><span class="n">bundle</span> <span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装Octopress默认主题</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>&#8211;未完待续，哥去睡觉</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -231,11 +293,7 @@
 
 <p>毕业也是三年有余，自认为自己技术能力还行，可是一路走来都是各种坑爹的公司。当身边朋友薪水都五位数的时候，我开始觉得我是不是有点太安于现状，或者太没勇气了。</p>
 
-<p>我只想安安心心的专注做技术，但是我其实发现在公司中，这些踏踏实实做技术的，往往是工资比较低的，反而那些动动嘴皮子，指点江山的众位大神，他们拿着高出你好几倍的薪水，却没为你的项目的优化和核心代码的算法带来一丝改进。整天用一些名词来糊弄你。</p>
-
-<p>如果一家公司责备你不加班，项目你花费的时间太长，明天你的工作时间要按9个小时算，并且你每天晚上不能九点前回家，否则领导会很不高兴。我这尼玛遇见的是极品吗</p>
-
-<h3>我去年买了个表</h3>
+<p>我只想安安心心的专注做技术.</p>
 </div>
   
   
@@ -612,6 +670,7 @@
 <li><a href="http://www.i-funbox.com/">iFunBox</a> 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面</li>
 <li><a href="https://jianguoyun.com/">坚果云</a> 国内一个特别出色的网盘，可以右键添加要同步的文件</li>
 <li><a href="http://evernote.com/">Evernote</a> 这个大家都懂的</li>
+<li><a href="http://www.trankynam.com/xtrafinder/">XtraFinder</a> 为你的Finder增加Tab，剪切等功能</li>
 </ol>
 
 
@@ -707,6 +766,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/10/blog-with-github/">blog with github</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/10/different-of-class-and-category/">different of class and category</a>
       </li>
     
@@ -720,10 +783,6 @@
     
       <li class="post">
         <a href="/blog/2013/04/10/use-rvm-install-ruby/">使用RVM安装ruby</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/10/use-cocoapods/">Cocoapods 使用</a>
       </li>
     
   </ul>
