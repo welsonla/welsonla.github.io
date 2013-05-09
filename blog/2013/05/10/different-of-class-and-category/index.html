@@ -5,19 +5,31 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Cocoapods 使用 - Welsonla on the way</title>
+  <title>different of class and category - Welsonla on the way</title>
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="1
-gem install cocoapods 搜索第三方的oc库 1
+  <meta name="description" content="当需要重写父类中的方法时，这时候定义子类 1
 2
 3
 4
 5
 6
 7
-pod search fmdb -&gt; FMDB (2.0) A Cocoa / Objective-C wrapper around SQLite. - Homepage: https:// &hellip;">
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+@interface JADanSideController : JASidePanelController @end @implementation &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -26,7 +38,7 @@ pod search fmdb -&gt; FMDB (2.0) A Cocoa / Objective-C wrapper around SQLite. - 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://welsonla.github.io/blog/2013/04/10/use-cocoapods">
+  <link rel="canonical" href="http://welsonla.github.io/blog/2013/05/10/different-of-class-and-category">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Welsonla on the way" type="application/atom+xml">
@@ -89,7 +101,7 @@ pod search fmdb -&gt; FMDB (2.0) A Cocoa / Objective-C wrapper around SQLite. - 
   
   <header>
     
-      <h1 class="entry-title">Cocoapods 使用</h1>
+      <h1 class="entry-title">Different of Class and Category</h1>
     
     
       <p class="meta">
@@ -105,7 +117,7 @@ pod search fmdb -&gt; FMDB (2.0) A Cocoa / Objective-C wrapper around SQLite. - 
   
 
 
-<time datetime="2013-04-10T16:48:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+<time datetime="2013-05-10T01:05:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -114,12 +126,7 @@ pod search fmdb -&gt; FMDB (2.0) A Cocoa / Objective-C wrapper around SQLite. - 
   </header>
 
 
-<div class="entry-content"><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>搜索第三方的oc库</p>
+<div class="entry-content"><p>当需要重写父类中的方法时，这时候定义子类</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -128,16 +135,55 @@ pod search fmdb -&gt; FMDB (2.0) A Cocoa / Objective-C wrapper around SQLite. - 
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">pod</span> <span class="n">search</span> <span class="n">fmdb</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vi">@interface</span> <span class="no">JADanSideController</span> <span class="p">:</span> <span class="no">JASidePanelController</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">-&gt;</span> <span class="no">FMDB</span> <span class="p">(</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
-</span><span class='line'>   <span class="n">A</span> <span class="no">Cocoa</span> <span class="o">/</span> <span class="no">Objective</span><span class="o">-</span><span class="n">C</span> <span class="n">wrapper</span> <span class="n">around</span> <span class="no">SQLite</span><span class="o">.</span>
-</span><span class='line'>   <span class="o">-</span> <span class="ss">Homepage</span><span class="p">:</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ccgus</span><span class="o">/</span><span class="n">fmdb</span>
-</span><span class='line'>   <span class="o">-</span> <span class="ss">Source</span><span class="p">:</span>   <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ccgus</span><span class="o">/</span><span class="n">fmdb</span><span class="o">.</span><span class="n">git</span>
-</span><span class='line'>   <span class="o">-</span> <span class="ss">Versions</span><span class="p">:</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span> <span class="o">[</span><span class="n">master</span> <span class="n">repo</span><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@implementation</span> <span class="no">JADanSideController</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="no">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="n">leftButtonForCenterPanel</span><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="no">UIButton</span> <span class="o">*</span><span class="n">leftBarButton</span> <span class="o">=</span> <span class="o">[</span><span class="no">UIButton</span> <span class="ss">buttonWithType</span><span class="p">:</span><span class="no">UIButtonTypeCustom</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">[</span><span class="n">leftBarButton</span> <span class="ss">setFrame</span><span class="p">:</span><span class="no">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">[</span><span class="n">leftBarButton</span> <span class="ss">setBackgroundImage</span><span class="p">:</span><span class="o">[</span><span class="no">UIImage</span> <span class="ss">imageNamed</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;List_NaviSide.png&quot;</span><span class="o">]</span> <span class="ss">forState</span><span class="p">:</span><span class="no">UIControlStateNormal</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">[</span><span class="n">leftBarButton</span> <span class="ss">addTarget</span><span class="p">:</span><span class="nb">self</span> <span class="ss">action</span><span class="p">:</span><span class="vi">@selector</span><span class="p">(</span><span class="ss">toggleLeftPanel</span><span class="p">:)</span> <span class="ss">forControlEvents</span><span class="p">:</span><span class="no">UIControlEventTouchUpInside</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">__autoreleasing</span> <span class="no">UIBarButtonItem</span> <span class="o">*</span><span class="n">leftBarButtonItem</span> <span class="o">=</span> <span class="o">[[</span><span class="no">UIBarButtonItem</span> <span class="n">alloc</span><span class="o">]</span> <span class="ss">initWithCustomView</span><span class="p">:</span><span class="n">leftBarButton</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">leftBarButtonItem</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>当需要为父类添加方法时，这时候定义类别</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vi">@interface</span> <span class="no">JADanSideController</span> <span class="p">:</span> <span class="no">JASidePanelController</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">setBackGroundColor</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -161,7 +207,7 @@ pod search fmdb -&gt; FMDB (2.0) A Cocoa / Objective-C wrapper around SQLite. - 
   
 
 
-<time datetime="2013-04-10T16:48:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+<time datetime="2013-05-10T01:05:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
       
 
 
@@ -169,7 +215,7 @@ pod search fmdb -&gt; FMDB (2.0) A Cocoa / Objective-C wrapper around SQLite. - 
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://welsonla.github.io/blog/2013/04/10/use-cocoapods/" data-via="welsonla" data-counturl="http://welsonla.github.io/blog/2013/04/10/use-cocoapods/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://welsonla.github.io/blog/2013/05/10/different-of-class-and-category/" data-via="welsonla" data-counturl="http://welsonla.github.io/blog/2013/05/10/different-of-class-and-category/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -180,10 +226,8 @@ pod search fmdb -&gt; FMDB (2.0) A Cocoa / Objective-C wrapper around SQLite. - 
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/04/10/build-your-mac-os/" title="Previous Post: 一个码农的Mac配置">&laquo; 一个码农的Mac配置</a>
+        <a class="basic-alignment left" href="/blog/2013/04/10/the-time-past-so-quick/" title="Previous Post: 岁月匆匆，我已不是昨日懵懂少年">&laquo; 岁月匆匆，我已不是昨日懵懂少年</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/04/10/use-rvm-install-ruby/" title="Next Post: 使用RVM安装ruby">使用RVM安装ruby &raquo;</a>
       
     </p>
   </footer>
@@ -278,8 +322,8 @@ pod search fmdb -&gt; FMDB (2.0) A Cocoa / Objective-C wrapper around SQLite. - 
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://welsonla.github.io/blog/2013/04/10/use-cocoapods/';
-        var disqus_url = 'http://welsonla.github.io/blog/2013/04/10/use-cocoapods/';
+        var disqus_identifier = 'http://welsonla.github.io/blog/2013/05/10/different-of-class-and-category/';
+        var disqus_url = 'http://welsonla.github.io/blog/2013/05/10/different-of-class-and-category/';
         var disqus_script = 'embed.js';
       
     (function () {

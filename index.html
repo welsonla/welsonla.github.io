@@ -9,7 +9,27 @@
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="大约从去年春节，家里人在耳边提到最多的两个字就是“结婚”。这个我特别敏感，一是还没有准备好，更重要的是毕业到现在，感觉自己发展太缓慢，或者说钱途太烂 今年清明节回家，妈妈说奶奶腿疼，一直身体硬朗的她现在走路也不得不扶着拐杖了。时间过的太快，我还记得上学第一天，奶奶用一块雪糕把我骗去幼儿园去上学。 &hellip;">
+  <meta name="description" content="当需要重写父类中的方法时，这时候定义子类 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+@interface JADanSideController : JASidePanelController @end @implementation &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +98,102 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/10/different-of-class-and-category/">Different of Class and Category</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-10T01:05:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/05/10/different-of-class-and-category/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>当需要重写父类中的方法时，这时候定义子类</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vi">@interface</span> <span class="no">JADanSideController</span> <span class="p">:</span> <span class="no">JASidePanelController</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@implementation</span> <span class="no">JADanSideController</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="no">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="n">leftButtonForCenterPanel</span><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="no">UIButton</span> <span class="o">*</span><span class="n">leftBarButton</span> <span class="o">=</span> <span class="o">[</span><span class="no">UIButton</span> <span class="ss">buttonWithType</span><span class="p">:</span><span class="no">UIButtonTypeCustom</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">[</span><span class="n">leftBarButton</span> <span class="ss">setFrame</span><span class="p">:</span><span class="no">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">[</span><span class="n">leftBarButton</span> <span class="ss">setBackgroundImage</span><span class="p">:</span><span class="o">[</span><span class="no">UIImage</span> <span class="ss">imageNamed</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;List_NaviSide.png&quot;</span><span class="o">]</span> <span class="ss">forState</span><span class="p">:</span><span class="no">UIControlStateNormal</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">[</span><span class="n">leftBarButton</span> <span class="ss">addTarget</span><span class="p">:</span><span class="nb">self</span> <span class="ss">action</span><span class="p">:</span><span class="vi">@selector</span><span class="p">(</span><span class="ss">toggleLeftPanel</span><span class="p">:)</span> <span class="ss">forControlEvents</span><span class="p">:</span><span class="no">UIControlEventTouchUpInside</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">__autoreleasing</span> <span class="no">UIBarButtonItem</span> <span class="o">*</span><span class="n">leftBarButtonItem</span> <span class="o">=</span> <span class="o">[[</span><span class="no">UIBarButtonItem</span> <span class="n">alloc</span><span class="o">]</span> <span class="ss">initWithCustomView</span><span class="p">:</span><span class="n">leftBarButton</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">leftBarButtonItem</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>当需要为父类添加方法时，这时候定义类别</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vi">@interface</span> <span class="no">JADanSideController</span> <span class="p">:</span> <span class="no">JASidePanelController</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">setBackGroundColor</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -591,6 +707,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/10/different-of-class-and-category/">different of class and category</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/04/10/the-time-past-so-quick/">岁月匆匆，我已不是昨日懵懂少年</a>
       </li>
     
@@ -604,10 +724,6 @@
     
       <li class="post">
         <a href="/blog/2013/04/10/use-cocoapods/">Cocoapods 使用</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/10/build-your-mac-os/">一个码农的Mac配置</a>
       </li>
     
   </ul>
