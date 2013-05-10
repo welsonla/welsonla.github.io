@@ -1,0 +1,879 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Welsonla on the way</title>
+  <meta name="author" content="Welsonla">
+
+  
+  <meta name="description" content="开始之前 1.安装Git
+2.使用rbenv或者RVM安装ruby 1.9.3 安装完后确保你的ruby版本是1.9.3 1
+ruby -v 设置Octopress 1
+2
+git clone git://github.com/imathis/octopress.git octopress
+cd &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://welsonla.github.io">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Welsonla on the way" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19152389-6']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Welsonla on the way</a></h1>
+  
+    <h2>这是一个码农生活的点点滴滴</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:welsonla.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about-welsonla">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/10/blog-with-github/">Blog With Github</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-10T01:18:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/05/10/blog-with-github/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>开始之前</h2>
+
+<p>1.<a href="http://git-scm.com/">安装Git</a>
+2.使用<a href="http://octopress.org/docs/setup/rbenv">rbenv</a>或者<a href="http://octopress.org/docs/setup/rvm">RVM</a>安装ruby 1.9.3</p>
+
+<p>安装完后确保你的ruby版本是1.9.3</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">v</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>设置Octopress</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="nb">clone</span> <span class="ss">git</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">imathis</span><span class="o">/</span><span class="n">octopress</span><span class="o">.</span><span class="n">git</span> <span class="n">octopress</span>
+</span><span class='line'><span class="n">cd</span> <span class="n">octopress</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>接下来安装一些依赖</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">bundler</span>
+</span><span class='line'><span class="n">rbenv</span> <span class="n">rehash</span>
+</span><span class='line'><span class="n">bundle</span> <span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装Octopress默认主题</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>&#8211;未完待续，哥去睡觉</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/10/different-of-class-and-category/">Different of Class and Category</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-10T01:05:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/05/10/different-of-class-and-category/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>当需要重写父类中的方法时，这时候定义子类</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vi">@interface</span> <span class="no">JADanSideController</span> <span class="p">:</span> <span class="no">JASidePanelController</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@implementation</span> <span class="no">JADanSideController</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="no">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="n">leftButtonForCenterPanel</span><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="no">UIButton</span> <span class="o">*</span><span class="n">leftBarButton</span> <span class="o">=</span> <span class="o">[</span><span class="no">UIButton</span> <span class="ss">buttonWithType</span><span class="p">:</span><span class="no">UIButtonTypeCustom</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">[</span><span class="n">leftBarButton</span> <span class="ss">setFrame</span><span class="p">:</span><span class="no">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">[</span><span class="n">leftBarButton</span> <span class="ss">setBackgroundImage</span><span class="p">:</span><span class="o">[</span><span class="no">UIImage</span> <span class="ss">imageNamed</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;List_NaviSide.png&quot;</span><span class="o">]</span> <span class="ss">forState</span><span class="p">:</span><span class="no">UIControlStateNormal</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">[</span><span class="n">leftBarButton</span> <span class="ss">addTarget</span><span class="p">:</span><span class="nb">self</span> <span class="ss">action</span><span class="p">:</span><span class="vi">@selector</span><span class="p">(</span><span class="ss">toggleLeftPanel</span><span class="p">:)</span> <span class="ss">forControlEvents</span><span class="p">:</span><span class="no">UIControlEventTouchUpInside</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">__autoreleasing</span> <span class="no">UIBarButtonItem</span> <span class="o">*</span><span class="n">leftBarButtonItem</span> <span class="o">=</span> <span class="o">[[</span><span class="no">UIBarButtonItem</span> <span class="n">alloc</span><span class="o">]</span> <span class="ss">initWithCustomView</span><span class="p">:</span><span class="n">leftBarButton</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">leftBarButtonItem</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>当需要为父类添加方法时，这时候定义类别</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vi">@interface</span> <span class="no">JADanSideController</span> <span class="p">:</span> <span class="no">JASidePanelController</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">setBackGroundColor</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/10/the-time-past-so-quick/">岁月匆匆，我已不是昨日懵懂少年</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-10T22:42:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/04/10/the-time-past-so-quick/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>大约从去年春节，家里人在耳边提到最多的两个字就是“结婚”。这个我特别敏感，一是还没有准备好，更重要的是毕业到现在，感觉自己发展太缓慢，或者说钱途太烂</p>
+
+<p>今年清明节回家，妈妈说奶奶腿疼，一直身体硬朗的她现在走路也不得不扶着拐杖了。时间过的太快，我还记得上学第一天，奶奶用一块雪糕把我骗去幼儿园去上学。现在我都26岁了，将近二十年的时间已经过去了。</p>
+
+<p>毕业也是三年有余，自认为自己技术能力还行，可是一路走来都是各种坑爹的公司。当身边朋友薪水都五位数的时候，我开始觉得我是不是有点太安于现状，或者太没勇气了。</p>
+
+<p>我只想安安心心的专注做技术.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/10/generate-github-ssh-keys/">生成 Github SSH Keys</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-10T22:16:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/04/10/generate-github-ssh-keys/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>本文主要来自github官方，Generating SSH Keys</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">cd</span> <span class="o">~</span><span class="sr">/.ssh</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">创建一个文件夹来备份你原来的</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">mkdir backup</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">mv id_rsa* backup</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span>
+</span><span class='line'><span class="sr"># Creates a new ssh key using the provided email</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr"># Generating public/</span><span class="kp">private</span> <span class="n">rsa</span> <span class="n">key</span> <span class="n">pair</span><span class="o">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">这里直接回车就会生成一个默认名为</span><span class="n">id_rsa</span>
+</span><span class='line'><span class="c1"># Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="err">这里需要你输入一个你加密的</span><span class="n">key</span><span class="err">（一定要记住）</span>
+</span><span class='line'><span class="no">Enter</span> <span class="n">passphrase</span> <span class="p">(</span><span class="n">empty</span> <span class="k">for</span> <span class="n">no</span> <span class="n">passphrase</span><span class="p">):</span> <span class="o">[</span><span class="no">Type</span> <span class="n">a</span> <span class="n">passphrase</span><span class="o">]</span>
+</span><span class='line'><span class="no">Enter</span> <span class="n">same</span> <span class="n">passphrase</span> <span class="ss">again</span><span class="p">:</span> <span class="o">[</span><span class="no">Type</span> <span class="n">passphrase</span> <span class="n">again</span><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="no">Your</span> <span class="n">identification</span> <span class="n">has</span> <span class="n">been</span> <span class="n">saved</span> <span class="k">in</span> <span class="sr">/Users/</span><span class="n">wanyc</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">.</span>
+</span><span class='line'><span class="no">Your</span> <span class="kp">public</span> <span class="n">key</span> <span class="n">has</span> <span class="n">been</span> <span class="n">saved</span> <span class="k">in</span> <span class="sr">/Users/</span><span class="n">wanyc</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span>
+</span><span class='line'><span class="no">The</span> <span class="n">key</span> <span class="n">fingerprint</span> <span class="ss">is</span><span class="p">:</span>
+</span><span class='line'><span class="mi">30</span><span class="ss">:e8:aa</span><span class="p">:</span><span class="mi">08</span><span class="ss">:ee:bc</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="mi">88</span><span class="p">:</span><span class="mi">2</span><span class="ss">c</span><span class="p">:</span><span class="mi">3</span><span class="ss">f</span><span class="p">:</span><span class="mi">83</span><span class="p">:</span><span class="mi">39</span><span class="ss">:b0</span><span class="p">:</span><span class="mi">6</span><span class="ss">e</span><span class="p">:</span><span class="mi">95</span><span class="ss">:cc</span> <span class="n">wyc</span><span class="o">.</span><span class="n">jar</span><span class="vi">@gmail</span><span class="o">.</span><span class="n">com</span>
+</span><span class='line'><span class="no">The</span> <span class="n">key</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">randomart</span> <span class="n">image</span> <span class="ss">is</span><span class="p">:</span>
+</span><span class='line'><span class="o">+--[</span> <span class="no">RSA</span> <span class="mi">2048</span><span class="o">]----+</span>
+</span><span class='line'><span class="o">|</span>                 <span class="o">|</span>
+</span><span class='line'><span class="o">|</span>     <span class="o">.</span>           <span class="o">|</span>
+</span><span class='line'><span class="o">|</span>    <span class="o">.</span> <span class="n">o</span>          <span class="o">|</span>
+</span><span class='line'><span class="o">|</span>   <span class="o">.</span>   <span class="n">o</span>         <span class="o">|</span>
+</span><span class='line'><span class="o">|</span>  <span class="n">o</span> <span class="n">o</span>   <span class="n">S</span>        <span class="o">|</span>
+</span><span class='line'><span class="o">|.</span>  <span class="n">E</span>             <span class="o">|</span>
+</span><span class='line'><span class="o">|=++</span>              <span class="o">|</span>
+</span><span class='line'><span class="o">|%*</span><span class="n">o</span><span class="o">.</span>             <span class="o">|</span>
+</span><span class='line'><span class="o">|</span><span class="no">OO</span><span class="o">+</span><span class="n">o</span>             <span class="o">|</span>
+</span><span class='line'><span class="o">+-----------------+</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="err">看到这个界面说明生成成功</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">copy</span><span class="err">加密字符到剪切板</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">pbcopy</span> <span class="o">&lt;</span> <span class="o">~</span><span class="sr">/.ssh/i</span><span class="n">d_rsa</span><span class="o">.</span><span class="n">pub</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="err">打开你的</span><span class="n">github</span>
+</span><span class='line'>
+</span><span class='line'><span class="mi">1</span><span class="o">.</span> <span class="err">点击</span> <span class="no">Account</span> <span class="no">Settings</span>
+</span><span class='line'><span class="mi">2</span><span class="o">.</span> <span class="err">点击左侧</span> <span class="s2">&quot;SSH Keys&quot;</span>
+</span><span class='line'><span class="mi">3</span><span class="o">.</span> <span class="err">点击</span> <span class="s2">&quot;Add SSH key&quot;</span>
+</span><span class='line'><span class="mi">4</span><span class="o">.</span> <span class="err">粘贴你的可以到</span> <span class="s2">&quot;Key&quot;</span> <span class="err">输入框</span>
+</span><span class='line'><span class="mi">5</span><span class="o">.</span> <span class="err">点击</span> <span class="s2">&quot;Add key&quot;</span>
+</span><span class='line'><span class="mi">6</span><span class="o">.</span> <span class="err">输入你的</span><span class="n">github</span><span class="err">密码确认</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/10/use-rvm-install-ruby/">使用RVM安装ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-10T16:58:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/04/10/use-rvm-install-ruby/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天突然发现ruby版本不小心又回到了1.8.7，可能是我修改了rvm的配置文件导致的，于是开始折腾安装rvm和ruby</p>
+
+<p>首先还是先安装Homebrew吧
+很简单，一行代码搞定</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装RVM</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">get</span><span class="o">.</span><span class="n">rvm</span><span class="o">.</span><span class="n">io</span> <span class="o">|</span> <span class="n">bash</span> <span class="o">-</span><span class="n">s</span> <span class="n">stable</span> <span class="o">--</span><span class="n">ruby</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>走着走着发现出错了</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Missing</span> <span class="n">required</span> <span class="ss">packages</span><span class="p">:</span> <span class="n">autoconf</span><span class="p">,</span> <span class="n">automake</span><span class="p">,</span> <span class="n">libtool</span><span class="p">,</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="p">,</span> <span class="n">libyaml</span><span class="p">,</span> <span class="nb">readline</span><span class="p">,</span> <span class="n">libxml2</span><span class="p">,</span> <span class="n">libxslt</span><span class="p">,</span> <span class="n">libksba</span><span class="p">,</span> <span class="n">openssl</span><span class="p">,</span> <span class="n">sqlite</span><span class="o">.</span>
+</span><span class='line'><span class="no">RVM</span> <span class="n">autolibs</span> <span class="n">is</span> <span class="n">now</span> <span class="n">configured</span> <span class="n">with</span> <span class="n">mode</span> <span class="s1">&#39;2&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;check and stop if missing&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="n">please</span> <span class="n">run</span> <span class="sb">`rvm autolibs enable`</span> <span class="n">to</span> <span class="n">let</span> <span class="no">RVM</span> <span class="k">do</span> <span class="n">it</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">job</span> <span class="ow">or</span> <span class="n">run</span> <span class="ow">and</span> <span class="n">read</span> <span class="sb">`rvm autolibs [help]`</span>
+</span><span class='line'><span class="ow">or</span> <span class="n">visit</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">rvm</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">rvm</span><span class="o">/</span><span class="n">autolibs</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+</span><span class='line'><span class="no">There</span> <span class="n">were</span> <span class="n">package</span> <span class="n">installation</span> <span class="n">errors</span><span class="p">,</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">to</span> <span class="n">read</span> <span class="n">the</span> <span class="n">log</span><span class="o">.</span>
+</span><span class='line'><span class="no">Check</span> <span class="no">Homebrew</span> <span class="n">requirements</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mxcl</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="no">Installation</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>透过错误信息，发现缺少一写依赖的包，和rvm的autolibs没打开，这时候我们就通过Homebrew先安装上（具体你要看清楚你缺少的是什么）</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rvm</span> <span class="n">autolibs</span> <span class="n">enable</span>
+</span><span class='line'><span class="n">rvm</span> <span class="n">reload</span>
+</span><span class='line'><span class="n">brew</span> <span class="n">install</span> <span class="n">autoconf</span> <span class="n">automake</span> <span class="n">libtool</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="n">libyaml</span> <span class="nb">readline</span> <span class="n">libxml2</span> <span class="n">libxslt</span> <span class="n">libksba</span> <span class="n">openssl</span> <span class="n">sqlite</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>漫长的等带后，依赖包终于装完了
+再次安装RVM</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">get</span><span class="o">.</span><span class="n">rvm</span><span class="o">.</span><span class="n">io</span> <span class="o">|</span> <span class="n">bash</span> <span class="o">-</span><span class="n">s</span> <span class="n">stable</span> <span class="o">--</span><span class="n">ruby</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>就会安装成功，你可以rvm -v查看下版本</p>
+
+<p>安装并设置1.9.3为你的默认版本</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rvm</span> <span class="n">install</span> <span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">3</span>
+</span><span class='line'><span class="n">rvm</span> <span class="n">use</span> <span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">3</span>
+</span><span class='line'><span class="n">rvm</span> <span class="n">rubygems</span> <span class="n">latest</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finish</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/10/use-cocoapods/">Cocoapods 使用</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-10T16:48:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/04/10/use-cocoapods/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>搜索第三方的oc库</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">pod</span> <span class="n">search</span> <span class="n">fmdb</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-&gt;</span> <span class="no">FMDB</span> <span class="p">(</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+</span><span class='line'>   <span class="n">A</span> <span class="no">Cocoa</span> <span class="o">/</span> <span class="no">Objective</span><span class="o">-</span><span class="n">C</span> <span class="n">wrapper</span> <span class="n">around</span> <span class="no">SQLite</span><span class="o">.</span>
+</span><span class='line'>   <span class="o">-</span> <span class="ss">Homepage</span><span class="p">:</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ccgus</span><span class="o">/</span><span class="n">fmdb</span>
+</span><span class='line'>   <span class="o">-</span> <span class="ss">Source</span><span class="p">:</span>   <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ccgus</span><span class="o">/</span><span class="n">fmdb</span><span class="o">.</span><span class="n">git</span>
+</span><span class='line'>   <span class="o">-</span> <span class="ss">Versions</span><span class="p">:</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span> <span class="o">[</span><span class="n">master</span> <span class="n">repo</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/10/build-your-mac-os/">一个码农的Mac配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-10T14:14:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/04/10/build-your-mac-os/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4>我常用的一些Mac工具</h4>
+
+<ol>
+<li><a href="http://www.iterm2.com/">iTerm2</a> 一个增强的命令终端</li>
+<li><a href="http://www.sourcetreeapp.com/">SourceTree</a> git代码控制工具</li>
+<li><a href="https://www.wunderlist.com/">WunderList</a> 一个出色的Todo工具，提供云同步，我把它当做我的任务列表</li>
+<li><a href="https://github.com/textmate/textmate/tags">TextMate2</a> 号称&#8221;The Missing Editor for Mac OS X&#8221;</li>
+<li><a href="http://www.sublimetext.com/2">SublimeText2</a> 另一个特别出色的Editor</li>
+<li><a href="http://www.alfredapp.com/">Alfred</a> Option+Space,唤出，提高你打开软件的效率，购买Powerpack还可以使用很多强大的拓展</li>
+<li><a href="http://www.i-funbox.com/">iFunBox</a> 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面</li>
+<li><a href="https://jianguoyun.com/">坚果云</a> 国内一个特别出色的网盘，可以右键添加要同步的文件</li>
+<li><a href="http://evernote.com/">Evernote</a> 这个大家都懂的</li>
+<li><a href="http://www.trankynam.com/xtrafinder/">XtraFinder</a> 为你的Finder增加Tab，剪切等功能</li>
+</ol>
+
+
+<h4>安装HomeBrew</h4>
+
+<p>Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包</p>
+
+<p>比如安装mysql，你只需要</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">brew</span> <span class="n">install</span> <span class="n">mysql</span>  
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Homebrew 安装特别简单，只需要键入</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>相关的文档可以到官方去查看<a href="http://mxcl.github.io/homebrew/">http://mxcl.github.io/homebrew/</a></p>
+
+<h4>安装oh-my-Zsh</h4>
+
+<p>Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，</p>
+
+<p>安装步骤</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">robbyrussell</span><span class="o">/</span><span class="n">oh</span><span class="o">-</span><span class="n">my</span><span class="o">-</span><span class="n">zsh</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#备份你的.zshrc文件</span>
+</span><span class='line'><span class="n">cp</span> <span class="o">~</span><span class="sr">/.zshrc ~/</span><span class="o">.</span><span class="n">zshrc</span><span class="o">.</span><span class="n">orig</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#创建zsh配置</span>
+</span><span class='line'><span class="n">cp</span> <span class="o">~</span><span class="sr">/.oh-my-zsh/</span><span class="n">templates</span><span class="o">/</span><span class="n">zshrc</span><span class="o">.</span><span class="n">zsh</span><span class="o">-</span><span class="n">template</span> <span class="o">~</span><span class="sr">/.zshrc</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">#设置zsh为你的默认shell</span>
+</span><span class='line'><span class="sr">chsh -s /</span><span class="n">bin</span><span class="o">/</span><span class="n">zsh</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#重启终端就会生效</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这里还有一些主题<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">https://github.com/robbyrussell/oh-my-zsh/wiki/themes</a></p>
+
+<p>如果你要修改zsh的默认主题</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">vi</span> <span class="o">~</span><span class="sr">/.zshrc</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">修改ZSH_THEME为你喜欢的主题名即可</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果不想继续使用，可以使用以下命令卸载</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">uninstall_oh_my_zsh</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/05/10/blog-with-github/">blog with github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/10/different-of-class-and-category/">different of class and category</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/10/the-time-past-so-quick/">岁月匆匆，我已不是昨日懵懂少年</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/10/generate-github-ssh-keys/">生成 github SSH keys</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/10/use-rvm-install-ruby/">使用RVM安装ruby</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/welsonla">@welsonla</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'welsonla',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Welsonla -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'welsonlablog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
