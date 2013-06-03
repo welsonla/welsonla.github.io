@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "blog-with-github(3)-Octopress的一些配置"
+title: "blog with github(3)-Octopress配置"
 date: 2013-06-03 13:46
 comments: true
 categories: 

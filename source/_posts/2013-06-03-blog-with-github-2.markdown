@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "blog-with-github(2)-部署到github"
+title: "blog with github(2)-部署到github"
 date: 2013-06-03 13:20
 comments: true
 categories: 
