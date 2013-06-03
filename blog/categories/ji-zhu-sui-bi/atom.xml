@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术随笔 | Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/blog/categories/ji-zhu-sui-bi/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-06-03T13:42:23+08:00</updated>
+  <updated>2013-06-03T13:44:25+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[生成 github SSH keys]]></title>
+    <link href="http://welsonla.github.io/blog/2013/04/10/generate-github-ssh-keys/"/>
+    <updated>2013-04-10T22:16:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/04/10/generate-github-ssh-keys</id>
+    <content type="html"><![CDATA[<p>本文主要来自github官方，Generating SSH Keys</p>
+
+<p>```ruby</p>
+
+<p>cd ~/.ssh</p>
+
+<p>创建一个文件夹来备份你原来的</p>
+
+<p>mkdir backup</p>
+
+<p>mv id_rsa* backup</p>
+
+<p>ssh-keygen -t rsa -C "your_email@example.com"</p>
+
+<h1>Creates a new ssh key using the provided email</h1>
+
+<h1>Generating public/private rsa key pair.</h1>
+
+<p>这里直接回车就会生成一个默认名为id_rsa</p>
+
+<h1>Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]</h1>
+
+<p>这里需要你输入一个你加密的key（一定要记住）
+Enter passphrase (empty for no passphrase): [Type a passphrase]
+Enter same passphrase again: [Type passphrase again]</p>
+
+<p>Your identification has been saved in /Users/wanyc/.ssh/id_rsa.
+Your public key has been saved in /Users/wanyc/.ssh/id_rsa.pub.
+The key fingerprint is:
+30:e8:aa:08:ee:bc:76:88:2c:3f:83:39:b0:6e:95:cc wyc.jar@gmail.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|     .           |
+|    . o          |
+|   .   o         |
+|  o o   S        |
+|.  E             |
+|=++              |
+|%*o.             |
+|OO+o             |
++-----------------+</p>
+
+<p>看到这个界面说明生成成功</p>
+
+<p>copy加密字符到剪切板</p>
+
+<p>pbcopy &lt; ~/.ssh/id_rsa.pub</p>
+
+<p>打开你的github</p>
+
+<ol>
+<li>点击 Account Settings</li>
+<li>点击左侧 "SSH Keys"</li>
+<li>点击 "Add SSH key"</li>
+<li>粘贴你的可以到 "Key" 输入框</li>
+<li>点击 "Add key"</li>
+<li>输入你的github密码确认</li>
+</ol>
+
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[使用RVM安装ruby]]></title>
@@ -86,6 +156,7 @@ rvm rubygems latest
 <li><a href="http://www.i-funbox.com/">iFunBox</a> 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面</li>
 <li><a href="https://jianguoyun.com/">坚果云</a> 国内一个特别出色的网盘，可以右键添加要同步的文件</li>
 <li><a href="http://evernote.com/">Evernote</a> 这个大家都懂的</li>
+<li><a href="http://www.trankynam.com/xtrafinder/">XtraFinder</a> 为你的Finder增加Tab，剪切等功能</li>
 </ol>
 
 

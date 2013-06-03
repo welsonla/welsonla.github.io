@@ -5,14 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Welsonla on the way</title>
+  <title>blog with github - Welsonla on the way</title>
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="Blog Archive 2013 blog-with-github(2)-部署到github
-Jun 03 2013 blog with github
-May 10 2013 different of class and category
-May 10 2013 岁月匆匆，我已不是昨日懵懂少年 &hellip;">
+  <meta name="description" content="开始之前 安装Git
+使用rbenv或者RVM安装ruby 1.9.3 安装完后确保你的ruby版本是1.9.3 1
+ruby -v 设置Octopress 1
+2
+git clone git://github.com/imathis/octopress.git octopress
+cd &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +23,7 @@ May 10 2013 岁月匆匆，我已不是昨日懵懂少年 &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://welsonla.github.io/blog/archives">
+  <link rel="canonical" href="http://welsonla.github.io/blog/2013/05/10/blog-with-github">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Welsonla on the way" type="application/atom+xml">
@@ -80,114 +82,133 @@ May 10 2013 岁月匆匆，我已不是昨日懵懂少年 &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Blog With Github</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-10T01:18:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><h2>开始之前</h2>
 
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/blog/2013/06/03/blog-with-github-2/">blog-with-github(2)-部署到github</a></h1>
-<time datetime="2013-06-03T13:20:00+08:00" pubdate><span class='month'>Jun</span> <span class='day'>03</span> <span class='year'>2013</span></time>
+<ol>
+<li><a href="http://git-scm.com/">安装Git</a></li>
+<li>使用<a href="http://octopress.org/docs/setup/rbenv">rbenv</a>或者<a href="http://octopress.org/docs/setup/rvm">RVM</a>安装ruby 1.9.3</li>
+</ol>
 
 
-</article>
+<p>安装完后确保你的ruby版本是1.9.3</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">v</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
+<h2>设置Octopress</h2>
 
-<article>
-  
-<h1><a href="/blog/2013/05/10/blog-with-github/">blog with github</a></h1>
-<time datetime="2013-05-10T01:18:00+08:00" pubdate><span class='month'>May</span> <span class='day'>10</span> <span class='year'>2013</span></time>
-
-
-</article>
-
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="nb">clone</span> <span class="ss">git</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">imathis</span><span class="o">/</span><span class="n">octopress</span><span class="o">.</span><span class="n">git</span> <span class="n">octopress</span>
+</span><span class='line'><span class="n">cd</span> <span class="n">octopress</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<article>
-  
-<h1><a href="/blog/2013/05/10/different-of-class-and-category/">different of class and category</a></h1>
-<time datetime="2013-05-10T01:05:00+08:00" pubdate><span class='month'>May</span> <span class='day'>10</span> <span class='year'>2013</span></time>
+<p>接下来安装一些依赖</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">bundler</span>
+</span><span class='line'><span class="n">rbenv</span> <span class="n">rehash</span>
+</span><span class='line'><span class="n">bundle</span> <span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>安装Octopress默认主题</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-
-<article>
-  
-<h1><a href="/blog/2013/04/10/the-time-past-so-quick/">岁月匆匆，我已不是昨日懵懂少年</a></h1>
-<time datetime="2013-04-10T22:42:00+08:00" pubdate><span class='month'>Apr</span> <span class='day'>10</span> <span class='year'>2013</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2013/04/10/generate-github-ssh-keys/">生成 github SSH keys</a></h1>
-<time datetime="2013-04-10T22:16:00+08:00" pubdate><span class='month'>Apr</span> <span class='day'>10</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ji-zhu-sui-bi/'>技术随笔</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2013/04/10/use-rvm-install-ruby/">使用RVM安装ruby</a></h1>
-<time datetime="2013-04-10T16:58:00+08:00" pubdate><span class='month'>Apr</span> <span class='day'>10</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ji-zhu-sui-bi/'>技术随笔</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2013/04/10/use-cocoapods/">Cocoapods 使用</a></h1>
-<time datetime="2013-04-10T16:48:00+08:00" pubdate><span class='month'>Apr</span> <span class='day'>10</span> <span class='year'>2013</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2013/04/10/build-your-mac-os/">一个码农的Mac配置</a></h1>
-<time datetime="2013-04-10T14:14:00+08:00" pubdate><span class='month'>Apr</span> <span class='day'>10</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ji-zhu-sui-bi/'>技术随笔</a></span>
-</footer>
-
-
-</article>
-
+<p>&#8211;未完待续，哥去睡觉</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Welsonla</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-10T01:18:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://welsonla.github.io/blog/2013/05/10/blog-with-github/" data-via="welsonla" data-counturl="http://welsonla.github.io/blog/2013/05/10/blog-with-github/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/05/10/different-of-class-and-category/" title="Previous Post: different of class and category">&laquo; different of class and category</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/06/03/blog-with-github-2/" title="Next Post: blog-with-github(2)-部署到github">blog-with-github(2)-部署到github &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -271,7 +292,10 @@ May 10 2013 岁月匆匆，我已不是昨日懵懂少年 &hellip;">
       var disqus_shortname = 'welsonlablog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://welsonla.github.io/blog/2013/05/10/blog-with-github/';
+        var disqus_url = 'http://welsonla.github.io/blog/2013/05/10/blog-with-github/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
