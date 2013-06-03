@@ -4,7 +4,7 @@
   <title><![CDATA[Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-04-10T17:28:16+08:00</updated>
+  <updated>2013-06-03T13:42:23+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[blog-with-github(2)-部署到github]]></title>
+    <link href="http://welsonla.github.io/blog/2013/06/03/blog-with-github-2/"/>
+    <updated>2013-06-03T13:20:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/06/03/blog-with-github-2</id>
+    <content type="html"><![CDATA[<h3>使用github pages</h3>
+
+<p>如果想使用 http://username.github.io的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io）</p>
+
+<p>用户使用的是Github Pages的master版本下面的public作为你的网站主目录，你可以通过浏览http://username.github.io来查看。如果你想在source这个版本上面维护代码，并且把内容提交到master分支，Octopress有一个命令来帮助你完成这些</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">setup_github_pages</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后，他将
+1. 询问你的github pages的url
+2. 将远程的重‘origin’重命名为‘octopress’
+3. 在远程的origin讲你的github pages仓库添加进去
+4. 切换当前branch从master切换到source
+5. 根据你的仓库名，重新配置你的blog地址
+6. 在_deploy目录下面设置master分支，用于部署</p>
+
+<p>接下来执行</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">generate</span>
+</span><span class='line'><span class="n">rake</span> <span class="n">deploy</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这将生成你的blog，并将生成的文件copy到_deploy目录下面,并添加到git，将他们commit和push到master分支上面，稍后，你会收到一份来自github的email告诉你，你的提交已经收到，并且很快将发不到你的web上面</p>
+
+<p>并且，不要忘记提交你的代码到source分支</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</span><span class='line'><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;your message&#39;</span>
+</span><span class='line'><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>自定义域名绑定</h4>
+
+<p>首先你要source目录下面创建一个CNAME，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">echo</span> <span class="s1">&#39;your-domain.com&#39;</span> <span class="o">&gt;&gt;</span> <span class="n">source</span><span class="o">/</span><span class="no">CNAME</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>之后去你的域名服务商或者你的dns服务商那里创建一条CNAME记录，记录指向的IP为
+(不要使用顶级域名指向到pages,要使用二级域名)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">207</span><span class="o">.</span><span class="mi">97</span><span class="o">.</span><span class="mi">227</span><span class="o">.</span><span class="mi">245</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[使用RVM安装ruby]]></title>
