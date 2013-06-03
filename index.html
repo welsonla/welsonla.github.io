@@ -9,12 +9,7 @@
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件 1
-2
-3
-4
-_config.yml # Main config (Jekyll&#39;s settings)
-Rakefile # &hellip;">
+  <meta name="description" content="Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/&lt;category>/atom.xml中找到这些内容 Post 这些Post页面必须存放在Source/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,7 +84,173 @@ Rakefile # &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/06/03/blog-with-github-3/">blog-with-github(3)-Octopress的一些配置</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/06/03/blog-with-github-4/">Blog-with-github(4)-开始写吧，骚年</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-03T13:57:00+08:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2013</time>
+        
+         | <a href="/blog/2013/06/03/blog-with-github-4/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/&lt;category>/atom.xml中找到这些内容</p>
+
+<h4>Post</h4>
+
+<p>这些Post页面必须存放在Source/_posts目录下面，并且命名方式和jekyll的命名方式一样，会转换成YYYY-MM-DD-Post-title.markdown，这个文件的名字就是你的blog的url slug，日期帮助你排序这些文章</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_post</span><span class="o">[</span><span class="s2">&quot;Title&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在使用了ZSH的话，你要这样创建</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_post</span><span class="err">或者</span><span class="n">rake</span> <span class="n">new_post</span><span class="o">[</span><span class="p">\</span><span class="s2">&quot;Title</span><span class="se">\&quot;</span><span class="s2">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="s2">例如</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ruby
+rake new_post[&#8220;Zombie Ninjas Attack: A survivor&#8217;s retrospective&#8221;]</p>
+
+<h1>Creates source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown</h1>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ow">or</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ruby
+~/Code/rails/octopress(branch:source) » rake new_post                      <br/>
+Enter a title for your post: blog-with-github-4
+mkdir -p source/<em>posts
+Creating new post: source/</em>posts/2013-06-03-blog-with-github-4.markdown</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">生成的内容大致如下</span>
+</span><span class='line'> <span class="sb">```ruby</span>
+</span><span class='line'><span class="sb">---</span>
+</span><span class='line'><span class="sb">layout: post</span>
+</span><span class='line'><span class="sb">title: &quot;Zombie Ninjas Attack: A survivor&#39;s retrospective&quot;</span>
+</span><span class='line'><span class="sb">date: 2011-07-03 5:59</span>
+</span><span class='line'><span class="sb">comments: true</span>
+</span><span class='line'><span class="sb">external-url:</span>
+</span><span class='line'><span class="sb">categories:</span>
+</span><span class='line'><span class="sb">---</span>
+</span><span class='line'><span class="sb"> ```</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">你可以关闭</span><span class="n">comments</span><span class="err">，或者为他添加</span><span class="n">categories</span><span class="err">的</span><span class="n">tag</span><span class="err">，并且你还可以添加</span><span class="sb">`author: Your Name`</span><span class="err">与</span><span class="sb">`published: false`</span><span class="err">来控制是否发布</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">####Page</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">生成</span><span class="no">Page</span><span class="err">的命令</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ruby
+rake new_page[super-awesome]</p>
+
+<h1>creates /source/super-awesome/index.markdown</h1>
+
+<p>rake new_page[super-awesome/page.html]</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">如果使用了</span><span class="n">zsh</span><span class="err">的话，方法要参照</span><span class="n">post</span><span class="err">的创建方式</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">生成的</span><span class="n">pages</span><span class="err">的默认内如大致如下</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>ruby</h2>
+
+<p>layout: page
+title: &#8220;Super Awesome&#8221;
+date: 2011-07-03 5:59
+comments: true
+sharing: true</p>
+
+<h2>footer: true</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">####Content</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">如果列表中不想显示全文内容的话，可以添加</span><span class="sb">`&lt;!-- more --&gt;`</span><span class="err">标签，这将在文章下面生成一个“</span><span class="no">Continue</span> <span class="err">→”</span> <span class="err">链接，链接到全文的地址</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">###Generate &amp; Preview</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ruby
+rake generate   # Generates posts and pages into the public directory
+rake watch      # Watches source/ and sass/ for changes and regenerates
+rake preview    # Watches, and mounts a webserver at http://localhost:4000
+&#8220;`</p>
+
+<p>本地使用http://localhost:4000就可以访问了</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/03/blog-with-github-3/">Blog With github(3)-Octopress配置</a></h1>
     
     
       <p class="meta">
@@ -231,7 +392,7 @@ Rakefile # &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/06/03/blog-with-github-2/">Blog-with-github(2)-部署到github</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/06/03/blog-with-github-2/">Blog With Github(2)-部署到github</a></h1>
     
     
       <p class="meta">
@@ -1009,11 +1170,15 @@ Rakefile # &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/06/03/blog-with-github-3/">blog-with-github(3)-Octopress的一些配置</a>
+        <a href="/blog/2013/06/03/blog-with-github-4/">blog-with-github(4)-开始写吧，骚年</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/06/03/blog-with-github-2/">blog-with-github(2)-部署到github</a>
+        <a href="/blog/2013/06/03/blog-with-github-3/">blog with github(3)-Octopress配置</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/03/blog-with-github-2/">blog with github(2)-部署到github</a>
       </li>
     
       <li class="post">
@@ -1022,10 +1187,6 @@ Rakefile # &hellip;">
     
       <li class="post">
         <a href="/blog/2013/05/10/different-of-class-and-category/">different of class and category</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/10/the-time-past-so-quick/">岁月匆匆，我已不是昨日懵懂少年</a>
       </li>
     
   </ul>
