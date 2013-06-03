@@ -9,7 +9,12 @@
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="使用github pages 如果想使用 http://username.github.io的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io） 用户使用的是Github &hellip;">
+  <meta name="description" content="Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件 1
+2
+3
+4
+_config.yml # Main config (Jekyll&#39;s settings)
+Rakefile # &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +89,148 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2013/06/03/blog-with-github-3/">blog-with-github(3)-Octopress的一些配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-03T13:46:00+08:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2013</time>
+        
+         | <a href="/blog/2013/06/03/blog-with-github-3/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">_config</span><span class="o">.</span><span class="n">yml</span>       <span class="c1"># Main config (Jekyll&#39;s settings)</span>
+</span><span class='line'><span class="no">Rakefile</span>          <span class="c1"># Configs for deployment</span>
+</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">rb</span>         <span class="c1"># Compass config</span>
+</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">ru</span>         <span class="c1"># Rack config</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Rakefile大多是与部署相关的配置,如果不需要同步的话，你就不需要进行修改</p>
+
+<h4>Blog配置</h4>
+
+<p>_config.yml有三部分配置,你必须修改url，并且title，subtitle和author也要修改，还有一些第三方的服务需要启用</p>
+
+<h5>主配置</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">url</span><span class="p">:</span>                <span class="c1"># For rewriting urls for RSS, etc</span>
+</span><span class='line'><span class="ss">title</span><span class="p">:</span>              <span class="c1"># Used in the header and title tags</span>
+</span><span class='line'><span class="ss">subtitle</span><span class="p">:</span>           <span class="c1"># A description used in the header</span>
+</span><span class='line'><span class="ss">author</span><span class="p">:</span>             <span class="c1"># Your name, for RSS, Copyright, Metadata</span>
+</span><span class='line'><span class="n">simple_search</span><span class="p">:</span>      <span class="c1"># Search engine for simple site search</span>
+</span><span class='line'><span class="ss">description</span><span class="p">:</span>        <span class="c1"># A default meta description for your site</span>
+</span><span class='line'><span class="n">date_format</span><span class="p">:</span>        <span class="c1"># Format dates using Ruby&#39;s date strftime syntax</span>
+</span><span class='line'><span class="n">subscribe_rss</span><span class="p">:</span>      <span class="c1"># Url for your blog&#39;s feed, defauts to /atom.xml</span>
+</span><span class='line'><span class="n">subscribe_email</span><span class="p">:</span>    <span class="c1"># Url to subscribe by email (service required)</span>
+</span><span class='line'><span class="n">category_feeds</span><span class="p">:</span>     <span class="c1"># Enable per category RSS feeds (defaults to false in 2.1)</span>
+</span><span class='line'><span class="ss">email</span><span class="p">:</span>              <span class="c1"># Email address for the RSS feed if you want it.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Jekyll&amp;Plugins</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">root</span><span class="p">:</span>               <span class="c1"># Mapping for relative urls (default: /)</span>
+</span><span class='line'><span class="ss">permalink</span><span class="p">:</span>          <span class="c1"># Permalink structure for blog posts</span>
+</span><span class='line'><span class="ss">source</span><span class="p">:</span>             <span class="c1"># Directory for site source files</span>
+</span><span class='line'><span class="ss">destination</span><span class="p">:</span>        <span class="c1"># Directory for generated site files</span>
+</span><span class='line'><span class="ss">plugins</span><span class="p">:</span>            <span class="c1"># Directory for Jekyll plugins</span>
+</span><span class='line'><span class="n">code_dir</span><span class="p">:</span>           <span class="c1"># Directory for code snippets (for include_code plugin)</span>
+</span><span class='line'><span class="n">category_dir</span><span class="p">:</span>       <span class="c1"># Directory for generated blog category pages</span>
+</span><span class='line'>
+</span><span class='line'><span class="ss">pygments</span><span class="p">:</span>           <span class="c1"># Toggle python pygments syntax highlighting</span>
+</span><span class='line'><span class="ss">paginate</span><span class="p">:</span>           <span class="c1"># Posts per page on the blog index</span>
+</span><span class='line'><span class="n">pagination_dir</span><span class="p">:</span>     <span class="c1"># Directory base for pagination URLs eg. /blog/page/2/</span>
+</span><span class='line'><span class="n">recent_posts</span><span class="p">:</span>       <span class="c1"># Number of recent posts to appear in the sidebar</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">default_asides</span><span class="p">:</span>     <span class="c1"># Configure what shows up in the sidebar and in what order</span>
+</span><span class='line'><span class="n">blog_index_asides</span><span class="p">:</span>  <span class="c1"># Optional sidebar config for blog index page</span>
+</span><span class='line'><span class="n">post_asides</span><span class="p">:</span>        <span class="c1"># Optional sidebar config for post layout</span>
+</span><span class='line'><span class="n">page_asides</span><span class="p">:</span>        <span class="c1"># Optional sidebar config for page layout</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>第三方配置</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Github</span> <span class="o">-</span> <span class="no">List</span> <span class="n">your</span> <span class="n">github</span> <span class="n">repositories</span> <span class="k">in</span> <span class="n">the</span> <span class="n">sidebar</span>
+</span><span class='line'><span class="no">Twitter</span> <span class="o">-</span> <span class="no">Setup</span> <span class="n">a</span> <span class="n">sidebar</span> <span class="n">twitter</span> <span class="n">feed</span><span class="p">,</span> <span class="n">follow</span> <span class="n">button</span><span class="p">,</span> <span class="ow">and</span> <span class="n">tweet</span> <span class="n">button</span> <span class="p">(</span><span class="k">for</span> <span class="n">sharing</span> <span class="n">posts</span> <span class="ow">and</span> <span class="n">pages</span><span class="p">)</span><span class="o">.</span>
+</span><span class='line'><span class="no">Google</span> <span class="no">Plus</span> <span class="no">One</span> <span class="o">-</span> <span class="no">Setup</span> <span class="n">sharing</span> <span class="k">for</span> <span class="n">posts</span> <span class="ow">and</span> <span class="n">pages</span> <span class="n">on</span> <span class="no">Google</span><span class="err">’</span><span class="n">s</span> <span class="n">plus</span> <span class="n">one</span> <span class="n">network</span><span class="o">.</span>
+</span><span class='line'><span class="no">Pinboard</span> <span class="o">-</span> <span class="no">Share</span> <span class="n">your</span> <span class="n">recent</span> <span class="no">Pinboard</span> <span class="n">bookmarks</span> <span class="k">in</span> <span class="n">the</span> <span class="n">sidebar</span><span class="o">.</span>
+</span><span class='line'><span class="no">Delicious</span> <span class="o">-</span> <span class="no">Share</span> <span class="n">your</span> <span class="n">recent</span> <span class="no">Delicious</span> <span class="n">bookmarks</span> <span class="k">in</span> <span class="n">the</span> <span class="n">sidebar</span><span class="o">.</span>
+</span><span class='line'><span class="no">Disqus</span> <span class="no">Comments</span> <span class="o">-</span> <span class="no">Add</span> <span class="n">your</span> <span class="n">disqus</span> <span class="n">short</span> <span class="nb">name</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">disqus</span> <span class="n">comments</span> <span class="n">on</span> <span class="n">your</span> <span class="n">site</span><span class="o">.</span>
+</span><span class='line'><span class="no">Google</span> <span class="no">Analytics</span> <span class="o">-</span> <span class="no">Add</span> <span class="n">your</span> <span class="n">tracking</span> <span class="nb">id</span> <span class="n">to</span> <span class="n">enable</span> <span class="no">Google</span> <span class="no">Analytics</span> <span class="n">tracking</span> <span class="k">for</span> <span class="n">your</span> <span class="n">site</span><span class="o">.</span>
+</span><span class='line'><span class="no">Facebook</span> <span class="o">-</span> <span class="no">Add</span> <span class="n">a</span> <span class="no">Facebook</span> <span class="n">like</span> <span class="n">button</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2013/06/03/blog-with-github-2/">Blog-with-github(2)-部署到github</a></h1>
     
     
@@ -120,13 +267,17 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>然后，他将
-1. 询问你的github pages的url
-2. 将远程的重‘origin’重命名为‘octopress’
-3. 在远程的origin讲你的github pages仓库添加进去
-4. 切换当前branch从master切换到source
-5. 根据你的仓库名，重新配置你的blog地址
-6. 在_deploy目录下面设置master分支，用于部署</p>
+<p>然后，他将</p>
+
+<ol>
+<li>询问你的github pages的url</li>
+<li>将远程的重‘origin’重命名为‘octopress’</li>
+<li>在远程的origin讲你的github pages仓库添加进去</li>
+<li>切换当前branch从master切换到source</li>
+<li>根据你的仓库名，重新配置你的blog地址</li>
+<li>在_deploy目录下面设置master分支，用于部署</li>
+</ol>
+
 
 <p>接下来执行</p>
 
@@ -178,7 +329,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/05/10/blog-with-github/">Blog With Github</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/05/10/blog-with-github/">Blog With Github(1)-前期准备</a></h1>
     
     
       <p class="meta">
@@ -858,11 +1009,15 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/03/blog-with-github-3/">blog-with-github(3)-Octopress的一些配置</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/03/blog-with-github-2/">blog-with-github(2)-部署到github</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/05/10/blog-with-github/">blog with github</a>
+        <a href="/blog/2013/05/10/blog-with-github/">blog with github(1)-前期准备</a>
       </li>
     
       <li class="post">
@@ -871,10 +1026,6 @@
     
       <li class="post">
         <a href="/blog/2013/04/10/the-time-past-so-quick/">岁月匆匆，我已不是昨日懵懂少年</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/10/generate-github-ssh-keys/">生成 github SSH keys</a>
       </li>
     
   </ul>
