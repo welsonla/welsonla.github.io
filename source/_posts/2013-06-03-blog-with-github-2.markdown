@@ -20,6 +20,7 @@ rake setup_github_pages
 ```
 
 然后，他将 
+
 1. 询问你的github pages的url
 2. 将远程的重‘origin’重命名为‘octopress’
 3. 在远程的origin讲你的github pages仓库添加进去

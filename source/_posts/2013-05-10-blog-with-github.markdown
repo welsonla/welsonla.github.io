@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "blog with github"
+title: "blog with github(1)-前期准备"
 date: 2013-05-10 01:18
 comments: true
 categories: 
