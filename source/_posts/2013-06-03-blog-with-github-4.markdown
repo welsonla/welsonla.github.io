@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "blog-with-github(4)-开始写吧，骚年"
+title: "blog with github(4)-开始写吧，骚年"
 date: 2013-06-03 13:57
 comments: true
 categories: 
@@ -20,15 +20,19 @@ rake new_post["Title"]
 ```
 
 在使用了ZSH的话，你要这样创建
+
 ```ruby
 rake new_post或者rake new_post[\"Title\"]
+```
 
 例如
+
 ```ruby
 rake new_post["Zombie Ninjas Attack: A survivor's retrospective"]
-# Creates source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown
+ Creates source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown
 ```
 or
+
 ```ruby
 ~/Code/rails/octopress(branch:source) » rake new_post                        
 Enter a title for your post: blog-with-github-4
@@ -38,7 +42,8 @@ Creating new post: source/_posts/2013-06-03-blog-with-github-4.markdown
 
 
 生成的内容大致如下
- ```ruby
+
+```ruby
 ---
 layout: post
 title: "Zombie Ninjas Attack: A survivor's retrospective"
@@ -47,7 +52,7 @@ comments: true
 external-url:
 categories:
 ---
- ```
+```
 
 你可以关闭comments，或者为他添加categories的tag，并且你还可以添加`author: Your Name`与`published: false`来控制是否发布
 
