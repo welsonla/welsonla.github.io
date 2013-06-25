@@ -5,11 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>岁月匆匆，我已不是昨日懵懂少年 - Welsonla on the way</title>
+  <title>git笔记 - Welsonla on the way</title>
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="大约从去年春节，家里人在耳边提到最多的两个字就是“结婚”。这个我特别敏感，一是还没有准备好，更重要的是毕业到现在，感觉自己发展太缓慢，或者说钱途太烂 今年清明节回家，妈妈说奶奶腿疼，一直身体硬朗的她现在走路也不得不扶着拐杖了。时间过的太快，我还记得上学第一天，奶奶用一块雪糕把我骗去幼儿园去上学。 &hellip;">
+  <meta name="description" content="添加所有新文件 1
+git add . 从版本中去除一个文件 1
+git rm test.html.rb 假设有很多新文件和删除了好多文件 1
+git add -A 获取所有远程版本 1
+git fetch 创建并切换到新分支 1
+git checkout -b newbranch ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://welsonla.github.io/blog/2013/04/10/the-time-past-so-quick">
+  <link rel="canonical" href="http://welsonla.github.io/blog/2013/06/25/git-note">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Welsonla on the way" type="application/atom+xml">
@@ -81,7 +86,7 @@
   
   <header>
     
-      <h1 class="entry-title">岁月匆匆，我已不是昨日懵懂少年</h1>
+      <h1 class="entry-title">Git笔记</h1>
     
     
       <p class="meta">
@@ -97,7 +102,7 @@
   
 
 
-<time datetime="2013-04-10T22:42:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+<time datetime="2013-06-25T09:21:00+08:00" pubdate data-updated="true">Jun 25<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -106,13 +111,42 @@
   </header>
 
 
-<div class="entry-content"><p>大约从去年春节，家里人在耳边提到最多的两个字就是“结婚”。这个我特别敏感，一是还没有准备好，更重要的是毕业到现在，感觉自己发展太缓慢，或者说钱途太烂</p>
+<div class="entry-content"><h4>添加所有新文件</h4>
 
-<p>今年清明节回家，妈妈说奶奶腿疼，一直身体硬朗的她现在走路也不得不扶着拐杖了。时间过的太快，我还记得上学第一天，奶奶用一块雪糕把我骗去幼儿园去上学。现在我都26岁了，将近二十年的时间已经过去了。</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>毕业也是三年有余，自认为自己技术能力还行，可是一路走来都是各种坑爹的公司。当身边朋友薪水都五位数的时候，我开始觉得我是不是有点太安于现状，或者太没勇气了。</p>
 
-<p>我只想安安心心的专注做技术.</p>
+<h4>从版本中去除一个文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">rm</span> <span class="nb">test</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">rb</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>假设有很多新文件和删除了好多文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>获取所有远程版本</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">fetch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>创建并切换到新分支</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">newbranch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 
@@ -135,7 +169,7 @@
   
 
 
-<time datetime="2013-04-10T22:42:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
+<time datetime="2013-06-25T09:21:00+08:00" pubdate data-updated="true">Jun 25<span>th</span>, 2013</time>
       
 
 
@@ -143,7 +177,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://welsonla.github.io/blog/2013/04/10/the-time-past-so-quick/" data-via="welsonla" data-counturl="http://welsonla.github.io/blog/2013/04/10/the-time-past-so-quick/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://welsonla.github.io/blog/2013/06/25/git-note/" data-via="welsonla" data-counturl="http://welsonla.github.io/blog/2013/06/25/git-note/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -154,10 +188,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/04/10/generate-github-ssh-keys/" title="Previous Post: 生成 github SSH keys">&laquo; 生成 github SSH keys</a>
+        <a class="basic-alignment left" href="/blog/2013/06/03/blog-with-github-4/" title="Previous Post: blog with github(4)-开始写吧，骚年">&laquo; blog with github(4)-开始写吧，骚年</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/05/10/different-of-class-and-category/" title="Next Post: different of class and category">different of class and category &raquo;</a>
       
     </p>
   </footer>
@@ -252,8 +284,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://welsonla.github.io/blog/2013/04/10/the-time-past-so-quick/';
-        var disqus_url = 'http://welsonla.github.io/blog/2013/04/10/the-time-past-so-quick/';
+        var disqus_identifier = 'http://welsonla.github.io/blog/2013/06/25/git-note/';
+        var disqus_url = 'http://welsonla.github.io/blog/2013/06/25/git-note/';
         var disqus_script = 'embed.js';
       
     (function () {

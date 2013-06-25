@@ -4,7 +4,7 @@
   <title><![CDATA[Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-06-04T09:41:16+08:00</updated>
+  <updated>2013-06-25T09:26:43+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[git笔记]]></title>
+    <link href="http://welsonla.github.io/blog/2013/06/25/git-note/"/>
+    <updated>2013-06-25T09:21:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/06/25/git-note</id>
+    <content type="html"><![CDATA[<h4>添加所有新文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>从版本中去除一个文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">rm</span> <span class="nb">test</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">rb</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>假设有很多新文件和删除了好多文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>获取所有远程版本</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">fetch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>创建并切换到新分支</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">newbranch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[blog with github(4)-开始写吧，骚年]]></title>

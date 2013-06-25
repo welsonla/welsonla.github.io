@@ -9,7 +9,12 @@
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/&lt;category>/atom.xml中找到这些内容 Post 这些Post页面必须存放在Source/ &hellip;">
+  <meta name="description" content="添加所有新文件 1
+git add . 从版本中去除一个文件 1
+git rm test.html.rb 假设有很多新文件和删除了好多文件 1
+git add -A 获取所有远程版本 1
+git fetch 创建并切换到新分支 1
+git checkout -b newbranch ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +83,79 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/25/git-note/">Git笔记</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-25T09:21:00+08:00" pubdate data-updated="true">Jun 25<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/06/25/git-note/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4>添加所有新文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>从版本中去除一个文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">rm</span> <span class="nb">test</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">rb</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>假设有很多新文件和删除了好多文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>获取所有远程版本</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">fetch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>创建并切换到新分支</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">newbranch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1020,132 +1098,9 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/04/10/build-your-mac-os/">一个码农的Mac配置</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-10T14:14:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
-        
-         | <a href="/blog/2013/04/10/build-your-mac-os/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h4>我常用的一些Mac工具</h4>
-
-<ol>
-<li><a href="http://www.iterm2.com/">iTerm2</a> 一个增强的命令终端</li>
-<li><a href="http://www.sourcetreeapp.com/">SourceTree</a> git代码控制工具</li>
-<li><a href="https://www.wunderlist.com/">WunderList</a> 一个出色的Todo工具，提供云同步，我把它当做我的任务列表</li>
-<li><a href="https://github.com/textmate/textmate/tags">TextMate2</a> 号称&#8221;The Missing Editor for Mac OS X&#8221;</li>
-<li><a href="http://www.sublimetext.com/2">SublimeText2</a> 另一个特别出色的Editor</li>
-<li><a href="http://www.alfredapp.com/">Alfred</a> Option+Space,唤出，提高你打开软件的效率，购买Powerpack还可以使用很多强大的拓展</li>
-<li><a href="http://www.i-funbox.com/">iFunBox</a> 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面</li>
-<li><a href="https://jianguoyun.com/">坚果云</a> 国内一个特别出色的网盘，可以右键添加要同步的文件</li>
-<li><a href="http://evernote.com/">Evernote</a> 这个大家都懂的</li>
-<li><a href="http://www.trankynam.com/xtrafinder/">XtraFinder</a> 为你的Finder增加Tab，剪切等功能</li>
-</ol>
-
-
-<h4>安装HomeBrew</h4>
-
-<p>Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包</p>
-
-<p>比如安装mysql，你只需要</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">brew</span> <span class="n">install</span> <span class="n">mysql</span>  
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Homebrew 安装特别简单，只需要键入</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>相关的文档可以到官方去查看<a href="http://mxcl.github.io/homebrew/">http://mxcl.github.io/homebrew/</a></p>
-
-<h4>安装oh-my-Zsh</h4>
-
-<p>Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，</p>
-
-<p>安装步骤</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">robbyrussell</span><span class="o">/</span><span class="n">oh</span><span class="o">-</span><span class="n">my</span><span class="o">-</span><span class="n">zsh</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#备份你的.zshrc文件</span>
-</span><span class='line'><span class="n">cp</span> <span class="o">~</span><span class="sr">/.zshrc ~/</span><span class="o">.</span><span class="n">zshrc</span><span class="o">.</span><span class="n">orig</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#创建zsh配置</span>
-</span><span class='line'><span class="n">cp</span> <span class="o">~</span><span class="sr">/.oh-my-zsh/</span><span class="n">templates</span><span class="o">/</span><span class="n">zshrc</span><span class="o">.</span><span class="n">zsh</span><span class="o">-</span><span class="n">template</span> <span class="o">~</span><span class="sr">/.zshrc</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">#设置zsh为你的默认shell</span>
-</span><span class='line'><span class="sr">chsh -s /</span><span class="n">bin</span><span class="o">/</span><span class="n">zsh</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#重启终端就会生效</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>这里还有一些主题<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">https://github.com/robbyrussell/oh-my-zsh/wiki/themes</a></p>
-
-<p>如果你要修改zsh的默认主题</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">vi</span> <span class="o">~</span><span class="sr">/.zshrc</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">修改ZSH_THEME为你喜欢的主题名即可</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>如果不想继续使用，可以使用以下命令卸载</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">uninstall_oh_my_zsh</span>
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -1156,6 +1111,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/25/git-note/">git笔记</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/06/03/blog-with-github-4/">blog with github(4)-开始写吧，骚年</a>
@@ -1171,10 +1130,6 @@
     
       <li class="post">
         <a href="/blog/2013/05/10/blog-with-github/">blog with github(1)-前期准备</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/05/10/different-of-class-and-category/">different of class and category</a>
       </li>
     
   </ul>
