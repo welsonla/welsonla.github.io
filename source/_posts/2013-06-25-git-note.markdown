@@ -1,0 +1,35 @@
+---
+layout: post
+title: "git笔记"
+date: 2013-06-25 09:21
+comments: true
+categories: 
+---
+
+####添加所有新文件
+
+```ruby
+git add .
+```
+
+####从版本中去除一个文件
+```ruby
+git rm test.html.rb
+```
+
+####假设有很多新文件和删除了好多文件
+```ruby
+git add -A
+```
+####获取所有远程版本
+```ruby
+git fetch
+```
+
+####创建并切换到新分支
+```ruby
+git checkout -b newbranch
+```
+
+
+
