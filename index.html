@@ -9,12 +9,12 @@
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="开始之前 1.安装Git
-2.使用rbenv或者RVM安装ruby 1.9.3 安装完后确保你的ruby版本是1.9.3 1
-ruby -v 设置Octopress 1
-2
-git clone git://github.com/imathis/octopress.git octopress
-cd &hellip;">
+  <meta name="description" content="添加所有新文件 1
+git add . 从版本中去除一个文件 1
+git rm test.html.rb 假设有很多新文件和删除了好多文件 1
+git add -A 获取所有远程版本 1
+git fetch 创建并切换到新分支 1
+git checkout -b newbranch ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,7 +89,474 @@ cd &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/05/10/blog-with-github/">Blog With Github</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/06/25/git-note/">Git笔记</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-25T09:21:00+08:00" pubdate data-updated="true">Jun 25<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/06/25/git-note/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4>添加所有新文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>从版本中去除一个文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">rm</span> <span class="nb">test</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">rb</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>假设有很多新文件和删除了好多文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>获取所有远程版本</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">fetch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>创建并切换到新分支</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">newbranch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/03/blog-with-github-4/">Blog With Github(4)-开始写吧，骚年</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-03T13:57:00+08:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2013</time>
+        
+         | <a href="/blog/2013/06/03/blog-with-github-4/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/&lt;category>/atom.xml中找到这些内容</p>
+
+<h4>Post</h4>
+
+<p>这些Post页面必须存放在Source/_posts目录下面，并且命名方式和jekyll的命名方式一样，会转换成YYYY-MM-DD-Post-title.markdown，这个文件的名字就是你的blog的url slug，日期帮助你排序这些文章</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_post</span><span class="o">[</span><span class="s2">&quot;Title&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在使用了ZSH的话，你要这样创建</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_post</span><span class="err">或者</span><span class="n">rake</span> <span class="n">new_post</span><span class="o">[</span><span class="p">\</span><span class="s2">&quot;Title</span><span class="se">\&quot;</span><span class="s2">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>例如</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_post</span><span class="o">[</span><span class="s2">&quot;Zombie Ninjas Attack: A survivor&#39;s retrospective&quot;</span><span class="o">]</span>
+</span><span class='line'> <span class="no">Creates</span> <span class="n">source</span><span class="o">/</span><span class="n">_posts</span><span class="o">/</span><span class="mi">2011</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="n">zombie</span><span class="o">-</span><span class="n">ninjas</span><span class="o">-</span><span class="n">attack</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">survivors</span><span class="o">-</span><span class="n">retrospective</span><span class="o">.</span><span class="n">markdown</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">~</span><span class="sr">/Code/</span><span class="n">rails</span><span class="o">/</span><span class="n">octopress</span><span class="p">(</span><span class="ss">branch</span><span class="p">:</span><span class="n">source</span><span class="p">)</span> <span class="err">»</span> <span class="n">rake</span> <span class="n">new_post</span>
+</span><span class='line'><span class="no">Enter</span> <span class="n">a</span> <span class="n">title</span> <span class="k">for</span> <span class="n">your</span> <span class="ss">post</span><span class="p">:</span> <span class="n">blog</span><span class="o">-</span><span class="n">with</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="mi">4</span>
+</span><span class='line'><span class="n">mkdir</span> <span class="o">-</span><span class="nb">p</span> <span class="n">source</span><span class="o">/</span><span class="n">_posts</span>
+</span><span class='line'><span class="no">Creating</span> <span class="kp">new</span> <span class="ss">post</span><span class="p">:</span> <span class="n">source</span><span class="o">/</span><span class="n">_posts</span><span class="o">/</span><span class="mi">2013</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="n">blog</span><span class="o">-</span><span class="n">with</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="mi">4</span><span class="o">.</span><span class="n">markdown</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>生成的内容大致如下</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">---</span>
+</span><span class='line'><span class="ss">layout</span><span class="p">:</span> <span class="n">post</span>
+</span><span class='line'><span class="ss">title</span><span class="p">:</span> <span class="s2">&quot;Zombie Ninjas Attack: A survivor&#39;s retrospective&quot;</span>
+</span><span class='line'><span class="ss">date</span><span class="p">:</span> <span class="mi">2011</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mo">03</span> <span class="mi">5</span><span class="p">:</span><span class="mi">59</span>
+</span><span class='line'><span class="ss">comments</span><span class="p">:</span> <span class="kp">true</span>
+</span><span class='line'><span class="n">external</span><span class="o">-</span><span class="ss">url</span><span class="p">:</span>
+</span><span class='line'><span class="ss">categories</span><span class="p">:</span>
+</span><span class='line'><span class="o">---</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>你可以关闭comments，或者为他添加categories的tag，并且你还可以添加<code>author: Your Name</code>与<code>published: false</code>来控制是否发布</p>
+
+<h4>Page</h4>
+
+<p>生成Page的命令</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_page</span><span class="o">[</span><span class="k">super</span><span class="o">-</span><span class="n">awesome</span><span class="o">]</span>
+</span><span class='line'><span class="c1"># creates /source/super-awesome/index.markdown</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">rake</span> <span class="n">new_page</span><span class="o">[</span><span class="k">super</span><span class="o">-</span><span class="n">awesome</span><span class="o">/</span><span class="n">page</span><span class="o">.</span><span class="n">html</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果使用了zsh的话，方法要参照post的创建方式</p>
+
+<p>生成的pages的默认内如大致如下</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">---</span>
+</span><span class='line'><span class="ss">layout</span><span class="p">:</span> <span class="n">page</span>
+</span><span class='line'><span class="ss">title</span><span class="p">:</span> <span class="s2">&quot;Super Awesome&quot;</span>
+</span><span class='line'><span class="ss">date</span><span class="p">:</span> <span class="mi">2011</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mo">03</span> <span class="mi">5</span><span class="p">:</span><span class="mi">59</span>
+</span><span class='line'><span class="ss">comments</span><span class="p">:</span> <span class="kp">true</span>
+</span><span class='line'><span class="ss">sharing</span><span class="p">:</span> <span class="kp">true</span>
+</span><span class='line'><span class="ss">footer</span><span class="p">:</span> <span class="kp">true</span>
+</span><span class='line'><span class="o">---</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Content</h4>
+
+<p>如果列表中不想显示全文内容的话，可以添加<code>&lt;!-- more --&gt;</code>标签，这将在文章下面生成一个“Continue →” 链接，链接到全文的地址</p>
+
+<h3>Generate &amp; Preview</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">generate</span>   <span class="c1"># Generates posts and pages into the public directory</span>
+</span><span class='line'><span class="n">rake</span> <span class="n">watch</span>      <span class="c1"># Watches source/ and sass/ for changes and regenerates</span>
+</span><span class='line'><span class="n">rake</span> <span class="n">preview</span>    <span class="c1"># Watches, and mounts a webserver at http://localhost:4000</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>本地使用http://localhost:4000就可以访问了</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/03/blog-with-github-3/">Blog With github(3)-Octopress配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-03T13:46:00+08:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2013</time>
+        
+         | <a href="/blog/2013/06/03/blog-with-github-3/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">_config</span><span class="o">.</span><span class="n">yml</span>       <span class="c1"># Main config (Jekyll&#39;s settings)</span>
+</span><span class='line'><span class="no">Rakefile</span>          <span class="c1"># Configs for deployment</span>
+</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">rb</span>         <span class="c1"># Compass config</span>
+</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">ru</span>         <span class="c1"># Rack config</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Rakefile大多是与部署相关的配置,如果不需要同步的话，你就不需要进行修改</p>
+
+<h4>Blog配置</h4>
+
+<p>_config.yml有三部分配置,你必须修改url，并且title，subtitle和author也要修改，还有一些第三方的服务需要启用</p>
+
+<h5>主配置</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">url</span><span class="p">:</span>                <span class="c1"># For rewriting urls for RSS, etc</span>
+</span><span class='line'><span class="ss">title</span><span class="p">:</span>              <span class="c1"># Used in the header and title tags</span>
+</span><span class='line'><span class="ss">subtitle</span><span class="p">:</span>           <span class="c1"># A description used in the header</span>
+</span><span class='line'><span class="ss">author</span><span class="p">:</span>             <span class="c1"># Your name, for RSS, Copyright, Metadata</span>
+</span><span class='line'><span class="n">simple_search</span><span class="p">:</span>      <span class="c1"># Search engine for simple site search</span>
+</span><span class='line'><span class="ss">description</span><span class="p">:</span>        <span class="c1"># A default meta description for your site</span>
+</span><span class='line'><span class="n">date_format</span><span class="p">:</span>        <span class="c1"># Format dates using Ruby&#39;s date strftime syntax</span>
+</span><span class='line'><span class="n">subscribe_rss</span><span class="p">:</span>      <span class="c1"># Url for your blog&#39;s feed, defauts to /atom.xml</span>
+</span><span class='line'><span class="n">subscribe_email</span><span class="p">:</span>    <span class="c1"># Url to subscribe by email (service required)</span>
+</span><span class='line'><span class="n">category_feeds</span><span class="p">:</span>     <span class="c1"># Enable per category RSS feeds (defaults to false in 2.1)</span>
+</span><span class='line'><span class="ss">email</span><span class="p">:</span>              <span class="c1"># Email address for the RSS feed if you want it.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Jekyll&amp;Plugins</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">root</span><span class="p">:</span>               <span class="c1"># Mapping for relative urls (default: /)</span>
+</span><span class='line'><span class="ss">permalink</span><span class="p">:</span>          <span class="c1"># Permalink structure for blog posts</span>
+</span><span class='line'><span class="ss">source</span><span class="p">:</span>             <span class="c1"># Directory for site source files</span>
+</span><span class='line'><span class="ss">destination</span><span class="p">:</span>        <span class="c1"># Directory for generated site files</span>
+</span><span class='line'><span class="ss">plugins</span><span class="p">:</span>            <span class="c1"># Directory for Jekyll plugins</span>
+</span><span class='line'><span class="n">code_dir</span><span class="p">:</span>           <span class="c1"># Directory for code snippets (for include_code plugin)</span>
+</span><span class='line'><span class="n">category_dir</span><span class="p">:</span>       <span class="c1"># Directory for generated blog category pages</span>
+</span><span class='line'>
+</span><span class='line'><span class="ss">pygments</span><span class="p">:</span>           <span class="c1"># Toggle python pygments syntax highlighting</span>
+</span><span class='line'><span class="ss">paginate</span><span class="p">:</span>           <span class="c1"># Posts per page on the blog index</span>
+</span><span class='line'><span class="n">pagination_dir</span><span class="p">:</span>     <span class="c1"># Directory base for pagination URLs eg. /blog/page/2/</span>
+</span><span class='line'><span class="n">recent_posts</span><span class="p">:</span>       <span class="c1"># Number of recent posts to appear in the sidebar</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">default_asides</span><span class="p">:</span>     <span class="c1"># Configure what shows up in the sidebar and in what order</span>
+</span><span class='line'><span class="n">blog_index_asides</span><span class="p">:</span>  <span class="c1"># Optional sidebar config for blog index page</span>
+</span><span class='line'><span class="n">post_asides</span><span class="p">:</span>        <span class="c1"># Optional sidebar config for post layout</span>
+</span><span class='line'><span class="n">page_asides</span><span class="p">:</span>        <span class="c1"># Optional sidebar config for page layout</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>第三方配置</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Github</span> <span class="o">-</span> <span class="no">List</span> <span class="n">your</span> <span class="n">github</span> <span class="n">repositories</span> <span class="k">in</span> <span class="n">the</span> <span class="n">sidebar</span>
+</span><span class='line'><span class="no">Twitter</span> <span class="o">-</span> <span class="no">Setup</span> <span class="n">a</span> <span class="n">sidebar</span> <span class="n">twitter</span> <span class="n">feed</span><span class="p">,</span> <span class="n">follow</span> <span class="n">button</span><span class="p">,</span> <span class="ow">and</span> <span class="n">tweet</span> <span class="n">button</span> <span class="p">(</span><span class="k">for</span> <span class="n">sharing</span> <span class="n">posts</span> <span class="ow">and</span> <span class="n">pages</span><span class="p">)</span><span class="o">.</span>
+</span><span class='line'><span class="no">Google</span> <span class="no">Plus</span> <span class="no">One</span> <span class="o">-</span> <span class="no">Setup</span> <span class="n">sharing</span> <span class="k">for</span> <span class="n">posts</span> <span class="ow">and</span> <span class="n">pages</span> <span class="n">on</span> <span class="no">Google</span><span class="err">’</span><span class="n">s</span> <span class="n">plus</span> <span class="n">one</span> <span class="n">network</span><span class="o">.</span>
+</span><span class='line'><span class="no">Pinboard</span> <span class="o">-</span> <span class="no">Share</span> <span class="n">your</span> <span class="n">recent</span> <span class="no">Pinboard</span> <span class="n">bookmarks</span> <span class="k">in</span> <span class="n">the</span> <span class="n">sidebar</span><span class="o">.</span>
+</span><span class='line'><span class="no">Delicious</span> <span class="o">-</span> <span class="no">Share</span> <span class="n">your</span> <span class="n">recent</span> <span class="no">Delicious</span> <span class="n">bookmarks</span> <span class="k">in</span> <span class="n">the</span> <span class="n">sidebar</span><span class="o">.</span>
+</span><span class='line'><span class="no">Disqus</span> <span class="no">Comments</span> <span class="o">-</span> <span class="no">Add</span> <span class="n">your</span> <span class="n">disqus</span> <span class="n">short</span> <span class="nb">name</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">disqus</span> <span class="n">comments</span> <span class="n">on</span> <span class="n">your</span> <span class="n">site</span><span class="o">.</span>
+</span><span class='line'><span class="no">Google</span> <span class="no">Analytics</span> <span class="o">-</span> <span class="no">Add</span> <span class="n">your</span> <span class="n">tracking</span> <span class="nb">id</span> <span class="n">to</span> <span class="n">enable</span> <span class="no">Google</span> <span class="no">Analytics</span> <span class="n">tracking</span> <span class="k">for</span> <span class="n">your</span> <span class="n">site</span><span class="o">.</span>
+</span><span class='line'><span class="no">Facebook</span> <span class="o">-</span> <span class="no">Add</span> <span class="n">a</span> <span class="no">Facebook</span> <span class="n">like</span> <span class="n">button</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/03/blog-with-github-2/">Blog With Github(2)-部署到github</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-03T13:20:00+08:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2013</time>
+        
+         | <a href="/blog/2013/06/03/blog-with-github-2/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>使用github pages</h3>
+
+<p>如果想使用 http://username.github.io的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io）</p>
+
+<p>用户使用的是Github Pages的master版本下面的public作为你的网站主目录，你可以通过浏览http://username.github.io来查看。如果你想在source这个版本上面维护代码，并且把内容提交到master分支，Octopress有一个命令来帮助你完成这些</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">setup_github_pages</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后，他将</p>
+
+<ol>
+<li>询问你的github pages的url</li>
+<li>将远程的重‘origin’重命名为‘octopress’</li>
+<li>在远程的origin讲你的github pages仓库添加进去</li>
+<li>切换当前branch从master切换到source</li>
+<li>根据你的仓库名，重新配置你的blog地址</li>
+<li>在_deploy目录下面设置master分支，用于部署</li>
+</ol>
+
+
+<p>接下来执行</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">generate</span>
+</span><span class='line'><span class="n">rake</span> <span class="n">deploy</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这将生成你的blog，并将生成的文件copy到_deploy目录下面,并添加到git，将他们commit和push到master分支上面，稍后，你会收到一份来自github的email告诉你，你的提交已经收到，并且很快将发不到你的web上面</p>
+
+<p>并且，不要忘记提交你的代码到source分支</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</span><span class='line'><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;your message&#39;</span>
+</span><span class='line'><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>自定义域名绑定</h4>
+
+<p>首先你要source目录下面创建一个CNAME，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">echo</span> <span class="s1">&#39;your-domain.com&#39;</span> <span class="o">&gt;&gt;</span> <span class="n">source</span><span class="o">/</span><span class="no">CNAME</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>之后去你的域名服务商或者你的dns服务商那里创建一条CNAME记录，记录指向的IP为
+(不要使用顶级域名指向到pages,要使用二级域名)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">207</span><span class="o">.</span><span class="mi">97</span><span class="o">.</span><span class="mi">227</span><span class="o">.</span><span class="mi">245</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/10/blog-with-github/">Blog With Github(1)-前期准备</a></h1>
     
     
       <p class="meta">
@@ -116,8 +583,11 @@ cd &hellip;">
 
   <div class="entry-content"><h2>开始之前</h2>
 
-<p>1.<a href="http://git-scm.com/">安装Git</a>
-2.使用<a href="http://octopress.org/docs/setup/rbenv">rbenv</a>或者<a href="http://octopress.org/docs/setup/rvm">RVM</a>安装ruby 1.9.3</p>
+<ol>
+<li><a href="http://git-scm.com/">安装Git</a></li>
+<li>使用<a href="http://octopress.org/docs/setup/rbenv">rbenv</a>或者<a href="http://octopress.org/docs/setup/rvm">RVM</a>安装ruby 1.9.3</li>
+</ol>
+
 
 <p>安装完后确保你的ruby版本是1.9.3</p>
 
@@ -628,132 +1098,9 @@ cd &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/04/10/build-your-mac-os/">一个码农的Mac配置</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-10T14:14:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2013</time>
-        
-         | <a href="/blog/2013/04/10/build-your-mac-os/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h4>我常用的一些Mac工具</h4>
-
-<ol>
-<li><a href="http://www.iterm2.com/">iTerm2</a> 一个增强的命令终端</li>
-<li><a href="http://www.sourcetreeapp.com/">SourceTree</a> git代码控制工具</li>
-<li><a href="https://www.wunderlist.com/">WunderList</a> 一个出色的Todo工具，提供云同步，我把它当做我的任务列表</li>
-<li><a href="https://github.com/textmate/textmate/tags">TextMate2</a> 号称&#8221;The Missing Editor for Mac OS X&#8221;</li>
-<li><a href="http://www.sublimetext.com/2">SublimeText2</a> 另一个特别出色的Editor</li>
-<li><a href="http://www.alfredapp.com/">Alfred</a> Option+Space,唤出，提高你打开软件的效率，购买Powerpack还可以使用很多强大的拓展</li>
-<li><a href="http://www.i-funbox.com/">iFunBox</a> 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面</li>
-<li><a href="https://jianguoyun.com/">坚果云</a> 国内一个特别出色的网盘，可以右键添加要同步的文件</li>
-<li><a href="http://evernote.com/">Evernote</a> 这个大家都懂的</li>
-<li><a href="http://www.trankynam.com/xtrafinder/">XtraFinder</a> 为你的Finder增加Tab，剪切等功能</li>
-</ol>
-
-
-<h4>安装HomeBrew</h4>
-
-<p>Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包</p>
-
-<p>比如安装mysql，你只需要</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">brew</span> <span class="n">install</span> <span class="n">mysql</span>  
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Homebrew 安装特别简单，只需要键入</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>相关的文档可以到官方去查看<a href="http://mxcl.github.io/homebrew/">http://mxcl.github.io/homebrew/</a></p>
-
-<h4>安装oh-my-Zsh</h4>
-
-<p>Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，</p>
-
-<p>安装步骤</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">robbyrussell</span><span class="o">/</span><span class="n">oh</span><span class="o">-</span><span class="n">my</span><span class="o">-</span><span class="n">zsh</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#备份你的.zshrc文件</span>
-</span><span class='line'><span class="n">cp</span> <span class="o">~</span><span class="sr">/.zshrc ~/</span><span class="o">.</span><span class="n">zshrc</span><span class="o">.</span><span class="n">orig</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#创建zsh配置</span>
-</span><span class='line'><span class="n">cp</span> <span class="o">~</span><span class="sr">/.oh-my-zsh/</span><span class="n">templates</span><span class="o">/</span><span class="n">zshrc</span><span class="o">.</span><span class="n">zsh</span><span class="o">-</span><span class="n">template</span> <span class="o">~</span><span class="sr">/.zshrc</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">#设置zsh为你的默认shell</span>
-</span><span class='line'><span class="sr">chsh -s /</span><span class="n">bin</span><span class="o">/</span><span class="n">zsh</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#重启终端就会生效</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>这里还有一些主题<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">https://github.com/robbyrussell/oh-my-zsh/wiki/themes</a></p>
-
-<p>如果你要修改zsh的默认主题</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">vi</span> <span class="o">~</span><span class="sr">/.zshrc</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">修改ZSH_THEME为你喜欢的主题名即可</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>如果不想继续使用，可以使用以下命令卸载</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">uninstall_oh_my_zsh</span>
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -766,23 +1113,23 @@ cd &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/05/10/blog-with-github/">blog with github</a>
+        <a href="/blog/2013/06/25/git-note/">git笔记</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/05/10/different-of-class-and-category/">different of class and category</a>
+        <a href="/blog/2013/06/03/blog-with-github-4/">blog with github(4)-开始写吧，骚年</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/04/10/the-time-past-so-quick/">岁月匆匆，我已不是昨日懵懂少年</a>
+        <a href="/blog/2013/06/03/blog-with-github-3/">blog with github(3)-Octopress配置</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/04/10/generate-github-ssh-keys/">生成 github SSH keys</a>
+        <a href="/blog/2013/06/03/blog-with-github-2/">blog with github(2)-部署到github</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/04/10/use-rvm-install-ruby/">使用RVM安装ruby</a>
+        <a href="/blog/2013/05/10/blog-with-github/">blog with github(1)-前期准备</a>
       </li>
     
   </ul>

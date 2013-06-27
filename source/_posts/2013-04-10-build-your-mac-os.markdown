@@ -19,6 +19,15 @@ categories: 技术随笔
 8. [坚果云](https://jianguoyun.com/) 国内一个特别出色的网盘，可以右键添加要同步的文件
 9. [Evernote](http://evernote.com/) 这个大家都懂的
 10. [XtraFinder](http://www.trankynam.com/xtrafinder/) 为你的Finder增加Tab，剪切等功能
+11. [shortcat](http://shortcatapp.com/)键盘快捷键，写啥点啥,怒赞
+
+
+####shortcat快捷键
+```ruby
+cmd+shift+space唤醒
+输入关键词后，如果匹配了多个，使用control+字母去点击相应的匹配
+```
+
 
 ####安装HomeBrew
 
