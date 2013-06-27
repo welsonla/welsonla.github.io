@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术随笔 | Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/blog/categories/ji-zhu-sui-bi/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-06-25T09:26:43+08:00</updated>
+  <updated>2013-06-27T10:04:40+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -157,8 +157,16 @@ rvm rubygems latest
 <li><a href="https://jianguoyun.com/">坚果云</a> 国内一个特别出色的网盘，可以右键添加要同步的文件</li>
 <li><a href="http://evernote.com/">Evernote</a> 这个大家都懂的</li>
 <li><a href="http://www.trankynam.com/xtrafinder/">XtraFinder</a> 为你的Finder增加Tab，剪切等功能</li>
+<li><a href="http://shortcatapp.com/">shortcat</a>键盘快捷键，写啥点啥,怒赞</li>
 </ol>
 
+
+<h4>shortcat快捷键</h4>
+
+<p><code>ruby
+cmd+shift+space唤醒
+输入关键词后，如果匹配了多个，使用control+字母去点击相应的匹配
+</code></p>
 
 <h4>安装HomeBrew</h4>
 
