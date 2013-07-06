@@ -4,7 +4,7 @@
   <title><![CDATA[Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-07-06T17:00:59+08:00</updated>
+  <updated>2013-07-06T17:31:20+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[vim-note]]></title>
+    <link href="http://welsonla.github.io/blog/2013/07/06/vim-note/"/>
+    <updated>2013-07-06T17:27:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/07/06/vim-note</id>
+    <content type="html"><![CDATA[<h4>移动到行首</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">0</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>移动到行尾</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">$</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>剪切多行</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">v</span>
+</span><span class='line'><span class="err">向下移动</span>
+</span><span class='line'><span class="n">d</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>粘贴</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">P</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>在nerdTree光标处新建一个文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">m</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>删除多行(数字+dd)</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">5</span><span class="n">dd</span> <span class="c1">#删除5行</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[git笔记]]></title>

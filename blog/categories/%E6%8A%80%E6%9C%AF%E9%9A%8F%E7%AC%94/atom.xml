@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术随笔 | Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/blog/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-07-06T17:00:59+08:00</updated>
+  <updated>2013-07-06T17:31:20+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[vim-note]]></title>
+    <link href="http://welsonla.github.io/blog/2013/07/06/vim-note/"/>
+    <updated>2013-07-06T17:27:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/07/06/vim-note</id>
+    <content type="html"><![CDATA[<h4>移动到行首</h4>
+
+<p><code>ruby
+0
+</code></p>
+
+<h4>移动到行尾</h4>
+
+<p><code>ruby
+$
+</code></p>
+
+<h4>剪切多行</h4>
+
+<p><code>ruby
+v
+向下移动
+d
+</code></p>
+
+<h4>粘贴</h4>
+
+<p><code>ruby
+P
+</code></p>
+
+<h4>在nerdTree光标处新建一个文件</h4>
+
+<p><code>ruby
+m
+</code></p>
+
+<h4>删除多行(数字+dd)</h4>
+
+<p><code>ruby
+5dd #删除5行
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[git笔记]]></title>
@@ -290,49 +335,6 @@ echo 'your-domain.com' &gt;&gt; source/CNAME
 <code>ruby
 207.97.227.245
 </code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[blog with github(1)-前期准备]]></title>
-    <link href="http://welsonla.github.io/blog/2013/05/10/blog-with-github/"/>
-    <updated>2013-05-10T01:18:00+08:00</updated>
-    <id>http://welsonla.github.io/blog/2013/05/10/blog-with-github</id>
-    <content type="html"><![CDATA[<h2>开始之前</h2>
-
-<ol>
-<li><a href="http://git-scm.com/">安装Git</a></li>
-<li>使用<a href="http://octopress.org/docs/setup/rbenv">rbenv</a>或者<a href="http://octopress.org/docs/setup/rvm">RVM</a>安装ruby 1.9.3</li>
-</ol>
-
-
-<p>安装完后确保你的ruby版本是1.9.3
-<code>ruby
-ruby -v
-</code></p>
-
-<h2>设置Octopress</h2>
-
-<p><code>ruby
-git clone git://github.com/imathis/octopress.git octopress
-cd octopress  
-</code></p>
-
-<p>接下来安装一些依赖</p>
-
-<p><code>ruby
-gem install bundler
-rbenv rehash   
-bundle install
-</code></p>
-
-<p>安装Octopress默认主题</p>
-
-<p><code>ruby
-rake install
-</code></p>
-
-<p>--未完待续，哥去睡觉</p>
 ]]></content>
   </entry>
   
