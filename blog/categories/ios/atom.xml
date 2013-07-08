@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: iOS | Welsonla on the way]]></title>
+  <link href="http://welsonla.github.io/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://welsonla.github.io/"/>
+  <updated>2013-07-06T17:31:20+08:00</updated>
+  <id>http://welsonla.github.io/</id>
+  <author>
+    <name><![CDATA[Welsonla]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cocoapods 使用]]></title>
+    <link href="http://welsonla.github.io/blog/2013/04/10/use-cocoapods/"/>
+    <updated>2013-04-10T16:48:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/04/10/use-cocoapods</id>
+    <content type="html"><![CDATA[<p><code>ruby
+gem install cocoapods
+</code></p>
+
+<p>搜索第三方的oc库</p>
+
+<p>```ruby
+pod search fmdb</p>
+
+<p>-> FMDB (2.0)
+   A Cocoa / Objective-C wrapper around SQLite.
+   - Homepage: https://github.com/ccgus/fmdb
+   - Source:   https://github.com/ccgus/fmdb.git
+   - Versions: 2.0, 1.5.1, 1.5 [master repo]
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

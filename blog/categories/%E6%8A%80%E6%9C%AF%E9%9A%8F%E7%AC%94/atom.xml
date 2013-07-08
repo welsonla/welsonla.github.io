@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 技术随笔 | Welsonla on the way]]></title>
+  <link href="http://welsonla.github.io/blog/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/atom.xml" rel="self"/>
+  <link href="http://welsonla.github.io/"/>
+  <updated>2013-07-06T17:31:20+08:00</updated>
+  <id>http://welsonla.github.io/</id>
+  <author>
+    <name><![CDATA[Welsonla]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[vim-note]]></title>
+    <link href="http://welsonla.github.io/blog/2013/07/06/vim-note/"/>
+    <updated>2013-07-06T17:27:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/07/06/vim-note</id>
+    <content type="html"><![CDATA[<h4>移动到行首</h4>
+
+<p><code>ruby
+0
+</code></p>
+
+<h4>移动到行尾</h4>
+
+<p><code>ruby
+$
+</code></p>
+
+<h4>剪切多行</h4>
+
+<p><code>ruby
+v
+向下移动
+d
+</code></p>
+
+<h4>粘贴</h4>
+
+<p><code>ruby
+P
+</code></p>
+
+<h4>在nerdTree光标处新建一个文件</h4>
+
+<p><code>ruby
+m
+</code></p>
+
+<h4>删除多行(数字+dd)</h4>
+
+<p><code>ruby
+5dd #删除5行
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[git笔记]]></title>
+    <link href="http://welsonla.github.io/blog/2013/06/25/git-note/"/>
+    <updated>2013-06-25T09:21:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/06/25/git-note</id>
+    <content type="html"><![CDATA[<h4>添加所有新文件</h4>
+
+<p><code>ruby
+git add .
+</code></p>
+
+<h4>从版本中去除一个文件</h4>
+
+<p><code>ruby
+git rm test.html.rb
+</code></p>
+
+<h4>假设有很多新文件和删除了好多文件</h4>
+
+<p><code>ruby
+git add -A
+</code></p>
+
+<h4>获取所有远程版本</h4>
+
+<p><code>ruby
+git fetch
+</code></p>
+
+<h4>创建并切换到新分支</h4>
+
+<p><code>ruby
+git checkout -b newbranch
+</code></p>
+
+<h4>迁移原有git项目到新得项目地址</h4>
+
+<p><code>ruby
+git remote set-url origin git@git.github.com:welsonla/studio.git
+</code></p>
+
+<h4>查看当前git分支</h4>
+
+<p><code>
+git branch -r
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[blog with github(4)-开始写吧，骚年]]></title>
+    <link href="http://welsonla.github.io/blog/2013/06/03/blog-with-github-4/"/>
+    <updated>2013-06-03T13:57:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/06/03/blog-with-github-4</id>
+    <content type="html"><![CDATA[<p>Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/&lt;category>/atom.xml中找到这些内容</p>
+
+<h4>Post</h4>
+
+<p>这些Post页面必须存放在Source/_posts目录下面，并且命名方式和jekyll的命名方式一样，会转换成YYYY-MM-DD-Post-title.markdown，这个文件的名字就是你的blog的url slug，日期帮助你排序这些文章</p>
+
+<p><code>ruby
+rake new_post["Title"]
+</code></p>
+
+<p>在使用了ZSH的话，你要这样创建</p>
+
+<p><code>ruby
+rake new_post或者rake new_post[\"Title\"]
+</code></p>
+
+<p>例如</p>
+
+<p><code>ruby
+rake new_post["Zombie Ninjas Attack: A survivor's retrospective"]
+ Creates source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown
+</code>
+or</p>
+
+<p><code>ruby
+~/Code/rails/octopress(branch:source) » rake new_post                        
+Enter a title for your post: blog-with-github-4
+mkdir -p source/_posts
+Creating new post: source/_posts/2013-06-03-blog-with-github-4.markdown
+</code></p>
+
+<p>生成的内容大致如下</p>
+
+<h2>```ruby</h2>
+
+<p>layout: post
+title: "Zombie Ninjas Attack: A survivor's retrospective"
+date: 2011-07-03 5:59
+comments: true
+external-url:</p>
+
+<h2>categories:</h2>
+
+<p>```</p>
+
+<p>你可以关闭comments，或者为他添加categories的tag，并且你还可以添加<code>author: Your Name</code>与<code>published: false</code>来控制是否发布</p>
+
+<h4>Page</h4>
+
+<p>生成Page的命令</p>
+
+<p>```ruby
+rake new_page[super-awesome]</p>
+
+<h1>creates /source/super-awesome/index.markdown</h1>
+
+<p>rake new_page[super-awesome/page.html]
+```</p>
+
+<p>如果使用了zsh的话，方法要参照post的创建方式</p>
+
+<p>生成的pages的默认内如大致如下</p>
+
+<h2>```ruby</h2>
+
+<p>layout: page
+title: "Super Awesome"
+date: 2011-07-03 5:59
+comments: true
+sharing: true</p>
+
+<h2>footer: true</h2>
+
+<p>```</p>
+
+<h4>Content</h4>
+
+<p>如果列表中不想显示全文内容的话，可以添加<code>&lt;!-- more --&gt;</code>标签，这将在文章下面生成一个“Continue →” 链接，链接到全文的地址</p>
+
+<h3>Generate &amp; Preview</h3>
+
+<p><code>ruby
+rake generate   # Generates posts and pages into the public directory
+rake watch      # Watches source/ and sass/ for changes and regenerates
+rake preview    # Watches, and mounts a webserver at http://localhost:4000
+</code></p>
+
+<p>本地使用http://localhost:4000就可以访问了</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[blog with github(3)-Octopress配置]]></title>
+    <link href="http://welsonla.github.io/blog/2013/06/03/blog-with-github-3/"/>
+    <updated>2013-06-03T13:46:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/06/03/blog-with-github-3</id>
+    <content type="html"><![CDATA[<p>Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件</p>
+
+<p>```ruby
+_config.yml       # Main config (Jekyll's settings)
+Rakefile          # Configs for deployment
+config.rb         # Compass config
+config.ru         # Rack config</p>
+
+<p>```</p>
+
+<p>Rakefile大多是与部署相关的配置,如果不需要同步的话，你就不需要进行修改</p>
+
+<h4>Blog配置</h4>
+
+<p>_config.yml有三部分配置,你必须修改url，并且title，subtitle和author也要修改，还有一些第三方的服务需要启用</p>
+
+<h5>主配置</h5>
+
+<p><code>ruby
+url:                # For rewriting urls for RSS, etc
+title:              # Used in the header and title tags
+subtitle:           # A description used in the header
+author:             # Your name, for RSS, Copyright, Metadata
+simple_search:      # Search engine for simple site search
+description:        # A default meta description for your site
+date_format:        # Format dates using Ruby's date strftime syntax
+subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
+subscribe_email:    # Url to subscribe by email (service required)
+category_feeds:     # Enable per category RSS feeds (defaults to false in 2.1)
+email:              # Email address for the RSS feed if you want it.
+</code></p>
+
+<h5>Jekyll&amp;Plugins</h5>
+
+<p>```ruby
+root:               # Mapping for relative urls (default: /)
+permalink:          # Permalink structure for blog posts
+source:             # Directory for site source files
+destination:        # Directory for generated site files
+plugins:            # Directory for Jekyll plugins
+code_dir:           # Directory for code snippets (for include_code plugin)
+category_dir:       # Directory for generated blog category pages</p>
+
+<p>pygments:           # Toggle python pygments syntax highlighting
+paginate:           # Posts per page on the blog index
+pagination_dir:     # Directory base for pagination URLs eg. /blog/page/2/
+recent_posts:       # Number of recent posts to appear in the sidebar</p>
+
+<p>default_asides:     # Configure what shows up in the sidebar and in what order
+blog_index_asides:  # Optional sidebar config for blog index page
+post_asides:        # Optional sidebar config for post layout
+page_asides:        # Optional sidebar config for page layout
+```</p>
+
+<h5>第三方配置</h5>
+
+<p>```ruby
+Github - List your github repositories in the sidebar
+Twitter - Setup a sidebar twitter feed, follow button, and tweet button (for sharing posts and pages).
+Google Plus One - Setup sharing for posts and pages on Google’s plus one network.
+Pinboard - Share your recent Pinboard bookmarks in the sidebar.
+Delicious - Share your recent Delicious bookmarks in the sidebar.
+Disqus Comments - Add your disqus short name to enable disqus comments on your site.
+Google Analytics - Add your tracking id to enable Google Analytics tracking for your site.
+Facebook - Add a Facebook like button</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[blog with github(2)-部署到github]]></title>
+    <link href="http://welsonla.github.io/blog/2013/06/03/blog-with-github-2/"/>
+    <updated>2013-06-03T13:20:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/06/03/blog-with-github-2</id>
+    <content type="html"><![CDATA[<h3>使用github pages</h3>
+
+<p>如果想使用 http://username.github.io的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io）</p>
+
+<p>用户使用的是Github Pages的master版本下面的public作为你的网站主目录，你可以通过浏览http://username.github.io来查看。如果你想在source这个版本上面维护代码，并且把内容提交到master分支，Octopress有一个命令来帮助你完成这些</p>
+
+<p><code>ruby
+rake setup_github_pages
+</code></p>
+
+<p>然后，他将</p>
+
+<ol>
+<li>询问你的github pages的url</li>
+<li>将远程的重‘origin’重命名为‘octopress’</li>
+<li>在远程的origin讲你的github pages仓库添加进去</li>
+<li>切换当前branch从master切换到source</li>
+<li>根据你的仓库名，重新配置你的blog地址</li>
+<li>在_deploy目录下面设置master分支，用于部署</li>
+</ol>
+
+
+<p>接下来执行
+```ruby
+rake generate
+rake deploy</p>
+
+<p>```</p>
+
+<p>这将生成你的blog，并将生成的文件copy到_deploy目录下面,并添加到git，将他们commit和push到master分支上面，稍后，你会收到一份来自github的email告诉你，你的提交已经收到，并且很快将发不到你的web上面</p>
+
+<p>并且，不要忘记提交你的代码到source分支</p>
+
+<p><code>ruby
+git add .
+git commit -m 'your message'
+git push origin source
+</code></p>
+
+<h4>自定义域名绑定</h4>
+
+<p>首先你要source目录下面创建一个CNAME，</p>
+
+<p><code>ruby
+echo 'your-domain.com' &gt;&gt; source/CNAME
+</code></p>
+
+<p>之后去你的域名服务商或者你的dns服务商那里创建一条CNAME记录，记录指向的IP为
+(不要使用顶级域名指向到pages,要使用二级域名)
+<code>ruby
+207.97.227.245
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

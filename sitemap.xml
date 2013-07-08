@@ -2,66 +2,70 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://welsonla.github.io/blog/2013/04/10/build-your-mac-os/</loc>
-        <lastmod>2013-06-03T13:44:12+08:00</lastmod>
+        <lastmod>2013-07-06T16:37:50+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/2013/04/10/use-cocoapods/</loc>
-        <lastmod>2013-04-10T17:25:24+08:00</lastmod>
+        <lastmod>2013-07-06T16:44:21+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/2013/04/10/use-rvm-install-ruby/</loc>
-        <lastmod>2013-04-10T17:50:48+08:00</lastmod>
+        <lastmod>2013-04-10T22:29:15+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/2013/04/10/generate-github-ssh-keys/</loc>
-        <lastmod>2013-06-03T13:44:12+08:00</lastmod>
+        <lastmod>2013-04-10T22:25:40+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/2013/04/10/the-time-past-so-quick/</loc>
-        <lastmod>2013-06-03T13:44:12+08:00</lastmod>
+        <lastmod>2013-07-06T16:44:38+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/2013/05/10/different-of-class-and-category/</loc>
-        <lastmod>2013-06-03T13:44:12+08:00</lastmod>
+        <lastmod>2013-07-06T16:38:44+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/2013/05/10/blog-with-github/</loc>
-        <lastmod>2013-06-03T13:45:47+08:00</lastmod>
+        <lastmod>2013-07-06T16:42:06+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/2013/06/03/blog-with-github-2/</loc>
-        <lastmod>2013-06-03T14:18:43+08:00</lastmod>
+        <lastmod>2013-07-06T16:39:04+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/2013/06/03/blog-with-github-3/</loc>
-        <lastmod>2013-06-03T14:18:34+08:00</lastmod>
+        <lastmod>2013-07-06T16:39:16+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/2013/06/03/blog-with-github-4/</loc>
-        <lastmod>2013-06-04T09:40:37+08:00</lastmod>
+        <lastmod>2013-07-06T16:39:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/2013/06/25/git-note/</loc>
-        <lastmod>2013-06-25T09:26:33+08:00</lastmod>
+        <lastmod>2013-07-06T16:39:43+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://welsonla.github.io/blog/2013/07/06/vim-note/</loc>
+        <lastmod>2013-07-06T17:30:43+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/about-welsonla/</loc>
-        <lastmod>2013-06-03T13:44:12+08:00</lastmod>
+        <lastmod>2013-04-11T20:30:30+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/blog/archives/</loc>
-        <lastmod>2013-06-25T09:26:33+08:00</lastmod>
+        <lastmod>2013-07-06T17:30:43+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/</loc>
-        <lastmod>2013-06-25T09:26:33+08:00</lastmod>
+        <lastmod>2013-07-06T17:30:43+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/new-page/</loc>
-        <lastmod>2013-04-10T17:29:15+08:00</lastmod>
+        <lastmod>2013-07-06T15:48:34+08:00</lastmod>
     </url>
     <url>
         <loc>http://welsonla.github.io/robots.txt</loc>
-        <lastmod>2013-04-10T16:05:45+08:00</lastmod>
+        <lastmod>2013-04-10T22:10:48+08:00</lastmod>
     </url>
 </urlset>
