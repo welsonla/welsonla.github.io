@@ -30,6 +30,12 @@ git fetch
 ```ruby
 git checkout -b newbranch
 ```
+
+####切换到分支
+```ruby
+git checkout master
+```
+
 ####迁移原有git项目到新得项目地址
 ```ruby
 git remote set-url origin git@git.github.com:welsonla/studio.git
@@ -39,4 +45,7 @@ git remote set-url origin git@git.github.com:welsonla/studio.git
 ```
 git branch -r
 ```
-
+####查看git log
+```ruby
+git log
+```
