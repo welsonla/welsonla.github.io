@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 工具控 | Welsonla on the way]]></title>
+  <link href="http://welsonla.github.io/blog/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/atom.xml" rel="self"/>
+  <link href="http://welsonla.github.io/"/>
+  <updated>2013-07-22T10:25:31+08:00</updated>
+  <id>http://welsonla.github.io/</id>
+  <author>
+    <name><![CDATA[Welsonla]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[一个码农的Mac配置]]></title>
+    <link href="http://welsonla.github.io/blog/2013/04/10/build-your-mac-os/"/>
+    <updated>2013-04-10T14:14:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/04/10/build-your-mac-os</id>
+    <content type="html"><![CDATA[<h4>我常用的一些Mac工具</h4>
+
+<ol>
+<li><a href="http://www.iterm2.com/">iTerm2</a> 一个增强的命令终端</li>
+<li><a href="http://www.sourcetreeapp.com/">SourceTree</a> git代码控制工具</li>
+<li><a href="https://www.wunderlist.com/">WunderList</a> 一个出色的Todo工具，提供云同步，我把它当做我的任务列表</li>
+<li><a href="https://github.com/textmate/textmate/tags">TextMate2</a> 号称"The Missing Editor for Mac OS X"</li>
+<li><a href="http://www.sublimetext.com/2">SublimeText2</a> 另一个特别出色的Editor</li>
+<li><a href="http://www.alfredapp.com/">Alfred</a> Option+Space,唤出，提高你打开软件的效率，购买Powerpack还可以使用很多强大的拓展</li>
+<li><a href="http://www.i-funbox.com/">iFunBox</a> 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面</li>
+<li><a href="https://jianguoyun.com/">坚果云</a> 国内一个特别出色的网盘，可以右键添加要同步的文件</li>
+<li><a href="http://evernote.com/">Evernote</a> 这个大家都懂的</li>
+<li><a href="http://www.trankynam.com/xtrafinder/">XtraFinder</a> 为你的Finder增加Tab，剪切等功能</li>
+<li><a href="http://shortcatapp.com/">shortcat</a>键盘快捷键，写啥点啥,怒赞</li>
+</ol>
+
+
+<h4>shortcat快捷键</h4>
+
+<p><code>ruby
+cmd+shift+space唤醒
+输入关键词后，如果匹配了多个，使用control+字母去点击相应的匹配
+</code></p>
+
+<h4>安装HomeBrew</h4>
+
+<p>Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包</p>
+
+<p>比如安装mysql，你只需要</p>
+
+<p><code>ruby
+brew install mysql  
+</code>
+Homebrew 安装特别简单，只需要键入</p>
+
+<p><code>ruby
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+</code></p>
+
+<p>相关的文档可以到官方去查看<a href="http://mxcl.github.io/homebrew/">http://mxcl.github.io/homebrew/</a></p>
+
+<h4>安装oh-my-Zsh</h4>
+
+<p>Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，</p>
+
+<p>安装步骤
+```ruby
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh</p>
+
+<h1>备份你的.zshrc文件</h1>
+
+<p>cp ~/.zshrc ~/.zshrc.orig</p>
+
+<h1>创建zsh配置</h1>
+
+<p>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</p>
+
+<h1>设置zsh为你的默认shell</h1>
+
+<p>chsh -s /bin/zsh</p>
+
+<h1>重启终端就会生效</h1>
+
+<p>```</p>
+
+<p>这里还有一些主题<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">https://github.com/robbyrussell/oh-my-zsh/wiki/themes</a></p>
+
+<p>如果你要修改zsh的默认主题
+```ruby
+vi ~/.zshrc</p>
+
+<p>修改ZSH_THEME为你喜欢的主题名即可
+```</p>
+
+<p>如果不想继续使用，可以使用以下命令卸载
+<code>ruby
+uninstall_oh_my_zsh
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
