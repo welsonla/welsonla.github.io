@@ -41,7 +41,10 @@ platform :ios, '5.1'
 Pod 'FMDB','2.0'
 ```
 
-然后执行pod install
+然后执行下面的命令，将这些类库加到到本地
 
+```ruby
+pod install
+```
 
 之后将会生成一个workspace文件，以后我们打开项目的时候，就打开workspace文件即可，项目和其所需要的类库都以sub project的方式加到了这个workspace下面
