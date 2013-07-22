@@ -3,7 +3,7 @@ layout: post
 title: "blog with github(4)-开始写吧，骚年"
 date: 2013-06-03 13:57
 comments: true
-categories: 
+categories: 技术随笔 
 ---
 
 

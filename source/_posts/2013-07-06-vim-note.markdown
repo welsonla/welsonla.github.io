@@ -1,0 +1,43 @@
+---
+layout: post
+title: "vim-note"
+date: 2013-07-06 17:27
+comments: true
+categories: 技术随笔 
+---
+
+####移动到行首
+```ruby
+0
+```
+
+####移动到行尾
+```ruby
+$
+```
+
+####剪切多行
+```ruby
+v
+向下移动
+d
+```
+
+####粘贴
+```ruby
+P
+```
+
+####在nerdTree光标处新建一个文件
+```ruby
+m
+```
+
+####删除多行(数字+dd)
+```ruby
+5dd #删除5行
+```
+
+
+
+

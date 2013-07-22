@@ -3,7 +3,7 @@ layout: post
 title: "一个码农的Mac配置"
 date: 2013-04-10 14:14
 comments: true
-categories: 技术随笔
+categories: 工具控
 ---
 
 

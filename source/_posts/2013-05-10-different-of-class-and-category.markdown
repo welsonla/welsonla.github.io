@@ -3,7 +3,7 @@ layout: post
 title: "different of class and category"
 date: 2013-05-10 01:05
 comments: true
-categories: 
+categories: 技术随笔 
 ---
 
 
