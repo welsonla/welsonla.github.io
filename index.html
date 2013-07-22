@@ -1071,6 +1071,20 @@ git checkout -b newbranch ">
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>cd到你的项目的根目录，就是跟project文件同级,建立Podfile文件</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">touch</span> <span class="no">Podfile</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>加入平台版本，（5.1可以省略，但是最好在podfile中加入，因为一些ARC相关的类库不加的话，会提示错误）</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span><span class="s1">&#39;5.1&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
 <p>搜索第三方的oc库</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -1090,7 +1104,18 @@ git checkout -b newbranch ">
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>通过搜索，我们已经找到了该类库的版本的名字，只需要将这些内容加入到podfile文件中即可</p>
 
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">&#39;5.1&#39;</span>
+</span><span class='line'><span class="no">Pod</span> <span class="s1">&#39;FMDB&#39;</span><span class="p">,</span><span class="s1">&#39;2.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后执行pod install</p>
+
+<p>之后将会生成一个workspace文件，以后我们打开项目的时候，就打开workspace文件即可，项目和其所需要的类库都以sub project的方式加到了这个workspace下面</p>
 </div>
   
   
