@@ -3,7 +3,7 @@ layout: post
 title: "vim-note"
 date: 2013-07-06 17:27
 comments: true
-categories: 技术随笔 
+categories: 工具控 
 ---
 
 ####移动到行首

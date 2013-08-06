@@ -3,7 +3,7 @@ layout: post
 title: "git笔记"
 date: 2013-06-25 09:21
 comments: true
-categories: 技术随笔 
+categories: git 
 ---
 
 ####添加所有新文件
