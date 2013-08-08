@@ -25,7 +25,7 @@ Someone could be eavesdropping on you right now (man-in-the-middle attack)!
 It is also possible that a host key has just been changed.
 ```
 
-第一个问题非常简单，就是修改/etc/hosts，添加一个IP与域名的对应关系即可
+~~第一个问题非常简单，就是修改/etc/hosts，添加一个IP与域名的对应关系即可~~
 
 第二个是要求你更新know_host中的RSA key，执行如下命令即可
 
