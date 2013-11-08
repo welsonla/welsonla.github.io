@@ -49,3 +49,7 @@ git branch -r
 ```ruby
 git log
 ```
+####将现有svn项目转换成git项目，并保留所有commit log
+```ruby
+git svn clone [SVN-Path]
+```
