@@ -49,6 +49,24 @@ git branch -r
 ```ruby
 git log
 ```
+
+####查看当前tag
+```ruby
+git tag
+```
+####创建一个新的tag
+```ruby
+git tag v1.1
+```
+
+####降当前tag推送到服务器
+```ruby
+git push origin --tags
+
+推送单个
+git push origin v1.1
+```
+
 ####将现有svn项目转换成git项目，并保留所有commit log
 ```ruby
 git svn clone [SVN-Path]
