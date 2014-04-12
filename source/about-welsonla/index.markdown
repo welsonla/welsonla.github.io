@@ -19,7 +19,6 @@ Object-c , PHP ,Ruby on Rails
 
 只是一个喜欢技术并且想安安心心做技术的人，喜欢开源，乐于分享，最近在学习Ruby on rails
 
-最近想换工作，如果对我感兴趣，可以email给我： wyc.jar@gmail.com
 
 
 
