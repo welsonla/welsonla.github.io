@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Welsonla]]></title>
   <link href="http://welsonla.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2014-04-12T23:27:58+08:00</updated>
+  <updated>2014-05-12T10:28:31+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learn core animation the hard way]]></title>
+    <link href="http://welsonla.github.io/blog/2014/05/11/learn-core-animation-the-hard-way/"/>
+    <updated>2014-05-11T20:43:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2014/05/11/learn-core-animation-the-hard-way</id>
+    <content type="html"><![CDATA[<h3>Document</h3>
+
+<ol>
+<li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW8">CABasicAnimation Keypath</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Animation_Types_Timing/Articles/PropertyAnimations.html">Animation Types and Timing Programming Guide</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/reference/CGAffineTransform/Reference/reference.html">CGAffineTransform</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066">Quartz 2D Programming Guide</a></li>
+<li><a href="http://baike.baidu.com/view/954621.htm">放射变换</a></li>
+<li><a href="http://www.cnblogs.com/xiaodao/archive/2012/02/10/2345481.html">组合动画</a></li>
+<li><a href="http://www.cnblogs.com/v2m_/archive/2013/05/09/3070187.html">http://www.cnblogs.com/v2m_/archive/2013/05/09/3070187.html</a></li>
+<li><a href="http://www.cnblogs.com/sell/archive/2013/02/01/2889013.html">几个常用动画代码</a></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[encrypt sqlite with sqlcipher]]></title>
