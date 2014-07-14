@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Welsonla]]></title>
   <link href="http://welsonla.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2014-05-12T10:28:31+08:00</updated>
+  <updated>2014-07-14T16:58:34+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Xcode5 install command line tools]]></title>
+    <link href="http://welsonla.github.io/blog/2014/07/14/xcode5-install-command-line-tools/"/>
+    <updated>2014-07-14T16:56:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2014/07/14/xcode5-install-command-line-tools</id>
+    <content type="html"><![CDATA[<p>之前遇到过，一直没做笔记，导致每次都要现查</p>
+
+<p><code>ruby
+xcode-select --install
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Instruments无法启动]]></title>
+    <link href="http://welsonla.github.io/blog/2014/07/14/instrument-start-fail/"/>
+    <updated>2014-07-14T15:57:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2014/07/14/instrument-start-fail</id>
+    <content type="html"><![CDATA[<p>最近在iOS7的系统上使用Instrument想检查内存的leaks，启动时候总是提示失败，花了些时间，解决了这个问题，做下笔记。</p>
+
+<h2>issue</h2>
+
+<p>```ruby
+Error Starting Recording
+At least one target failed to launch; aborting run</p>
+
+<p>Target failed to run. Permisson to debug [app name] was denied. The app must be signed with a development identity (i.e. iOS Developer)
+```
+<img src="http://ww4.sinaimg.cn/large/6e8de9dbgw1eice18vkrej20rs0jmgnq.jpg" alt="http://ww4.sinaimg.cn/large/6e8de9dbgw1eice18vkrej20rs0jmgnq.jpg" /></p>
+
+<h2>fix</h2>
+
+<p><code>ruby
+Product--&gt;Scheme--&gt;Edit Scheme,将Profile那栏中的Build Configuration将Release改为Debug
+</code>
+<img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1eice66ef74j20jg0d7759.jpg" alt="http://ww1.sinaimg.cn/large/6e8de9dbgw1eice66ef74j20jg0d7759.jpg" /></p>
+
+<h2>issue</h2>
+
+<p>1.如果发现leaks视图无法监控到任何的内存泄露，说明你开启了Zombie，将Scheme菜单中的<code>Enable Zombie Objects</code>勾去就可以了
+2.检查你是否启用了环境变量，变量中是否开启了zombie设置</p>
+
+<p><img src="http://ww4.sinaimg.cn/large/6e8de9dbgw1eiceaztirjj20ee0arq3q.jpg" alt="http://ww4.sinaimg.cn/large/6e8de9dbgw1eiceaztirjj20ee0arq3q.jpg" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learn core animation the hard way]]></title>

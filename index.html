@@ -7,8 +7,8 @@
 	<meta name="author" content="Welsonla">
 
 	
-	<meta name="description" content="May 11th, 2014 iOS Comments Learn Core Animation the Hard Way Document CABasicAnimation Keypath
-Animation Types and Timing Programming Guide &hellip;">
+	<meta name="description" content="Jul 14th, 2014 iOS Comments Xcode5 Install Command Line Tools 之前遇到过，一直没做笔记，导致每次都要现查 1
+xcode-select --install Jul 14th, 2014 iOS Comments &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,118 @@ Animation Types and Timing Programming Guide &hellip;">
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-14T16:56:00+08:00" data-updated="true" itemprop="datePublished">Jul 14<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>iOS</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/07/14/xcode5-install-command-line-tools/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/07/14/xcode5-install-command-line-tools/" itemprop="url">Xcode5 Install Command Line Tools</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>之前遇到过，一直没做笔记，导致每次都要现查</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">xcode</span><span class="o">-</span><span class="nb">select</span> <span class="o">--</span><span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-14T15:57:00+08:00" data-updated="true" itemprop="datePublished">Jul 14<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>iOS</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/07/14/instrument-start-fail/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/07/14/instrument-start-fail/" itemprop="url">Instruments无法启动</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>最近在iOS7的系统上使用Instrument想检查内存的leaks，启动时候总是提示失败，花了些时间，解决了这个问题，做下笔记。</p>
+
+<h2>issue</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Error</span> <span class="no">Starting</span> <span class="no">Recording</span>
+</span><span class='line'><span class="no">At</span> <span class="n">least</span> <span class="n">one</span> <span class="n">target</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">launch</span><span class="p">;</span> <span class="n">aborting</span> <span class="n">run</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="no">Target</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">run</span><span class="o">.</span> <span class="no">Permisson</span> <span class="n">to</span> <span class="n">debug</span> <span class="o">[</span><span class="n">app</span> <span class="nb">name</span><span class="o">]</span> <span class="n">was</span> <span class="n">denied</span><span class="o">.</span> <span class="no">The</span> <span class="n">app</span> <span class="n">must</span> <span class="n">be</span> <span class="n">signed</span> <span class="n">with</span> <span class="n">a</span> <span class="n">development</span> <span class="n">identity</span> <span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">iOS</span> <span class="no">Developer</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="http://ww4.sinaimg.cn/large/6e8de9dbgw1eice18vkrej20rs0jmgnq.jpg" alt="http://ww4.sinaimg.cn/large/6e8de9dbgw1eice18vkrej20rs0jmgnq.jpg" /></p>
+
+<h2>fix</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Product</span><span class="o">--&gt;</span><span class="no">Scheme</span><span class="o">--&gt;</span><span class="no">Edit</span> <span class="no">Scheme</span><span class="p">,</span><span class="err">将</span><span class="no">Profile</span><span class="err">那栏中的</span><span class="no">Build</span> <span class="no">Configuration</span><span class="err">将</span><span class="no">Release</span><span class="err">改为</span><span class="no">Debug</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1eice66ef74j20jg0d7759.jpg" alt="http://ww1.sinaimg.cn/large/6e8de9dbgw1eice66ef74j20jg0d7759.jpg" /></p>
+
+<h2>issue</h2>
+
+<p>1.如果发现leaks视图无法监控到任何的内存泄露，说明你开启了Zombie，将Scheme菜单中的<code>Enable Zombie Objects</code>勾去就可以了
+2.检查你是否启用了环境变量，变量中是否开启了zombie设置</p>
+
+<p><img src="http://ww4.sinaimg.cn/large/6e8de9dbgw1eiceaztirjj20ee0arq3q.jpg" alt="http://ww4.sinaimg.cn/large/6e8de9dbgw1eiceaztirjj20ee0arq3q.jpg" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -943,244 +1055,6 @@ Animation Types and Timing Programming Guide &hellip;">
 
 
 <p>本地使用http://localhost:4000就可以访问了</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-03T13:46:00+08:00" data-updated="true" itemprop="datePublished">Jun 3<span>rd</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ji-zhu-sui-bi/'>技术随笔</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2013/06/03/blog-with-github-3/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/06/03/blog-with-github-3/" itemprop="url">Blog With github(3)-Octopress配置</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">_config</span><span class="o">.</span><span class="n">yml</span>       <span class="c1"># Main config (Jekyll&#39;s settings)</span>
-</span><span class='line'><span class="no">Rakefile</span>          <span class="c1"># Configs for deployment</span>
-</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">rb</span>         <span class="c1"># Compass config</span>
-</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">ru</span>         <span class="c1"># Rack config</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Rakefile大多是与部署相关的配置,如果不需要同步的话，你就不需要进行修改</p>
-
-<h4>Blog配置</h4>
-
-<p>_config.yml有三部分配置,你必须修改url，并且title，subtitle和author也要修改，还有一些第三方的服务需要启用</p>
-
-<h5>主配置</h5>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">url</span><span class="p">:</span>                <span class="c1"># For rewriting urls for RSS, etc</span>
-</span><span class='line'><span class="ss">title</span><span class="p">:</span>              <span class="c1"># Used in the header and title tags</span>
-</span><span class='line'><span class="ss">subtitle</span><span class="p">:</span>           <span class="c1"># A description used in the header</span>
-</span><span class='line'><span class="ss">author</span><span class="p">:</span>             <span class="c1"># Your name, for RSS, Copyright, Metadata</span>
-</span><span class='line'><span class="n">simple_search</span><span class="p">:</span>      <span class="c1"># Search engine for simple site search</span>
-</span><span class='line'><span class="ss">description</span><span class="p">:</span>        <span class="c1"># A default meta description for your site</span>
-</span><span class='line'><span class="n">date_format</span><span class="p">:</span>        <span class="c1"># Format dates using Ruby&#39;s date strftime syntax</span>
-</span><span class='line'><span class="n">subscribe_rss</span><span class="p">:</span>      <span class="c1"># Url for your blog&#39;s feed, defauts to /atom.xml</span>
-</span><span class='line'><span class="n">subscribe_email</span><span class="p">:</span>    <span class="c1"># Url to subscribe by email (service required)</span>
-</span><span class='line'><span class="n">category_feeds</span><span class="p">:</span>     <span class="c1"># Enable per category RSS feeds (defaults to false in 2.1)</span>
-</span><span class='line'><span class="ss">email</span><span class="p">:</span>              <span class="c1"># Email address for the RSS feed if you want it.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h5>Jekyll&amp;Plugins</h5>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">root</span><span class="p">:</span>               <span class="c1"># Mapping for relative urls (default: /)</span>
-</span><span class='line'><span class="ss">permalink</span><span class="p">:</span>          <span class="c1"># Permalink structure for blog posts</span>
-</span><span class='line'><span class="ss">source</span><span class="p">:</span>             <span class="c1"># Directory for site source files</span>
-</span><span class='line'><span class="ss">destination</span><span class="p">:</span>        <span class="c1"># Directory for generated site files</span>
-</span><span class='line'><span class="ss">plugins</span><span class="p">:</span>            <span class="c1"># Directory for Jekyll plugins</span>
-</span><span class='line'><span class="n">code_dir</span><span class="p">:</span>           <span class="c1"># Directory for code snippets (for include_code plugin)</span>
-</span><span class='line'><span class="n">category_dir</span><span class="p">:</span>       <span class="c1"># Directory for generated blog category pages</span>
-</span><span class='line'>
-</span><span class='line'><span class="ss">pygments</span><span class="p">:</span>           <span class="c1"># Toggle python pygments syntax highlighting</span>
-</span><span class='line'><span class="ss">paginate</span><span class="p">:</span>           <span class="c1"># Posts per page on the blog index</span>
-</span><span class='line'><span class="n">pagination_dir</span><span class="p">:</span>     <span class="c1"># Directory base for pagination URLs eg. /blog/page/2/</span>
-</span><span class='line'><span class="n">recent_posts</span><span class="p">:</span>       <span class="c1"># Number of recent posts to appear in the sidebar</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">default_asides</span><span class="p">:</span>     <span class="c1"># Configure what shows up in the sidebar and in what order</span>
-</span><span class='line'><span class="n">blog_index_asides</span><span class="p">:</span>  <span class="c1"># Optional sidebar config for blog index page</span>
-</span><span class='line'><span class="n">post_asides</span><span class="p">:</span>        <span class="c1"># Optional sidebar config for post layout</span>
-</span><span class='line'><span class="n">page_asides</span><span class="p">:</span>        <span class="c1"># Optional sidebar config for page layout</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h5>第三方配置</h5>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Github</span> <span class="o">-</span> <span class="no">List</span> <span class="n">your</span> <span class="n">github</span> <span class="n">repositories</span> <span class="k">in</span> <span class="n">the</span> <span class="n">sidebar</span>
-</span><span class='line'><span class="no">Twitter</span> <span class="o">-</span> <span class="no">Setup</span> <span class="n">a</span> <span class="n">sidebar</span> <span class="n">twitter</span> <span class="n">feed</span><span class="p">,</span> <span class="n">follow</span> <span class="n">button</span><span class="p">,</span> <span class="ow">and</span> <span class="n">tweet</span> <span class="n">button</span> <span class="p">(</span><span class="k">for</span> <span class="n">sharing</span> <span class="n">posts</span> <span class="ow">and</span> <span class="n">pages</span><span class="p">)</span><span class="o">.</span>
-</span><span class='line'><span class="no">Google</span> <span class="no">Plus</span> <span class="no">One</span> <span class="o">-</span> <span class="no">Setup</span> <span class="n">sharing</span> <span class="k">for</span> <span class="n">posts</span> <span class="ow">and</span> <span class="n">pages</span> <span class="n">on</span> <span class="no">Google</span><span class="err">’</span><span class="n">s</span> <span class="n">plus</span> <span class="n">one</span> <span class="n">network</span><span class="o">.</span>
-</span><span class='line'><span class="no">Pinboard</span> <span class="o">-</span> <span class="no">Share</span> <span class="n">your</span> <span class="n">recent</span> <span class="no">Pinboard</span> <span class="n">bookmarks</span> <span class="k">in</span> <span class="n">the</span> <span class="n">sidebar</span><span class="o">.</span>
-</span><span class='line'><span class="no">Delicious</span> <span class="o">-</span> <span class="no">Share</span> <span class="n">your</span> <span class="n">recent</span> <span class="no">Delicious</span> <span class="n">bookmarks</span> <span class="k">in</span> <span class="n">the</span> <span class="n">sidebar</span><span class="o">.</span>
-</span><span class='line'><span class="no">Disqus</span> <span class="no">Comments</span> <span class="o">-</span> <span class="no">Add</span> <span class="n">your</span> <span class="n">disqus</span> <span class="n">short</span> <span class="nb">name</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">disqus</span> <span class="n">comments</span> <span class="n">on</span> <span class="n">your</span> <span class="n">site</span><span class="o">.</span>
-</span><span class='line'><span class="no">Google</span> <span class="no">Analytics</span> <span class="o">-</span> <span class="no">Add</span> <span class="n">your</span> <span class="n">tracking</span> <span class="nb">id</span> <span class="n">to</span> <span class="n">enable</span> <span class="no">Google</span> <span class="no">Analytics</span> <span class="n">tracking</span> <span class="k">for</span> <span class="n">your</span> <span class="n">site</span><span class="o">.</span>
-</span><span class='line'><span class="no">Facebook</span> <span class="o">-</span> <span class="no">Add</span> <span class="n">a</span> <span class="no">Facebook</span> <span class="n">like</span> <span class="n">button</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-03T13:20:00+08:00" data-updated="true" itemprop="datePublished">Jun 3<span>rd</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ji-zhu-sui-bi/'>技术随笔</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2013/06/03/blog-with-github-2/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/06/03/blog-with-github-2/" itemprop="url">Blog With Github(2)-部署到github</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<h3>使用github pages</h3>
-
-<p>如果想使用 http://username.github.io的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io）</p>
-
-<p>用户使用的是Github Pages的master版本下面的public作为你的网站主目录，你可以通过浏览http://username.github.io来查看。如果你想在source这个版本上面维护代码，并且把内容提交到master分支，Octopress有一个命令来帮助你完成这些</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">setup_github_pages</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>然后，他将</p>
-
-<ol>
-<li>询问你的github pages的url</li>
-<li>将远程的重‘origin’重命名为‘octopress’</li>
-<li>在远程的origin讲你的github pages仓库添加进去</li>
-<li>切换当前branch从master切换到source</li>
-<li>根据你的仓库名，重新配置你的blog地址</li>
-<li>在_deploy目录下面设置master分支，用于部署</li>
-</ol>
-
-
-<p>接下来执行</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">generate</span>
-</span><span class='line'><span class="n">rake</span> <span class="n">deploy</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>这将生成你的blog，并将生成的文件copy到_deploy目录下面,并添加到git，将他们commit和push到master分支上面，稍后，你会收到一份来自github的email告诉你，你的提交已经收到，并且很快将发不到你的web上面</p>
-
-<p>并且，不要忘记提交你的代码到source分支</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
-</span><span class='line'><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;your message&#39;</span>
-</span><span class='line'><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">source</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>自定义域名绑定</h4>
-
-<p>首先你要source目录下面创建一个CNAME，</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">echo</span> <span class="s1">&#39;your-domain.com&#39;</span> <span class="o">&gt;&gt;</span> <span class="n">source</span><span class="o">/</span><span class="no">CNAME</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>之后去你的域名服务商或者你的dns服务商那里创建一条CNAME记录，记录指向的IP为
-(不要使用顶级域名指向到pages,要使用二级域名)</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">207</span><span class="o">.</span><span class="mi">97</span><span class="o">.</span><span class="mi">227</span><span class="o">.</span><span class="mi">245</span>
-</span></code></pre></td></tr></table></div></figure>
-
 
 		
 		
