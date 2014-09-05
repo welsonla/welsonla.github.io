@@ -7,10 +7,7 @@
 	<meta name="author" content="Welsonla">
 
 	
-	<meta name="description" content="Jun 3rd, 2013 技术随笔 Comments Blog With github(3)-Octopress配置 Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件 1
-2
-3
-4 &hellip;">
+	<meta name="description" content="Jun 3rd, 2013 技术随笔 Comments Blog With Github(4)-开始写吧，骚年 Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/&lt; &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,6 +88,159 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-03T13:57:00+08:00" data-updated="true" itemprop="datePublished">Jun 3<span>rd</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ji-zhu-sui-bi/'>技术随笔</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/06/03/blog-with-github-4/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/06/03/blog-with-github-4/" itemprop="url">Blog With Github(4)-开始写吧，骚年</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/&lt;category>/atom.xml中找到这些内容</p>
+
+<h4>Post</h4>
+
+<p>这些Post页面必须存放在Source/_posts目录下面，并且命名方式和jekyll的命名方式一样，会转换成YYYY-MM-DD-Post-title.markdown，这个文件的名字就是你的blog的url slug，日期帮助你排序这些文章</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_post</span><span class="o">[</span><span class="s2">&quot;Title&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在使用了ZSH的话，你要这样创建</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_post</span><span class="err">或者</span><span class="n">rake</span> <span class="n">new_post</span><span class="o">[</span><span class="p">\</span><span class="s2">&quot;Title</span><span class="se">\&quot;</span><span class="s2">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>例如</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_post</span><span class="o">[</span><span class="s2">&quot;Zombie Ninjas Attack: A survivor&#39;s retrospective&quot;</span><span class="o">]</span>
+</span><span class='line'> <span class="no">Creates</span> <span class="n">source</span><span class="o">/</span><span class="n">_posts</span><span class="o">/</span><span class="mi">2011</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="n">zombie</span><span class="o">-</span><span class="n">ninjas</span><span class="o">-</span><span class="n">attack</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">survivors</span><span class="o">-</span><span class="n">retrospective</span><span class="o">.</span><span class="n">markdown</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">~</span><span class="sr">/Code/</span><span class="n">rails</span><span class="o">/</span><span class="n">octopress</span><span class="p">(</span><span class="ss">branch</span><span class="p">:</span><span class="n">source</span><span class="p">)</span> <span class="err">»</span> <span class="n">rake</span> <span class="n">new_post</span>
+</span><span class='line'><span class="no">Enter</span> <span class="n">a</span> <span class="n">title</span> <span class="k">for</span> <span class="n">your</span> <span class="ss">post</span><span class="p">:</span> <span class="n">blog</span><span class="o">-</span><span class="n">with</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="mi">4</span>
+</span><span class='line'><span class="n">mkdir</span> <span class="o">-</span><span class="nb">p</span> <span class="n">source</span><span class="o">/</span><span class="n">_posts</span>
+</span><span class='line'><span class="no">Creating</span> <span class="kp">new</span> <span class="ss">post</span><span class="p">:</span> <span class="n">source</span><span class="o">/</span><span class="n">_posts</span><span class="o">/</span><span class="mi">2013</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="n">blog</span><span class="o">-</span><span class="n">with</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="mi">4</span><span class="o">.</span><span class="n">markdown</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>生成的内容大致如下</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">---</span>
+</span><span class='line'><span class="ss">layout</span><span class="p">:</span> <span class="n">post</span>
+</span><span class='line'><span class="ss">title</span><span class="p">:</span> <span class="s2">&quot;Zombie Ninjas Attack: A survivor&#39;s retrospective&quot;</span>
+</span><span class='line'><span class="ss">date</span><span class="p">:</span> <span class="mi">2011</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mo">03</span> <span class="mi">5</span><span class="p">:</span><span class="mi">59</span>
+</span><span class='line'><span class="ss">comments</span><span class="p">:</span> <span class="kp">true</span>
+</span><span class='line'><span class="n">external</span><span class="o">-</span><span class="ss">url</span><span class="p">:</span>
+</span><span class='line'><span class="ss">categories</span><span class="p">:</span>
+</span><span class='line'><span class="o">---</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>你可以关闭comments，或者为他添加categories的tag，并且你还可以添加<code>author: Your Name</code>与<code>published: false</code>来控制是否发布</p>
+
+<h4>Page</h4>
+
+<p>生成Page的命令</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_page</span><span class="o">[</span><span class="k">super</span><span class="o">-</span><span class="n">awesome</span><span class="o">]</span>
+</span><span class='line'><span class="c1"># creates /source/super-awesome/index.markdown</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">rake</span> <span class="n">new_page</span><span class="o">[</span><span class="k">super</span><span class="o">-</span><span class="n">awesome</span><span class="o">/</span><span class="n">page</span><span class="o">.</span><span class="n">html</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果使用了zsh的话，方法要参照post的创建方式</p>
+
+<p>生成的pages的默认内如大致如下</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">---</span>
+</span><span class='line'><span class="ss">layout</span><span class="p">:</span> <span class="n">page</span>
+</span><span class='line'><span class="ss">title</span><span class="p">:</span> <span class="s2">&quot;Super Awesome&quot;</span>
+</span><span class='line'><span class="ss">date</span><span class="p">:</span> <span class="mi">2011</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mo">03</span> <span class="mi">5</span><span class="p">:</span><span class="mi">59</span>
+</span><span class='line'><span class="ss">comments</span><span class="p">:</span> <span class="kp">true</span>
+</span><span class='line'><span class="ss">sharing</span><span class="p">:</span> <span class="kp">true</span>
+</span><span class='line'><span class="ss">footer</span><span class="p">:</span> <span class="kp">true</span>
+</span><span class='line'><span class="o">---</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Content</h4>
+
+<p>如果列表中不想显示全文内容的话，可以添加<code>&lt;!-- more --&gt;</code>标签，这将在文章下面生成一个“Continue →” 链接，链接到全文的地址</p>
+
+<h3>Generate &amp; Preview</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">generate</span>   <span class="c1"># Generates posts and pages into the public directory</span>
+</span><span class='line'><span class="n">rake</span> <span class="n">watch</span>      <span class="c1"># Watches source/ and sass/ for changes and regenerates</span>
+</span><span class='line'><span class="n">rake</span> <span class="n">preview</span>    <span class="c1"># Watches, and mounts a webserver at http://localhost:4000</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>本地使用http://localhost:4000就可以访问了</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">

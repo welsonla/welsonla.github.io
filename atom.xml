@@ -4,7 +4,7 @@
   <title><![CDATA[Welsonla]]></title>
   <link href="http://welsonla.github.io/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2014-07-14T16:58:31+08:00</updated>
+  <updated>2014-09-05T13:32:06+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,98 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[cocoa简洁写法笔记]]></title>
+    <link href="http://welsonla.github.io/blog/2014/09/05/cocoa-tidy-write/"/>
+    <updated>2014-09-05T13:14:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2014/09/05/cocoa-tidy-write</id>
+    <content type="html"><![CDATA[<h3>NSNumber</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">NSNumber</span> <span class="o">*</span><span class="n">totalNumber</span> <span class="o">=</span> <span class="o">[</span><span class="no">NSNumber</span> <span class="ss">numberWithInt</span><span class="p">:</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="n">to</span>
+</span><span class='line'><span class="no">NSNumber</span> <span class="o">*</span><span class="n">totalNumber</span> <span class="o">=</span> <span class="err">@</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">##更多拓展</span>
+</span><span class='line'><span class="no">NSNumber</span> <span class="o">*</span><span class="n">floatNumber</span> <span class="o">=</span> <span class="err">@</span><span class="mi">2</span><span class="o">.</span><span class="mi">5</span><span class="n">f</span><span class="p">;</span>
+</span><span class='line'><span class="no">NSNumber</span> <span class="o">*</span><span class="n">boolNumber</span> <span class="o">=</span> <span class="vi">@YES</span><span class="p">;</span>
+</span><span class='line'><span class="no">NSNumber</span> <span class="o">*</span><span class="n">totalNumber</span> <span class="o">=</span> <span class="err">@</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">6</span><span class="o">.</span><span class="mi">5</span><span class="n">f</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>NSArray</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">NSArray</span> <span class="o">*</span><span class="n">members</span> <span class="o">=</span> <span class="o">[</span><span class="no">NSArray</span> <span class="ss">arrayWithObjects</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;father&quot;</span><span class="p">,</span><span class="err">@</span><span class="s2">&quot;mother&quot;</span><span class="p">,</span><span class="err">@</span><span class="s2">&quot;Jim&quot;</span><span class="p">,</span><span class="kp">nil</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="n">to</span>
+</span><span class='line'><span class="no">NSArray</span> <span class="o">*</span><span class="n">members</span> <span class="o">=</span> <span class="err">@</span><span class="o">[</span><span class="err">@</span><span class="s2">&quot;father&quot;</span><span class="p">,</span><span class="err">@</span><span class="s2">&quot;mother&quot;</span><span class="p">,</span><span class="err">@</span><span class="s2">&quot;Jim&quot;</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#取值</span>
+</span><span class='line'><span class="no">NSString</span> <span class="o">*</span><span class="n">username</span> <span class="o">=</span> <span class="o">[</span><span class="n">members</span> <span class="ss">objectAtIndex</span><span class="p">:</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="n">to</span>
+</span><span class='line'><span class="no">NSString</span> <span class="o">*</span><span class="n">username</span> <span class="o">=</span> <span class="n">members</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>NSDictionary</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">NSDictionary</span> <span class="o">*</span><span class="n">personData</span> <span class="o">=</span> <span class="o">[</span><span class="no">NSDictionary</span> <span class="ss">dictionaryWithObjectsAndKeys</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;Jim&quot;</span><span class="p">,</span><span class="err">@</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+</span><span class='line'><span class="err">@</span><span class="s2">&quot;man&quot;</span><span class="p">,</span><span class="err">@</span><span class="s2">&quot;gender&quot;</span><span class="p">,</span><span class="kp">nil</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="n">to</span>
+</span><span class='line'><span class="no">NSDictionary</span> <span class="o">*</span><span class="n">personData</span> <span class="o">=</span> <span class="err">@</span><span class="p">{</span><span class="err">@</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;Jim&quot;</span><span class="p">,</span>
+</span><span class='line'>                                  <span class="err">@</span><span class="s2">&quot;gender&quot;</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;man&quot;</span><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#取值</span>
+</span><span class='line'><span class="no">NSString</span> <span class="o">*</span><span class="n">username</span> <span class="o">=</span> <span class="o">[</span><span class="n">personData</span> <span class="ss">objectForKey</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;name&quot;</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="n">to</span>
+</span><span class='line'><span class="no">NSString</span> <span class="o">*</span><span class="n">username</span> <span class="o">=</span> <span class="n">person</span><span class="o">[</span><span class="err">@</span><span class="s2">&quot;name&quot;</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#设值和替换</span>
+</span><span class='line'><span class="o">[</span><span class="n">personData</span> <span class="ss">replaceObjectAtIndex</span><span class="p">:</span><span class="mi">1</span> <span class="ss">withOjbect</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;woman&quot;</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="o">[</span><span class="n">personData</span> <span class="ss">setObject</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;address&quot;</span> <span class="ss">forKey</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;Beijing&quot;</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="n">to</span>
+</span><span class='line'><span class="n">person</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="err">@</span><span class="s2">&quot;woman&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="n">person</span><span class="o">[</span><span class="err">@</span><span class="s2">&quot;address&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="err">@</span><span class="s2">&quot;Beijing&quot;</span><span class="p">;</span>     
+</span><span class='line'>                          
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Xcode5 install command line tools]]></title>
