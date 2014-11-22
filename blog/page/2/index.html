@@ -7,7 +7,23 @@
 	<meta name="author" content="Welsonla">
 
 	
-	<meta name="description" content="Jun 3rd, 2013 技术随笔 Comments Blog With Github(4)-开始写吧，骚年 Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/&lt; &hellip;">
+	<meta name="description" content="Jul 6th, 2013 工具控 Comments Vim-note 移动到行首 1
+0 移动到行尾 1
+$ 剪切多行 1
+2
+3
+v
+向下移动
+d 粘贴 1
+P 在nerdTree光标处新建一个文件 1
+m 删除多行(数字+dd) 1
+5dd #删除5行 多行注释 1
+2
+3
+4
+5
+6
+1 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +104,238 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-06T17:27:00+08:00" data-updated="true" itemprop="datePublished">Jul 6<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/gong-ju-kong/'>工具控</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/07/06/vim-note/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/07/06/vim-note/" itemprop="url">Vim-note</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h4>移动到行首</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">0</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>移动到行尾</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">$</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>剪切多行</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">v</span>
+</span><span class='line'><span class="err">向下移动</span>
+</span><span class='line'><span class="n">d</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>粘贴</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">P</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>在nerdTree光标处新建一个文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">m</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>删除多行(数字+dd)</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">5</span><span class="n">dd</span> <span class="c1">#删除5行</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>多行注释</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">1</span><span class="o">.</span><span class="n">ESC</span><span class="o">+</span><span class="n">v</span>
+</span><span class='line'><span class="mi">2</span><span class="o">.</span><span class="err">方向键向下或者向上选中多行</span>
+</span><span class='line'><span class="mi">3</span><span class="o">.</span><span class="n">Control</span><span class="o">+</span><span class="n">v</span>
+</span><span class='line'><span class="mi">4</span><span class="o">.</span><span class="n">Shift</span><span class="o">+</span><span class="n">i</span>
+</span><span class='line'><span class="mi">5</span><span class="o">.</span><span class="c1">#</span>
+</span><span class='line'><span class="mi">6</span><span class="o">.</span><span class="n">Esc</span><span class="p">,</span><span class="no">Esc</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-25T09:21:00+08:00" data-updated="true" itemprop="datePublished">Jun 25<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/git/'>git</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/06/25/git-note/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/06/25/git-note/" itemprop="url">Git笔记</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h4>添加所有新文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>从版本中去除一个文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">rm</span> <span class="nb">test</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">rb</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>假设有很多新文件和删除了好多文件</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>获取所有远程版本</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">fetch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>创建并切换到新分支</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">newbranch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>切换到分支</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>迁移原有git项目到新得项目地址</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">remote</span> <span class="n">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">git</span><span class="vi">@git</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="ss">:welsonla</span><span class="o">/</span><span class="n">studio</span><span class="o">.</span><span class="n">git</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>查看当前git分支</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">r</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>查看git log</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">log</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>查看当前tag</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">tag</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>创建一个新的tag</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">tag</span> <span class="n">v1</span><span class="o">.</span><span class="mi">1</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>降当前tag推送到服务器</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">--</span><span class="n">tags</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">推送单个</span>
+</span><span class='line'><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">v1</span><span class="o">.</span><span class="mi">1</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>将现有svn项目转换成git项目，并保留所有commit log</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">svn</span> <span class="nb">clone</span> <span class="o">[</span><span class="no">SVN</span><span class="o">-</span><span class="no">Path</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -960,237 +1208,13 @@
 
 </article>
 
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-10T16:48:00+08:00" data-updated="true" itemprop="datePublished">Apr 10<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ios/'>iOS</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2013/04/10/use-cocoapods/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/04/10/use-cocoapods/" itemprop="url">Cocoapods 使用</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>cd到你的项目的根目录，就是跟project文件同级,建立Podfile文件</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">touch</span> <span class="no">Podfile</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>加入平台版本，（5.1可以省略，但是最好在podfile中加入，因为一些ARC相关的类库不加的话，会提示错误）</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span><span class="s1">&#39;5.1&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>搜索第三方的oc库</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">pod</span> <span class="n">search</span> <span class="n">fmdb</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">-&gt;</span> <span class="no">FMDB</span> <span class="p">(</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
-</span><span class='line'>   <span class="n">A</span> <span class="no">Cocoa</span> <span class="o">/</span> <span class="no">Objective</span><span class="o">-</span><span class="n">C</span> <span class="n">wrapper</span> <span class="n">around</span> <span class="no">SQLite</span><span class="o">.</span>
-</span><span class='line'>   <span class="o">-</span> <span class="ss">Homepage</span><span class="p">:</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ccgus</span><span class="o">/</span><span class="n">fmdb</span>
-</span><span class='line'>   <span class="o">-</span> <span class="ss">Source</span><span class="p">:</span>   <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ccgus</span><span class="o">/</span><span class="n">fmdb</span><span class="o">.</span><span class="n">git</span>
-</span><span class='line'>   <span class="o">-</span> <span class="ss">Versions</span><span class="p">:</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span> <span class="o">[</span><span class="n">master</span> <span class="n">repo</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>通过搜索，我们已经找到了该类库的版本的名字，只需要将这些内容加入到podfile文件中即可</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">&#39;5.1&#39;</span>
-</span><span class='line'><span class="no">Pod</span> <span class="s1">&#39;FMDB&#39;</span><span class="p">,</span><span class="s1">&#39;2.0&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>然后执行下面的命令，将这些类库加到到本地</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">pod</span> <span class="n">install</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>之后将会生成一个workspace文件，以后我们打开项目的时候，就打开workspace文件即可，项目和其所需要的类库都以sub project的方式加到了这个workspace下面</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-10T14:14:00+08:00" data-updated="true" itemprop="datePublished">Apr 10<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/gong-ju-kong/'>工具控</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2013/04/10/build-your-mac-os/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/04/10/build-your-mac-os/" itemprop="url">一个码农的Mac配置</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<h4>我常用的一些Mac工具</h4>
-
-<ol>
-<li><a href="http://www.iterm2.com/">iTerm2</a> 一个增强的命令终端</li>
-<li><a href="http://www.sourcetreeapp.com/">SourceTree</a> git代码控制工具</li>
-<li><a href="https://www.wunderlist.com/">WunderList</a> 一个出色的Todo工具，提供云同步，我把它当做我的任务列表</li>
-<li><a href="https://github.com/textmate/textmate/tags">TextMate2</a> 号称&#8221;The Missing Editor for Mac OS X&#8221;</li>
-<li><a href="http://www.sublimetext.com/2">SublimeText2</a> 另一个特别出色的Editor</li>
-<li><a href="http://www.alfredapp.com/">Alfred</a> Option+Space,唤出，提高你打开软件的效率，购买Powerpack还可以使用很多强大的拓展</li>
-<li><a href="http://www.i-funbox.com/">iFunBox</a> 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面</li>
-<li><a href="https://jianguoyun.com/">坚果云</a> 国内一个特别出色的网盘，可以右键添加要同步的文件</li>
-<li><a href="http://evernote.com/">Evernote</a> 这个大家都懂的</li>
-<li><a href="http://www.trankynam.com/xtrafinder/">XtraFinder</a> 为你的Finder增加Tab，剪切等功能</li>
-<li><a href="http://shortcatapp.com/">shortcat</a>键盘快捷键，写啥点啥,怒赞</li>
-<li><a href="http://chameleon.alessandroboschini.com/">Chameleon</a> 打开第三方SSD的trim</li>
-</ol>
-
-
-<h4>shortcat快捷键</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">cmd</span><span class="o">+</span><span class="n">shift</span><span class="o">+</span><span class="n">space</span><span class="err">唤醒</span>
-</span><span class='line'><span class="err">输入关键词后，如果匹配了多个，使用</span><span class="n">control</span><span class="o">+</span><span class="err">字母去点击相应的匹配</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>安装HomeBrew</h4>
-
-<p>Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包</p>
-
-<p>比如安装mysql，你只需要</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">brew</span> <span class="n">install</span> <span class="n">mysql</span>  
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Homebrew 安装特别简单，只需要键入</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>相关的文档可以到官方去查看<a href="http://mxcl.github.io/homebrew/">http://mxcl.github.io/homebrew/</a></p>
-
-<h4>安装oh-my-Zsh</h4>
-
-<p>Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，</p>
-
-<p>安装步骤</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">robbyrussell</span><span class="o">/</span><span class="n">oh</span><span class="o">-</span><span class="n">my</span><span class="o">-</span><span class="n">zsh</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#备份你的.zshrc文件</span>
-</span><span class='line'><span class="n">cp</span> <span class="o">~</span><span class="sr">/.zshrc ~/</span><span class="o">.</span><span class="n">zshrc</span><span class="o">.</span><span class="n">orig</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#创建zsh配置</span>
-</span><span class='line'><span class="n">cp</span> <span class="o">~</span><span class="sr">/.oh-my-zsh/</span><span class="n">templates</span><span class="o">/</span><span class="n">zshrc</span><span class="o">.</span><span class="n">zsh</span><span class="o">-</span><span class="n">template</span> <span class="o">~</span><span class="sr">/.zshrc</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">#设置zsh为你的默认shell</span>
-</span><span class='line'><span class="sr">chsh -s /</span><span class="n">bin</span><span class="o">/</span><span class="n">zsh</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">#重启终端就会生效</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>这里还有一些主题<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">https://github.com/robbyrussell/oh-my-zsh/wiki/themes</a></p>
-
-<p>如果你要修改zsh的默认主题</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">vi</span> <span class="o">~</span><span class="sr">/.zshrc</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">修改ZSH_THEME为你喜欢的主题名即可</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>如果不想继续使用，可以使用以下命令卸载</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">uninstall_oh_my_zsh</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
-	</div>
-
-</article>
-
 </div>
 <nav id="pagenavi">
     
         <a href="/" class="prev">Prev</a>
     
+    
+        <a href="/blog/page/3/" class="next">Next</a>
     
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav></div>
