@@ -32,11 +32,10 @@ NSString *username = members[2];
 
 ###NSDictionary
 ```ruby
-NSDictionary *personData = [NSDictionary dictionaryWithObjectsAndKeys:@"Jim",@"name",
-@"man",@"gender",nil];
+NSDictionary *personData = [NSDictionary dictionaryWithObjectsAndKeys:@"Jim",@"name",@"man",@"gender",nil];
 to
 NSDictionary *personData = @{@"name":@"Jim",
-									@"gender":@"man"};
+							 @"gender":@"man"};
 
 #取值
 NSString *username = [personData objectForKey:@"name"];

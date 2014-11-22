@@ -20,7 +20,7 @@ categories: 工具控
 9. [Evernote](http://evernote.com/) 这个大家都懂的
 10. [XtraFinder](http://www.trankynam.com/xtrafinder/) 为你的Finder增加Tab，剪切等功能
 11. [shortcat](http://shortcatapp.com/)键盘快捷键，写啥点啥,怒赞
-
+12. [Chameleon](http://chameleon.alessandroboschini.com/) 打开第三方SSD的trim
 
 ####shortcat快捷键
 ```ruby
