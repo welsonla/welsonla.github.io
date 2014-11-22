@@ -7,23 +7,11 @@
 	<meta name="author" content="Welsonla">
 
 	
-	<meta name="description" content="Jul 6th, 2013 工具控 Comments Vim-note 移动到行首 1
-0 移动到行尾 1
-$ 剪切多行 1
-2
-3
-v
-向下移动
-d 粘贴 1
-P 在nerdTree光标处新建一个文件 1
-m 删除多行(数字+dd) 1
-5dd #删除5行 多行注释 1
-2
-3
-4
-5
-6
-1 &hellip;">
+	<meta name="description" content="Jun 25th, 2013 git Comments Git笔记 添加所有新文件 1
+git add . 从版本中去除一个文件 1
+git rm test.html.rb 假设有很多新文件和删除了好多文件 1
+git add -A 获取所有远程版本 1
+git fetch 创建并切换到新分支 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -104,106 +92,6 @@ m 删除多行(数字+dd) 1
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-06T17:27:00+08:00" data-updated="true" itemprop="datePublished">Jul 6<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/gong-ju-kong/'>工具控</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2013/07/06/vim-note/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/07/06/vim-note/" itemprop="url">Vim-note</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<h4>移动到行首</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">0</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>移动到行尾</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">$</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>剪切多行</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">v</span>
-</span><span class='line'><span class="err">向下移动</span>
-</span><span class='line'><span class="n">d</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>粘贴</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">P</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>在nerdTree光标处新建一个文件</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">m</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>删除多行(数字+dd)</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">5</span><span class="n">dd</span> <span class="c1">#删除5行</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>多行注释</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">1</span><span class="o">.</span><span class="n">ESC</span><span class="o">+</span><span class="n">v</span>
-</span><span class='line'><span class="mi">2</span><span class="o">.</span><span class="err">方向键向下或者向上选中多行</span>
-</span><span class='line'><span class="mi">3</span><span class="o">.</span><span class="n">Control</span><span class="o">+</span><span class="n">v</span>
-</span><span class='line'><span class="mi">4</span><span class="o">.</span><span class="n">Shift</span><span class="o">+</span><span class="n">i</span>
-</span><span class='line'><span class="mi">5</span><span class="o">.</span><span class="c1">#</span>
-</span><span class='line'><span class="mi">6</span><span class="o">.</span><span class="n">Esc</span><span class="p">,</span><span class="no">Esc</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-		
-		
-	</div>
-
-</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -1201,6 +1089,97 @@ m 删除多行(数字+dd) 1
 
 
 <p>Finish</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-10T16:48:00+08:00" data-updated="true" itemprop="datePublished">Apr 10<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>iOS</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/04/10/use-cocoapods/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/04/10/use-cocoapods/" itemprop="url">Cocoapods 使用</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>cd到你的项目的根目录，就是跟project文件同级,建立Podfile文件</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">touch</span> <span class="no">Podfile</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>加入平台版本，（5.1可以省略，但是最好在podfile中加入，因为一些ARC相关的类库不加的话，会提示错误）</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span><span class="s1">&#39;5.1&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>搜索第三方的oc库</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">pod</span> <span class="n">search</span> <span class="n">fmdb</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-&gt;</span> <span class="no">FMDB</span> <span class="p">(</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+</span><span class='line'>   <span class="n">A</span> <span class="no">Cocoa</span> <span class="o">/</span> <span class="no">Objective</span><span class="o">-</span><span class="n">C</span> <span class="n">wrapper</span> <span class="n">around</span> <span class="no">SQLite</span><span class="o">.</span>
+</span><span class='line'>   <span class="o">-</span> <span class="ss">Homepage</span><span class="p">:</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ccgus</span><span class="o">/</span><span class="n">fmdb</span>
+</span><span class='line'>   <span class="o">-</span> <span class="ss">Source</span><span class="p">:</span>   <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ccgus</span><span class="o">/</span><span class="n">fmdb</span><span class="o">.</span><span class="n">git</span>
+</span><span class='line'>   <span class="o">-</span> <span class="ss">Versions</span><span class="p">:</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span> <span class="o">[</span><span class="n">master</span> <span class="n">repo</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>通过搜索，我们已经找到了该类库的版本的名字，只需要将这些内容加入到podfile文件中即可</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">&#39;5.1&#39;</span>
+</span><span class='line'><span class="no">Pod</span> <span class="s1">&#39;FMDB&#39;</span><span class="p">,</span><span class="s1">&#39;2.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后执行下面的命令，将这些类库加到到本地</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">pod</span> <span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>之后将会生成一个workspace文件，以后我们打开项目的时候，就打开workspace文件即可，项目和其所需要的类库都以sub project的方式加到了这个workspace下面</p>
 
 		
 		

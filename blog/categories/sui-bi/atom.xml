@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 随笔 | Welsonla]]></title>
   <link href="http://welsonla.github.io/blog/categories/sui-bi/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2014-11-23T00:16:52+08:00</updated>
+  <updated>2014-11-23T00:41:20+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -19,6 +19,9 @@
     <updated>2014-04-12T12:56:00+08:00</updated>
     <id>http://welsonla.github.io/blog/2014/04/12/why-my-mac-so-slow</id>
     <content type="html"><![CDATA[<p>本子是MC700,已经陪伴我coding了三年,中间升级了内存,硬盘加了SSD,但是自从电池坏掉以后,我拆掉了电池,接电使用,发现越来越卡,经历了三个月左右的煎熬,我的mac终于又重新焕发了青春,说说遇到的问题</p>
+
+<!--more-->
+
 
 <ol>
 <li><p>必须安装电池,电池坏掉的话,赶紧买新的装上,否则你的macbook会降频运行</p>

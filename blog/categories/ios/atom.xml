@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Welsonla]]></title>
   <link href="http://welsonla.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2014-11-23T00:16:52+08:00</updated>
+  <updated>2014-11-23T00:41:20+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -32,6 +32,9 @@ xcode-select --install
     <updated>2014-07-14T15:57:00+08:00</updated>
     <id>http://welsonla.github.io/blog/2014/07/14/instrument-start-fail</id>
     <content type="html"><![CDATA[<p>最近在iOS7的系统上使用Instrument想检查内存的leaks，启动时候总是提示失败，花了些时间，解决了这个问题，做下笔记。</p>
+
+<!--more-->
+
 
 <h2>issue</h2>
 
@@ -94,6 +97,9 @@ Product--&gt;Scheme--&gt;Edit Scheme,将Profile那栏中的Build Configuration�
 <p>https://github.com/welsonla/sqlcipher/archive/v2.1.1.tar.gz</p>
 
 <p>```</p>
+
+<!--more-->
+
 
 <h2>Complite the source code</h2>
 
