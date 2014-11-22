@@ -12,6 +12,8 @@ categories: iOS
 https://github.com/welsonla/sqlcipher/archive/v2.1.1.tar.gz
 
 ```
+<!--more-->
+
 ##Complite the source code
 动态链接的编译方法（Compiling with dynamic linking）[推荐]:
 

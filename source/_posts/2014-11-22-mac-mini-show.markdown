@@ -10,23 +10,26 @@ categories: CodeLife
 从3月份换了新工作，就一直在使用自己的电脑，每天背着上下班，后来自己又买了显示器和新的机械键盘。想想这时候如果上Mac mini的话，外设都已经齐全了。
 一直在等9月份的Mini新版，无奈对新版确实有些失望，一直摇摆不定，恰巧双十一的前一天，发现京东的MD387已经降价到了3588，果断决定入手了。
 
+<!--more-->
+
 ###开箱
 11.11日下午收到了京东的货，用的京东白条，可以到12.10日进行还款，这个给京东点赞
-![Mini](http://ww2.sinaimg.cn/large/6e8de9dbgw1emk7661ob8j21kw23u7wh.jpg)
+
+![Mini](http://ww2.sinaimg.cn/large/6e8de9dbgw1emk7661ob8j21kw23u7wh.jpg =500x)
 
 ####正面照
-![mini front]()
+![mini front](http://ww2.sinaimg.cn/large/6e8de9dbjw1emk8q9x5caj21kw23u7sd.jpg =500x)
 
 ####背后有丰富的插口，再也不用担心USB口不够用了
-![Mini back](http://ww2.sinaimg.cn/large/6e8de9dbgw1emk78er4izj21kw23u7sd.jpg)
+![Mini back](http://ww2.sinaimg.cn/large/6e8de9dbgw1emk78er4izj21kw23u7sd.jpg =500x)
 
 ####配件是有一个HDMI转DVI的口
-![Mini support](http://ww1.sinaimg.cn/large/6e8de9dbgw1emk7a8ffzjj21kw23unj2.jpg)
+![Mini support](http://ww1.sinaimg.cn/large/6e8de9dbgw1emk7a8ffzjj21kw23unj2.jpg  =500x)
 
 
 ###升级
 如果要换内存的话，是不用拧一颗螺丝的，旋转后壳，就能取下底部的壳,内部结构太美了
-![Mini inside](http://ww4.sinaimg.cn/large/6e8de9dbgw1emk7crpjh4j21kw16oqmn.jpg)
+![Mini inside](http://ww4.sinaimg.cn/large/6e8de9dbgw1emk7crpjh4j21kw16oqmn.jpg =400x)
 
 ###使用
 #####显示特别模糊

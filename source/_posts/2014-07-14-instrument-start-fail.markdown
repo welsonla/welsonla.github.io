@@ -8,6 +8,8 @@ categories: iOS
 
 最近在iOS7的系统上使用Instrument想检查内存的leaks，启动时候总是提示失败，花了些时间，解决了这个问题，做下笔记。
 
+<!--more-->
+
 ##issue
 ```ruby
 Error Starting Recording

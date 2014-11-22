@@ -6,6 +6,9 @@ comments: true
 categories: 
 ---
 
+对cocoa的一些语法糖做的笔记
+<!--more-->
+
 ###NSNumber
 ```ruby
 NSNumber *totalNumber = [NSNumber numberWithInt:1];
