@@ -56,6 +56,7 @@ ruby patch-edid.rb
 
 #####打开trim，支持10.10
 鉴于网上脚本众多，而trim enabler又让很多电脑出现了问题，现在终于发现一款10.10下完美的打开Trim的工具(free)
+
 [Chameleon](http://chameleon.alessandroboschini.com/)
 
 ![Chameleon](http://ww2.sinaimg.cn/large/6e8de9dbjw1emk7zcot3oj20880d9t95.jpg)
@@ -63,9 +64,10 @@ ruby patch-edid.rb
 
 ###总结
 使用中，将MC700上的8G内存换到了Mini上面，现在的配置是
-1. Mac Mini DDR3 1333 8G
-2. MC700 4G DDR3 1600, Sandisk SSD 128
-
+```
+1. Mac Mini : DDR3 1333 8G
+2. MC700 : 4G DDR3 1600, Sandisk SSD 128
+```
 由于近期开销比较大，这样对两台机器进行了一个互补，发现都还可以进行正常的开发，但Mini还是要比我的MC700要快很多，不知道这台MC700还能陪伴我多久。
 
 感谢老婆，让我这次败家，有了一个一直以来梦寐以求的工作套装
