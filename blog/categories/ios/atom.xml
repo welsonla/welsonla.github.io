@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ios | Welsonla]]></title>
+  <link href="http://welsonla.timebot.net/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://welsonla.timebot.net/"/>
+  <updated>2015-04-13T13:29:44+08:00</updated>
+  <id>http://welsonla.timebot.net/</id>
+  <author>
+    <name><![CDATA[Welsonla]]></name>
+    <email><![CDATA[wyc.jar@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Xcode5 install command line tools]]></title>
+    <link href="http://welsonla.timebot.net/blog/2014/07/14/xcode5-install-command-line-tools/"/>
+    <updated>2014-07-14T16:56:00+08:00</updated>
+    <id>http://welsonla.timebot.net/blog/2014/07/14/xcode5-install-command-line-tools</id>
+    <content type="html"><![CDATA[<p>之前遇到过，一直没做笔记，导致每次都要现查</p>
+
+<pre><code class="ruby">xcode-select --install
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Instruments无法启动]]></title>
+    <link href="http://welsonla.timebot.net/blog/2014/07/14/instrument-start-fail/"/>
+    <updated>2014-07-14T15:57:00+08:00</updated>
+    <id>http://welsonla.timebot.net/blog/2014/07/14/instrument-start-fail</id>
+    <content type="html"><![CDATA[<p>最近在iOS7的系统上使用Instrument想检查内存的leaks，启动时候总是提示失败，花了些时间，解决了这个问题，做下笔记。</p>
+
+<!--more-->
+
+
+<h2>issue</h2>
+
+<pre><code class="ruby">Error Starting Recording
+At least one target failed to launch; aborting run
+
+
+Target failed to run. Permisson to debug [app name] was denied. The app must be signed with a development identity (i.e. iOS Developer)
+</code></pre>
+
+<p><img src="http://ww4.sinaimg.cn/large/6e8de9dbgw1eice18vkrej20rs0jmgnq.jpg" alt="http://ww4.sinaimg.cn/large/6e8de9dbgw1eice18vkrej20rs0jmgnq.jpg" /></p>
+
+<h2>fix</h2>
+
+<pre><code class="ruby">Product--&gt;Scheme--&gt;Edit Scheme,将Profile那栏中的Build Configuration将Release改为Debug
+</code></pre>
+
+<p><img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1eice66ef74j20jg0d7759.jpg" alt="http://ww1.sinaimg.cn/large/6e8de9dbgw1eice66ef74j20jg0d7759.jpg" /></p>
+
+<h2>issue</h2>
+
+<p>1.如果发现leaks视图无法监控到任何的内存泄露，说明你开启了Zombie，将Scheme菜单中的<code>Enable Zombie Objects</code>勾去就可以了
+2.检查你是否启用了环境变量，变量中是否开启了zombie设置</p>
+
+<p><img src="http://ww4.sinaimg.cn/large/6e8de9dbgw1eiceaztirjj20ee0arq3q.jpg" alt="http://ww4.sinaimg.cn/large/6e8de9dbgw1eiceaztirjj20ee0arq3q.jpg" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learn core animation the hard way]]></title>
+    <link href="http://welsonla.timebot.net/blog/2014/05/11/learn-core-animation-the-hard-way/"/>
+    <updated>2014-05-11T20:43:00+08:00</updated>
+    <id>http://welsonla.timebot.net/blog/2014/05/11/learn-core-animation-the-hard-way</id>
+    <content type="html"><![CDATA[<h3>Document</h3>
+
+<ol>
+<li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW8">CABasicAnimation Keypath</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Animation_Types_Timing/Articles/PropertyAnimations.html">Animation Types and Timing Programming Guide</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/reference/CGAffineTransform/Reference/reference.html">CGAffineTransform</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066">Quartz 2D Programming Guide</a></li>
+<li><a href="http://baike.baidu.com/view/954621.htm">放射变换</a></li>
+<li><a href="http://www.cnblogs.com/xiaodao/archive/2012/02/10/2345481.html">组合动画</a></li>
+<li><a href="http://www.cnblogs.com/v2m_/archive/2013/05/09/3070187.html">http://www.cnblogs.com/v2m_/archive/2013/05/09/3070187.html</a></li>
+<li><a href="http://www.cnblogs.com/sell/archive/2013/02/01/2889013.html">几个常用动画代码</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[encrypt sqlite with sqlcipher]]></title>
+    <link href="http://welsonla.timebot.net/blog/2013/08/13/encrypt-sqlite-with-sqlcipher/"/>
+    <updated>2013-08-13T18:05:00+08:00</updated>
+    <id>http://welsonla.timebot.net/blog/2013/08/13/encrypt-sqlite-with-sqlcipher</id>
+    <content type="html"><![CDATA[<h2>Get the sqlcipher SourceCode</h2>
+
+<pre><code class="ruby">#使用2.1的版本比较稳定些
+https://github.com/welsonla/sqlcipher/archive/v2.1.1.tar.gz
+</code></pre>
+
+<!--more-->
+
+
+<h2>Complite the source code</h2>
+
+<p>动态链接的编译方法（Compiling with dynamic linking）[推荐]:</p>
+
+<pre><code class="ruby">./configure --enable-tempstore=yes CFLAGS="-DSQLITE_HAS_CODEC" LDFLAGS="-lcrypto"
+ make
+ ln -s /Users/wanyc/sqlcipher/sqlite3 /usr/bin/sqlcipher 
+</code></pre>
+
+<p><del>静态库的编译方法: (replace /path/to with the path to libcrypto.a)</del>
+<code>ruby
+  #./configure --enable-tempstore=yes CFLAGS="-DSQLITE_HAS_CODEC" LDFLAGS="/path/to/libcrypto.a"
+  #make
+</code></p>
+
+<h2>How to encrypt a sqlite(In Shell)</h2>
+
+<h1>加密数据库几种方式</h1>
+
+<h4>1.shell方式加密一个sqlite</h4>
+
+<pre><code class="ruby">sqlcipher test.db
+&gt; PRAGMA key='test'; //必须在打开数据库第一步来执行
+</code></pre>
+
+<h4>2.（In shell）</h4>
+
+<pre><code class="ruby">sqlciper test.db
+PRAGMA KEY='helloworld';#第一步必须执行
+ATTACH DATABASE 'encrypted.db' as encrypted KEY 'SomePassword'; //encrypted.db是要导出的新的数据库
+SELECT sqlcipher_export('encrypted');
+DETACH DATABASE encrypted;
+</code></pre>
+
+<h5>3..Object-c代码实现对一个非加密库导入到加密库的方法(已经验证)(Xcode)</h5>
+
+<pre><code class="ruby">NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0];
+NSString *attachPath = [documentPath stringByAppendingPathComponent:@"new.db"];
+
+if (sqlite3_open([path_u UTF8String], &amp;convert_DB) == SQLITE_OK) {
+        NSString *sql = [NSString stringWithFormat:@"ATTACH DATABASE '%@' AS encrypted KEY '1234';",attachPath];
+
+        //执行Attach操作
+      sqlite3_exec(convert_DB, [sql UTF8String] , NULL, NULL, NULL);
+
+      // 导出数据库
+      sqlite3_exec(convert_DB, "SELECT sqlcipher_export('encrypted');", NULL, NULL, NULL);
+
+      // 执行分离
+      sqlite3_exec(convert_DB, "DETACH DATABASE encrypted;", NULL, NULL, NULL);
+
+      NSLog (@"End database copying at %@",[NSDate date]);
+      sqlite3_close(convert_DB);
+}
+else {
+    sqlite3_close(convert_DB);
+    NSAssert1(NO, @"Failed to open database with message '%s'.", sqlite3_errmsg(convert_DB));
+}
+</code></pre>
+
+<h1>为加密数据库解密</h1>
+
+<h4>1.先导出现有库的数据(In shell)</h4>
+
+<pre><code class="ruby">sqlcipher plaintext.db
+.output dsa.sql
+.dump
+</code></pre>
+
+<h4>将新的数据库导出，并加密，之后导入非加密的库里面的数据</h4>
+
+<pre><code class="ruby">sqlcipher another.db
+PRAGMA key='aaa';
+.read dsa.sql
+</code></pre>
+
+<h4>2. 为加密后的sqlite执行解密(其实步骤与加密一样，只要把key设置为空就实现了不加密)</h4>
+
+<pre><code class="ruby">ATTACH DATABASE 'encrypted.db' as encrypted KEY ''; //encrypted.db是要导出的新的数据库
+SELECT sqlcipher_export('encrypted');
+DETACH DATABASE encrypted;
+</code></pre>
+
+<h4>3.（In shell）</h4>
+
+<pre><code class="ruby">sqlciper test.db
+PRAGMA KEY='helloworld';#第一步必须执行
+ATTACH DATABASE 'encrypted.db' as encrypted KEY '';
+SELECT sqlcipher_export('encrypted');
+DETACH DATABASE encrypted;
+</code></pre>
+
+<h2>参考</h2>
+
+<ul>
+<li>sqlcipher配置 <a href="http://sqlcipher.net/ios-tutorial/">http://sqlcipher.net/ios-tutorial/</a></li>
+<li>sqlcipher API <a href="http://sqlcipher.net/sqlcipher-api/">http://sqlcipher.net/sqlcipher-api/</a></li>
+<li>sqlcipher 使用 <a href="http://jordy.easymorse.com/?p=970">http://jordy.easymorse.com/?p=970</a></li>
+<li>Mac SQLCipher导出工具 <a href="https://github.com/welsonla/SQLCipherExport">https://github.com/welsonla/SQLCipherExport</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cocoapods 使用]]></title>
+    <link href="http://welsonla.timebot.net/blog/2013/04/10/use-cocoapods/"/>
+    <updated>2013-04-10T16:48:00+08:00</updated>
+    <id>http://welsonla.timebot.net/blog/2013/04/10/use-cocoapods</id>
+    <content type="html"><![CDATA[<pre><code class="ruby">gem install cocoapods
+</code></pre>
+
+<p>cd到你的项目的根目录，就是跟project文件同级,建立Podfile文件
+<code>ruby
+touch Podfile
+</code></p>
+
+<p>加入平台版本，（5.1可以省略，但是最好在podfile中加入，因为一些ARC相关的类库不加的话，会提示错误）
+<code>ruby
+platform :ios,'5.1'
+</code></p>
+
+<p>搜索第三方的oc库</p>
+
+<pre><code class="ruby">pod search fmdb
+
+-&gt; FMDB (2.0)
+   A Cocoa / Objective-C wrapper around SQLite.
+   - Homepage: https://github.com/ccgus/fmdb
+   - Source:   https://github.com/ccgus/fmdb.git
+   - Versions: 2.0, 1.5.1, 1.5 [master repo]
+</code></pre>
+
+<p>通过搜索，我们已经找到了该类库的版本的名字，只需要将这些内容加入到podfile文件中即可</p>
+
+<pre><code class="ruby">platform :ios, '5.1'
+Pod 'FMDB','2.0'
+</code></pre>
+
+<p>然后执行下面的命令，将这些类库加到到本地</p>
+
+<pre><code class="ruby">pod install
+</code></pre>
+
+<p>之后将会生成一个workspace文件，以后我们打开项目的时候，就打开workspace文件即可，项目和其所需要的类库都以sub project的方式加到了这个workspace下面</p>
+]]></content>
+  </entry>
+  
+</feed>
