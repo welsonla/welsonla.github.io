@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 随笔 | Welsonla]]></title>
+  <link href="http://welsonla.github.io/blog/categories/sui-bi/atom.xml" rel="self"/>
+  <link href="http://welsonla.github.io/"/>
+  <updated>2014-11-23T10:09:17+08:00</updated>
+  <id>http://welsonla.github.io/</id>
+  <author>
+    <name><![CDATA[Welsonla]]></name>
+    <email><![CDATA[wyc.jar@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[你的Mac慢了么]]></title>
+    <link href="http://welsonla.github.io/blog/2014/04/12/why-my-mac-so-slow/"/>
+    <updated>2014-04-12T12:56:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2014/04/12/why-my-mac-so-slow</id>
+    <content type="html"><![CDATA[<p>本子是MC700,已经陪伴我coding了三年,中间升级了内存,硬盘加了SSD,但是自从电池坏掉以后,我拆掉了电池,接电使用,发现越来越卡,经历了三个月左右的煎熬,我的mac终于又重新焕发了青春,说说遇到的问题</p>
+
+<!--more-->
+
+
+<ol>
+<li><p>必须安装电池,电池坏掉的话,赶紧买新的装上,否则你的macbook会降频运行</p>
+
+<blockquote><p>这就是为什么我是SSD硬盘,依然感觉慢的要死的原因,之前电池坏了,本想着拆下来,裸奔运行,后来就发现本子卡的不行.检测你的macbook是否在降频运行,可以使用这个小工具<a href="http://software.intel.com/en-us/articles/intel-power-gadget-20">Intel(R) Power Gadget</a></p></blockquote></li>
+<li><p>使用时间长,本子会发热,你会发现kenerl_task这个进程占用的CPU特别大,试着用一些软件为mac降温</p>
+
+<blockquote><p>推荐<a href="http://www.crystalidea.com/macs-fan-control">Macs Fan Control </a>,能固定风扇的转速,防止温度飙的很高</p></blockquote></li>
+<li><p>如果是自己加装的SSD,默认trim是不打开的,需要自己使用打开</p>
+
+<blockquote><p>推荐一个小工具<a href="http://www.cindori.org/software/trimenabler/">trim enables</a>
+  如果你是geek,也可以使用命令行打开trim,打开后需要重启你的电脑,看看这个gist上<a href="https://gist.github.com/return1/4058659">trim_enabler.sh</a></p></blockquote></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[2013总结]]></title>
+    <link href="http://welsonla.github.io/blog/2014/01/02/my-2013/"/>
+    <updated>2014-01-02T08:19:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2014/01/02/my-2013</id>
+    <content type="html"><![CDATA[<h4>作品</h4>
+
+<ol>
+<li>对晴天进行了两次更新;</li>
+<li>和小伙伴们一起做了一个密码管理的软件<a href="https://itunes">passbox</a></li>
+<li>写了一个对SQLCipher加密数据库转换的Mac程序</li>
+</ol>
+
+
+<h4>读书</h4>
+
+<ol>
+<li>《打造Facebook》</li>
+<li>《MacTack人生元编程》</li>
+<li>《写给程序员的Web设计书》</li>
+<li>《写给大家看的Web设计书》</li>
+<li>《淘宝技术这十年》</li>
+<li>《苹果开发之Cocoa编程》</li>
+<li>《代码整洁之道》</li>
+</ol>
+
+
+<h4>健康</h4>
+
+<p>12年有一阵子住院，13年特别注意锻炼身体，9月份每天和几个朋友去紫竹院跑步运动。强度不是很大，天气渐冷，入冬，雾霾跟严寒，使运动停止。</p>
+
+<p>13年身体并没有什么大碍，感谢</p>
+
+<h4>技术</h4>
+
+<p>感觉自己这一年的技术，进步不大，惭愧。在用户体验跟交互方面，倒是有了一些自己的心得。对Mac的编程有了越来越浓厚的兴趣。</p>
+
+<h4>济南</h4>
+
+<p>从十月份，陆续跟女朋友在济南看了几套房子。主要参考的房子是90平米以上可以落户的房子，现在我女人已经开始考虑学区的问题了，经十路沿线现在也越来越多的高楼在崛起，房价也在逐渐的攀高，房价是每个年轻人心里的痛。</p>
+
+<h4>2014</h4>
+
+<ol>
+<li>多读书</li>
+<li>更多的iOS上的作品</li>
+<li>更多的Mac应用</li>
+<li>深入Object-c，并继续强化Ruby on Rails</li>
+<li>锻炼身体</li>
+<li>从AppStore赚多一点钱</li>
+<li>与几个朋友的小工作室，希望我们能成为TapBot</li>
+<li>换新工作</li>
+<li>买房结婚(房子已买)</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

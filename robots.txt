@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://welsonla.github.io/sitemap.xml 

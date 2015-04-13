@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 工具控 | Welsonla]]></title>
+  <link href="http://welsonla.github.io/blog/categories/gong-ju-kong/atom.xml" rel="self"/>
+  <link href="http://welsonla.github.io/"/>
+  <updated>2014-11-23T10:09:17+08:00</updated>
+  <id>http://welsonla.github.io/</id>
+  <author>
+    <name><![CDATA[Welsonla]]></name>
+    <email><![CDATA[wyc.jar@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[vim-note]]></title>
+    <link href="http://welsonla.github.io/blog/2013/07/06/vim-note/"/>
+    <updated>2013-07-06T17:27:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/07/06/vim-note</id>
+    <content type="html"><![CDATA[<h4>移动到行首</h4>
+
+<p><code>ruby
+0
+</code></p>
+
+<h4>移动到行尾</h4>
+
+<p><code>ruby
+$
+</code></p>
+
+<h4>剪切多行</h4>
+
+<p><code>ruby
+v
+向下移动
+d
+</code></p>
+
+<h4>粘贴</h4>
+
+<p><code>ruby
+P
+</code></p>
+
+<h4>在nerdTree光标处新建一个文件</h4>
+
+<p><code>ruby
+m
+</code></p>
+
+<h4>删除多行(数字+dd)</h4>
+
+<p><code>ruby
+5dd #删除5行
+</code></p>
+
+<h4>多行注释</h4>
+
+<p><code>ruby
+1.ESC+v
+2.方向键向下或者向上选中多行
+3.Control+v
+4.Shift+i
+5.#
+6.Esc,Esc
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
