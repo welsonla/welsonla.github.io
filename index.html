@@ -7,9 +7,13 @@
 	<meta name="author" content="Welsonla">
 
 	
-	<meta name="description" content="Comments Rails Code Snippets 生成Controller与action 1
-rails g controller todo_list list delete index 脚手架以及一些常用的变量类型 1
-rails g scaffold user name:string &hellip;">
+	<meta name="description" content="Comments Rails Code Snippets (摘录来自: persie. “Ruby on Rails 教程”) short key 1
+2
+3
+g generate
+d destory
+s server 脚手架以及一些常用的变量类型 1
+rails g scaffold user &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,10 +120,16 @@ rails g scaffold user name:string &hellip;">
 	</div>
 	<h1 class="title" itemprop="name"><a href="/blog/2015/04/12/rails-code-snippets/" itemprop="url">Rails Code Snippets</a></h1>
 	<div class="entry-content" itemprop="articleBody">
-		<h3>生成Controller与action</h3>
+		<p>(摘录来自: persie. “Ruby on Rails 教程”)</p>
+
+<h3>short key</h3>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">g</span> <span class="n">controller</span> <span class="n">todo_list</span> <span class="n">list</span> <span class="n">delete</span> <span class="n">index</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">g</span>   <span class="n">generate</span>
+</span><span class='line'><span class="n">d</span>   <span class="n">destory</span>
+</span><span class='line'><span class="n">s</span>   <span class="n">server</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -127,6 +137,55 @@ rails g scaffold user name:string &hellip;">
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">g</span> <span class="n">scaffold</span> <span class="n">user</span> <span class="nb">name</span><span class="ss">:string</span> <span class="ss">age</span><span class="p">:</span><span class="n">int</span> <span class="ss">email</span><span class="p">:</span><span class="n">string</span> <span class="ss">description</span><span class="p">:</span><span class="n">text</span> <span class="ss">cash</span><span class="p">:</span><span class="n">float</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>删除脚手架生成的代码</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">d</span> <span class="n">scaffold</span> <span class="no">Users</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>生成Controller与action</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">g</span> <span class="n">controller</span> <span class="no">TodoList</span> <span class="n">list</span> <span class="n">delete</span> <span class="n">index</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>删除Controller</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">d</span> <span class="n">controller</span> <span class="no">TodoList</span> <span class="n">list</span> <span class="n">delete</span> <span class="n">index</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>生成Model</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">g</span> <span class="n">model</span> <span class="no">User</span> <span class="nb">name</span><span class="ss">:string</span> <span class="ss">email</span><span class="p">:</span><span class="n">string</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>删除Model</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">d</span> <span class="n">model</span> <span class="no">User</span> <span class="nb">name</span><span class="ss">:string</span> <span class="ss">email</span><span class="p">:</span><span class="n">string</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>添加字段到表</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">“</span><span class="n">rails</span> <span class="n">generate</span> <span class="n">migration</span> <span class="n">add_password_digest_to_users</span> <span class="ss">password_digest</span><span class="p">:</span><span class="n">string</span><span class="err">”</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>根据Model生成数据库表</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="n">migrate</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
