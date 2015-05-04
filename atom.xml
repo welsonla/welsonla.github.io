@@ -4,7 +4,7 @@
   <title><![CDATA[Welsonla]]></title>
   <link href="http://welsonla.timebot.net/atom.xml" rel="self"/>
   <link href="http://welsonla.timebot.net/"/>
-  <updated>2015-05-04T11:11:13+08:00</updated>
+  <updated>2015-05-04T11:13:10+08:00</updated>
   <id>http://welsonla.timebot.net/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -213,7 +213,6 @@
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
 <span class='line-number'>23</span>
-<span class='line-number'>24</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">testLogin</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>  <span class="c1">##声明一个Exception</span>
@@ -226,7 +225,6 @@
 </span><span class='line'>        <span class="sr">//</span><span class="err">抛出错误</span>
 </span><span class='line'>        <span class="o">[</span><span class="n">loginException</span> <span class="n">fulfill</span><span class="o">]</span><span class="p">;</span>
 </span><span class='line'>    <span class="p">}</span> <span class="ss">onFailure</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="no">NSString</span> <span class="o">*</span><span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="no">NSLog</span><span class="p">(</span><span class="err">@</span><span class="s2">&quot;msg:%@&quot;</span><span class="p">,</span><span class="n">msg</span><span class="p">);</span>
 </span><span class='line'>        <span class="no">XCTFail</span><span class="p">(</span><span class="err">@</span><span class="s2">&quot;login error:%@&quot;</span><span class="p">,</span><span class="n">msg</span><span class="p">);</span>
 </span><span class='line'>
 </span><span class='line'>        <span class="sr">//</span><span class="err">抛出错误</span>
@@ -235,7 +233,7 @@
 </span><span class='line'>
 </span><span class='line'>    <span class="sr">//</span><span class="err">延迟两秒执行</span>
 </span><span class='line'>    <span class="o">[</span><span class="nb">self</span> <span class="ss">waitForExpectationsWithTimeout</span><span class="p">:</span><span class="mi">2</span> <span class="ss">handler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="no">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="no">NSLog</span><span class="p">(</span><span class="err">@</span><span class="s2">&quot;time out:%@&quot;</span><span class="p">,</span><span class="n">error</span><span class="p">);</span>
+</span><span class='line'>        <span class="no">XCTFail</span><span class="p">(</span><span class="err">@</span><span class="s2">&quot;time out:%@&quot;</span><span class="p">,</span><span class="n">error</span><span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span><span class="o">]</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Welsonla]]></title>
   <link href="http://welsonla.timebot.net/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://welsonla.timebot.net/"/>
-  <updated>2015-05-04T11:11:13+08:00</updated>
+  <updated>2015-05-04T11:13:10+08:00</updated>
   <id>http://welsonla.timebot.net/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -142,7 +142,6 @@ XCTAssertTrue(count&gt;3,@"count greater than 3");
         //抛出错误
         [loginException fulfill];
     } onFailure:^(NSString *msg) {
-        NSLog(@"msg:%@",msg);
         XCTFail(@"login error:%@",msg);
 
         //抛出错误
@@ -151,7 +150,7 @@ XCTAssertTrue(count&gt;3,@"count greater than 3");
 
     //延迟两秒执行
     [self waitForExpectationsWithTimeout:2 handler:^(NSError *error) {
-        NSLog(@"time out:%@",error);
+        XCTFail(@"time out:%@",error);
     }];
 }
 </code></pre>
