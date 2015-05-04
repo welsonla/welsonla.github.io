@@ -3,7 +3,7 @@ layout: post
 title: "Rails code snippets"
 date: 2015-04-12 12:55:48 +0800
 comments: true
-categories: 
+categories: ruby
 ---
 (摘录来自: persie. “Ruby on Rails 教程”)
 
