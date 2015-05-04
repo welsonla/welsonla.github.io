@@ -7,24 +7,20 @@
 	<meta name="author" content="Welsonla">
 
 	
-	<meta name="description" content="工具控 Comments Vim-note 移动到行首 1
-0 移动到行尾 1
-$ 剪切多行 1
-2
-3
-v
-向下移动
-d 粘贴 1
-P 在nerdTree光标处新建一个文件 1
-m 删除多行(数字+dd) 1
-5dd #删除5行 多行注释 1
+	<meta name="description" content="git Comments Generate New Host RSA Key 最近oschina的git服务器进行了迁移，导致了原有的git项目push不上去，总是提示 1
 2
 3
 4
 5
 6
-1.ESC+v
-2. &hellip;">
+7
+8
+9
+10
+11
+12
+13
+14 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -105,6 +101,92 @@ m 删除多行(数字+dd) 1
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-06T23:34:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/git/'>git</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/08/06/generate-new-host-rsa-key/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/08/06/generate-new-host-rsa-key/" itemprop="url">Generate New Host RSA Key</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>最近oschina的git服务器进行了迁移，导致了原有的git项目push不上去，总是提示</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="err">@</span>       <span class="ss">WARNING</span><span class="p">:</span> <span class="no">POSSIBLE</span> <span class="no">DNS</span> <span class="no">SPOOFING</span> <span class="no">DETECTED</span><span class="o">!</span>          <span class="err">@</span>
+</span><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="no">The</span> <span class="no">RSA</span> <span class="n">host</span> <span class="n">key</span> <span class="k">for</span> <span class="n">git</span><span class="o">.</span><span class="n">oschina</span><span class="o">.</span><span class="n">net</span> <span class="n">has</span> <span class="n">changed</span><span class="p">,</span>
+</span><span class='line'><span class="ow">and</span> <span class="n">the</span> <span class="n">key</span> <span class="k">for</span> <span class="n">the</span> <span class="n">corresponding</span> <span class="no">IP</span> <span class="n">address</span> <span class="mi">112</span><span class="o">.</span><span class="mi">124</span><span class="o">.</span><span class="mi">6</span><span class="o">.</span><span class="mi">106</span>
+</span><span class='line'><span class="n">is</span> <span class="n">unknown</span><span class="o">.</span> <span class="no">This</span> <span class="n">could</span> <span class="n">either</span> <span class="n">mean</span> <span class="n">that</span>
+</span><span class='line'><span class="no">DNS</span> <span class="no">SPOOFING</span> <span class="n">is</span> <span class="n">happening</span> <span class="ow">or</span> <span class="n">the</span> <span class="no">IP</span> <span class="n">address</span> <span class="k">for</span> <span class="n">the</span> <span class="n">host</span>
+</span><span class='line'><span class="ow">and</span> <span class="n">its</span> <span class="n">host</span> <span class="n">key</span> <span class="n">have</span> <span class="n">changed</span> <span class="n">at</span> <span class="n">the</span> <span class="n">same</span> <span class="n">time</span><span class="o">.</span>
+</span><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="err">@</span>    <span class="ss">WARNING</span><span class="p">:</span> <span class="no">REMOTE</span> <span class="no">HOST</span> <span class="no">IDENTIFICATION</span> <span class="no">HAS</span> <span class="no">CHANGED</span><span class="o">!</span>     <span class="err">@</span>
+</span><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="no">IT</span> <span class="no">IS</span> <span class="no">POSSIBLE</span> <span class="no">THAT</span> <span class="no">SOMEONE</span> <span class="no">IS</span> <span class="no">DOING</span> <span class="no">SOMETHING</span> <span class="no">NASTY</span><span class="o">!</span>
+</span><span class='line'><span class="no">Someone</span> <span class="n">could</span> <span class="n">be</span> <span class="n">eavesdropping</span> <span class="n">on</span> <span class="n">you</span> <span class="n">right</span> <span class="n">now</span> <span class="p">(</span><span class="n">man</span><span class="o">-</span><span class="k">in</span><span class="o">-</span><span class="n">the</span><span class="o">-</span><span class="n">middle</span> <span class="n">attack</span><span class="p">)</span><span class="o">!</span>
+</span><span class='line'><span class="no">It</span> <span class="n">is</span> <span class="n">also</span> <span class="n">possible</span> <span class="n">that</span> <span class="n">a</span> <span class="n">host</span> <span class="n">key</span> <span class="n">has</span> <span class="n">just</span> <span class="n">been</span> <span class="n">changed</span><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><del>第一个问题非常简单，就是修改/etc/hosts，添加一个IP与域名的对应关系即可</del></p>
+
+<p>第二个是要求你更新know_host中的RSA key，执行如下命令即可</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">R</span> <span class="n">git</span><span class="o">.</span><span class="n">oschina</span><span class="o">.</span><span class="n">net</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">cat</span> <span class="sr">/.ssh/</span><span class="n">known_hosts</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>查看known_host中的数据可以看到key已经更新了</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -1099,109 +1181,6 @@ m 删除多行(数字+dd) 1
 
 
 
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-10T16:58:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ji-zhu-sui-bi/'>技术随笔</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2013/04/10/use-rvm-install-ruby/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/04/10/use-rvm-install-ruby/" itemprop="url">使用RVM安装ruby</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>今天突然发现ruby版本不小心又回到了1.8.7，可能是我修改了rvm的配置文件导致的，于是开始折腾安装rvm和ruby</p>
-
-<p>首先还是先安装Homebrew吧
-很简单，一行代码搞定</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>安装RVM</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">get</span><span class="o">.</span><span class="n">rvm</span><span class="o">.</span><span class="n">io</span> <span class="o">|</span> <span class="n">bash</span> <span class="o">-</span><span class="n">s</span> <span class="n">stable</span> <span class="o">--</span><span class="n">ruby</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>走着走着发现出错了</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Missing</span> <span class="n">required</span> <span class="ss">packages</span><span class="p">:</span> <span class="n">autoconf</span><span class="p">,</span> <span class="n">automake</span><span class="p">,</span> <span class="n">libtool</span><span class="p">,</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="p">,</span> <span class="n">libyaml</span><span class="p">,</span> <span class="nb">readline</span><span class="p">,</span> <span class="n">libxml2</span><span class="p">,</span> <span class="n">libxslt</span><span class="p">,</span> <span class="n">libksba</span><span class="p">,</span> <span class="n">openssl</span><span class="p">,</span> <span class="n">sqlite</span><span class="o">.</span>
-</span><span class='line'><span class="no">RVM</span> <span class="n">autolibs</span> <span class="n">is</span> <span class="n">now</span> <span class="n">configured</span> <span class="n">with</span> <span class="n">mode</span> <span class="s1">&#39;2&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;check and stop if missing&#39;</span><span class="p">,</span>
-</span><span class='line'><span class="n">please</span> <span class="n">run</span> <span class="sb">`rvm autolibs enable`</span> <span class="n">to</span> <span class="n">let</span> <span class="no">RVM</span> <span class="k">do</span> <span class="n">it</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">job</span> <span class="ow">or</span> <span class="n">run</span> <span class="ow">and</span> <span class="n">read</span> <span class="sb">`rvm autolibs [help]`</span>
-</span><span class='line'><span class="ow">or</span> <span class="n">visit</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">rvm</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">rvm</span><span class="o">/</span><span class="n">autolibs</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
-</span><span class='line'><span class="no">There</span> <span class="n">were</span> <span class="n">package</span> <span class="n">installation</span> <span class="n">errors</span><span class="p">,</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">to</span> <span class="n">read</span> <span class="n">the</span> <span class="n">log</span><span class="o">.</span>
-</span><span class='line'><span class="no">Check</span> <span class="no">Homebrew</span> <span class="n">requirements</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mxcl</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="no">Installation</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>透过错误信息，发现缺少一写依赖的包，和rvm的autolibs没打开，这时候我们就通过Homebrew先安装上（具体你要看清楚你缺少的是什么）</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rvm</span> <span class="n">autolibs</span> <span class="n">enable</span>
-</span><span class='line'><span class="n">rvm</span> <span class="n">reload</span>
-</span><span class='line'><span class="n">brew</span> <span class="n">install</span> <span class="n">autoconf</span> <span class="n">automake</span> <span class="n">libtool</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="n">libyaml</span> <span class="nb">readline</span> <span class="n">libxml2</span> <span class="n">libxslt</span> <span class="n">libksba</span> <span class="n">openssl</span> <span class="n">sqlite</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>漫长的等带后，依赖包终于装完了
-再次安装RVM</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">get</span><span class="o">.</span><span class="n">rvm</span><span class="o">.</span><span class="n">io</span> <span class="o">|</span> <span class="n">bash</span> <span class="o">-</span><span class="n">s</span> <span class="n">stable</span> <span class="o">--</span><span class="n">ruby</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>就会安装成功，你可以rvm -v查看下版本</p>
-
-<p>安装并设置1.9.3为你的默认版本</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rvm</span> <span class="n">install</span> <span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">3</span>
-</span><span class='line'><span class="n">rvm</span> <span class="n">use</span> <span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">3</span>
-</span><span class='line'><span class="n">rvm</span> <span class="n">rubygems</span> <span class="n">latest</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Finish</p>
 
 		
 		

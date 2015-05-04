@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Welsonla]]></title>
   <link href="http://welsonla.timebot.net/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://welsonla.timebot.net/"/>
-  <updated>2015-04-21T17:12:13+08:00</updated>
+  <updated>2015-05-04T11:07:41+08:00</updated>
   <id>http://welsonla.timebot.net/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,151 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[关于Xcode单元测试(XCTest)的一些经验]]></title>
+    <link href="http://welsonla.timebot.net/blog/2015/05/04/something-about-xctest/"/>
+    <updated>2015-05-04T10:28:04+08:00</updated>
+    <id>http://welsonla.timebot.net/blog/2015/05/04/something-about-xctest</id>
+    <content type="html"><![CDATA[<p>单元测试可以让我们快速检测项目接口与一些功能的可用性，这次编写了大量的单元测试，让我对之前的一些疑惑有了一个透彻的理解</p>
+
+<ul>
+<li>单元测试中，可以直接import我们项目中的类</li>
+<li>想要执行的方法，必须使用test开头，testLogin会被执行，userLogin这样的方法名不会被执行</li>
+<li>单元测试没有头文件，一些变量声明，写在interface里面</li>
+<li>对于一些变量的初始化，放到setup里面进行</li>
+</ul>
+
+
+<h2>一个简单的单元测试类</h2>
+
+<h5>创建单元测试类</h5>
+
+<p><img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0n47wtrj20ka0bygnf.jpg" alt="" /></p>
+
+<h4>一个简单的类</h4>
+
+<pre><code class="ruby">#import &lt;UIKit/UIKit.h&gt;
+#import &lt;XCTest/XCTest.h&gt;
+#import "LoginService.h" //引入自定义的类
+
+@interface HelloTest : XCTestCase
+{
+    //变量声明      
+    NSInteger count;
+    LoginService *loginService;
+}
+
+@end
+
+@implementation HelloTest
+
+- (void)setUp {
+    [super setUp];
+
+    //初始化
+    count = 5;
+
+    loginService = [[LoginService alloc] init];
+
+}
+
+- (void)tearDown {
+
+    [super tearDown];
+}
+
+- (void)testCount
+{
+    XCTAssertEqual(count, 6,@"count不等于6,count的值为:%ld",(long)count);
+}
+
+- (void)testExample {
+
+    XCTAssert(YES, @"Pass");
+}
+
+- (void)testPerformanceExample {
+
+    [self measureBlock:^{
+
+    }];
+}
+
+@end
+</code></pre>
+
+<p><strong>cmd+U</strong> 进行执行后会提示我们如下错误,测试通过的方法，会有绿色对号，失败的方法会显示我们写的错误提示
+<img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0vuinl5j20p405jq49.jpg" alt="" /></p>
+
+<h2>XCTest的测试方法大都类似</h2>
+
+<h4>XCTAssertGreaterThan</h4>
+
+<pre><code class="ruby">#判断count是否大于8
+XCTAssertGreaterThan(count, 8,@"count is not greater than 8");
+</code></pre>
+
+<h4>XCTAssertNotEqual</h4>
+
+<pre><code class="ruby">#判断是否不相等
+XCTAssertNotEqual(count, 5,@"they are equal");
+</code></pre>
+
+<h4>XCTAssertTrue</h4>
+
+<pre><code class="ruby">#判断某个表达式是否成立
+XCTAssertTrue(count&gt;3,@"count greater than 3");
+</code></pre>
+
+<p>运行结果
+<img src="http://ww4.sinaimg.cn/large/6e8de9dbgw1ers16kf52bj210v04jn03.jpg" alt="" /></p>
+
+<h2>对于异步方法的测试(Asynchronous Testing)</h2>
+
+<p>对于block等异步方式执行的方法，在测试的时候，我们要使用，一般的做法都是延迟，<strong>等待block执行完毕再进行检查</strong></p>
+
+<h5>主要步骤</h5>
+
+<ul>
+<li>声明一个XCTestExpectation</li>
+<li>在block中使用fulfill抛出错误</li>
+<li>waitForExpectationsWithTimeout进行一个延迟时间设定</li>
+</ul>
+
+
+<pre><code class="ruby">#import &lt;XCTest/XCTestCase+AsynchronousTesting.h&gt;
+</code></pre>
+
+<p>比如上面的loginService</p>
+
+<pre><code class="ruby   ">- (void)testLogin
+{
+    ##声明一个Exception
+    XCTestExpectation *loginException = [self expectationWithDescription:@"loginError"];
+
+    [loginService sendLoginWithMobile:TEST_MOBILE andCode:TEST_CODE onComplete:^(NSDictionary *jsonDict, NSString *jsonString) {
+        MStatus *status = [loginService convertToMStatus:jsonDict];
+        XCTAssertEqual(status.returncode, 0, @"login error");
+
+        //抛出错误
+        [loginException fulfill];
+    } onFailure:^(NSString *msg) {
+        NSLog(@"msg:%@",msg);
+        XCTFail(@"login error:%@",msg);
+
+        //抛出错误
+        [loginException fulfill];
+    }];
+
+    //延迟两秒执行
+    [self waitForExpectationsWithTimeout:2 handler:^(NSError *error) {
+        NSLog(@"time out:%@",error);
+    }];
+}
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Xcode5 install command line tools]]></title>
@@ -198,50 +343,6 @@ DETACH DATABASE encrypted;
 <li>Mac SQLCipher导出工具 <a href="https://github.com/welsonla/SQLCipherExport">https://github.com/welsonla/SQLCipherExport</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Cocoapods 使用]]></title>
-    <link href="http://welsonla.timebot.net/blog/2013/04/10/use-cocoapods/"/>
-    <updated>2013-04-10T16:48:00+08:00</updated>
-    <id>http://welsonla.timebot.net/blog/2013/04/10/use-cocoapods</id>
-    <content type="html"><![CDATA[<pre><code class="ruby">gem install cocoapods
-</code></pre>
-
-<p>cd到你的项目的根目录，就是跟project文件同级,建立Podfile文件
-<code>ruby
-touch Podfile
-</code></p>
-
-<p>加入平台版本，（5.1可以省略，但是最好在podfile中加入，因为一些ARC相关的类库不加的话，会提示错误）
-<code>ruby
-platform :ios,'5.1'
-</code></p>
-
-<p>搜索第三方的oc库</p>
-
-<pre><code class="ruby">pod search fmdb
-
--&gt; FMDB (2.0)
-   A Cocoa / Objective-C wrapper around SQLite.
-   - Homepage: https://github.com/ccgus/fmdb
-   - Source:   https://github.com/ccgus/fmdb.git
-   - Versions: 2.0, 1.5.1, 1.5 [master repo]
-</code></pre>
-
-<p>通过搜索，我们已经找到了该类库的版本的名字，只需要将这些内容加入到podfile文件中即可</p>
-
-<pre><code class="ruby">platform :ios, '5.1'
-Pod 'FMDB','2.0'
-</code></pre>
-
-<p>然后执行下面的命令，将这些类库加到到本地</p>
-
-<pre><code class="ruby">pod install
-</code></pre>
-
-<p>之后将会生成一个workspace文件，以后我们打开项目的时候，就打开workspace文件即可，项目和其所需要的类库都以sub project的方式加到了这个workspace下面</p>
 ]]></content>
   </entry>
   

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://welsonla.timebot.net/blog/2015/05/04/something-about-xctest/</loc>
+    <lastmod>2015-05-04T10:28:04+08:00</lastmod>
+  </url>
+  <url>
     <loc>http://welsonla.timebot.net/blog/2015/04/12/rails-code-snippets/</loc>
     <lastmod>2015-04-12T12:55:48+08:00</lastmod>
   </url>
@@ -123,5 +127,8 @@
   </url>
   <url>
     <loc>http://welsonla.timebot.net/blog/categories/sui-bi/</loc>
+  </url>
+  <url>
+    <loc>http://welsonla.timebot.net/blog/categories/ruby/</loc>
   </url>
 </urlset>
