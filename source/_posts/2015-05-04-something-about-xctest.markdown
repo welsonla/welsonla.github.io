@@ -122,7 +122,6 @@ XCTAssertTrue(count>3,@"count greater than 3");
         //抛出错误
         [loginException fulfill];
     } onFailure:^(NSString *msg) {
-        NSLog(@"msg:%@",msg);
         XCTFail(@"login error:%@",msg);
         
         //抛出错误
@@ -131,7 +130,7 @@ XCTAssertTrue(count>3,@"count greater than 3");
     
     //延迟两秒执行
     [self waitForExpectationsWithTimeout:2 handler:^(NSError *error) {
-        NSLog(@"time out:%@",error);
+        XCTFail(@"time out:%@",error);
     }];
 }
 ```
