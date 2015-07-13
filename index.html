@@ -1,0 +1,885 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Welsonla</title>
+	<meta name="author" content="Welsonla">
+
+	
+	<meta name="description" content="ios Comments 关于Xcode单元测试(XCTest)的一些总结 单元测试可以让我们快速检测项目接口与一些功能的可用性，这次编写了大量的单元测试，让我对之前的一些疑惑有了一个透彻的理解 单元测试中，可以直接import我们项目中的类
+想要执行的方法，必须使用test开头， &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Welsonla" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://welsonla.timebot.net/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("wyc.jar@gmail.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Welsonla</a></h1>
+  
+    <h2>这是一个码农生活的点点滴滴</h2>
+  
+</hgroup>
+
+<p class="subtitle">这是一个码农生活的点点滴滴</p>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about-welsonla">About</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/welsonla" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/welsonla" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-05-04T10:28:04+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>ios</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2015/05/04/something-about-xctest/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2015/05/04/something-about-xctest/" itemprop="url">关于Xcode单元测试(XCTest)的一些总结</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>单元测试可以让我们快速检测项目接口与一些功能的可用性，这次编写了大量的单元测试，让我对之前的一些疑惑有了一个透彻的理解</p>
+
+<ul>
+<li>单元测试中，可以直接import我们项目中的类</li>
+<li>想要执行的方法，必须使用test开头，testLogin会被执行，userLogin这样的方法名不会被执行</li>
+<li>单元测试没有头文件，一些变量声明，写在interface里面</li>
+<li>对于一些变量的初始化，放到setup里面进行</li>
+</ul>
+
+
+<h2>一个简单的单元测试类</h2>
+
+<h5>创建单元测试类</h5>
+
+<p><img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0n47wtrj20ka0bygnf.jpg" alt="" /></p>
+
+<h4>一个简单的类</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#import &lt;UIKit/UIKit.h&gt;</span>
+</span><span class='line'><span class="c1">#import &lt;XCTest/XCTest.h&gt;</span>
+</span><span class='line'><span class="c1">#import &quot;LoginService.h&quot; //引入自定义的类</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@interface</span> <span class="no">HelloTest</span> <span class="p">:</span> <span class="no">XCTestCase</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="sr">//</span><span class="err">变量声明</span>     
+</span><span class='line'>    <span class="no">NSInteger</span> <span class="n">count</span><span class="p">;</span>
+</span><span class='line'>    <span class="no">LoginService</span> <span class="o">*</span><span class="n">loginService</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@implementation</span> <span class="no">HelloTest</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">setUp</span> <span class="p">{</span>
+</span><span class='line'>    <span class="o">[</span><span class="k">super</span> <span class="n">setUp</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sr">//</span><span class="err">初始化</span>
+</span><span class='line'>    <span class="n">count</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">loginService</span> <span class="o">=</span> <span class="o">[[</span><span class="no">LoginService</span> <span class="n">alloc</span><span class="o">]</span> <span class="n">init</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">tearDown</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">[</span><span class="k">super</span> <span class="n">tearDown</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">testCount</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="no">XCTAssertEqual</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span><span class="err">@</span><span class="s2">&quot;count不等于6,count的值为:%ld&quot;</span><span class="p">,(</span><span class="n">long</span><span class="p">)</span><span class="n">count</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">testExample</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="no">XCTAssert</span><span class="p">(</span><span class="no">YES</span><span class="p">,</span> <span class="err">@</span><span class="s2">&quot;Pass&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">testPerformanceExample</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">[</span><span class="nb">self</span> <span class="ss">measureBlock</span><span class="p">:</span><span class="o">^</span><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">}</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>cmd+U</strong> 进行执行后会提示我们如下错误,测试通过的方法，会有绿色对号，失败的方法会显示我们写的错误提示
+<img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0vuinl5j20p405jq49.jpg" alt="" /></p>
+
+<h2>XCTest的测试方法大都类似</h2>
+
+<h4>XCTAssertGreaterThan</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#判断count是否大于8</span>
+</span><span class='line'><span class="no">XCTAssertGreaterThan</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span><span class="err">@</span><span class="s2">&quot;count is not greater than 8&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>XCTAssertNotEqual</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#判断是否不相等</span>
+</span><span class='line'><span class="no">XCTAssertNotEqual</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span><span class="err">@</span><span class="s2">&quot;they are equal&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>XCTAssertTrue</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#判断某个表达式是否成立</span>
+</span><span class='line'><span class="no">XCTAssertTrue</span><span class="p">(</span><span class="n">count</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">,</span><span class="err">@</span><span class="s2">&quot;count greater than 3&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>运行结果
+<img src="http://ww4.sinaimg.cn/large/6e8de9dbgw1ers16kf52bj210v04jn03.jpg" alt="" /></p>
+
+<h2>对于异步方法的测试(Asynchronous Testing)</h2>
+
+<p>对于block等异步方式执行的方法，在测试的时候，我们要使用，一般的做法都是延迟，<strong>等待block执行完毕再进行检查</strong></p>
+
+<h5>主要步骤</h5>
+
+<ul>
+<li>声明一个XCTestExpectation</li>
+<li>在block中使用fulfill抛出错误</li>
+<li>waitForExpectationsWithTimeout进行一个延迟时间设定</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#import &lt;XCTest/XCTestCase+AsynchronousTesting.h&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>比如上面的loginService</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="n">testLogin</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="c1">##声明一个Exception</span>
+</span><span class='line'>    <span class="no">XCTestExpectation</span> <span class="o">*</span><span class="n">loginException</span> <span class="o">=</span> <span class="o">[</span><span class="nb">self</span> <span class="ss">expectationWithDescription</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;loginError&quot;</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">[</span><span class="n">loginService</span> <span class="ss">sendLoginWithMobile</span><span class="p">:</span><span class="no">TEST_MOBILE</span> <span class="ss">andCode</span><span class="p">:</span><span class="no">TEST_CODE</span> <span class="ss">onComplete</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="no">NSDictionary</span> <span class="o">*</span><span class="n">jsonDict</span><span class="p">,</span> <span class="no">NSString</span> <span class="o">*</span><span class="n">jsonString</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="no">MStatus</span> <span class="o">*</span><span class="n">status</span> <span class="o">=</span> <span class="o">[</span><span class="n">loginService</span> <span class="ss">convertToMStatus</span><span class="p">:</span><span class="n">jsonDict</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>        <span class="no">XCTAssertEqual</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">returncode</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="err">@</span><span class="s2">&quot;login error&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="sr">//</span><span class="err">抛出错误</span>
+</span><span class='line'>        <span class="o">[</span><span class="n">loginException</span> <span class="n">fulfill</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span> <span class="ss">onFailure</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="no">NSString</span> <span class="o">*</span><span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="no">XCTFail</span><span class="p">(</span><span class="err">@</span><span class="s2">&quot;login error:%@&quot;</span><span class="p">,</span><span class="n">msg</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="sr">//</span><span class="err">抛出错误</span>
+</span><span class='line'>        <span class="o">[</span><span class="n">loginException</span> <span class="n">fulfill</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sr">//</span><span class="err">延迟两秒执行</span>
+</span><span class='line'>    <span class="o">[</span><span class="nb">self</span> <span class="ss">waitForExpectationsWithTimeout</span><span class="p">:</span><span class="mi">2</span> <span class="ss">handler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="no">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="no">XCTFail</span><span class="p">(</span><span class="err">@</span><span class="s2">&quot;time out:%@&quot;</span><span class="p">,</span><span class="n">error</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-12T12:55:48+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2015/04/12/rails-code-snippets/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2015/04/12/rails-code-snippets/" itemprop="url">Rails Code Snippets</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>(摘录来自: persie. “Ruby on Rails 教程”)</p>
+
+<h3>short key</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">g</span>   <span class="n">generate</span>
+</span><span class='line'><span class="n">d</span>   <span class="n">destory</span>
+</span><span class='line'><span class="n">s</span>   <span class="n">server</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>脚手架以及一些常用的变量类型</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">g</span> <span class="n">scaffold</span> <span class="n">user</span> <span class="nb">name</span><span class="ss">:string</span> <span class="ss">age</span><span class="p">:</span><span class="n">int</span> <span class="ss">email</span><span class="p">:</span><span class="n">string</span> <span class="ss">description</span><span class="p">:</span><span class="n">text</span> <span class="ss">cash</span><span class="p">:</span><span class="n">float</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>删除脚手架生成的代码</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">d</span> <span class="n">scaffold</span> <span class="no">Users</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>生成Controller与action</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">g</span> <span class="n">controller</span> <span class="no">TodoList</span> <span class="n">list</span> <span class="n">delete</span> <span class="n">index</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>删除Controller</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">d</span> <span class="n">controller</span> <span class="no">TodoList</span> <span class="n">list</span> <span class="n">delete</span> <span class="n">index</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>生成Model</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">g</span> <span class="n">model</span> <span class="no">User</span> <span class="nb">name</span><span class="ss">:string</span> <span class="ss">email</span><span class="p">:</span><span class="n">string</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>删除Model</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails</span> <span class="n">d</span> <span class="n">model</span> <span class="no">User</span> <span class="nb">name</span><span class="ss">:string</span> <span class="ss">email</span><span class="p">:</span><span class="n">string</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>添加字段到表</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">“</span><span class="n">rails</span> <span class="n">generate</span> <span class="n">migration</span> <span class="n">add_password_digest_to_users</span> <span class="ss">password_digest</span><span class="p">:</span><span class="n">string</span><span class="err">”</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>根据Model生成数据库表</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="n">migrate</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-22T23:24:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/codelife/'>codelife</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/11/22/mac-mini-show/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/11/22/mac-mini-show/" itemprop="url">Mac Mini开箱</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>背景</h3>
+
+<p>从3月份换了新工作，就一直在使用自己的电脑，每天背着上下班，后来自己又买了显示器和新的机械键盘。想想这时候如果上Mac mini的话，外设都已经齐全了。
+一直在等9月份的Mini新版，无奈对新版确实有些失望，一直摇摆不定，恰巧双十一的前一天，发现京东的MD387已经降价到了3588，果断决定入手了。</p>
+
+
+		
+		<a href="/blog/2014/11/22/mac-mini-show/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-05T13:14:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/09/05/cocoa-tidy-write/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/09/05/cocoa-tidy-write/" itemprop="url">Cocoa简洁写法笔记</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>对cocoa的一些语法糖做的笔记</p>
+
+
+		
+		<a href="/blog/2014/09/05/cocoa-tidy-write/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-14T16:56:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>ios</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/07/14/xcode5-install-command-line-tools/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/07/14/xcode5-install-command-line-tools/" itemprop="url">Xcode5 Install Command Line Tools</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>之前遇到过，一直没做笔记，导致每次都要现查</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">xcode</span><span class="o">-</span><span class="nb">select</span> <span class="o">--</span><span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-14T15:57:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>ios</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/07/14/instrument-start-fail/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/07/14/instrument-start-fail/" itemprop="url">Instruments无法启动</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>最近在iOS7的系统上使用Instrument想检查内存的leaks，启动时候总是提示失败，花了些时间，解决了这个问题，做下笔记。</p>
+
+
+		
+		<a href="/blog/2014/07/14/instrument-start-fail/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-11T20:43:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>ios</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/05/11/learn-core-animation-the-hard-way/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/05/11/learn-core-animation-the-hard-way/" itemprop="url">Learn Core Animation the Hard Way</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Document</h3>
+
+<ol>
+<li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW8">CABasicAnimation Keypath</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Animation_Types_Timing/Articles/PropertyAnimations.html">Animation Types and Timing Programming Guide</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/reference/CGAffineTransform/Reference/reference.html">CGAffineTransform</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066">Quartz 2D Programming Guide</a></li>
+<li><a href="http://baike.baidu.com/view/954621.htm">放射变换</a></li>
+<li><a href="http://www.cnblogs.com/xiaodao/archive/2012/02/10/2345481.html">组合动画</a></li>
+<li><a href="http://www.cnblogs.com/v2m_/archive/2013/05/09/3070187.html">http://www.cnblogs.com/v2m_/archive/2013/05/09/3070187.html</a></li>
+<li><a href="http://www.cnblogs.com/sell/archive/2013/02/01/2889013.html">几个常用动画代码</a></li>
+</ol>
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-12T12:56:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/sui-bi/'>随笔</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/04/12/why-my-mac-so-slow/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/04/12/why-my-mac-so-slow/" itemprop="url">你的Mac慢了么</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>本子是MC700,已经陪伴我coding了三年,中间升级了内存,硬盘加了SSD,但是自从电池坏掉以后,我拆掉了电池,接电使用,发现越来越卡,经历了三个月左右的煎熬,我的mac终于又重新焕发了青春,说说遇到的问题</p>
+
+
+		
+		<a href="/blog/2014/04/12/why-my-mac-so-slow/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-02T08:19:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/sui-bi/'>随笔</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/01/02/my-2013/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/01/02/my-2013/" itemprop="url">2013总结</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h4>作品</h4>
+
+<ol>
+<li>对晴天进行了两次更新;</li>
+<li>和小伙伴们一起做了一个密码管理的软件<a href="https://itunes">passbox</a></li>
+<li>写了一个对SQLCipher加密数据库转换的Mac程序</li>
+</ol>
+
+
+<h4>读书</h4>
+
+<ol>
+<li>《打造Facebook》</li>
+<li>《MacTack人生元编程》</li>
+<li>《写给程序员的Web设计书》</li>
+<li>《写给大家看的Web设计书》</li>
+<li>《淘宝技术这十年》</li>
+<li>《苹果开发之Cocoa编程》</li>
+<li>《代码整洁之道》</li>
+</ol>
+
+
+<h4>健康</h4>
+
+<p>12年有一阵子住院，13年特别注意锻炼身体，9月份每天和几个朋友去紫竹院跑步运动。强度不是很大，天气渐冷，入冬，雾霾跟严寒，使运动停止。</p>
+
+<p>13年身体并没有什么大碍，感谢</p>
+
+<h4>技术</h4>
+
+<p>感觉自己这一年的技术，进步不大，惭愧。在用户体验跟交互方面，倒是有了一些自己的心得。对Mac的编程有了越来越浓厚的兴趣。</p>
+
+<h4>济南</h4>
+
+<p>从十月份，陆续跟女朋友在济南看了几套房子。主要参考的房子是90平米以上可以落户的房子，现在我女人已经开始考虑学区的问题了，经十路沿线现在也越来越多的高楼在崛起，房价也在逐渐的攀高，房价是每个年轻人心里的痛。</p>
+
+<h4>2014</h4>
+
+<ol>
+<li>多读书</li>
+<li>更多的iOS上的作品</li>
+<li>更多的Mac应用</li>
+<li>深入Object-c，并继续强化Ruby on Rails</li>
+<li>锻炼身体</li>
+<li>从AppStore赚多一点钱</li>
+<li>与几个朋友的小工作室，希望我们能成为TapBot</li>
+<li>换新工作</li>
+<li>买房结婚(房子已买)</li>
+</ol>
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-13T18:05:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>ios</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/08/13/encrypt-sqlite-with-sqlcipher/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/08/13/encrypt-sqlite-with-sqlcipher/" itemprop="url">Encrypt Sqlite With Sqlcipher</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h2>Get the sqlcipher SourceCode</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#使用2.1的版本比较稳定些</span>
+</span><span class='line'><span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">welsonla</span><span class="o">/</span><span class="n">sqlcipher</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">v2</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+		
+		<a href="/blog/2013/08/13/encrypt-sqlite-with-sqlcipher/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+    
+        <a href="2" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2015 - Welsonla -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'welsonlablog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-19152389-6']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

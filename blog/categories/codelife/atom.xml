@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: codelife | Welsonla]]></title>
+  <link href="http://welsonla.timebot.net/blog/categories/codelife/atom.xml" rel="self"/>
+  <link href="http://welsonla.timebot.net/"/>
+  <updated>2015-05-04T11:13:10+08:00</updated>
+  <id>http://welsonla.timebot.net/</id>
+  <author>
+    <name><![CDATA[Welsonla]]></name>
+    <email><![CDATA[wyc.jar@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mac Mini开箱]]></title>
+    <link href="http://welsonla.timebot.net/blog/2014/11/22/mac-mini-show/"/>
+    <updated>2014-11-22T23:24:00+08:00</updated>
+    <id>http://welsonla.timebot.net/blog/2014/11/22/mac-mini-show</id>
+    <content type="html"><![CDATA[<h3>背景</h3>
+
+<p>从3月份换了新工作，就一直在使用自己的电脑，每天背着上下班，后来自己又买了显示器和新的机械键盘。想想这时候如果上Mac mini的话，外设都已经齐全了。
+一直在等9月份的Mini新版，无奈对新版确实有些失望，一直摇摆不定，恰巧双十一的前一天，发现京东的MD387已经降价到了3588，果断决定入手了。</p>
+
+<!--more-->
+
+
+<h3>开箱</h3>
+
+<p>11.11日下午收到了京东的货，用的京东白条，可以到12.10日进行还款，这个给京东点赞</p>
+
+<p><img src="http://ww2.sinaimg.cn/large/6e8de9dbgw1emk7661ob8j21kw23u7wh.jpg" width="500" alt="Mini" /></p>
+
+<h4>正面照</h4>
+
+<p><img src="http://ww2.sinaimg.cn/large/6e8de9dbjw1emk8q9x5caj21kw23u7sd.jpg" width="500" alt="mini front" /></p>
+
+<h4>背后有丰富的插口，再也不用担心USB口不够用了</h4>
+
+<p><img src="http://ww2.sinaimg.cn/large/6e8de9dbgw1emk78er4izj21kw23u7sd.jpg" width="500" alt="Mini back" /></p>
+
+<h4>配件是有一个HDMI转DVI的口</h4>
+
+<p><img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1emk7a8ffzjj21kw23unj2.jpg" width="500" alt="Mini support" /></p>
+
+<h3>升级</h3>
+
+<p>如果要换内存的话，是不用拧一颗螺丝的，旋转后壳，就能取下底部的壳,内部结构太美了
+<img src="http://ww4.sinaimg.cn/large/6e8de9dbgw1emk7crpjh4j21kw16oqmn.jpg" width="400" alt="Mini inside" /></p>
+
+<h3>使用</h3>
+
+<h5>显示特别模糊</h5>
+
+<p>当我接上显示器的那一刻，我感觉眼睛都要瞎了，一定是我打开方式不对，屏幕为什么这么模糊，后来上网搜了一下，很多人都有这个问题。
+有人说线的问题，我换了几条线，显示效果都是一样糟糕
+后来终于找到了问题，并且感谢大神给的解决方案。<a href="http://adolfzer.blogspot.com/2013/05/mac-osx.html">Mac OSX 顯示模糊問題，完全解決辦法</a></p>
+
+<pre><code class="ruby">mac的電腦如果搭配自家螢幕可能不會有這問題，
+
+不過如果不是用Apple的螢幕，然後又是跟我一樣是用HDMI輸出的話，
+
+那畫面就一定很難好了，
+</code></pre>
+
+<p>我把这个脚本放到了<a href="https://gist.github.com/welsonla/e43ba2ba039c7ecd475d">gist</a>上面，你复制保存到本地，命名为<code>patch-edid.rb</code>
+将这个patch放到你的文档下，然后运行,会生成一套显示器配置
+<code>ruby
+ruby patch-edid.rb
+</code></p>
+
+<p>将这套配置，放到系统<code>/System/Library/Displays/Overrides</code>,重启后就会生效了。</p>
+
+<h5>打开trim，支持10.10</h5>
+
+<p>鉴于网上脚本众多，而trim enabler又让很多电脑出现了问题，现在终于发现一款10.10下完美的打开Trim的工具(free)</p>
+
+<p><a href="http://chameleon.alessandroboschini.com/">Chameleon</a></p>
+
+<p><img src="http://ww2.sinaimg.cn/large/6e8de9dbjw1emk7zcot3oj20880d9t95.jpg" alt="Chameleon" /></p>
+
+<h3>总结</h3>
+
+<p>使用中，将MC700上的8G内存换到了Mini上面，现在的配置是
+<code>
+1. Mac Mini : DDR3 1333 8G
+2. MC700 : 4G DDR3 1600, Sandisk SSD 128
+</code>
+由于近期开销比较大，这样对两台机器进行了一个互补，发现都还可以进行正常的开发，但Mini还是要比我的MC700要快很多，不知道这台MC700还能陪伴我多久。</p>
+
+<p>感谢老婆，让我这次败家，有了一个一直以来梦寐以求的工作套装</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一个码农的Mac配置]]></title>
+    <link href="http://welsonla.timebot.net/blog/2013/04/10/build-your-mac-os/"/>
+    <updated>2013-04-10T14:14:00+08:00</updated>
+    <id>http://welsonla.timebot.net/blog/2013/04/10/build-your-mac-os</id>
+    <content type="html"><![CDATA[<h4>我常用的一些Mac工具</h4>
+
+<ol>
+<li><a href="http://www.iterm2.com/">iTerm2</a> 一个增强的命令终端</li>
+<li><a href="http://www.sourcetreeapp.com/">SourceTree</a> git代码控制工具</li>
+<li><a href="https://www.wunderlist.com/">WunderList</a> 一个出色的Todo工具，提供云同步，我把它当做我的任务列表</li>
+<li><a href="https://github.com/textmate/textmate/tags">TextMate2</a> 号称&#8221;The Missing Editor for Mac OS X&#8221;</li>
+<li><a href="http://www.sublimetext.com/2">SublimeText2</a> 另一个特别出色的Editor</li>
+<li><a href="http://www.alfredapp.com/">Alfred</a> Option+Space,唤出，提高你打开软件的效率，购买Powerpack还可以使用很多强大的拓展</li>
+<li><a href="http://www.i-funbox.com/">iFunBox</a> 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面</li>
+<li><a href="https://jianguoyun.com/">坚果云</a> 国内一个特别出色的网盘，可以右键添加要同步的文件</li>
+<li><a href="http://evernote.com/">Evernote</a> 这个大家都懂的</li>
+<li><a href="http://www.trankynam.com/xtrafinder/">XtraFinder</a> 为你的Finder增加Tab，剪切等功能</li>
+<li><a href="http://shortcatapp.com/">shortcat</a>键盘快捷键，写啥点啥,怒赞</li>
+<li><a href="http://chameleon.alessandroboschini.com/">Chameleon</a> 打开第三方SSD的trim</li>
+</ol>
+
+
+<h4>shortcat快捷键</h4>
+
+<pre><code class="ruby">cmd+shift+space唤醒
+输入关键词后，如果匹配了多个，使用control+字母去点击相应的匹配
+</code></pre>
+
+<h4>安装HomeBrew</h4>
+
+<p>Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包</p>
+
+<p>比如安装mysql，你只需要</p>
+
+<pre><code class="ruby">brew install mysql  
+</code></pre>
+
+<p>Homebrew 安装特别简单，只需要键入</p>
+
+<pre><code class="ruby">ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+</code></pre>
+
+<p>相关的文档可以到官方去查看<a href="http://mxcl.github.io/homebrew/">http://mxcl.github.io/homebrew/</a></p>
+
+<h4>安装oh-my-Zsh</h4>
+
+<p>Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，</p>
+
+<p>安装步骤
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh&quot;</span><span class="o">&gt;</span><span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">robbyrussell</span><span class="o">/</span><span class="n">oh</span><span class="o">-</span><span class="n">my</span><span class="o">-</span><span class="n">zsh</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span><span class="o">&lt;</span><span class="sr">/a&gt; | sh&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="err">备份你的</span><span class="o">.</span><span class="n">zshrc</span><span class="err">文件</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;cp ~/</span><span class="o">.</span><span class="n">zshrc</span> <span class="o">~</span><span class="sr">/.zshrc.orig&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="err">创建</span><span class="n">zsh</span><span class="err">配置</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;cp ~/</span><span class="o">.</span><span class="n">oh</span><span class="o">-</span><span class="n">my</span><span class="o">-</span><span class="n">zsh</span><span class="o">/</span><span class="n">templates</span><span class="o">/</span><span class="n">zshrc</span><span class="o">.</span><span class="n">zsh</span><span class="o">-</span><span class="n">template</span> <span class="o">~</span><span class="sr">/.zshrc&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="err">设置</span><span class="n">zsh</span><span class="err">为你的默认</span><span class="n">shell</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;chsh -s /</span><span class="n">bin</span><span class="o">/</span><span class="n">zsh</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;重启终端就会生效&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>
+</span><span class='line'><span class="err">这里还有一些主题</span><span class="o">[</span><span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">robbyrussell</span><span class="o">/</span><span class="n">oh</span><span class="o">-</span><span class="n">my</span><span class="o">-</span><span class="n">zsh</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">themes</span><span class="o">]</span><span class="p">(</span><span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">robbyrussell</span><span class="o">/</span><span class="n">oh</span><span class="o">-</span><span class="n">my</span><span class="o">-</span><span class="n">zsh</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">themes</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">如果你要修改</span><span class="n">zsh</span><span class="err">的默认主题</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">vi</span> <span class="o">~</span><span class="sr">/.zshrc&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="err">修改</span><span class="no">ZSH_THEME</span><span class="err">为你喜欢的主题名即可</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>如果不想继续使用，可以使用以下命令卸载
+<code>ruby
+uninstall_oh_my_zsh
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
