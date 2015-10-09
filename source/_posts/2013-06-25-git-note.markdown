@@ -71,3 +71,10 @@ git push origin v1.1
 ```ruby
 git svn clone [SVN-Path]
 ```
+####回滚
+
+```ruby
+#http://stackoverflow.com/questions/1338728/delete-commits-from-a-branch-in-git
+git reset --hard commitid
+git push --force
+```
