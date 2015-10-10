@@ -1,10 +1,7 @@
+title: 关于Xcode单元测试(XCTest)的一些总结
+date: 2015-05-04 10:58:17
+categories: something
 ---
-layout: post
-title: "关于Xcode单元测试(XCTest)的一些总结"
-date: 2015-05-04 10:28:04 +0800
-comments: true
-categories: ios
----   
 
 单元测试可以让我们快速检测项目接口与一些功能的可用性，这次编写了大量的单元测试，让我对之前的一些疑惑有了一个透彻的理解
 
