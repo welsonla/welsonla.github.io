@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://welsonla.timebot.net
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -67,5 +67,6 @@ theme: landscape
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type:
+deploy: 
+  type: git
+  repo: git@github.com:welsonla/welsonla.github.com.git
