@@ -52,3 +52,12 @@ deploy:
   repo: git@github.com:welsonla/welsonla.github.com.git
   branch: master
 ```
+
+6. 安装主题，推荐Next, 有详细的安装文档
+```ruby
+＃安装参考
+http://theme-next.iissnan.com/five-minutes-setup.html
+
+#详细的配置
+https://github.com/iissnan/hexo-theme-next/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83
+```
