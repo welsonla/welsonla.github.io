@@ -69,6 +69,8 @@ theme: NexT
 
 since: 2013
 
+disqus_shortname: welsonla
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy: 

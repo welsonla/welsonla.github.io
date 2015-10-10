@@ -9,11 +9,11 @@ categories: 技术随笔
 
 ###使用github pages
 
-如果想使用 http://username.github.io的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io）
+如果想使用 http://username.github.io 的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io）
 
 
 
-用户使用的是Github Pages的master版本下面的public作为你的网站主目录，你可以通过浏览http://username.github.io来查看。如果你想在source这个版本上面维护代码，并且把内容提交到master分支，Octopress有一个命令来帮助你完成这些
+用户使用的是Github Pages的master版本下面的public作为你的网站主目录，你可以通过浏览http://username.github.io 来查看。如果你想在source这个版本上面维护代码，并且把内容提交到master分支，Octopress有一个命令来帮助你完成这些
 
 ```ruby
 rake setup_github_pages
