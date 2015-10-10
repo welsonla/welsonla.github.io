@@ -38,11 +38,16 @@ npm install -g hexo-cli
 3. 创建Blog  
 ```ruby
 hexo init blog
+cd blog
+npm install
+
+#安装Server
+npm install hexo-server --save
+
 ```
 
 4. 创建文章  
 ```ruby
-cd blog
 hexo new "first blog"
 ```
 

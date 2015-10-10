@@ -6,60 +6,70 @@ comments: true
 categories: git 
 ---
 
-####添加所有新文件
+
+#### 一些全局配置
+```ruby
+git config --global push.default matching
+
+git config --global color.status auto
+git config --global color.diff auto
+git config --global color.branch auto
+git config --global color.interactive auto
+```
+#### 添加所有新文件
 
 ```ruby
 git add .
 ```
 
-####从版本中去除一个文件
+#### 从版本中去除一个文件
 ```ruby
 git rm test.html.rb
 ```
 
-####假设有很多新文件和删除了好多文件
+#### 假设有很多新文件和删除了好多文件
 ```ruby
 git add -A
 ```
-####获取所有远程版本
+#### 获取所有远程版本
 ```ruby
 git fetch
 ```
 
-####创建并切换到新分支
+#### 创建并切换到新分支
 ```ruby
 git checkout -b newbranch
 ```
 
-####切换到分支
+#### 切换到分支
 ```ruby
 git checkout master
 ```
 
-####迁移原有git项目到新得项目地址
+#### 迁移原有git项目到新得项目地址
 ```ruby
 git remote set-url origin git@git.github.com:welsonla/studio.git
 ```
 
-####查看当前git分支
+#### 查看当前git分支
 ```
 git branch -r
 ```
-####查看git log
+#### 查看git log
 ```ruby
 git log
 ```
 
-####查看当前tag
+#### 查看当前tag
 ```ruby
 git tag
 ```
-####创建一个新的tag
+#### 创建一个新的tag
 ```ruby
 git tag v1.1
 ```
 
-####降当前tag推送到服务器
+#### 降当前tag推送到服务器
 ```ruby
 git push origin --tags
 
@@ -67,11 +77,11 @@ git push origin --tags
 git push origin v1.1
 ```
 
-####将现有svn项目转换成git项目，并保留所有commit log
+#### 将现有svn项目转换成git项目，并保留所有commit log
 ```ruby
 git svn clone [SVN-Path]
 ```
-####回滚
+#### 回滚
 
 ```ruby
 #http://stackoverflow.com/questions/1338728/delete-commits-from-a-branch-in-git

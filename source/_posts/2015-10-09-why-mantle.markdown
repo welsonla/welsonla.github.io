@@ -1,7 +1,13 @@
-title: "Mantle简介"
+title: "为什么使用Mantle"
 date: 2015-10-08 16:06:07
 tags: iOS
 ---
+
+项目地址: [https://github.com/Mantle/Mantle](https://github.com/Mantle/Mantle)
+
+今年上半年在两个项目中都将Model层替换为Mantle，大大减少了开发中实体转换的时间;选择mantle的初衷是因为看到了大神的blog,里面的应用场景也是在开发中我们经常遇到的情况:
+[iWangKe.me - 为什么唱吧iOS 6.0选择了Mantle](http://www.iwangke.me/2014/10/13/Why-Changba-iOS-choose-Mantle/)
+
 
 ## 对比一下
 ```json
@@ -102,3 +108,10 @@ NSDictionary *params = [user dictionaryValue];
 #使用部分的字段
 NSDictionary *params = [address dictionaryWithValuesForKeys:@[@"uid",@"stats",@"homepage"]];
 ```
+
+## 最后
+
+在项目的开发过程中，我抽时间做了一个小工具，可以方便的将JSON转换为Mantle支持的Model类，希望对你们有帮助
+
+Source: https://github.com/TimeBots/ModelBot
+Download: [ModelBot Download](https://github.com/TimeBots/ModelBot/releases/download/0.3.0/ModelBot.0.3.0.zip)
