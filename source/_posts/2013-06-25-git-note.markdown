@@ -1,0 +1,80 @@
+---
+layout: post
+title: "git笔记"
+date: 2013-06-25 09:21
+comments: true
+categories: git 
+---
+
+####添加所有新文件
+
+```ruby
+git add .
+```
+
+####从版本中去除一个文件
+```ruby
+git rm test.html.rb
+```
+
+####假设有很多新文件和删除了好多文件
+```ruby
+git add -A
+```
+####获取所有远程版本
+```ruby
+git fetch
+```
+
+####创建并切换到新分支
+```ruby
+git checkout -b newbranch
+```
+
+####切换到分支
+```ruby
+git checkout master
+```
+
+####迁移原有git项目到新得项目地址
+```ruby
+git remote set-url origin git@git.github.com:welsonla/studio.git
+```
+
+####查看当前git分支
+```
+git branch -r
+```
+####查看git log
+```ruby
+git log
+```
+
+####查看当前tag
+```ruby
+git tag
+```
+####创建一个新的tag
+```ruby
+git tag v1.1
+```
+
+####降当前tag推送到服务器
+```ruby
+git push origin --tags
+
+推送单个
+git push origin v1.1
+```
+
+####将现有svn项目转换成git项目，并保留所有commit log
+```ruby
+git svn clone [SVN-Path]
+```
+####回滚
+
+```ruby
+#http://stackoverflow.com/questions/1338728/delete-commits-from-a-branch-in-git
+git reset --hard commitid
+git push --force
+```
