@@ -3,7 +3,7 @@ layout: post
 title: "Mac Mini开箱"
 date: 2014-11-22 23:24
 comments: true
-categories: CodeLife
+categories: life
 ---
 
 ###背景

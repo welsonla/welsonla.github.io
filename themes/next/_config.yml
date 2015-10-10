@@ -22,6 +22,11 @@ avatar: /uploads/avatar.jpg
 
 disqus_shortname: welsonla
 
+social:
+	github: https://github.com/welsonla
+	twitter: https://twitter.com/welsonla
+	
+
 # Icon fonts
 # Place your font into next/source/fonts, specify directory-name and font-name here
 # Avialable: default | linecons | fifty-shades | feather
@@ -33,7 +38,7 @@ icon_font: default
 # Code Highlight theme
 # Available value: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night eighties
 
 
 # MathJax Support

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "2013总结"
+title: "我的2013"
 date: 2014-01-02 08:19
 comments: true
-categories: 随笔
+categories: life
 ---
 
 ####作品
