@@ -1,6 +1,6 @@
 title: "为什么使用Mantle"
 date: 2015-10-08 16:06:07
-tags: iOS
+categories: iOS
 ---
 
 项目地址: [https://github.com/Mantle/Mantle](https://github.com/Mantle/Mantle)
