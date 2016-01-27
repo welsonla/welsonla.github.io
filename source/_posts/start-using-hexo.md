@@ -12,7 +12,7 @@ categories: something
 
 1. 更简洁的语法
 ```ruby
- hexo new
+ hexo new "title"
  hexo new page
  hexo g #生成
  hexo d #部署

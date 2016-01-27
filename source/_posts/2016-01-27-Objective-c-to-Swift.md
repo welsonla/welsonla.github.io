@@ -54,7 +54,7 @@ var score2 = Dictionary<String,String>()
 var score3 = [:]
 
 #ObjC
-NSDictionary *person = @{@"name":@"Sigle Dog",@"Skill":@"Swift"};
+NSDictionary *person = @{@"name":@"Single Dog",@"Skill":@"Swift"};
 person[@“age”] = @“28”;
 
 #Swift
