@@ -22,7 +22,7 @@ categories: something
 2. 更快的生成速度
 
 3. 直观的部署结果
-  
+
 ## 安装
 
 1. 安装Node  
@@ -62,7 +62,7 @@ npm install hexo-deployer-git --save
 
 
 # 修改_config.yml  
-deploy: 
+deploy:
   type: git #不要再使用github作为type
   repo: git@github.com:<yourname>/<yourname>.github.io.git
   branch: master
@@ -76,3 +76,15 @@ deploy:
 	##### 详细的配置
 	[https://github.com/iissnan/hexo-theme-next/wiki/主题配置参考](https://github.com/iissnan/hexo-theme-next/wiki/主题配置参考)
 
+7. 添加RSS
+  [](https://github.com/hexojs/hexo-generator-feed)
+
+  ```js
+  npm install hexo-generator-feed --save
+  ```
+
+8. 上传图片
+  ```js
+  放到./source/uploads文件夹下，代码中使用
+  ![](./uploads/xxx.png)
+  ```

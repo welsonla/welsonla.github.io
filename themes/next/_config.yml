@@ -4,6 +4,7 @@ menu:
   categories: /categories
   archives: /archives
   about: /about
+  feed: /atom.xml
   # tags: /tags
   # commonweal: /404.html
 
@@ -18,14 +19,19 @@ keywords: "welsonla,cocoa,mac,ios"
 # Set rss to specific value if you have burned your feed already.
 rss:
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+
 avatar: /uploads/avatar.jpg
 
 disqus_shortname: welsonla
 
 social:
-	github: https://github.com/welsonla
-	twitter: https://twitter.com/welsonla
-	
+ github: https://github.com/welsonla
+ twitter: https://twitter.com/welsonla
 
 # Icon fonts
 # Place your font into next/source/fonts, specify directory-name and font-name here
