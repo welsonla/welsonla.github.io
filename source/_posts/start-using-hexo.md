@@ -86,5 +86,5 @@ deploy:
 8. 上传图片
   ```js
   放到./source/uploads文件夹下，代码中使用
-  ![](./uploads/xxx.png)
+  ![](/uploads/xxx.png)
   ```
