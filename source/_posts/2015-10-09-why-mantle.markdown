@@ -29,6 +29,8 @@ categories: iOS
 
 ```
 
+<!--more-->
+
 ![](http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvrr4eyjj20gp0eqjvh.jpg)
 
 ![](http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvsjo0s6j20go0f7whk.jpg)
@@ -45,14 +47,14 @@ categories: iOS
 ```ruby
 MDoubanUser *allModel = [MTLJSONAdapter modelOfClass:[MDoubanUser class] fromJSONDictionary:rstlDict] error:nil]
 ```
-  
+
 ## 将JSON中的数组转换为Model的数组
 
 ```ruby
 NSArray *users = [MTLJSONAdapter modelsOfClass:[MDoubanUser class] fromJSONArray:userArray error:nil];
 ```
 
-  
+
 ## 将某个字段对应到某个实体
 ```ruby
 +(NSValueTransformer *)JSONTransformerForKey:(NSString *)key{

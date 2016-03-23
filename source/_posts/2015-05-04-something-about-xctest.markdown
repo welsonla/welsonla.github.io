@@ -10,11 +10,13 @@ categories: iOS
 - 单元测试没有头文件，一些变量声明，写在interface里面
 - 对于一些变量的初始化，放到setup里面进行
 
-##一个简单的单元测试类
-#####创建单元测试类
+<!--more-->
+
+## 一个简单的单元测试类
+##### 创建单元测试类
 ![](http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0n47wtrj20ka0bygnf.jpg)
 
-####一个简单的类
+#### 一个简单的类
 ```ruby
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
@@ -33,10 +35,10 @@ categories: iOS
 
 - (void)setUp {
     [super setUp];
-    
+
     //初始化
     count = 5;
-    
+
     loginService = [[LoginService alloc] init];
 
 }
@@ -69,20 +71,20 @@ categories: iOS
 **cmd+U** 进行执行后会提示我们如下错误,测试通过的方法，会有绿色对号，失败的方法会显示我们写的错误提示
 ![](http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0vuinl5j20p405jq49.jpg)
 
-##XCTest的测试方法大都类似
+## XCTest的测试方法大都类似
 
-####XCTAssertGreaterThan
+#### XCTAssertGreaterThan
 ```ruby
 #判断count是否大于8
 XCTAssertGreaterThan(count, 8,@"count is not greater than 8");
 ```
-####XCTAssertNotEqual
+#### XCTAssertNotEqual
 ```ruby
 #判断是否不相等
 XCTAssertNotEqual(count, 5,@"they are equal");
 ```
 
-####XCTAssertTrue
+#### XCTAssertTrue
 ```ruby
 #判断某个表达式是否成立
 XCTAssertTrue(count>3,@"count greater than 3");
@@ -91,10 +93,10 @@ XCTAssertTrue(count>3,@"count greater than 3");
 ![](http://ww4.sinaimg.cn/large/6e8de9dbgw1ers16kf52bj210v04jn03.jpg)
 
 
-##对于异步方法的测试(Asynchronous Testing)
+## 对于异步方法的测试(Asynchronous Testing)
 对于block等异步方式执行的方法，在测试的时候，我们要使用，一般的做法都是延迟，**等待block执行完毕再进行检查**
 
-#####主要步骤
+##### 主要步骤
 - 声明一个XCTestExpectation
 - 在block中使用fulfill抛出错误
 - waitForExpectationsWithTimeout进行一个延迟时间设定
@@ -115,16 +117,16 @@ XCTAssertTrue(count>3,@"count greater than 3");
     [loginService sendLoginWithMobile:TEST_MOBILE andCode:TEST_CODE onComplete:^(NSDictionary *jsonDict, NSString *jsonString) {
         MStatus *status = [loginService convertToMStatus:jsonDict];
         XCTAssertEqual(status.returncode, 0, @"login error");
-        
+
         //抛出错误
         [loginException fulfill];
     } onFailure:^(NSString *msg) {
         XCTFail(@"login error:%@",msg);
-        
+
         //抛出错误
         [loginException fulfill];
     }];
-    
+
     //延迟两秒执行
     [self waitForExpectationsWithTimeout:2 handler:^(NSError *error) {
         XCTFail(@"time out:%@",error);
