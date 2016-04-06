@@ -73,7 +73,7 @@ arc4random_uniform(255)
 random() % 255
 ```
 
-### Selector 
+### Selector
 感觉Selector的方式不如ObjC那样有方法提示，容易写错，效率反而不如之前
 ```swift
 #ObjC
@@ -91,7 +91,29 @@ id sender
 #Swift
 var sender:Anyobject?
 ```  
+### 三元运算缩写
+```swift
+#ObjC
+a ? : b
 
+#Swift
+a ?? b
+```
+
+### 枚举
+```swift
+#ObjC
+typedef NS_ENUM(NSInteger,LocationState){
+    LocationStateStart,
+    LocationStateFinish,
+    LocationStateFail
+};
+
+#Swift
+enum LocationState {
+    case LocationStart, LocationFinish, LocationFail
+}
+```
 
 # Todo List
 1. Block to Closure
@@ -100,4 +122,3 @@ var sender:Anyobject?
 ……
 
 遇到继续添加,未完待续……
-

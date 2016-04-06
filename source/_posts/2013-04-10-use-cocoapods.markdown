@@ -3,7 +3,7 @@ layout: post
 title: "Cocoapods 使用"
 date: 2013-04-10 16:48
 comments: true
-categories: iOS 
+categories: iOS
 ---
 
 
@@ -18,7 +18,7 @@ touch Podfile
 
 加入平台版本，（5.1可以省略，但是最好在podfile中加入，因为一些ARC相关的类库不加的话，会提示错误）
 ```ruby
-platform :ios,'5.1'
+platform :ios,'9.0'
 ```
 
 
@@ -45,6 +45,19 @@ Pod 'FMDB','2.0'
 
 ```ruby
 pod install
+```
+
+### 修复Cocoapods，重置repo
+```ruby
+pod repo remove master
+pod repo add master https://github.com/CocoaPods/Specs.git
+pod repo update
+```
+
+### 减少更新安装的时间，只安装或更新必要的库
+```ruby
+pod install --verbose --no-repo-update
+pod update --verbose --no-repo-update
 ```
 
 之后将会生成一个workspace文件，以后我们打开项目的时候，就打开workspace文件即可，项目和其所需要的类库都以sub project的方式加到了这个workspace下面
