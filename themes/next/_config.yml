@@ -5,6 +5,7 @@ menu:
   archives: /archives
   about: /about
   feed: /atom.xml
+  devlist: /list
   # tags: /tags
   # commonweal: /404.html
 
