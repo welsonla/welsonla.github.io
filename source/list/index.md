@@ -1,0 +1,62 @@
+title: list
+date: 2016-04-07 14:36:14
+---
+# My Develop list 
+### 工具控
+#### The Setup
+[https://usesthis.com/](https://usesthis.com/)
+
+#### 利器
+[http://liqi.io](http://liqi.io)
+
+#### Stackshare
+`在开发中流行的软件以及大公司在用什么软件进行开发`  
+[http://stackshare.io/](http://stackshare.io/)
+
+
+# iTunesConnect第三方工具
+#### AppAnnie(有iOS客户端)
+[http://appannie.com](http://appannie.com)
+
+### appfigures(有iOS客户端)
+[https://appfigures.com/](https://appfigures.com/)
+
+# For Mac Developer
+### Analytics
+#### Fabric
+[http://fabric.com](http://fabric.com)
+
+#### DevMate
+[http://devmate.com](http://devmate.com)
+
+### In-App purchases
+#### FastSpring
+[http://www.fastspring.com/](http://www.fastspring.com/)
+
+# Code Editor
+
+#### TextMate
+[https://github.com/textmate/textmate](https://github.com/textmate/textmate)
+
+#### SublimeText
+[http://www.sublimetext.com/3]()
+
+#### Atom
+[https://atom.io]()
+
+#### VS Code
+[https://code.visualstudio.com/]()
+
+# The github’s
+
+#### Shop
+[https://github.myshopify.com/](https://github.myshopify.com/)
+
+#### Octodex
+[https://octodex.github.com/](https://octodex.github.com/)
+
+#### Projects that power GitHub for Mac
+[https://github.com/showcases/projects-that-power-github-for-mac](https://github.com/showcases/projects-that-power-github-for-mac)
+
+#### Projects that power GitHub
+[https://github.com/showcases/projects-that-power-github](https://github.com/showcases/projects-that-power-github)
