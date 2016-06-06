@@ -88,3 +88,20 @@ git svn clone [SVN-Path]
 git reset --hard commitid
 git push --force
 ```
+
+
+
+#### ignore
+
+##### .gitignore 新文件使用正则匹配
+```
+*.file_extension
+.idea/*
+```
+
+##### remove exist files(现有文件需要软删除)
+```ruby
+git rm -r --cached . //soft delete
+git add .
+git commit -m 'remove ignore files'
+```
