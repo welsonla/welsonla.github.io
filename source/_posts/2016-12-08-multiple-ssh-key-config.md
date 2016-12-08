@@ -1,9 +1,8 @@
-title: multiple ssh key config
+title: 配置多个SSH Keygen
 comment: true
 date: 2016-12-08 10:16:06
 categories:
 ---
-# 配置多个SSH Keygen
 
 ```ruby
 ssh-keygen -t rsa -C "YourMail@github.com" -f ~/.ssh/github_rsa
