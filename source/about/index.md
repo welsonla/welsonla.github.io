@@ -21,7 +21,16 @@ Object-c, Swift , PHP ,Ruby on Rails
 
 
 
-### 我的iOS作品
+# 我的iOS作品
+#### [晴天](https://itunes.apple.com/cn/app/qing-tian/id585544395?mt=8)
+> 一款简洁的天气应用
 
-1. [晴天](https://itunes.apple.com/cn/app/qing-tian/id585544395?mt=8) 一款简洁的天气应用
-2. [PassBoxes](http://itunes.apple.com/app/id663329564) 管理你所有的密码
+#### [PassBoxes](http://itunes.apple.com/app/id663329564)
+> 管理你所有的密码
+
+# 写过的Mac小工具
+#### [SQLCipherExport](https://github.com/welsonla/SQLCipherExport)
+> 将SQLite进行AES256加密解密转换的工具
+
+#### [ModelBot](https://github.com/TimeBots/ModelBot)
+> 将JSON生成NSObject，MTLModel(Mantle),Swift, ObjectMapper实体类的工具
