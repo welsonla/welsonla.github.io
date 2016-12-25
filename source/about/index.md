@@ -22,7 +22,7 @@ Object-c, Swift , PHP ,Ruby on Rails
 
 
 # 我的iOS作品
-#### [晴天](https://itunes.apple.com/cn/app/qing-tian/id585544395?mt=8)
+#### [晴天](https://itunes.apple.com/app/apple-store/id585544395?pt=1829602&ct=blog&mt=8)
 > 一款简洁的天气应用
 
 #### [PassBoxes](http://itunes.apple.com/app/id663329564)
