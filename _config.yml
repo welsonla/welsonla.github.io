@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: NSLog("welsonla's code life and etc.");
+title: NSLog #("welsonla's code life and etc.");
 subtitle:
 description:
 author: welsonla
@@ -48,6 +48,10 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+#
+# local_search:
+#   enable: true
+  
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
@@ -66,6 +70,7 @@ google_analytics: UA-19152389-6
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: NexT
+# theme: apollo
 
 since: 2013
 
@@ -77,3 +82,9 @@ deploy:
   type: git
   repo: git@github.com:welsonla/welsonla.github.com.git
   branch: master
+  
+sitemap:
+	path: sitemap.xml
+baidusitemap:
+	path: baidusitemap.xml
+
