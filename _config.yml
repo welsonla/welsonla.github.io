@@ -69,7 +69,7 @@ google_analytics: UA-19152389-6
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: NexT
+theme: crisp
 # theme: apollo
 
 since: 2013
