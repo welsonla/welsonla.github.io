@@ -9,8 +9,9 @@ date: 2016-04-07 14:36:14
 
 
 ## iTunesConnect第三方工具  
-[AppAnnie(有iOS客户端)](http://appannie.com)
-[appfigures(有iOS客户端)](https://appfigures.com/)
+[AppAnnie(iOS)](http://appannie.com)
+[AppSales-Mobile(iOS)](https://github.com/nicolasgomollon/AppSales-Mobile)
+[AppWage(Mac)](https://github.com/hankinsoft/AppWage)
 
 ## For Mac Developer
 ##### Analytics
