@@ -26,7 +26,7 @@ categories: life
 - [Sublime Merge](https://www.sublimemerge.com/) Sublime Text出品的Git客户端
 - [Netbeans 8](https://netbeans.org/community/releases/81/index.html) 使用PlantUML插件用它来画UML
 - [iThoughtsX(Paid)](https://apps.apple.com/cn/app/ithoughtsx-mindmap/id720669838?mt=12) Mindmap工具
-- []()
+- [ForkLift2](https://apps.apple.com/cn/app/forklift-file-manager-and-ftp-sftp-webdav-amazon-s3-client/id412448059?mt=12) 目前AppStore版本免费，强大功能齐全的FTP工具
 
 #### shortcat快捷键
 ```ruby
