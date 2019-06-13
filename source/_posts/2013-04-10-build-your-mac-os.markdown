@@ -7,36 +7,42 @@ categories: life
 ---
 
 
-####我常用的一些Mac工具
+#### 我常用的一些Mac工具
 
-1. [iTerm2](http://www.iterm2.com/) 一个增强的命令终端
-2. [SourceTree](http://www.sourcetreeapp.com/) git代码控制工具
-3. [WunderList](https://www.wunderlist.com/) 一个出色的Todo工具，提供云同步，我把它当做我的任务列表
-4. [TextMate2](https://github.com/textmate/textmate/tags) 号称"The Missing Editor for Mac OS X"
-5. [SublimeText2](http://www.sublimetext.com/2) 另一个特别出色的Editor
-6. [Alfred](http://www.alfredapp.com/) Option+Space,唤出，提高你打开软件的效率，购买Powerpack还可以使用很多强大的拓展
-7. [iFunBox](http://www.i-funbox.com/) 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面
-8. [坚果云](https://jianguoyun.com/) 国内一个特别出色的网盘，可以右键添加要同步的文件
-9. [Evernote](http://evernote.com/) 这个大家都懂的
-10. [XtraFinder](http://www.trankynam.com/xtrafinder/) 为你的Finder增加Tab，剪切等功能
-11. [shortcat](http://shortcatapp.com/)键盘快捷键，写啥点啥,怒赞
-12. [Chameleon](http://chameleon.alessandroboschini.com/) 打开第三方SSD的trim
+- [iTerm2](http://www.iterm2.com/) 一个增强的命令终端
+- [SourceTree](http://www.sourcetreeapp.com/) git代码控制工具
+- [WunderList](https://www.wunderlist.com/) 一个出色的Todo工具，提供云同步，我把它当做我的任务列表
+- [TextMate2](https://github.com/textmate/textmate/tags) 号称"The Missing Editor for Mac OS X"
+- [SublimeText2](http://www.sublimetext.com/2) 另一个特别出色的Editor
+- [Alfred](http://www.alfredapp.com/) Option+Space,唤出，提高你打开软件的效率，购买Powerpack还可以使用很多强大的拓展
+- [iFunBox](http://www.i-funbox.com/) 管理你的苹果设备的文件，可以不通过iTunes直接把文件放到程序的Documents下面
+- [坚果云](https://jianguoyun.com/) 国内一个特别出色的网盘，可以右键添加要同步的文件
+- [Evernote](http://evernote.com/) 这个大家都懂的
+- [XtraFinder](http://www.trankynam.com/xtrafinder/) 为你的Finder增加Tab，剪切等功能
+- [shortcat](http://shortcatapp.com/)键盘快捷键，写啥点啥,怒赞
+- [Chameleon](http://chameleon.alessandroboschini.com/) 打开第三方SSD的trim
+- [Agenda](https://apps.apple.com/cn/app/agenda/id1287445660?mt=12)
+- [itsycal](https://www.mowglii.com/itsycal/) 不错的菜单栏日历
+- [Sublime Merge](https://www.sublimemerge.com/) Sublime Text出品的Git客户端
+- [Netbeans 8](https://netbeans.org/community/releases/81/index.html) 使用PlantUML插件用它来画UML
+- [iThoughtsX(Paid)](https://apps.apple.com/cn/app/ithoughtsx-mindmap/id720669838?mt=12) Mindmap工具
+- []()
 
-####shortcat快捷键
+#### shortcat快捷键
 ```ruby
 cmd+shift+space唤醒
 输入关键词后，如果匹配了多个，使用control+字母去点击相应的匹配
 ```
 
 
-####安装HomeBrew
+#### 安装HomeBrew
 
 Homebrew是一个管理Mac拓展的工具，他可以很方便的安装你所需要的软件，以及软件的一些依赖包
 
 比如安装mysql，你只需要
 
 ```ruby
-brew install mysql	
+brew install mysql
 ```
 Homebrew 安装特别简单，只需要键入
 
@@ -47,7 +53,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 相关的文档可以到官方去查看[http://mxcl.github.io/homebrew/](http://mxcl.github.io/homebrew/)
 
 
-####安装oh-my-Zsh
+#### 安装oh-my-Zsh
 
 Zsh是Mac上面的一个命令行增强工具，他提供了关键字高亮，命令补全，以及一些命令的拓展，
 
