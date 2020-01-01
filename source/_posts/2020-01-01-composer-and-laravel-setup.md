@@ -1,7 +1,7 @@
 title: Mac OS 安装 配置Laravel开发环境
 comment: true
 date: 2020-01-01 12:57:25
-categories:
+categories: PHP
 ---
 
 
