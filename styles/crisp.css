@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 500 !important;
 }
 h1 {
-	font-size: 2em;
+	font-size: 1.5em;
 	line-height: 1.1em;
 	margin-top: 0.6em;
 	margin-bottom: 0.6em;
@@ -102,7 +102,7 @@ img, iframe {
 	max-width: 100%;
 }
 a {
-	font-weight:700;
+	font-weight:400;
 	text-decoration:none;
 	color: #375EAB; /* Change Link Color */
 }
@@ -134,8 +134,8 @@ code {
 	background: #eee;
 }
 pre {
-	font-size: 0.8em;
-	line-height: 2em;
+	font-size: 16px;
+	line-height: 25px;
 	background: #eee;
 	padding: 1em;
 	word-break: break-all;
@@ -144,6 +144,11 @@ pre {
 	white-space: -moz-pre-wrap;
 	white-space: pre-wrap;
 	white-space: pre\9; 
+}
+
+p{
+	font-size: 16px;
+	font-weight: 300;
 }
 input {
 	font-size:1em;
@@ -195,13 +200,13 @@ article span.post-stamp {
 }
 h1.post-title {
 	margin-top:0.35em;
-	margin-bottom: 0.6em;
+	margin-bottom: 2em;
 }
 h3.post-title {
 	margin-top:0.4em;
 	padding-bottom:0.9em;
 	border-bottom: 1px solid #eee;
-	font-size: 1.2em;
+	font-size: 1em;
 	color: #444;
 }
 .post-title .feature-star {
@@ -292,10 +297,16 @@ footer a:hover {
 	}
 }
 
+.post-date{
+	color: #999;
+	font-weight: 300;
+	font-size: 15px;
+}
+
 
 .article-entry pre,
 .article-entry .highlight {
-  background: #2d2d2d;
+  background: #333;
   margin: 0 10px;
   padding: 15px 20px;
   border-style: solid;
@@ -314,7 +325,7 @@ footer a:hover {
 }
 .article-entry pre,
 .article-entry code {
-  font-family: Consolas, Monaco, Menlo, Consolas, monospace;
+/*  font-family: Consolas, Monaco, Menlo, Consolas, monospace;*/
 }
 .article-entry code {
   text-shadow: 0 1px #fff;

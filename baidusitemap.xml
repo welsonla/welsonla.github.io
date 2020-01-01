@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://welsonla.timebot.net/2020/01/01/Mac-Diskspace-release/</loc>
+    <lastmod>2020-01-01</lastmod>
+  </url>  <url>
+    <loc>http://welsonla.timebot.net/2016/03/23/Mac-Tips/</loc>
+    <lastmod>2020-01-01</lastmod>
+  </url>  <url>
+    <loc>http://welsonla.timebot.net/2016/03/23/iOS-Tips/</loc>
+    <lastmod>2020-01-01</lastmod>
+  </url>  <url>
     <loc>http://welsonla.timebot.net/2020/01/01/composer-and-laravel-setup/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/uploads/2013-04-10-the-time-past-so-quick.html</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2015/10/10/hello-world/</loc>
+    <loc>http://welsonla.timebot.net/2015/10/10/start-using-hexo/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2015/10/10/start-using-hexo/</loc>
+    <loc>http://welsonla.timebot.net/2015/10/10/hello-world/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2017/07/13/heroku-command/</loc>
@@ -28,19 +37,16 @@
     <loc>http://welsonla.timebot.net/2019/06/13/iterm-with-powerline-theme/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2016/03/23/Mac-Tips/</loc>
+    <loc>http://welsonla.timebot.net/2016/02/29/the-day-of-2-29/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2016/12/08/multiple-ssh-key-config/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2016/02/29/the-day-of-2-29/</loc>
-    <lastmod>2020-01-01</lastmod>
-  </url>  <url>
-    <loc>http://welsonla.timebot.net/2016/03/23/iOS-Tips/</loc>
-    <lastmod>2020-01-01</lastmod>
-  </url>  <url>
     <loc>http://welsonla.timebot.net/2015/04/12/rails-code-snippets/</loc>
+    <lastmod>2020-01-01</lastmod>
+  </url>  <url>
+    <loc>http://welsonla.timebot.net/2015/05/04/something-about-xctest/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2015/07/13/application-transport-security-in-ios9/</loc>
@@ -49,43 +55,37 @@
     <loc>http://welsonla.timebot.net/2015/10/08/why-mantle/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2015/05/04/something-about-xctest/</loc>
-    <lastmod>2020-01-01</lastmod>
-  </url>  <url>
     <loc>http://welsonla.timebot.net/2016/01/27/Objective-c-to-Swift/</loc>
-    <lastmod>2020-01-01</lastmod>
-  </url>  <url>
-    <loc>http://welsonla.timebot.net/2014/07/14/instrument-start-fail/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2014/07/14/xcode5-install-command-line-tools/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2014/11/22/mac-mini-show/</loc>
+    <loc>http://welsonla.timebot.net/2014/07/14/instrument-start-fail/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2014/09/05/cocoa-tidy-write/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2015/02/01/my-2014/</loc>
+    <loc>http://welsonla.timebot.net/2014/11/22/mac-mini-show/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2013/08/13/encrypt-sqlite-with-sqlcipher/</loc>
+    <loc>http://welsonla.timebot.net/2015/02/01/my-2014/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2013/08/06/generate-new-host-rsa-key/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2014/04/12/why-my-mac-so-slow/</loc>
+    <loc>http://welsonla.timebot.net/2014/01/02/my-2013/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2014/01/02/my-2013/</loc>
+    <loc>http://welsonla.timebot.net/2013/08/13/encrypt-sqlite-with-sqlcipher/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2014/05/11/learn-core-animation-the-hard-way/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2013/06/03/blog-with-github-3/</loc>
+    <loc>http://welsonla.timebot.net/2014/04/12/why-my-mac-so-slow/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2013/06/03/blog-with-github-4/</loc>
@@ -94,25 +94,28 @@
     <loc>http://welsonla.timebot.net/2013/06/25/git-note/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
+    <loc>http://welsonla.timebot.net/2013/06/03/blog-with-github-3/</loc>
+    <lastmod>2020-01-01</lastmod>
+  </url>  <url>
     <loc>http://welsonla.timebot.net/2013/07/06/vim-note/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2013/04/10/generate-github-ssh-keys/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2013/04/10/use-rvm-install-ruby/</loc>
-    <lastmod>2020-01-01</lastmod>
-  </url>  <url>
     <loc>http://welsonla.timebot.net/2013/04/10/use-cocoapods/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
-    <loc>http://welsonla.timebot.net/2013/06/03/blog-with-github-2/</loc>
+    <loc>http://welsonla.timebot.net/2013/04/10/use-rvm-install-ruby/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2013/05/10/different-of-class-and-category/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2013/05/10/blog-with-github/</loc>
+    <lastmod>2020-01-01</lastmod>
+  </url>  <url>
+    <loc>http://welsonla.timebot.net/2013/06/03/blog-with-github-2/</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
     <loc>http://welsonla.timebot.net/2013/04/10/build-your-mac-os/</loc>

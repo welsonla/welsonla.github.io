@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head><meta name="generator" content="Hexo 3.9.0">
+		
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content>
+        <link rel="shortcut icon" href="/uploads/avatar.jpg">
+        <link rel="canonical" href="http://guolinn.com/">
+        <link rel="alternate" type="application/rss+xml" title="welsonla" href="/atom.xml">
+        <title>解决 Mac OS 删除文件后磁盘空间不更新的问题 | NSLog(&#34;Life &amp; Code&#34;);</title>
+        <meta name="description" content="{{meta_description}}">
+
+        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    
+		<body class="post-template">
+	
+
+        <header id="header">
+            <a id="logo" href="/"><img src="/uploads/avatar.jpg" alt="NSLog(" life & code");"></a>
+            <h1><a href="/">welsonla</a></h1>
+            <p></p>
+            <div id="follow-icons">
+      <a href="http://instagram.com/welsonla"><i class="fa fa-instagram fa-2x"></i></a>
+          <a href="http://github.com/welsonla"><i class="fa fa-github-square fa-2x"></i></a>
+          <a href="http://twitter.com/welsonla"><i class="fa fa-twitter-square fa-2x"></i></a>
+          <a href="/atom.xml"><i class="fa fa-rss-square fa-2x"></i></a>
+  </div>
+<h6><a href="/list">List</a></h6>
+<h6><a href="/categories">Categories</a></h6>
+<h6><a href="/archives">Archives</a></h6>
+<h6><a href="/about">About</a></h6>
+        </header>
+
+        <main id="content">
+        
+
+<article class="post">
+  January 1, 2020
+  
+
+  <h1 class="post-title">解决 Mac OS 删除文件后磁盘空间不更新的问题</h1>
+  <section class="post-content article-entry">
+    <p>这个问题存在了很久，一直也没有找到解决的办法，今天上网查询后发现，这个问题只存在于使用了Time Machine的用户，原因是因为Time Machine的快照自动生成造成的，于是试着按照解决方法查询了下本地快照</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo</span> tmutil listlocalsnapshots /</span><br></pre></td></tr></table></figure>
+<p>得到如下结果,确实Mac在自动的生成系统的快照<br><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">com.apple.TimeMachine<span class="number">.2019</span><span class="number">-12</span><span class="number">-31</span><span class="number">-214148.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2019</span><span class="number">-12</span><span class="number">-31</span><span class="number">-223649.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2020</span><span class="number">-01</span><span class="number">-01</span><span class="number">-103649.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2020</span><span class="number">-01</span><span class="number">-01</span><span class="number">-113743.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2020</span><span class="number">-01</span><span class="number">-01</span><span class="number">-124353.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2020</span><span class="number">-01</span><span class="number">-01</span><span class="number">-143927.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2020</span><span class="number">-01</span><span class="number">-01</span><span class="number">-153651.</span>local</span><br></pre></td></tr></table></figure></p>
+<p>试着删除其中的一个快照<br><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmutil deletelocalsnapshots <span class="number">2019</span><span class="number">-12</span><span class="number">-31</span><span class="number">-214148</span></span><br></pre></td></tr></table></figure></p>
+<p>发现系统的空间立刻就释放了，猜测就是以为Time Machine的快照自动生成导致的，不知道是Mac系统的bug还是因为备份的策略,  试着写了一个Ruby的脚本来自动的删除这些快照，希望对遇到此问题的人有帮助:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#diskspace info</span></span><br><span class="line">puts <span class="string">"Current Diskspace info:"</span> </span><br><span class="line">puts <span class="string">"---------"</span></span><br><span class="line">puts <span class="string">%x[df -lh /]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#list localsnapshots</span></span><br><span class="line">puts <span class="string">"\n\n---------"</span></span><br><span class="line">list = <span class="string">%x[tmutil listlocalsnapshots /]</span></span><br><span class="line">puts list</span><br><span class="line"></span><br><span class="line"><span class="comment">#delete snapshots</span></span><br><span class="line">puts <span class="string">"\n\n---------"</span></span><br><span class="line">puts <span class="string">"Start delete snapshots:"</span></span><br><span class="line">matches = list.scan(<span class="regexp">/\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;-\d&#123;6&#125;/</span>)</span><br><span class="line">matches.each_with_index&#123;<span class="params">|snapshoot,index|</span></span><br><span class="line">    puts <span class="string">"delete the listlocalsnapshots <span class="subst">#&#123;snapshoot&#125;</span>"</span></span><br><span class="line">    sh = <span class="string">"tmutil deletelocalsnapshots <span class="subst">#&#123;snapshoot&#125;</span>"</span></span><br><span class="line">    system(sh)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#diskspace info after delete snapshot</span></span><br><span class="line">puts puts <span class="string">"\n\n---------"</span></span><br><span class="line">puts <span class="string">"Diskspace info after delete snapshots:"</span></span><br><span class="line">puts <span class="string">%x[df -lh /]</span></span><br></pre></td></tr></table></figure>
+<p>将上面脚本保存为snapshots_clear.rb,或从我保存的gist上<a href="https://gist.github.com/welsonla/0e4c4a818abfae0400a4087b54e81c43" target="_blank" rel="noopener">下载</a><br>执行. </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby snapshots_clear.rb</span><br></pre></td></tr></table></figure>
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><p><a href="http://nb.zol.com.cn/671/6715453.html" target="_blank" rel="noopener">Mac瘦身技巧 删除文件后可用空间还变少了？</a><br><a href="https://forums.macrumors.com/threads/solution-reclaim-storage-back-from-system.2073174/" target="_blank" rel="noopener">Solution: Reclaim storage back from “System”</a></p>
+
+  </section>
+  <footer class="post-footer">
+    <!--
+    <section class="author">
+      <h4>welsonla</h4>
+      <p></p>
+    </section>
+    -->
+  </footer>
+</article>
+
+<nav class="pagination" role="pagination">
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2020/01/01/composer-and-laravel-setup/">
+        <!--Mac OS 安装 配置Laravel开发环境--> next →
+    </a>
+    
+</nav>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'welsonla';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+        </main>
+        <footer id="footer">
+            <section id="footer-message">&copy; 2020 welsonla. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="https://github.com/guolin" target="_blank">Guo Lin</a>.</section>
+        </footer>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','/js/ga.js','ga');
+            ga('create', 'UA-19152389-6', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+
+
