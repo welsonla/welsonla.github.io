@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    <head><meta name="generator" content="Hexo 3.9.0">
+		
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content>
+        <link rel="shortcut icon" href="/uploads/avatar.jpg">
+        <link rel="canonical" href="http://guolinn.com/">
+        <link rel="alternate" type="application/rss+xml" title="welsonla" href="/atom.xml">
+        <title>iTerm2 with powerline theme | NSLog(&#34;Life &amp; Code&#34;);</title>
+        <meta name="description" content="{{meta_description}}">
+
+        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    
+		<body class="post-template">
+	
+
+        <header id="header">
+            <a id="logo" href="/"><img src="/uploads/avatar.jpg" alt="NSLog(" life & code");"></a>
+            <h1><a href="/">welsonla</a></h1>
+            <p></p>
+            <div id="follow-icons">
+      <a href="http://instagram.com/welsonla"><i class="fa fa-instagram fa-2x"></i></a>
+          <a href="http://github.com/welsonla"><i class="fa fa-github-square fa-2x"></i></a>
+          <a href="http://twitter.com/welsonla"><i class="fa fa-twitter-square fa-2x"></i></a>
+          <a href="/atom.xml"><i class="fa fa-rss-square fa-2x"></i></a>
+  </div>
+<h6><a href="/list">List</a></h6>
+<h6><a href="/categories">Categories</a></h6>
+<h6><a href="/about">About</a></h6>
+        </header>
+
+        <main id="content">
+        
+
+<article class="post">
+  June 13, 2019
+  
+
+  <h1 class="post-title">iTerm2 with powerline theme</h1>
+  <section class="post-content article-entry">
+    <h3 id="确保已经安装了oh-my-zsh"><a href="#确保已经安装了oh-my-zsh" class="headerlink" title="确保已经安装了oh-my-zsh"></a>确保已经安装了oh-my-zsh</h3><p><a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener">https://github.com/robbyrussell/oh-my-zsh</a></p>
+<h3 id="安装-oh-my-zsh-powerline-theme"><a href="#安装-oh-my-zsh-powerline-theme" class="headerlink" title="安装 oh-my-zsh-powerline-theme"></a>安装 oh-my-zsh-powerline-theme</h3><p><a href="https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme" target="_blank" rel="noopener">https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.oh-my-zsh/themes</span><br><span class="line">git clone git@github.com:jeremyFreeAgent/oh-my-zsh-powerline-theme.git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">更新submodule,进行powerline-fonts安装</span></span><br><span class="line">cd oh-my-zsh-powerline-theme</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">安装</span></span><br><span class="line">./install_in_omz.sh</span><br></pre></td></tr></table></figure>
+<h3 id="更改iterm字体"><a href="#更改iterm字体" class="headerlink" title="更改iterm字体"></a>更改iterm字体</h3><p>iTerm2 – Preferences – Profiles – Text<br>找到Font，点击Change Font，将字体改为<code>Fira mono for powerline</code>, 字号14pt</p>
+<h3 id="修改zsh配置"><a href="#修改zsh配置" class="headerlink" title="修改zsh配置"></a>修改zsh配置</h3><p>打开<code>~/.zshrc</code>文件，修改<code>ZSH_THEME&quot;</code>为<code>powerline</code></p>
+<p>添加如下配置<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">POWERLINE_RIGHT_B=""  </span><br><span class="line">POWERLINE_RIGHT_A="date"  </span><br><span class="line">POWERLINE_RIGHT_A_COLOR_FRONT="black"  </span><br><span class="line">POWERLINE_RIGHT_A_COLOR_BACK="red"  </span><br><span class="line">POWERLINE_HIDE_HOST_NAME="true"</span><br><span class="line">POWERLINE_PATH="short"</span><br><span class="line">POWERLINE_SHORT_HOST_NAME="true"</span><br><span class="line">POWERLINE_DETECT_SSH="true"</span><br><span class="line">POWERLINE_GIT_CLEAN="✔"</span><br><span class="line">POWERLINE_GIT_DIRTY="✘"</span><br><span class="line">POWERLINE_GIT_ADDED="%F&#123;green&#125;✚%F&#123;black&#125;"</span><br><span class="line">POWERLINE_GIT_MODIFIED="%F&#123;blue&#125;✹%F&#123;black&#125;"</span><br><span class="line">POWERLINE_GIT_DELETED="%F&#123;red&#125;✖%F&#123;black&#125;"</span><br><span class="line">POWERLINE_GIT_UNTRACKED="%F&#123;yellow&#125;✭%F&#123;black&#125;"</span><br><span class="line">POWERLINE_GIT_RENAMED="➜"</span><br><span class="line">POWERLINE_GIT_UNMERGED="═"</span><br></pre></td></tr></table></figure></p>
+<h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h3><p><img src="/uploads/powerline.png" alt="/uploads/powerline.png"></p>
+
+  </section>
+  <footer class="post-footer">
+    <!--
+    <section class="author">
+      <h4>welsonla</h4>
+      <p></p>
+    </section>
+    -->
+  </footer>
+</article>
+
+<nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2020/01/01/composer-and-laravel-setup/">
+        ← prev <!--Mac OS 安装 配置Laravel开发环境-->
+    </a>
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2018/05/30/let-react-native-shell-open-in-iterm/">
+        <!--将 ReactNative 的默认终端改为 iTerm2--> next →
+    </a>
+    
+</nav>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'welsonla';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+        </main>
+        <footer id="footer">
+            <section id="footer-message">&copy; 2020 welsonla. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="guolin.github.io" target="_blank">Guo Lin</a>.</section>
+        </footer>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','/js/ga.js','ga');
+            ga('create', 'UA-19152389-6', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+
+

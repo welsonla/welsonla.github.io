@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+    <head><meta name="generator" content="Hexo 3.9.0">
+		
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content>
+        <link rel="shortcut icon" href="/uploads/avatar.jpg">
+        <link rel="canonical" href="http://guolinn.com/">
+        <link rel="alternate" type="application/rss+xml" title="welsonla" href="/atom.xml">
+        <title>blog with github(4)-开始写吧，骚年 | NSLog(&#34;Life &amp; Code&#34;);</title>
+        <meta name="description" content="{{meta_description}}">
+
+        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    
+		<body class="post-template">
+	
+
+        <header id="header">
+            <a id="logo" href="/"><img src="/uploads/avatar.jpg" alt="NSLog(" life & code");"></a>
+            <h1><a href="/">welsonla</a></h1>
+            <p></p>
+            <div id="follow-icons">
+      <a href="http://instagram.com/welsonla"><i class="fa fa-instagram fa-2x"></i></a>
+          <a href="http://github.com/welsonla"><i class="fa fa-github-square fa-2x"></i></a>
+          <a href="http://twitter.com/welsonla"><i class="fa fa-twitter-square fa-2x"></i></a>
+          <a href="/atom.xml"><i class="fa fa-rss-square fa-2x"></i></a>
+  </div>
+<h6><a href="/list">List</a></h6>
+<h6><a href="/categories">Categories</a></h6>
+<h6><a href="/about">About</a></h6>
+        </header>
+
+        <main id="content">
+        
+
+<article class="post">
+  June 3, 2013
+  
+
+  <h1 class="post-title">blog with github(4)-开始写吧，骚年</h1>
+  <section class="post-content article-entry">
+    <p>Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/\&lt;category>/atom.xml中找到这些内容</p>
+<p>####Post</p>
+<p>这些Post页面必须存放在Source/_posts目录下面，并且命名方式和jekyll的命名方式一样，会转换成YYYY-MM-DD-Post-title.markdown，这个文件的名字就是你的blog的url slug，日期帮助你排序这些文章</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake new_post[<span class="string">"Title"</span>]</span><br></pre></td></tr></table></figure>
+<p>在使用了ZSH的话，你要这样创建</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake new_post或者rake new_post[\<span class="string">"Title\"]</span></span><br></pre></td></tr></table></figure>
+<p>例如</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rake new_post[<span class="string">"Zombie Ninjas Attack: A survivor's retrospective"</span>]</span><br><span class="line"> Creates source/_posts/<span class="number">2011</span>-<span class="number">07</span>-<span class="number">03</span>-zombie-ninjas-attack-a-survivors-retrospective.markdown</span><br></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/Code/rails</span><span class="regexp">/octopress(branch:source) » rake new_post                        </span></span><br><span class="line"><span class="regexp">Enter a title for your post: blog-with-github-4</span></span><br><span class="line"><span class="regexp">mkdir -p source/</span>_posts</span><br><span class="line">Creating new <span class="symbol">post:</span> source/_posts/<span class="number">2013</span>-<span class="number">06</span>-<span class="number">03</span>-blog-with-github-<span class="number">4</span>.markdown</span><br></pre></td></tr></table></figure>
+<p>生成的内容大致如下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="symbol">layout:</span> post</span><br><span class="line"><span class="symbol">title:</span> <span class="string">"Zombie Ninjas Attack: A survivor's retrospective"</span></span><br><span class="line"><span class="symbol">date:</span> <span class="number">2011</span>-<span class="number">07</span>-<span class="number">03</span> <span class="number">5</span><span class="symbol">:</span><span class="number">59</span></span><br><span class="line"><span class="symbol">comments:</span> <span class="literal">true</span></span><br><span class="line">external-<span class="symbol">url:</span></span><br><span class="line"><span class="symbol">categories:</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>你可以关闭comments，或者为他添加categories的tag，并且你还可以添加<code>author: Your Name</code>与<code>published: false</code>来控制是否发布</p>
+<p>####Page</p>
+<p>生成Page的命令</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rake new_page[<span class="keyword">super</span>-awesome]</span><br><span class="line"><span class="comment"># creates /source/super-awesome/index.markdown</span></span><br><span class="line"></span><br><span class="line">rake new_page[<span class="keyword">super</span>-awesome/page.html]</span><br></pre></td></tr></table></figure>
+<p>如果使用了zsh的话，方法要参照post的创建方式</p>
+<p>生成的pages的默认内如大致如下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="symbol">layout:</span> page</span><br><span class="line"><span class="symbol">title:</span> <span class="string">"Super Awesome"</span></span><br><span class="line"><span class="symbol">date:</span> <span class="number">2011</span>-<span class="number">07</span>-<span class="number">03</span> <span class="number">5</span><span class="symbol">:</span><span class="number">59</span></span><br><span class="line"><span class="symbol">comments:</span> <span class="literal">true</span></span><br><span class="line"><span class="symbol">sharing:</span> <span class="literal">true</span></span><br><span class="line"><span class="symbol">footer:</span> <span class="literal">true</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>####Content</p>
+<p>如果列表中不想显示全文内容的话，可以添加<code>&lt;!-- more --&gt;</code>标签，这将在文章下面生成一个“Continue →” 链接，链接到全文的地址</p>
+<p>###Generate &amp; Preview</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rake generate   <span class="comment"># Generates posts and pages into the public directory</span></span><br><span class="line">rake watch      <span class="comment"># Watches source/ and sass/ for changes and regenerates</span></span><br><span class="line">rake preview    <span class="comment"># Watches, and mounts a webserver at http://localhost:4000</span></span><br></pre></td></tr></table></figure>
+<p>本地使用<a href="http://localhost:4000就可以访问了" target="_blank" rel="noopener">http://localhost:4000就可以访问了</a></p>
+
+  </section>
+  <footer class="post-footer">
+    <!--
+    <section class="author">
+      <h4>welsonla</h4>
+      <p></p>
+    </section>
+    -->
+  </footer>
+</article>
+
+<nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2013/06/25/git-note/">
+        ← prev <!--git笔记-->
+    </a>
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2013/06/03/blog-with-github-3/">
+        <!--blog with github(3)-Octopress配置--> next →
+    </a>
+    
+</nav>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'welsonla';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+        </main>
+        <footer id="footer">
+            <section id="footer-message">&copy; 2020 welsonla. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="guolin.github.io" target="_blank">Guo Lin</a>.</section>
+        </footer>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','/js/ga.js','ga');
+            ga('create', 'UA-19152389-6', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+
+

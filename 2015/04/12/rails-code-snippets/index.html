@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+    <head><meta name="generator" content="Hexo 3.9.0">
+		
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content>
+        <link rel="shortcut icon" href="/uploads/avatar.jpg">
+        <link rel="canonical" href="http://guolinn.com/">
+        <link rel="alternate" type="application/rss+xml" title="welsonla" href="/atom.xml">
+        <title>Rails code snippets | NSLog(&#34;Life &amp; Code&#34;);</title>
+        <meta name="description" content="{{meta_description}}">
+
+        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    
+		<body class="post-template">
+	
+
+        <header id="header">
+            <a id="logo" href="/"><img src="/uploads/avatar.jpg" alt="NSLog(" life & code");"></a>
+            <h1><a href="/">welsonla</a></h1>
+            <p></p>
+            <div id="follow-icons">
+      <a href="http://instagram.com/welsonla"><i class="fa fa-instagram fa-2x"></i></a>
+          <a href="http://github.com/welsonla"><i class="fa fa-github-square fa-2x"></i></a>
+          <a href="http://twitter.com/welsonla"><i class="fa fa-twitter-square fa-2x"></i></a>
+          <a href="/atom.xml"><i class="fa fa-rss-square fa-2x"></i></a>
+  </div>
+<h6><a href="/list">List</a></h6>
+<h6><a href="/categories">Categories</a></h6>
+<h6><a href="/about">About</a></h6>
+        </header>
+
+        <main id="content">
+        
+
+<article class="post">
+  April 12, 2015
+  
+
+  <h1 class="post-title">Rails code snippets</h1>
+  <section class="post-content article-entry">
+    <p>(摘录来自: persie. “Ruby on Rails 教程”)</p>
+<h3 id="short-key"><a href="#short-key" class="headerlink" title="short key"></a>short key</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">g   generate</span><br><span class="line">d   destory</span><br><span class="line">s   server</span><br></pre></td></tr></table></figure>
+<h3 id="脚手架以及一些常用的变量类型"><a href="#脚手架以及一些常用的变量类型" class="headerlink" title="脚手架以及一些常用的变量类型"></a>脚手架以及一些常用的变量类型</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails g scaffold user <span class="symbol">name:</span>string <span class="symbol">age:</span>int <span class="symbol">email:</span>string <span class="symbol">description:</span>text <span class="symbol">cash:</span>float</span><br></pre></td></tr></table></figure>
+<h3 id="删除脚手架生成的代码"><a href="#删除脚手架生成的代码" class="headerlink" title="删除脚手架生成的代码"></a>删除脚手架生成的代码</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails d scaffold Users</span><br></pre></td></tr></table></figure>
+<h3 id="生成Controller与action"><a href="#生成Controller与action" class="headerlink" title="生成Controller与action"></a>生成Controller与action</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails g controller TodoList list delete index</span><br></pre></td></tr></table></figure>
+<h3 id="删除Controller"><a href="#删除Controller" class="headerlink" title="删除Controller"></a>删除Controller</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails d controller TodoList list delete index</span><br></pre></td></tr></table></figure>
+<h3 id="生成Model"><a href="#生成Model" class="headerlink" title="生成Model"></a>生成Model</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails g model User <span class="symbol">name:</span>string <span class="symbol">email:</span>string</span><br></pre></td></tr></table></figure>
+<h3 id="删除Model"><a href="#删除Model" class="headerlink" title="删除Model"></a>删除Model</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails d model User <span class="symbol">name:</span>string <span class="symbol">email:</span>string</span><br></pre></td></tr></table></figure>
+<h3 id="添加字段到表"><a href="#添加字段到表" class="headerlink" title="添加字段到表"></a>添加字段到表</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">“rails generate migration add_password_digest_to_users <span class="symbol">password_digest:</span>string”</span><br></pre></td></tr></table></figure>
+<h3 id="根据Model生成数据库表"><a href="#根据Model生成数据库表" class="headerlink" title="根据Model生成数据库表"></a>根据Model生成数据库表</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake <span class="symbol">db:</span>migrate</span><br></pre></td></tr></table></figure>
+
+  </section>
+  <footer class="post-footer">
+    <!--
+    <section class="author">
+      <h4>welsonla</h4>
+      <p></p>
+    </section>
+    -->
+  </footer>
+</article>
+
+<nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2015/05/04/something-about-xctest/">
+        ← prev <!--关于Xcode单元测试(XCTest)的一些总结-->
+    </a>
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2015/02/01/my-2014/">
+        <!--我的2014--> next →
+    </a>
+    
+</nav>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'welsonla';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+        </main>
+        <footer id="footer">
+            <section id="footer-message">&copy; 2020 welsonla. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="guolin.github.io" target="_blank">Guo Lin</a>.</section>
+        </footer>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','/js/ga.js','ga');
+            ga('create', 'UA-19152389-6', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+
+
