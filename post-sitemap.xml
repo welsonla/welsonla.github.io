@@ -7,8 +7,32 @@
     </url>
 
     <url>
+        <loc>http://welsonla.timebot.net/2020/01/01/Mac-Diskspace-release/</loc>
+        <lastmod>2020-01-01T08:57:07.714Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://welsonla.timebot.net/2016/03/23/Mac-Tips/</loc>
+        <lastmod>2020-01-01T05:30:37.294Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://welsonla.timebot.net/2016/03/23/iOS-Tips/</loc>
+        <lastmod>2020-01-01T05:30:28.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://welsonla.timebot.net/2020/01/01/composer-and-laravel-setup/</loc>
-        <lastmod>2020-01-01T05:23:33.436Z</lastmod>
+        <lastmod>2020-01-01T05:30:09.866Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -39,7 +63,7 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2017/08/10/Xcode-buildid-autoincrement/</loc>
+        <loc>http://welsonla.timebot.net/2017/07/13/using-fastlane/</loc>
         <lastmod>2020-01-01T02:23:42.906Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -47,7 +71,7 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2017/07/13/using-fastlane/</loc>
+        <loc>http://welsonla.timebot.net/2017/08/10/Xcode-buildid-autoincrement/</loc>
         <lastmod>2020-01-01T02:23:42.906Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -71,7 +95,7 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2016/03/23/Mac-Tips/</loc>
+        <loc>http://welsonla.timebot.net/2016/02/29/the-day-of-2-29/</loc>
         <lastmod>2020-01-01T02:23:42.905Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -87,39 +111,7 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2016/02/29/the-day-of-2-29/</loc>
-        <lastmod>2020-01-01T02:23:42.905Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://welsonla.timebot.net/2016/03/23/iOS-Tips/</loc>
-        <lastmod>2020-01-01T02:23:42.905Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://welsonla.timebot.net/2015/04/12/rails-code-snippets/</loc>
-        <lastmod>2020-01-01T02:23:42.904Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://welsonla.timebot.net/2015/07/13/application-transport-security-in-ios9/</loc>
-        <lastmod>2020-01-01T02:23:42.904Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://welsonla.timebot.net/2015/10/08/why-mantle/</loc>
         <lastmod>2020-01-01T02:23:42.904Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -135,7 +127,23 @@
     </url>
 
     <url>
+        <loc>http://welsonla.timebot.net/2015/07/13/application-transport-security-in-ios9/</loc>
+        <lastmod>2020-01-01T02:23:42.904Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://welsonla.timebot.net/2016/01/27/Objective-c-to-Swift/</loc>
+        <lastmod>2020-01-01T02:23:42.904Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://welsonla.timebot.net/2015/10/08/why-mantle/</loc>
         <lastmod>2020-01-01T02:23:42.904Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -159,7 +167,7 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2014/11/22/mac-mini-show/</loc>
+        <loc>http://welsonla.timebot.net/2014/09/05/cocoa-tidy-write/</loc>
         <lastmod>2020-01-01T02:23:42.903Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -167,7 +175,7 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2014/09/05/cocoa-tidy-write/</loc>
+        <loc>http://welsonla.timebot.net/2014/11/22/mac-mini-show/</loc>
         <lastmod>2020-01-01T02:23:42.903Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -183,14 +191,6 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2013/08/13/encrypt-sqlite-with-sqlcipher/</loc>
-        <lastmod>2020-01-01T02:23:42.902Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://welsonla.timebot.net/2013/08/06/generate-new-host-rsa-key/</loc>
         <lastmod>2020-01-01T02:23:42.902Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -199,7 +199,7 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2014/04/12/why-my-mac-so-slow/</loc>
+        <loc>http://welsonla.timebot.net/2013/08/13/encrypt-sqlite-with-sqlcipher/</loc>
         <lastmod>2020-01-01T02:23:42.902Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -215,7 +215,7 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2014/05/11/learn-core-animation-the-hard-way/</loc>
+        <loc>http://welsonla.timebot.net/2014/04/12/why-my-mac-so-slow/</loc>
         <lastmod>2020-01-01T02:23:42.902Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -223,8 +223,8 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2013/06/03/blog-with-github-3/</loc>
-        <lastmod>2020-01-01T02:23:42.901Z</lastmod>
+        <loc>http://welsonla.timebot.net/2014/05/11/learn-core-animation-the-hard-way/</loc>
+        <lastmod>2020-01-01T02:23:42.902Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -240,6 +240,14 @@
 
     <url>
         <loc>http://welsonla.timebot.net/2013/06/25/git-note/</loc>
+        <lastmod>2020-01-01T02:23:42.901Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://welsonla.timebot.net/2013/06/03/blog-with-github-3/</loc>
         <lastmod>2020-01-01T02:23:42.901Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -263,14 +271,6 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2013/04/10/use-rvm-install-ruby/</loc>
-        <lastmod>2020-01-01T02:23:42.900Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://welsonla.timebot.net/2013/04/10/use-cocoapods/</loc>
         <lastmod>2020-01-01T02:23:42.900Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -279,7 +279,7 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/2013/06/03/blog-with-github-2/</loc>
+        <loc>http://welsonla.timebot.net/2013/04/10/use-rvm-install-ruby/</loc>
         <lastmod>2020-01-01T02:23:42.900Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -296,6 +296,14 @@
 
     <url>
         <loc>http://welsonla.timebot.net/2013/05/10/blog-with-github/</loc>
+        <lastmod>2020-01-01T02:23:42.900Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://welsonla.timebot.net/2013/06/03/blog-with-github-2/</loc>
         <lastmod>2020-01-01T02:23:42.900Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
