@@ -5,7 +5,8 @@
 # Site
 title: NSLog("Life & Code");
 subtitle:
-description:
+description: 整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助
+keywords: iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life
 author: welsonla
 language: zh-Hans
 timezone:
