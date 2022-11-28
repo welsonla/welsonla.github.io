@@ -28,7 +28,7 @@ tmutil deletelocalsnapshots 2019-12-31-214148
 
 发现系统的空间立刻就释放了，猜测就是以为Time Machine的快照自动生成导致的，不知道是Mac系统的bug还是因为备份的策略,  试着写了一个Ruby的脚本来自动的删除这些快照，希望对遇到此问题的人有帮助:
 
-```ruby
+```
 #/bin/bash
 
 #diskspace info
