@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+		
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助">
+        <meta name="keywords" content="iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life">
+        <link rel="shortcut icon" href="/uploads/avatar.jpg"/>
+        <link rel="canonical" href="http://guolinn.com/">
+        <link rel="alternate" type="application/rss+xml" title="welsonla" href="/atom.xml">
+        <title>生成 github SSH keys | NSLog(&#34;Life &amp; Code&#34;);</title>
+        <!-- <meta name="description" content="{{meta_description}}"> -->
+
+        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-site-verification" content="AlY4bsGF9vMeHg3et7af55fPyOcqfNhQUbYLSmREeE4" />
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <meta name="generator" content="Hexo 4.2.1"></head>
+    
+		<body class="post-template">
+	
+
+        <header id="header">
+            <a id="logo" href="/"><img src="/uploads/avatar.jpg" alt="NSLog("Life & Code");" /></a>
+            <h1><a href="/">welsonla</a></h1>
+            <p></p>
+            <div id="follow-icons">
+      <a href="http://instagram.com/welsonla" target="_blank" rel="noopener"><i class="fa fa-instagram fa-2x"></i></a>
+          <a href="http://github.com/welsonla" target="_blank" rel="noopener"><i class="fa fa-github-square fa-2x"></i></a>
+          <a href="http://twitter.com/welsonla" target="_blank" rel="noopener"><i class="fa fa-twitter-square fa-2x"></i></a>
+          <a href="/atom.xml"><i class="fa fa-rss-square fa-2x"></i></a>
+  </div>
+<h6><a href="/archives">Archives</h6>
+<h6><a href="/list">List</h6>
+<h6><a href="/categories">Categories</h6>
+<h6><a href="/about">About</a></h6>
+        </header>
+
+        <main id="content">
+        
+
+<article class="post">
+  April 10, 2013
+  
+
+  <h1 class="post-title">生成 github SSH keys</h1>
+  <section class="post-content article-entry">
+    <p>本文主要来自github官方，Generating SSH Keys</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">cd ~<span class="regexp">/.ssh</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">ssh-keygen -t rsa -C "your_email@example.com"</span></span><br></pre></td></tr></table></figure>
+<p>下面的步骤可以只敲回车进行确认即可<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Creates a new ssh key using the provided email</span><br><span class="line"></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line"></span><br><span class="line"><span class="comment">#这里直接回车就会生成一个默认名为id_rsa</span></span><br><span class="line">Enter file <span class="keyword">in</span> which to save the key (<span class="regexp">/Users/you</span><span class="regexp">/.ssh/id</span>_rsa): [Press enter]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#这里需要你输入一个你加密的key（一定要记住）</span></span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase): [Type a passphrase]</span><br><span class="line">Enter same passphrase <span class="symbol">again:</span> [Type passphrase again]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /Users/welsonla/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /Users/welsonla/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint <span class="symbol">is:</span></span><br><span class="line"><span class="number">30</span><span class="symbol">:e8</span><span class="symbol">:aa</span><span class="symbol">:</span>08<span class="symbol">:ee</span><span class="symbol">:bc</span><span class="symbol">:</span><span class="number">76</span><span class="symbol">:</span><span class="number">88</span><span class="symbol">:</span><span class="number">2</span><span class="symbol">c:</span><span class="number">3</span><span class="symbol">f:</span><span class="number">83</span><span class="symbol">:</span><span class="number">39</span><span class="symbol">:b0</span><span class="symbol">:</span><span class="number">6</span><span class="symbol">e:</span><span class="number">95</span><span class="symbol">:cc</span> wyc.jar@gmail.com</span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br><span class="line"><span class="string">+--[ RSA 2048]----+</span></span><br><span class="line"><span class="string">|                 |</span></span><br><span class="line"><span class="string">|     .           |</span></span><br><span class="line"><span class="string">|    . o          |</span></span><br><span class="line"><span class="string">|   .   o         |</span></span><br><span class="line"><span class="string">|  o o   S        |</span></span><br><span class="line"><span class="string">|.  E             |</span></span><br><span class="line"><span class="string">|=++              |</span></span><br><span class="line"><span class="string">|%*o.             |</span></span><br><span class="line"><span class="string">|OO+o             |</span></span><br><span class="line"><span class="string">+-----------------+</span></span><br></pre></td></tr></table></figure></p>
+<p>看到这个界面说明生成成功</p>
+<p>copy加密字符到剪切板</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~<span class="regexp">/.ssh/i</span>d_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>打开你的github<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 点击 Account Settings</span><br><span class="line">2. 点击左侧 <span class="string">"SSH Keys"</span> </span><br><span class="line">3. 点击 <span class="string">"Add SSH key"</span></span><br><span class="line">4. 粘贴你的可以到 <span class="string">"Key"</span> 输入框</span><br><span class="line">5. 点击 <span class="string">"Add key"</span></span><br><span class="line">6. 输入你的github密码确认</span><br></pre></td></tr></table></figure></p>
+
+  </section>
+  <footer class="post-footer">
+    <!--
+    <section class="author">
+      <h4>welsonla</h4>
+      <p></p>
+    </section>
+    -->
+  </footer>
+</article>
+
+<nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2013/05/10/different-of-class-and-category/">
+        ← prev <!--different of class and category-->
+    </a>
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2013/04/10/use-rvm-install-ruby/">
+        <!--使用RVM安装ruby--> next →
+    </a>
+    
+</nav>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'welsonla';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" target="_blank" rel="noopener" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+        </main>
+        <footer id="footer">
+            <section id="footer-message">&copy; 2022 welsonla. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="https://github.com/guolin" target="_blank">Guo Lin</a>.</section>
+        </footer>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','/js/ga.js','ga');
+            ga('create', 'UA-19152389-6', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+
+

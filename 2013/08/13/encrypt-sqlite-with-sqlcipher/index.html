@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+    <head>
+		
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助">
+        <meta name="keywords" content="iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life">
+        <link rel="shortcut icon" href="/uploads/avatar.jpg"/>
+        <link rel="canonical" href="http://guolinn.com/">
+        <link rel="alternate" type="application/rss+xml" title="welsonla" href="/atom.xml">
+        <title>encrypt sqlite with sqlcipher | NSLog(&#34;Life &amp; Code&#34;);</title>
+        <!-- <meta name="description" content="{{meta_description}}"> -->
+
+        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-site-verification" content="AlY4bsGF9vMeHg3et7af55fPyOcqfNhQUbYLSmREeE4" />
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <meta name="generator" content="Hexo 4.2.1"></head>
+    
+		<body class="post-template">
+	
+
+        <header id="header">
+            <a id="logo" href="/"><img src="/uploads/avatar.jpg" alt="NSLog("Life & Code");" /></a>
+            <h1><a href="/">welsonla</a></h1>
+            <p></p>
+            <div id="follow-icons">
+      <a href="http://instagram.com/welsonla" target="_blank" rel="noopener"><i class="fa fa-instagram fa-2x"></i></a>
+          <a href="http://github.com/welsonla" target="_blank" rel="noopener"><i class="fa fa-github-square fa-2x"></i></a>
+          <a href="http://twitter.com/welsonla" target="_blank" rel="noopener"><i class="fa fa-twitter-square fa-2x"></i></a>
+          <a href="/atom.xml"><i class="fa fa-rss-square fa-2x"></i></a>
+  </div>
+<h6><a href="/archives">Archives</h6>
+<h6><a href="/list">List</h6>
+<h6><a href="/categories">Categories</h6>
+<h6><a href="/about">About</a></h6>
+        </header>
+
+        <main id="content">
+        
+
+<article class="post">
+  August 13, 2013
+  
+
+  <h1 class="post-title">encrypt sqlite with sqlcipher</h1>
+  <section class="post-content article-entry">
+    <p>##Get the sqlcipher SourceCode</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用2.1的版本比较稳定些</span></span><br><span class="line"><span class="symbol">https:</span>/<span class="regexp">/github.com/welsonla</span><span class="regexp">/sqlcipher/archive</span><span class="regexp">/v2.1.1.tar.gz</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>##Complite the source code<br>动态链接的编译方法（Compiling with dynamic linking）[推荐]:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-tempstore=yes CFLAGS=<span class="string">"-DSQLITE_HAS_CODEC"</span> LDFLAGS=<span class="string">"-lcrypto"</span></span><br><span class="line"> make</span><br><span class="line"> ln -s /Users/wanyc/sqlcipher/sqlite3 /usr/bin/sqlcipher</span><br></pre></td></tr></table></figure>
+<p><del>静态库的编译方法: (replace /path/to with the path to libcrypto.a)</del><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#./configure --enable-tempstore=yes CFLAGS="-DSQLITE_HAS_CODEC" LDFLAGS="/path/to/libcrypto.a"</span></span><br><span class="line"><span class="comment">#make</span></span><br></pre></td></tr></table></figure></p>
+<p>##How to encrypt a sqlite(In Shell)</p>
+<p>#加密数据库几种方式</p>
+<p>####1.shell方式加密一个sqlite</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sqlcipher test.db</span><br><span class="line">&gt; PRAGMA key=<span class="string">'test'</span>; <span class="regexp">//</span>必须在打开数据库第一步来执行</span><br></pre></td></tr></table></figure>
+<p>####2.（In shell）<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sqlciper test.db</span><br><span class="line">PRAGMA KEY=<span class="string">'helloworld'</span>;<span class="comment">#第一步必须执行</span></span><br><span class="line">ATTACH DATABASE <span class="string">'encrypted.db'</span> as encrypted KEY <span class="string">'SomePassword'</span>; <span class="regexp">//encrypted</span>.db是要导出的新的数据库</span><br><span class="line">SELECT sqlcipher_export(<span class="string">'encrypted'</span>);</span><br><span class="line">DETACH DATABASE encrypted;</span><br></pre></td></tr></table></figure></p>
+<p>#####3..Object-c代码实现对一个非加密库导入到加密库的方法(已经验证)(Xcode)<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) <span class="symbol">objectAtIndex:</span><span class="number">0</span>];</span><br><span class="line">NSString *attachPath = [documentPath <span class="symbol">stringByAppendingPathComponent:</span>@<span class="string">"new.db"</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (sqlite3_open([path_u UTF8String], &amp;convert_DB) == SQLITE_OK) &#123;</span><br><span class="line">		NSString *sql = [NSString <span class="symbol">stringWithFormat:</span>@<span class="string">"ATTACH DATABASE '%@' AS encrypted KEY '1234';"</span>,attachPath];</span><br><span class="line">	</span><br><span class="line">		/<span class="regexp">/执行Attach操作</span></span><br><span class="line"><span class="regexp">	  sqlite3_exec(convert_DB, [sql UTF8String] , NULL, NULL, NULL);</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">	  /</span><span class="regexp">/ 导出数据库</span></span><br><span class="line"><span class="regexp">	  sqlite3_exec(convert_DB, "SELECT sqlcipher_export('encrypted');", NULL, NULL, NULL);</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">	  /</span><span class="regexp">/ 执行分离</span></span><br><span class="line"><span class="regexp">	  sqlite3_exec(convert_DB, "DETACH DATABASE encrypted;", NULL, NULL, NULL);</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">	  NSLog (@"End database copying at %@",[NSDate date]);</span></span><br><span class="line"><span class="regexp">	  sqlite3_close(convert_DB);</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">else &#123;</span></span><br><span class="line"><span class="regexp">    sqlite3_close(convert_DB);</span></span><br><span class="line"><span class="regexp">    NSAssert1(NO, @"Failed to open database with message '%s'.", sqlite3_errmsg(convert_DB));</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>#为加密数据库解密</p>
+<p>####1.先导出现有库的数据(In shell)<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sqlcipher plaintext.db</span><br><span class="line">.output dsa.sql</span><br><span class="line">.dump</span><br></pre></td></tr></table></figure></p>
+<p>####将新的数据库导出，并加密，之后导入非加密的库里面的数据<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sqlcipher another.db</span><br><span class="line">PRAGMA key=<span class="string">'aaa'</span>;</span><br><span class="line">.read dsa.sql</span><br></pre></td></tr></table></figure></p>
+<p>####2. 为加密后的sqlite执行解密(其实步骤与加密一样，只要把key设置为空就实现了不加密)<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ATTACH DATABASE <span class="string">'encrypted.db'</span> as encrypted KEY <span class="string">''</span>; <span class="regexp">//encrypted</span>.db是要导出的新的数据库</span><br><span class="line">SELECT sqlcipher_export(<span class="string">'encrypted'</span>);</span><br><span class="line">DETACH DATABASE encrypted;</span><br></pre></td></tr></table></figure></p>
+<p>####3.（In shell）<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sqlciper test.db</span><br><span class="line">PRAGMA KEY=<span class="string">'helloworld'</span>;<span class="comment">#第一步必须执行</span></span><br><span class="line">ATTACH DATABASE <span class="string">'encrypted.db'</span> as encrypted KEY <span class="string">''</span>;</span><br><span class="line">SELECT sqlcipher_export(<span class="string">'encrypted'</span>);</span><br><span class="line">DETACH DATABASE encrypted;</span><br></pre></td></tr></table></figure></p>
+<p>##参考</p>
+<ul>
+<li>sqlcipher配置 <a href="http://sqlcipher.net/ios-tutorial/" target="_blank" rel="noopener">http://sqlcipher.net/ios-tutorial/</a>  </li>
+<li>sqlcipher API <a href="http://sqlcipher.net/sqlcipher-api/" target="_blank" rel="noopener">http://sqlcipher.net/sqlcipher-api/</a></li>
+<li>sqlcipher 使用 <a href="http://jordy.easymorse.com/?p=970" target="_blank" rel="noopener">http://jordy.easymorse.com/?p=970</a></li>
+<li>Mac SQLCipher导出工具 <a href="https://github.com/welsonla/SQLCipherExport" target="_blank" rel="noopener">https://github.com/welsonla/SQLCipherExport</a></li>
+</ul>
+
+  </section>
+  <footer class="post-footer">
+    <!--
+    <section class="author">
+      <h4>welsonla</h4>
+      <p></p>
+    </section>
+    -->
+  </footer>
+</article>
+
+<nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2014/01/02/my-2013/">
+        ← prev <!--我的2013-->
+    </a>
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2013/08/06/generate-new-host-rsa-key/">
+        <!--generate new host RSA key--> next →
+    </a>
+    
+</nav>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'welsonla';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" target="_blank" rel="noopener" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+        </main>
+        <footer id="footer">
+            <section id="footer-message">&copy; 2022 welsonla. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="https://github.com/guolin" target="_blank">Guo Lin</a>.</section>
+        </footer>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','/js/ga.js','ga');
+            ga('create', 'UA-19152389-6', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+
+
