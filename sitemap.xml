@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/2013/05/10/different-of-class-and-category/</loc>
+    <loc>http://welsonla.timebot.net/2013/04/10/use-rvm-install-ruby/</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/2013/04/10/use-rvm-install-ruby/</loc>
+    <loc>http://welsonla.timebot.net/2013/05/10/different-of-class-and-category/</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/2014/01/02/my-2013/</loc>
+    <loc>http://welsonla.timebot.net/2013/08/13/encrypt-sqlite-with-sqlcipher/</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/2013/08/13/encrypt-sqlite-with-sqlcipher/</loc>
+    <loc>http://welsonla.timebot.net/2014/01/02/my-2013/</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -209,7 +209,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/2014/07/14/instrument-start-fail/</loc>
+    <loc>http://welsonla.timebot.net/2014/07/14/xcode5-install-command-line-tools/</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -218,7 +218,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/2014/07/14/xcode5-install-command-line-tools/</loc>
+    <loc>http://welsonla.timebot.net/2014/07/14/instrument-start-fail/</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/2015/05/04/something-about-xctest/</loc>
+    <loc>http://welsonla.timebot.net/2015/04/12/rails-code-snippets/</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -263,7 +263,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/2015/04/12/rails-code-snippets/</loc>
+    <loc>http://welsonla.timebot.net/2015/05/04/something-about-xctest/</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -317,6 +317,15 @@
   </url>
   
   <url>
+    <loc>http://welsonla.timebot.net/2017/07/13/heroku-command/</loc>
+    
+    <lastmod>2020-01-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://welsonla.timebot.net/2017/07/13/using-fastlane/</loc>
     
     <lastmod>2020-01-01</lastmod>
@@ -335,7 +344,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/2017/07/13/heroku-command/</loc>
+    <loc>http://welsonla.timebot.net/2018/05/30/let-react-native-shell-open-in-iterm/</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -371,7 +380,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/2018/05/30/let-react-native-shell-open-in-iterm/</loc>
+    <loc>http://welsonla.timebot.net/about/index.html</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -380,7 +389,7 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/about/index.html</loc>
+    <loc>http://welsonla.timebot.net/list/index.html</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -399,15 +408,6 @@
   
   <url>
     <loc>http://welsonla.timebot.net/uploads/2013-04-10-the-time-past-so-quick.html</loc>
-    
-    <lastmod>2020-01-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://welsonla.timebot.net/list/index.html</loc>
     
     <lastmod>2020-01-01</lastmod>
     
@@ -483,14 +483,14 @@
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/categories/PHP/</loc>
+    <loc>http://welsonla.timebot.net/categories/Mac/</loc>
     <lastmod>2022-11-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://welsonla.timebot.net/categories/Mac/</loc>
+    <loc>http://welsonla.timebot.net/categories/PHP/</loc>
     <lastmod>2022-11-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
