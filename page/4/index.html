@@ -1,192 +1,734 @@
-<!doctype html>
-<html lang="en">
-    <head>
-		
-        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助">
-        <meta name="keywords" content="iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life">
-        <link rel="shortcut icon" href="/uploads/avatar.jpg"/>
-        <link rel="canonical" href="http://guolinn.com/">
-        <link rel="alternate" type="application/rss+xml" title="welsonla" href="/atom.xml">
-        <title>NSLog(&#34;Life &amp; Code&#34;);</title>
-        <!-- <meta name="description" content="{{meta_description}}"> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>NSLog(&#34;Life &amp; Code&#34;);</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NSLog(&quot;Life &amp; Code&quot;);">
+<meta property="og:url" content="http://welsonla.timebot.net/page/4/index.html">
+<meta property="og:site_name" content="NSLog(&quot;Life &amp; Code&quot;);">
+<meta property="og:description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助">
+<meta property="og:locale">
+<meta property="article:author" content="welsonla">
+<meta property="article:tag" content="iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="NSLog(&#34;Life &amp; Code&#34;);" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
 
-        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="MobileOptimized" content="320" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="google-site-verification" content="AlY4bsGF9vMeHg3et7af55fPyOcqfNhQUbYLSmREeE4" />
+  
 
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    <meta name="generator" content="Hexo 6.3.0"></head>
-    
-		<body class="home-template">
-	
-
-        <header id="header">
-            <a id="logo" href="/"><img src="/uploads/avatar.jpg" alt="NSLog("Life & Code");" /></a>
-            <h1><a href="/">welsonla</a></h1>
-            <p></p>
-            <div id="follow-icons">
-      <a target="_blank" rel="noopener" href="http://instagram.com/welsonla"><i class="fa fa-instagram fa-2x"></i></a>
-          <a target="_blank" rel="noopener" href="http://github.com/welsonla"><i class="fa fa-github-square fa-2x"></i></a>
-          <a target="_blank" rel="noopener" href="http://twitter.com/welsonla"><i class="fa fa-twitter-square fa-2x"></i></a>
-          <a href="/atom.xml"><i class="fa fa-rss-square fa-2x"></i></a>
-  </div>
-<h6><a href="/archives">Archives</h6>
-<h6><a href="/list">List</h6>
-<h6><a href="/categories">Categories</h6>
-<h6><a href="/about">About</a></h6>
-        </header>
-
-        <main id="content">
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">NSLog(&#34;Life &amp; Code&#34;);</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2013/07/06/vim-note/">vim-note</a>
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://welsonla.timebot.net"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
   
-  <span class="separator"> &middot; </span>
-  
-  <span class="post-date">July 6, 2013</span>
-  
-  
-  </h3>
-</section>
+    <article id="post-vim-note" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/07/06/vim-note/" class="article-date">
+  <time datetime="2013-07-06T09:27:00.000Z" itemprop="datePublished">2013-07-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/">工具控</a>
+  </div>
 
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2013/06/25/git-note/">git笔记</a>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-  <span class="separator"> &middot; </span>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/07/06/vim-note/">vim-note</a>
+    </h1>
   
-  <span class="post-date">June 25, 2013</span>
-  
-  
-  </h3>
-</section>
 
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2013/06/03/blog-with-github-4/">blog with github(4)-开始写吧，骚年</a>
-  
-  <span class="separator"> &middot; </span>
-  
-  <span class="post-date">June 3, 2013</span>
-  
-  
-  </h3>
-</section>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>####移动到行首<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure></p>
+<p>####移动到行尾<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$</span><br></pre></td></tr></table></figure></p>
+<p>####剪切多行<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">v</span><br><span class="line">向下移动</span><br><span class="line">d</span><br></pre></td></tr></table></figure></p>
+<p>####粘贴<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P</span><br></pre></td></tr></table></figure></p>
+<p>####在nerdTree光标处新建一个文件<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m</span><br></pre></td></tr></table></figure></p>
+<p>####删除多行(数字+dd)<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>dd <span class="comment">#删除5行</span></span><br></pre></td></tr></table></figure></p>
+<p>####多行注释<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.ESC+v</span><br><span class="line"><span class="number">2</span>.方向键向下或者向上选中多行</span><br><span class="line"><span class="number">3</span>.Control+v</span><br><span class="line"><span class="number">4</span>.Shift+i</span><br><span class="line"><span class="number">5</span>.<span class="comment">#</span></span><br><span class="line"><span class="number">6</span>.Esc,Esc</span><br></pre></td></tr></table></figure></p>
 
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2013/06/03/blog-with-github-3/">blog with github(3)-Octopress配置</a>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2013/07/06/vim-note/" data-id="clb0uhkc3000lo63k09667lnf" class="article-share-link">Share</a>
+      
+        <a href="http://welsonla.timebot.net/2013/07/06/vim-note/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
   
-  <span class="separator"> &middot; </span>
-  
-  <span class="post-date">June 3, 2013</span>
-  
-  
-  </h3>
-</section>
+</article>
 
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2013/06/03/blog-with-github-2/">blog with github(2)-部署到github</a>
-  
-  <span class="separator"> &middot; </span>
-  
-  <span class="post-date">June 3, 2013</span>
-  
-  
-  </h3>
-</section>
 
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2013/05/10/blog-with-github/">blog with github(1)-前期准备</a>
-  
-  <span class="separator"> &middot; </span>
-  
-  <span class="post-date">May 10, 2013</span>
-  
-  
-  </h3>
-</section>
 
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2013/05/10/different-of-class-and-category/">different of class and category</a>
   
-  <span class="separator"> &middot; </span>
-  
-  <span class="post-date">May 10, 2013</span>
-  
-  
-  </h3>
-</section>
+    <article id="post-git-note" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/25/git-note/" class="article-date">
+  <time datetime="2013-06-25T01:21:00.000Z" itemprop="datePublished">2013-06-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/git/">git</a>
+  </div>
 
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2013/04/10/generate-github-ssh-keys/">生成 github SSH keys</a>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-  <span class="separator"> &middot; </span>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/25/git-note/">git笔记</a>
+    </h1>
   
-  <span class="post-date">April 10, 2013</span>
-  
-  
-  </h3>
-</section>
 
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2013/04/10/use-rvm-install-ruby/">使用RVM安装ruby</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一些全局配置"><a href="#一些全局配置" class="headerlink" title="一些全局配置"></a>一些全局配置</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git config --global push.default matching</span><br><span class="line"></span><br><span class="line">git config --global color.status auto</span><br><span class="line">git config --global color.diff auto</span><br><span class="line">git config --global color.branch auto</span><br><span class="line">git config --global color.interactive auto</span><br></pre></td></tr></table></figure>
+<h4 id="添加所有新文件"><a href="#添加所有新文件" class="headerlink" title="添加所有新文件"></a>添加所有新文件</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<h4 id="从版本中去除一个文件"><a href="#从版本中去除一个文件" class="headerlink" title="从版本中去除一个文件"></a>从版本中去除一个文件</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm test.html.rb</span><br></pre></td></tr></table></figure>
+<h4 id="假设有很多新文件和删除了好多文件"><a href="#假设有很多新文件和删除了好多文件" class="headerlink" title="假设有很多新文件和删除了好多文件"></a>假设有很多新文件和删除了好多文件</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br></pre></td></tr></table></figure>
+<h4 id="获取所有远程版本"><a href="#获取所有远程版本" class="headerlink" title="获取所有远程版本"></a>获取所有远程版本</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch</span><br></pre></td></tr></table></figure>
+<h4 id="创建并切换到新分支"><a href="#创建并切换到新分支" class="headerlink" title="创建并切换到新分支"></a>创建并切换到新分支</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b newbranch</span><br></pre></td></tr></table></figure>
+<h4 id="切换到分支"><a href="#切换到分支" class="headerlink" title="切换到分支"></a>切换到分支</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
+<h4 id="迁移原有git项目到新得项目地址"><a href="#迁移原有git项目到新得项目地址" class="headerlink" title="迁移原有git项目到新得项目地址"></a>迁移原有git项目到新得项目地址</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin git@git.github.<span class="symbol">com:</span>welsonla/studio.git</span><br></pre></td></tr></table></figure>
+<h4 id="查看当前git分支"><a href="#查看当前git分支" class="headerlink" title="查看当前git分支"></a>查看当前git分支</h4><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-r</span><br></pre></td></tr></table></figure>
+<h4 id="查看git-log"><a href="#查看git-log" class="headerlink" title="查看git log"></a>查看git log</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+<h4 id="查看当前tag"><a href="#查看当前tag" class="headerlink" title="查看当前tag"></a>查看当前tag</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag</span><br></pre></td></tr></table></figure>
+<h4 id="创建一个新的tag"><a href="#创建一个新的tag" class="headerlink" title="创建一个新的tag"></a>创建一个新的tag</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h4 id="降当前tag推送到服务器"><a href="#降当前tag推送到服务器" class="headerlink" title="降当前tag推送到服务器"></a>降当前tag推送到服务器</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git push origin --tags</span><br><span class="line"></span><br><span class="line">推送单个</span><br><span class="line">git push origin v1.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h4 id="将现有svn项目转换成git项目，并保留所有commit-log"><a href="#将现有svn项目转换成git项目，并保留所有commit-log" class="headerlink" title="将现有svn项目转换成git项目，并保留所有commit log"></a>将现有svn项目转换成git项目，并保留所有commit log</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git svn clone [SVN-Path]</span><br></pre></td></tr></table></figure>
+<h4 id="回滚"><a href="#回滚" class="headerlink" title="回滚"></a>回滚</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#http://stackoverflow.com/questions/1338728/delete-commits-from-a-branch-in-git</span></span><br><span class="line">git reset --hard commitid</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
+<h4 id="ignore"><a href="#ignore" class="headerlink" title="ignore"></a>ignore</h4><h5 id="gitignore-新文件使用正则匹配"><a href="#gitignore-新文件使用正则匹配" class="headerlink" title=".gitignore 新文件使用正则匹配"></a>.gitignore 新文件使用正则匹配</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*<span class="selector-class">.file_extension</span></span><br><span class="line"><span class="selector-class">.idea</span><span class="comment">/*</span></span><br></pre></td></tr></table></figure>
+<h5 id="remove-exist-files-现有文件需要软删除"><a href="#remove-exist-files-现有文件需要软删除" class="headerlink" title="remove exist files(现有文件需要软删除)"></a>remove exist files(现有文件需要软删除)</h5><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached . /<span class="regexp">/soft delete</span></span><br><span class="line"><span class="regexp">git add .</span></span><br><span class="line"><span class="regexp">git commit -m 'remove ignore files'</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2013/06/25/git-note/" data-id="clb0uhkc2000ko63k5smgnc0t" class="article-share-link">Share</a>
+      
+        <a href="http://welsonla.timebot.net/2013/06/25/git-note/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
   
-  <span class="separator"> &middot; </span>
-  
-  <span class="post-date">April 10, 2013</span>
-  
-  
-  </h3>
-</section>
+</article>
 
-<section id="{{id}}" class="{{post_class}}">
-  <h3 class="post-title">
-  <a href="/2013/04/10/use-cocoapods/">Cocoapods 使用</a>
-  
-  <span class="separator"> &middot; </span>
-  
-  <span class="post-date">April 10, 2013</span>
-  
-  
-  </h3>
-</section>
 
-<nav class="pagination" role="pagination">
-  <a class="newer-posts" href="/page/3/">← Newer Posts</a>
-  <span class="page-number">Page 4 of 5</span>
-  <a class="older-posts" href="/page/5/">Older Posts →</a>
+
+  
+    <article id="post-blog-with-github-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/03/blog-with-github-4/" class="article-date">
+  <time datetime="2013-06-03T05:57:00.000Z" itemprop="datePublished">2013-06-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/03/blog-with-github-4/">blog with github(4)-开始写吧，骚年</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/\&lt;category>/atom.xml中找到这些内容</p>
+<p>####Post</p>
+<p>这些Post页面必须存放在Source/_posts目录下面，并且命名方式和jekyll的命名方式一样，会转换成YYYY-MM-DD-Post-title.markdown，这个文件的名字就是你的blog的url slug，日期帮助你排序这些文章</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake new_post[<span class="string">"Title"</span>]</span><br></pre></td></tr></table></figure>
+<p>在使用了ZSH的话，你要这样创建</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake new_post或者rake new_post[\<span class="string">"Title\"]</span></span><br></pre></td></tr></table></figure>
+<p>例如</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rake new_post[<span class="string">"Zombie Ninjas Attack: A survivor's retrospective"</span>]</span><br><span class="line"> Creates source/_posts/<span class="number">2011</span>-<span class="number">07</span>-<span class="number">03</span>-zombie-ninjas-attack-a-survivors-retrospective.markdown</span><br></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/Code/rails</span><span class="regexp">/octopress(branch:source) » rake new_post                        </span></span><br><span class="line"><span class="regexp">Enter a title for your post: blog-with-github-4</span></span><br><span class="line"><span class="regexp">mkdir -p source/</span>_posts</span><br><span class="line">Creating new <span class="symbol">post:</span> source/_posts/<span class="number">2013</span>-<span class="number">06</span>-<span class="number">03</span>-blog-with-github-<span class="number">4</span>.markdown</span><br></pre></td></tr></table></figure>
+<p>生成的内容大致如下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="symbol">layout:</span> post</span><br><span class="line"><span class="symbol">title:</span> <span class="string">"Zombie Ninjas Attack: A survivor's retrospective"</span></span><br><span class="line"><span class="symbol">date:</span> <span class="number">2011</span>-<span class="number">07</span>-<span class="number">03</span> <span class="number">5</span><span class="symbol">:</span><span class="number">59</span></span><br><span class="line"><span class="symbol">comments:</span> <span class="literal">true</span></span><br><span class="line">external-<span class="symbol">url:</span></span><br><span class="line"><span class="symbol">categories:</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>你可以关闭comments，或者为他添加categories的tag，并且你还可以添加<code>author: Your Name</code>与<code>published: false</code>来控制是否发布</p>
+<p>####Page</p>
+<p>生成Page的命令</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rake new_page[<span class="keyword">super</span>-awesome]</span><br><span class="line"><span class="comment"># creates /source/super-awesome/index.markdown</span></span><br><span class="line"></span><br><span class="line">rake new_page[<span class="keyword">super</span>-awesome/page.html]</span><br></pre></td></tr></table></figure>
+<p>如果使用了zsh的话，方法要参照post的创建方式</p>
+<p>生成的pages的默认内如大致如下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="symbol">layout:</span> page</span><br><span class="line"><span class="symbol">title:</span> <span class="string">"Super Awesome"</span></span><br><span class="line"><span class="symbol">date:</span> <span class="number">2011</span>-<span class="number">07</span>-<span class="number">03</span> <span class="number">5</span><span class="symbol">:</span><span class="number">59</span></span><br><span class="line"><span class="symbol">comments:</span> <span class="literal">true</span></span><br><span class="line"><span class="symbol">sharing:</span> <span class="literal">true</span></span><br><span class="line"><span class="symbol">footer:</span> <span class="literal">true</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>####Content</p>
+<p>如果列表中不想显示全文内容的话，可以添加<code>&lt;!-- more --&gt;</code>标签，这将在文章下面生成一个“Continue →” 链接，链接到全文的地址</p>
+<p>###Generate &amp; Preview</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rake generate   <span class="comment"># Generates posts and pages into the public directory</span></span><br><span class="line">rake watch      <span class="comment"># Watches source/ and sass/ for changes and regenerates</span></span><br><span class="line">rake preview    <span class="comment"># Watches, and mounts a webserver at http://localhost:4000</span></span><br></pre></td></tr></table></figure>
+<p>本地使用<a href="http://localhost:4000就可以访问了" target="_blank" rel="noopener">http://localhost:4000就可以访问了</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2013/06/03/blog-with-github-4/" data-id="clb0uhkbz000ho63klqnkeeks" class="article-share-link">Share</a>
+      
+        <a href="http://welsonla.timebot.net/2013/06/03/blog-with-github-4/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-blog-with-github-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/03/blog-with-github-3/" class="article-date">
+  <time datetime="2013-06-03T05:46:00.000Z" itemprop="datePublished">2013-06-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/03/blog-with-github-3/">blog with github(3)-Octopress配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">_config.yml       <span class="comment"># Main config (Jekyll's settings)</span></span><br><span class="line">Rakefile          <span class="comment"># Configs for deployment</span></span><br><span class="line">config.rb         <span class="comment"># Compass config</span></span><br><span class="line">config.ru         <span class="comment"># Rack config</span></span><br></pre></td></tr></table></figure>
+<p>Rakefile大多是与部署相关的配置,如果不需要同步的话，你就不需要进行修改</p>
+<p>####Blog配置</p>
+<p>_config.yml有三部分配置,你必须修改url，并且title，subtitle和author也要修改，还有一些第三方的服务需要启用</p>
+<p>#####主配置<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">url:</span>                <span class="comment"># For rewriting urls for RSS, etc</span></span><br><span class="line"><span class="symbol">title:</span>              <span class="comment"># Used in the header and title tags</span></span><br><span class="line"><span class="symbol">subtitle:</span>           <span class="comment"># A description used in the header</span></span><br><span class="line"><span class="symbol">author:</span>             <span class="comment"># Your name, for RSS, Copyright, Metadata</span></span><br><span class="line"><span class="symbol">simple_search:</span>      <span class="comment"># Search engine for simple site search</span></span><br><span class="line"><span class="symbol">description:</span>        <span class="comment"># A default meta description for your site</span></span><br><span class="line"><span class="symbol">date_format:</span>        <span class="comment"># Format dates using Ruby's date strftime syntax</span></span><br><span class="line"><span class="symbol">subscribe_rss:</span>      <span class="comment"># Url for your blog's feed, defauts to /atom.xml</span></span><br><span class="line"><span class="symbol">subscribe_email:</span>    <span class="comment"># Url to subscribe by email (service required)</span></span><br><span class="line"><span class="symbol">category_feeds:</span>     <span class="comment"># Enable per category RSS feeds (defaults to false in 2.1)</span></span><br><span class="line"><span class="symbol">email:</span>              <span class="comment"># Email address for the RSS feed if you want it.</span></span><br></pre></td></tr></table></figure></p>
+<p>#####Jekyll&amp;Plugins</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">root:</span>               <span class="comment"># Mapping for relative urls (default: /)</span></span><br><span class="line"><span class="symbol">permalink:</span>          <span class="comment"># Permalink structure for blog posts</span></span><br><span class="line"><span class="symbol">source:</span>             <span class="comment"># Directory for site source files</span></span><br><span class="line"><span class="symbol">destination:</span>        <span class="comment"># Directory for generated site files</span></span><br><span class="line"><span class="symbol">plugins:</span>            <span class="comment"># Directory for Jekyll plugins</span></span><br><span class="line"><span class="symbol">code_dir:</span>           <span class="comment"># Directory for code snippets (for include_code plugin)</span></span><br><span class="line"><span class="symbol">category_dir:</span>       <span class="comment"># Directory for generated blog category pages</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">pygments:</span>           <span class="comment"># Toggle python pygments syntax highlighting</span></span><br><span class="line"><span class="symbol">paginate:</span>           <span class="comment"># Posts per page on the blog index</span></span><br><span class="line"><span class="symbol">pagination_dir:</span>     <span class="comment"># Directory base for pagination URLs eg. /blog/page/2/</span></span><br><span class="line"><span class="symbol">recent_posts:</span>       <span class="comment"># Number of recent posts to appear in the sidebar</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">default_asides:</span>     <span class="comment"># Configure what shows up in the sidebar and in what order</span></span><br><span class="line"><span class="symbol">blog_index_asides:</span>  <span class="comment"># Optional sidebar config for blog index page</span></span><br><span class="line"><span class="symbol">post_asides:</span>        <span class="comment"># Optional sidebar config for post layout</span></span><br><span class="line"><span class="symbol">page_asides:</span>        <span class="comment"># Optional sidebar config for page layout</span></span><br></pre></td></tr></table></figure>
+<p>#####第三方配置<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Github - List your github repositories <span class="keyword">in</span> the sidebar</span><br><span class="line">Twitter - Setup a sidebar twitter feed, follow button, <span class="keyword">and</span> tweet button (<span class="keyword">for</span> sharing posts <span class="keyword">and</span> pages).</span><br><span class="line">Google Plus One - Setup sharing <span class="keyword">for</span> posts <span class="keyword">and</span> pages on Google’s plus one network.</span><br><span class="line">Pinboard - Share your recent Pinboard bookmarks <span class="keyword">in</span> the sidebar.</span><br><span class="line">Delicious - Share your recent Delicious bookmarks <span class="keyword">in</span> the sidebar.</span><br><span class="line">Disqus Comments - Add your disqus short name to enable disqus comments on your site.</span><br><span class="line">Google Analytics - Add your tracking id to enable Google Analytics tracking <span class="keyword">for</span> your site.</span><br><span class="line">Facebook - Add a Facebook like button</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2013/06/03/blog-with-github-3/" data-id="clb0uhkby000go63k0xm6xlm0" class="article-share-link">Share</a>
+      
+        <a href="http://welsonla.timebot.net/2013/06/03/blog-with-github-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-blog-with-github-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/03/blog-with-github-2/" class="article-date">
+  <time datetime="2013-06-03T05:20:00.000Z" itemprop="datePublished">2013-06-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/03/blog-with-github-2/">blog with github(2)-部署到github</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###使用github pages</p>
+<p>如果想使用 <a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io）</p>
+<p>用户使用的是Github Pages的master版本下面的public作为你的网站主目录，你可以通过浏览<a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 来查看。如果你想在source这个版本上面维护代码，并且把内容提交到master分支，Octopress有一个命令来帮助你完成这些</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake setup_github_pages</span><br></pre></td></tr></table></figure>
+<p>然后，他将 </p>
+<ol>
+<li>询问你的github pages的url</li>
+<li>将远程的重‘origin’重命名为‘octopress’</li>
+<li>在远程的origin讲你的github pages仓库添加进去</li>
+<li>切换当前branch从master切换到source</li>
+<li>根据你的仓库名，重新配置你的blog地址</li>
+<li>在_deploy目录下面设置master分支，用于部署</li>
+</ol>
+<p>接下来执行<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rake generate</span><br><span class="line">rake deploy</span><br></pre></td></tr></table></figure></p>
+<p>这将生成你的blog，并将生成的文件copy到_deploy目录下面,并添加到git，将他们commit和push到master分支上面，稍后，你会收到一份来自github的email告诉你，你的提交已经收到，并且很快将发不到你的web上面</p>
+<p>并且，不要忘记提交你的代码到source分支</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">'your message'</span></span><br><span class="line">git push origin source</span><br></pre></td></tr></table></figure>
+<p>####自定义域名绑定</p>
+<p>首先你要source目录下面创建一个CNAME，</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">'your-domain.com'</span> &gt;&gt; source/CNAME</span><br></pre></td></tr></table></figure>
+<p>之后去你的域名服务商或者你的dns服务商那里创建一条CNAME记录，记录指向的IP为<br>(不要使用顶级域名指向到pages,要使用二级域名)<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">207.97</span>.<span class="number">227.245</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2013/06/03/blog-with-github-2/" data-id="clb0uhkbv000do63kw0chjn2s" class="article-share-link">Share</a>
+      
+        <a href="http://welsonla.timebot.net/2013/06/03/blog-with-github-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-blog-with-github" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/05/10/blog-with-github/" class="article-date">
+  <time datetime="2013-05-09T17:18:00.000Z" itemprop="datePublished">2013-05-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/05/10/blog-with-github/">blog with github(1)-前期准备</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##开始之前</p>
+<ol>
+<li><a href="http://git-scm.com/" target="_blank" rel="noopener">安装Git</a></li>
+<li>使用<a href="http://octopress.org/docs/setup/rbenv" target="_blank" rel="noopener">rbenv</a>或者<a href="http://octopress.org/docs/setup/rvm" target="_blank" rel="noopener">RVM</a>安装ruby 1.9.3</li>
+</ol>
+<p>安装完后确保你的ruby版本是1.9.3<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -v</span><br></pre></td></tr></table></figure></p>
+<p>##设置Octopress</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="symbol">git:</span>/<span class="regexp">/github.com/imathis</span><span class="regexp">/octopress.git octopress</span></span><br><span class="line"><span class="regexp">cd octopress</span></span><br></pre></td></tr></table></figure>
+<p>接下来安装一些依赖</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gem install bundler</span><br><span class="line">rbenv rehash   </span><br><span class="line">bundle install</span><br></pre></td></tr></table></figure>
+<p>安装Octopress默认主题</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake install</span><br></pre></td></tr></table></figure>
+<p>–未完待续，哥去睡觉</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2013/05/10/blog-with-github/" data-id="clb0uhkbn0008o63kyio48qn0" class="article-share-link">Share</a>
+      
+        <a href="http://welsonla.timebot.net/2013/05/10/blog-with-github/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-different-of-class-and-category" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/05/10/different-of-class-and-category/" class="article-date">
+  <time datetime="2013-05-09T17:05:00.000Z" itemprop="datePublished">2013-05-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/05/10/different-of-class-and-category/">different of class and category</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>当需要重写父类中的方法时，这时候定义子类</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@interface JADanSideController : JASidePanelController</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@implementation JADanSideController</span><br><span class="line"></span><br><span class="line">- (UIBarButtonItem *)leftButtonForCenterPanel&#123;</span><br><span class="line">    </span><br><span class="line">    UIButton *leftBarButton = [UIButton <span class="symbol">buttonWithType:</span>UIButtonTypeCustom];</span><br><span class="line">    [leftBarButton <span class="symbol">setFrame:</span>CGRectMake(<span class="number">0</span>, <span class="number">0</span>, <span class="number">44</span>, <span class="number">30</span>)];</span><br><span class="line">    [leftBarButton <span class="symbol">setBackgroundImage:</span>[UIImage <span class="symbol">imageNamed:</span>@<span class="string">"List_NaviSide.png"</span>] <span class="symbol">forState:</span>UIControlStateNormal];</span><br><span class="line">    [leftBarButton <span class="symbol">addTarget:</span><span class="keyword">self</span> <span class="symbol">action:</span>@selector(<span class="symbol">toggleLeftPanel:</span>) <span class="symbol">forControlEvents:</span>UIControlEventTouchUpInside];</span><br><span class="line">    __autoreleasing UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] <span class="symbol">initWithCustomView:</span>leftBarButton];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> leftBarButtonItem;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>当需要为父类添加方法时，这时候定义类别</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@interface JADanSideController : JASidePanelController</span><br><span class="line"></span><br><span class="line">- (void)setBackGroundColor;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2013/05/10/different-of-class-and-category/" data-id="clb0uhkbt000co63kyx15o3kc" class="article-share-link">Share</a>
+      
+        <a href="http://welsonla.timebot.net/2013/05/10/different-of-class-and-category/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-generate-github-ssh-keys" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/04/10/generate-github-ssh-keys/" class="article-date">
+  <time datetime="2013-04-10T14:16:00.000Z" itemprop="datePublished">2013-04-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/04/10/generate-github-ssh-keys/">生成 github SSH keys</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文主要来自github官方，Generating SSH Keys</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">cd ~<span class="regexp">/.ssh</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">ssh-keygen -t rsa -C "your_email@example.com"</span></span><br></pre></td></tr></table></figure>
+<p>下面的步骤可以只敲回车进行确认即可<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Creates a new ssh key using the provided email</span><br><span class="line"></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line"></span><br><span class="line"><span class="comment">#这里直接回车就会生成一个默认名为id_rsa</span></span><br><span class="line">Enter file <span class="keyword">in</span> which to save the key (<span class="regexp">/Users/you</span><span class="regexp">/.ssh/id</span>_rsa): [Press enter]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#这里需要你输入一个你加密的key（一定要记住）</span></span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase): [Type a passphrase]</span><br><span class="line">Enter same passphrase <span class="symbol">again:</span> [Type passphrase again]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /Users/welsonla/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /Users/welsonla/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint <span class="symbol">is:</span></span><br><span class="line"><span class="number">30</span><span class="symbol">:e8</span><span class="symbol">:aa</span><span class="symbol">:</span>08<span class="symbol">:ee</span><span class="symbol">:bc</span><span class="symbol">:</span><span class="number">76</span><span class="symbol">:</span><span class="number">88</span><span class="symbol">:</span><span class="number">2</span><span class="symbol">c:</span><span class="number">3</span><span class="symbol">f:</span><span class="number">83</span><span class="symbol">:</span><span class="number">39</span><span class="symbol">:b0</span><span class="symbol">:</span><span class="number">6</span><span class="symbol">e:</span><span class="number">95</span><span class="symbol">:cc</span> wyc.jar@gmail.com</span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br><span class="line"><span class="string">+--[ RSA 2048]----+</span></span><br><span class="line"><span class="string">|                 |</span></span><br><span class="line"><span class="string">|     .           |</span></span><br><span class="line"><span class="string">|    . o          |</span></span><br><span class="line"><span class="string">|   .   o         |</span></span><br><span class="line"><span class="string">|  o o   S        |</span></span><br><span class="line"><span class="string">|.  E             |</span></span><br><span class="line"><span class="string">|=++              |</span></span><br><span class="line"><span class="string">|%*o.             |</span></span><br><span class="line"><span class="string">|OO+o             |</span></span><br><span class="line"><span class="string">+-----------------+</span></span><br></pre></td></tr></table></figure></p>
+<p>看到这个界面说明生成成功</p>
+<p>copy加密字符到剪切板</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~<span class="regexp">/.ssh/i</span>d_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>打开你的github<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 点击 Account Settings</span><br><span class="line">2. 点击左侧 <span class="string">"SSH Keys"</span> </span><br><span class="line">3. 点击 <span class="string">"Add SSH key"</span></span><br><span class="line">4. 粘贴你的可以到 <span class="string">"Key"</span> 输入框</span><br><span class="line">5. 点击 <span class="string">"Add key"</span></span><br><span class="line">6. 输入你的github密码确认</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2013/04/10/generate-github-ssh-keys/" data-id="clb0uhkbk0006o63kfvs4qqt8" class="article-share-link">Share</a>
+      
+        <a href="http://welsonla.timebot.net/2013/04/10/generate-github-ssh-keys/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-use-rvm-install-ruby" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/04/10/use-rvm-install-ruby/" class="article-date">
+  <time datetime="2013-04-10T08:58:00.000Z" itemprop="datePublished">2013-04-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/04/10/use-rvm-install-ruby/">使用RVM安装ruby</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天突然发现ruby版本不小心又回到了1.8.7，可能是我修改了rvm的配置文件导致的，于是开始折腾安装rvm和ruby</p>
+<p>首先还是先安装Homebrew吧<br>很简单，一行代码搞定</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e <span class="string">"$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"</span></span><br></pre></td></tr></table></figure>
+<p>安装RVM<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L <span class="symbol">https:</span>/<span class="regexp">/get.rvm.io | bash -s stable --ruby</span></span><br></pre></td></tr></table></figure></p>
+<p>走着走着发现出错了<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Missing required <span class="symbol">packages:</span> autoconf, automake, libtool, pkg-config, libyaml, readline, libxml2, libxslt, libksba, openssl, sqlite.</span><br><span class="line">RVM autolibs is now configured with mode <span class="string">'2'</span> =&gt; <span class="string">'check and stop if missing'</span>,</span><br><span class="line">please run <span class="string">`rvm autolibs enable`</span> to let RVM <span class="keyword">do</span> it<span class="string">'s job or run and read `rvm autolibs [help]`</span></span><br><span class="line"><span class="string">or visit https://rvm.io/rvm/autolibs for more information.</span></span><br><span class="line"><span class="string">There were package installation errors, make sure to read the log.</span></span><br><span class="line"><span class="string">Check Homebrew requirements https://github.com/mxcl/homebrew/wiki/Installation</span></span><br></pre></td></tr></table></figure></p>
+<p>透过错误信息，发现缺少一写依赖的包，和rvm的autolibs没打开，这时候我们就通过Homebrew先安装上（具体你要看清楚你缺少的是什么）<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rvm autolibs enable</span><br><span class="line">rvm reload</span><br><span class="line">brew install autoconf automake libtool pkg-config libyaml readline libxml2 libxslt libksba openssl sqlite</span><br></pre></td></tr></table></figure></p>
+<p>漫长的等带后，依赖包终于装完了<br>再次安装RVM</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L <span class="symbol">https:</span>/<span class="regexp">/get.rvm.io | bash -s stable --ruby</span></span><br></pre></td></tr></table></figure>
+<p>就会安装成功，你可以rvm -v查看下版本</p>
+<p>安装并设置1.9.3为你的默认版本<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rvm install <span class="number">1.9</span>.<span class="number">3</span></span><br><span class="line">rvm use <span class="number">1.9</span>.<span class="number">3</span></span><br><span class="line">rvm rubygems latest</span><br></pre></td></tr></table></figure></p>
+<p>Finish</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2013/04/10/use-rvm-install-ruby/" data-id="clb0uhkbq000ao63koxt38q42" class="article-share-link">Share</a>
+      
+        <a href="http://welsonla.timebot.net/2013/04/10/use-rvm-install-ruby/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-use-cocoapods" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/04/10/use-cocoapods/" class="article-date">
+  <time datetime="2013-04-10T08:48:00.000Z" itemprop="datePublished">2013-04-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/04/10/use-cocoapods/">Cocoapods 使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install cocoapods</span><br></pre></td></tr></table></figure>
+<p>cd到你的项目的根目录，就是跟project文件同级,建立Podfile文件<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch Podfile</span><br></pre></td></tr></table></figure></p>
+<p>加入平台版本，（5.1可以省略，但是最好在podfile中加入，因为一些ARC相关的类库不加的话，会提示错误）<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">platform <span class="symbol">:ios</span>,<span class="string">'9.0'</span></span><br></pre></td></tr></table></figure></p>
+<p>搜索第三方的oc库</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pod search fmdb</span><br><span class="line"></span><br><span class="line">-&gt; FMDB (<span class="number">2.0</span>)</span><br><span class="line">   A Cocoa / Objective-C wrapper around SQLite.</span><br><span class="line">   - <span class="symbol">Homepage:</span> <span class="symbol">https:</span>/<span class="regexp">/github.com/ccgus</span><span class="regexp">/fmdb</span></span><br><span class="line"><span class="regexp">   - Source:   https:/</span><span class="regexp">/github.com/ccgus</span><span class="regexp">/fmdb.git</span></span><br><span class="line"><span class="regexp">   - Versions: 2.0, 1.5.1, 1.5 [master repo]</span></span><br></pre></td></tr></table></figure>
+<p>通过搜索，我们已经找到了该类库的版本的名字，只需要将这些内容加入到podfile文件中即可</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">platform <span class="symbol">:ios</span>, <span class="string">'5.1'</span></span><br><span class="line">Pod <span class="string">'FMDB'</span>,<span class="string">'2.0'</span></span><br></pre></td></tr></table></figure>
+<p>然后执行下面的命令，将这些类库加到到本地</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
+<h3 id="修复Cocoapods，重置repo"><a href="#修复Cocoapods，重置repo" class="headerlink" title="修复Cocoapods，重置repo"></a>修复Cocoapods，重置repo</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pod repo remove master</span><br><span class="line">pod repo add master <span class="symbol">https:</span>/<span class="regexp">/github.com/</span>CocoaPods/Specs.git</span><br><span class="line">pod repo update</span><br></pre></td></tr></table></figure>
+<h3 id="减少更新安装的时间，只安装或更新必要的库"><a href="#减少更新安装的时间，只安装或更新必要的库" class="headerlink" title="减少更新安装的时间，只安装或更新必要的库"></a>减少更新安装的时间，只安装或更新必要的库</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pod install --verbose --no-repo-update</span><br><span class="line">pod update --verbose --no-repo-update</span><br></pre></td></tr></table></figure>
+<p>之后将会生成一个workspace文件，以后我们打开项目的时候，就打开workspace文件即可，项目和其所需要的类库都以sub project的方式加到了这个workspace下面</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2013/04/10/use-cocoapods/" data-id="clb0uhkbf0003o63kc7mxhnot" class="article-share-link">Share</a>
+      
+        <a href="http://welsonla.timebot.net/2013/04/10/use-cocoapods/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &amp;raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ruby/">ruby</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/something/">something</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/">工具控</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/11/28/Hello-Nuphy-Halo-65/">Hello, Nuphy Halo 65</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/28/speed-up-maven/">使用阿里云加速Maven包更新</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/01/Mac-Diskspace-release/">解决 Mac OS 删除文件后磁盘空间不更新的问题</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/01/composer-and-laravel-setup/">Mac OS 安装 配置Laravel开发环境</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/13/iterm-with-powerline-theme/">iTerm2 with powerline theme</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 welsonla<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
 </nav>
+    
+<script>
+  var disqus_shortname = 'welsonla';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
 
-        </main>
-        <footer id="footer">
-            <section id="footer-message">&copy; 2022 welsonla. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="https://github.com/guolin" target="_blank">Guo Lin</a>.</section>
-        </footer>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','/js/ga.js','ga');
-            ga('create', 'UA-19152389-6', 'auto');
-            ga('send', 'pageview');
-        </script>
-    </body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
 </html>
-
-
