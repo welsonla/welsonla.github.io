@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+    <head>
+		
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助">
+        <meta name="keywords" content="iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life">
+        <link rel="shortcut icon" href="/uploads/avatar.jpg"/>
+        <link rel="canonical" href="http://guolinn.com/">
+        <link rel="alternate" type="application/rss+xml" title="welsonla" href="/atom.xml">
+        <title>iOS Tips | NSLog(&#34;Life &amp; Code&#34;);</title>
+        <!-- <meta name="description" content="{{meta_description}}"> -->
+
+        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-site-verification" content="AlY4bsGF9vMeHg3et7af55fPyOcqfNhQUbYLSmREeE4" />
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    
+		<body class="post-template">
+	
+
+        <header id="header">
+            <a id="logo" href="/"><img src="/uploads/avatar.jpg" alt="NSLog("Life & Code");" /></a>
+            <h1><a href="/">welsonla</a></h1>
+            <p></p>
+            <div id="follow-icons">
+      <a target="_blank" rel="noopener" href="http://instagram.com/welsonla"><i class="fa fa-instagram fa-2x"></i></a>
+          <a target="_blank" rel="noopener" href="http://github.com/welsonla"><i class="fa fa-github-square fa-2x"></i></a>
+          <a target="_blank" rel="noopener" href="http://twitter.com/welsonla"><i class="fa fa-twitter-square fa-2x"></i></a>
+          <a href="/atom.xml"><i class="fa fa-rss-square fa-2x"></i></a>
+  </div>
+<h6><a href="/archives">Archives</h6>
+<h6><a href="/list">List</h6>
+<h6><a href="/categories">Categories</h6>
+<h6><a href="/about">About</a></h6>
+        </header>
+
+        <main id="content">
+        
+
+<article class="post">
+  March 23, 2016
+  
+
+  <h1 class="post-title">iOS Tips</h1>
+  <section class="post-content article-entry">
+    <p>Code Snippets</p>
+<h5 id="去除空白TableViewCell的分割线"><a href="#去除空白TableViewCell的分割线" class="headerlink" title="去除空白TableViewCell的分割线"></a>去除空白TableViewCell的分割线</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">listTable.tableFooterView = [UIView <span class="keyword">new</span>];</span><br></pre></td></tr></table></figure>
+<h5 id="让header与cell一起滚动，不在顶部悬停"><a href="#让header与cell一起滚动，不在顶部悬停" class="headerlink" title="让header与cell一起滚动，不在顶部悬停"></a>让header与cell一起滚动，不在顶部悬停</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">设置为UITableViewStyleGrouped</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h5 id="在拼音打字的时候，不让textField响应Change"><a href="#在拼音打字的时候，不让textField响应Change" class="headerlink" title="在拼音打字的时候，不让textField响应Change"></a>在拼音打字的时候，不让textField响应Change</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//MARK: textfield notification</span></span><br><span class="line">- (<span class="keyword">void</span>)textFieldDidChange:(NSNotification *)notification&#123;</span><br><span class="line">   UITextRange *selectedRange = [self.searchField markedTextRange];</span><br><span class="line">   NSString * newText = [self.textField textInRange:selectedRange];</span><br><span class="line"></span><br><span class="line">   <span class="comment">//获取高亮部分,拼音状态不进行搜索</span></span><br><span class="line">   <span class="keyword">if</span>(newText.length&gt;<span class="number">0</span>)&#123;</span><br><span class="line">       <span class="keyword">return</span>;</span><br><span class="line">   &#125;</span><br><span class="line">……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="将数组中的Model的某个字段合并成String"><a href="#将数组中的Model的某个字段合并成String" class="headerlink" title="将数组中的Model的某个字段合并成String"></a>将数组中的Model的某个字段合并成String</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#假设listArray中是User实体，有一个Name字段</span><br><span class="line">[[listArray valueForKey:@“Name”] componentsJoinedByString:@<span class="string">"\n"</span>]</span><br></pre></td></tr></table></figure>
+<h5 id="设置NavigationBarItem的Title，可以让其与Tabbar的Title区分开"><a href="#设置NavigationBarItem的Title，可以让其与Tabbar的Title区分开" class="headerlink" title="设置NavigationBarItem的Title，可以让其与Tabbar的Title区分开"></a>设置NavigationBarItem的Title，可以让其与Tabbar的Title区分开</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.navigationItem.title = @“Home”;</span><br></pre></td></tr></table></figure>
+<h5 id="通过设置Cell的Custom-Insets来替代自定义View的分割线"><a href="#通过设置Cell的Custom-Insets来替代自定义View的分割线" class="headerlink" title="通过设置Cell的Custom Insets来替代自定义View的分割线"></a>通过设置Cell的Custom Insets来替代自定义View的分割线</h5><p><img src="/uploads/cell-insets.png" alt></p>
+<h3 id="Xcode"><a href="#Xcode" class="headerlink" title="Xcode"></a>Xcode</h3><ol>
+<li>按住Shift可以一次选择多个AutoLayout约束</li>
+<li>按住Ctrl,再点按Alt可以Toggle设置是否添加Margin</li>
+<li>Ctrl+Command+↑切换h与m文件（Objective-C使用）</li>
+<li>给类改名，并修改相关引用地方的类名<br><img src="/uploads/xcode-rename.png" alt></li>
+</ol>
+<p><img src="/uploads/xcode-rename-relation.png" alt></p>
+<h4 id="屏蔽Xcode8自带log"><a href="#屏蔽Xcode8自带log" class="headerlink" title="屏蔽Xcode8自带log"></a>屏蔽Xcode8自带log</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">http:</span>/<span class="regexp">/stackoverflow.com/questions</span><span class="regexp">/37800790/hide</span>-strange-unwanted-xcode-<span class="number">8</span>-logs](<span class="symbol">http:</span>/<span class="regexp">/stackoverflow.com/questions</span><span class="regexp">/37800790/hide</span>-strange-unwanted-xcode-<span class="number">8</span>-logs)</span><br><span class="line"><span class="number">1</span>- From Xcode menu <span class="symbol">open:</span> Product &gt; Scheme &gt; Edit Scheme</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>- On your Environment Variables set OS_ACTIVITY_MODE = disable</span><br></pre></td></tr></table></figure>
+<h3 id="Xcode8-注释快捷键"><a href="#Xcode8-注释快捷键" class="headerlink" title="Xcode8 注释快捷键"></a>Xcode8 注释快捷键</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Option+Command+<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
+
+  </section>
+  <footer class="post-footer">
+    <!--
+    <section class="author">
+      <h4>welsonla</h4>
+      <p></p>
+    </section>
+    -->
+  </footer>
+</article>
+
+<nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2016/12/08/multiple-ssh-key-config/">
+        ← prev <!--配置多个SSH Keygen-->
+    </a>
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2016/03/23/Mac-Tips/">
+        <!--Mac Tips--> next →
+    </a>
+    
+</nav>
+<div id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'welsonla';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a target="_blank" rel="noopener" href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+        </main>
+        <footer id="footer">
+            <section id="footer-message">&copy; 2022 welsonla. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="https://github.com/guolin" target="_blank">Guo Lin</a>.</section>
+        </footer>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','/js/ga.js','ga');
+            ga('create', 'UA-19152389-6', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+
+
