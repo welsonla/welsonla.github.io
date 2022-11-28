@@ -1,68 +1,118 @@
-<!doctype html>
-<html lang="en">
-    <head>
-		
-        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助">
-        <meta name="keywords" content="iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life">
-        <link rel="shortcut icon" href="/uploads/avatar.jpg"/>
-        <link rel="canonical" href="http://guolinn.com/">
-        <link rel="alternate" type="application/rss+xml" title="welsonla" href="/atom.xml">
-        <title>从Objective-c迁移到Swift的一些坑 | NSLog(&#34;Life &amp; Code&#34;);</title>
-        <!-- <meta name="description" content="{{meta_description}}"> -->
-
-        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="MobileOptimized" content="320" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="google-site-verification" content="AlY4bsGF9vMeHg3et7af55fPyOcqfNhQUbYLSmREeE4" />
-
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    <meta name="generator" content="Hexo 6.3.0"></head>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>从Objective-c迁移到Swift的一些坑 | NSLog(&#34;Life &amp; Code&#34;);</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="NSString to String12345#ObjCNSString *notice#Swiftvar notice:String?  NSArray,NSMutableArray to Array1234567891011121314#1. 声明#ObjCNSMutableArray *listArray &#x3D; [NSMutableArray array];#Swiftvar listArra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从Objective-c迁移到Swift的一些坑">
+<meta property="og:url" content="http://welsonla.timebot.net/2016/01/27/Objective-c-to-Swift/index.html">
+<meta property="og:site_name" content="NSLog(&quot;Life &amp; Code&quot;);">
+<meta property="og:description" content="NSString to String12345#ObjCNSString *notice#Swiftvar notice:String?  NSArray,NSMutableArray to Array1234567891011121314#1. 声明#ObjCNSMutableArray *listArray &#x3D; [NSMutableArray array];#Swiftvar listArra">
+<meta property="og:locale">
+<meta property="article:published_time" content="2016-01-27T07:08:49.000Z">
+<meta property="article:modified_time" content="2020-01-01T02:23:42.000Z">
+<meta property="article:author" content="welsonla">
+<meta property="article:tag" content="iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="NSLog("Life & Code");" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
     
-		<body class="post-template">
-	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-        <header id="header">
-            <a id="logo" href="/"><img src="/uploads/avatar.jpg" alt="NSLog("Life & Code");" /></a>
-            <h1><a href="/">welsonla</a></h1>
-            <p></p>
-            <div id="follow-icons">
-      <a target="_blank" rel="noopener" href="http://instagram.com/welsonla"><i class="fa fa-instagram fa-2x"></i></a>
-          <a target="_blank" rel="noopener" href="http://github.com/welsonla"><i class="fa fa-github-square fa-2x"></i></a>
-          <a target="_blank" rel="noopener" href="http://twitter.com/welsonla"><i class="fa fa-twitter-square fa-2x"></i></a>
-          <a href="/atom.xml"><i class="fa fa-rss-square fa-2x"></i></a>
-  </div>
-<h6><a href="/archives">Archives</h6>
-<h6><a href="/list">List</h6>
-<h6><a href="/categories">Categories</h6>
-<h6><a href="/about">About</a></h6>
-        </header>
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-        <main id="content">
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">NSLog(&#34;Life &amp; Code&#34;);</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://welsonla.timebot.net"></form>
+      </div>
+    </div>
+  </div>
+</header>
 
-<article class="post">
-  January 27, 2016
+      <div class="outer">
+        <section id="main"><article id="post-Objective-c-to-Swift" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2016/01/27/Objective-c-to-Swift/" class="article-date">
+  <time class="dt-published" datetime="2016-01-27T07:08:49.000Z" itemprop="datePublished">2016-01-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      从Objective-c迁移到Swift的一些坑
+    </h1>
   
 
-  <h1 class="post-title">从Objective-c迁移到Swift的一些坑</h1>
-  <section class="post-content article-entry">
-    <h3 id="NSString-to-String"><a href="#NSString-to-String" class="headerlink" title="NSString to String"></a>NSString to String</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">NSString</span> *notice</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">var</span> notice:<span class="type">String?</span></span><br></pre></td></tr></table></figure>
-<h3 id="NSArray-NSMutableArray-to-Array"><a href="#NSArray-NSMutableArray-to-Array" class="headerlink" title="NSArray,NSMutableArray to Array"></a>NSArray,NSMutableArray to Array</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#<span class="number">1</span>. 声明</span><br><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">NSMutableArray</span> *listArray = [<span class="type">NSMutableArray</span> array];</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">var</span> listArray:[<span class="type">String</span>] = <span class="type">Array</span>() <span class="comment">//必须带参数类型</span></span><br><span class="line"><span class="keyword">var</span> listArray:[<span class="type">AnyObject</span>] = <span class="type">Array</span>()</span><br><span class="line"></span><br><span class="line">#<span class="number">2</span>. 增加元素</span><br><span class="line">#<span class="type">ObjC</span></span><br><span class="line">[listArray addObject:@<span class="string">"foo"</span>];</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line">listArray.append(<span class="string">"foo"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="NSRange-gt-Range"><a href="#NSRange-gt-Range" class="headerlink" title="NSRange-&gt;Range"></a>NSRange-&gt;Range</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">NSRange</span> range = <span class="type">NSMakeRange</span>(<span class="number">0</span>,<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="type">Range</span>(start: <span class="number">0</span>, end: <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="NSDictionary-NSmutableDictionary-to-Dictionary"><a href="#NSDictionary-NSmutableDictionary-to-Dictionary" class="headerlink" title="NSDictionary,NSmutableDictionary  to Dictionary"></a>NSDictionary,NSmutableDictionary  to Dictionary</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">NSMutableDictionary</span> *score = [<span class="type">NSMutableDictionary</span> dictionary];</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">var</span> score0:[<span class="type">String</span>:<span class="type">String</span>]?</span><br><span class="line"><span class="keyword">var</span> score1 = [<span class="type">String</span>:<span class="type">String</span>]()</span><br><span class="line"><span class="keyword">var</span> score2 = <span class="type">Dictionary</span>&lt;<span class="type">String</span>,<span class="type">String</span>&gt;()</span><br><span class="line"><span class="keyword">var</span> score3 = [:]</span><br><span class="line"></span><br><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">NSDictionary</span> *person = @&#123;@<span class="string">"name"</span>:@<span class="string">"Single Dog"</span>,@<span class="string">"Skill"</span>:@<span class="string">"Swift"</span>&#125;;</span><br><span class="line">person[@“age”] = @“<span class="number">28</span>”;</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">var</span> person = [<span class="string">"name"</span>:<span class="string">"Single Dog"</span>,<span class="string">"Skill"</span>:<span class="string">"Swift"</span>]</span><br><span class="line">person[<span class="string">"age"</span>] = <span class="string">"28"</span></span><br></pre></td></tr></table></figure>
-<h3 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line">arc4random%<span class="number">255</span></span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line">arc4random_uniform(<span class="number">255</span>)</span><br><span class="line">random() % <span class="number">255</span></span><br></pre></td></tr></table></figure>
-<h3 id="Selector"><a href="#Selector" class="headerlink" title="Selector"></a>Selector</h3><p>感觉Selector的方式不如ObjC那样有方法提示，容易写错，效率反而不如之前<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">SEL</span> callback = @selector(uploadCallback:)</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="type">Selector</span>(<span class="string">"uploadCallback:"</span>)</span><br></pre></td></tr></table></figure></p>
-<h3 id="id-to-AnyObject"><a href="#id-to-AnyObject" class="headerlink" title="id to AnyObject"></a>id to AnyObject</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line">id sender</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">var</span> sender:<span class="type">Anyobject?</span></span><br><span class="line">```  </span><br><span class="line">### 三元运算缩写</span><br><span class="line">```swift</span><br><span class="line">#<span class="type">ObjC</span></span><br><span class="line">a ? : b</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line">a ?? b</span><br></pre></td></tr></table></figure>
-<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line">typedef <span class="type">NS_ENUM</span>(<span class="type">NSInteger</span>,<span class="type">LocationState</span>)&#123;</span><br><span class="line">    <span class="type">LocationStateStart</span>,</span><br><span class="line">    <span class="type">LocationStateFinish</span>,</span><br><span class="line">    <span class="type">LocationStateFail</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">LocationState</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="type">LocationStart</span>, <span class="type">LocationFinish</span>, <span class="type">LocationFail</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="NSString-to-String"><a href="#NSString-to-String" class="headerlink" title="NSString to String"></a>NSString to String</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">NSString</span> <span class="operator">*</span>notice</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">var</span> notice:<span class="type">String</span>?</span><br></pre></td></tr></table></figure>
+
+<h3 id="NSArray-NSMutableArray-to-Array"><a href="#NSArray-NSMutableArray-to-Array" class="headerlink" title="NSArray,NSMutableArray to Array"></a>NSArray,NSMutableArray to Array</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#<span class="number">1</span>. 声明</span><br><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">NSMutableArray</span> <span class="operator">*</span>listArray <span class="operator">=</span> [<span class="type">NSMutableArray</span> array];</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">var</span> listArray:[<span class="type">String</span>] <span class="operator">=</span> <span class="type">Array</span>() <span class="comment">//必须带参数类型</span></span><br><span class="line"><span class="keyword">var</span> listArray:[<span class="type">AnyObject</span>] <span class="operator">=</span> <span class="type">Array</span>()</span><br><span class="line"></span><br><span class="line">#<span class="number">2</span>. 增加元素</span><br><span class="line">#<span class="type">ObjC</span></span><br><span class="line">[listArray addObject:@<span class="string">&quot;foo&quot;</span>];</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line">listArray.append(<span class="string">&quot;foo&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="NSRange-gt-Range"><a href="#NSRange-gt-Range" class="headerlink" title="NSRange-&gt;Range"></a>NSRange-&gt;Range</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">NSRange</span> range <span class="operator">=</span> <span class="type">NSMakeRange</span>(<span class="number">0</span>,<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="type">Range</span>(start: <span class="number">0</span>, end: <span class="number">10</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="NSDictionary-NSmutableDictionary-to-Dictionary"><a href="#NSDictionary-NSmutableDictionary-to-Dictionary" class="headerlink" title="NSDictionary,NSmutableDictionary  to Dictionary"></a>NSDictionary,NSmutableDictionary  to Dictionary</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">NSMutableDictionary</span> <span class="operator">*</span>score <span class="operator">=</span> [<span class="type">NSMutableDictionary</span> dictionary];</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">var</span> score0:[<span class="type">String</span>:<span class="type">String</span>]<span class="operator">?</span></span><br><span class="line"><span class="keyword">var</span> score1 <span class="operator">=</span> [<span class="type">String</span>:<span class="type">String</span>]()</span><br><span class="line"><span class="keyword">var</span> score2 <span class="operator">=</span> <span class="type">Dictionary</span>&lt;<span class="type">String</span>,<span class="type">String</span>&gt;()</span><br><span class="line"><span class="keyword">var</span> score3 <span class="operator">=</span> [:]</span><br><span class="line"></span><br><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">NSDictionary</span> <span class="operator">*</span>person <span class="operator">=</span> @&#123;@<span class="string">&quot;name&quot;</span>:@<span class="string">&quot;Single Dog&quot;</span>,@<span class="string">&quot;Skill&quot;</span>:@<span class="string">&quot;Swift&quot;</span>&#125;;</span><br><span class="line">person[@“age”] <span class="operator">=</span> @“<span class="number">28</span>”;</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">var</span> person <span class="operator">=</span> [<span class="string">&quot;name&quot;</span>:<span class="string">&quot;Single Dog&quot;</span>,<span class="string">&quot;Skill&quot;</span>:<span class="string">&quot;Swift&quot;</span>]</span><br><span class="line">person[<span class="string">&quot;age&quot;</span>] <span class="operator">=</span> <span class="string">&quot;28&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line">arc4random<span class="operator">%</span><span class="number">255</span></span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line">arc4random_uniform(<span class="number">255</span>)</span><br><span class="line">random() <span class="operator">%</span> <span class="number">255</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Selector"><a href="#Selector" class="headerlink" title="Selector"></a>Selector</h3><p>感觉Selector的方式不如ObjC那样有方法提示，容易写错，效率反而不如之前</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line"><span class="type">SEL</span> callback <span class="operator">=</span> <span class="meta">@selector</span>(uploadCallback:)</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="type">Selector</span>(<span class="string">&quot;uploadCallback:&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="id-to-AnyObject"><a href="#id-to-AnyObject" class="headerlink" title="id to AnyObject"></a>id to AnyObject</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line">id sender</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">var</span> sender:<span class="type">Anyobject</span>?</span><br><span class="line">```  </span><br><span class="line">### 三元运算缩写</span><br><span class="line">```swift</span><br><span class="line">#<span class="type">ObjC</span></span><br><span class="line">a <span class="operator">?</span> : b</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line">a <span class="operator">??</span> b</span><br></pre></td></tr></table></figure>
+
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#<span class="type">ObjC</span></span><br><span class="line">typedef <span class="type">NS_ENUM</span>(<span class="type">NSInteger</span>,<span class="type">LocationState</span>)&#123;</span><br><span class="line">    <span class="type">LocationStateStart</span>,</span><br><span class="line">    <span class="type">LocationStateFinish</span>,</span><br><span class="line">    <span class="type">LocationStateFail</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">#<span class="type">Swift</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">LocationState</span> &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="type">LocationStart</span>, <span class="type">LocationFinish</span>, <span class="type">LocationFail</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h1 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h1><ol>
 <li>Block to Closure</li>
 <li>DateFormatter</li>
@@ -70,58 +120,162 @@
 </ol>
 <p>遇到继续添加,未完待续……</p>
 
-  </section>
-  <footer class="post-footer">
-    <!--
-    <section class="author">
-      <h4>welsonla</h4>
-      <p></p>
-    </section>
-    -->
-  </footer>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2016/01/27/Objective-c-to-Swift/" data-id="clb10nhah001mxi3kdam34lkq" data-title="从Objective-c迁移到Swift的一些坑" class="article-share-link">Teilen</a>
+      
+        <a href="http://welsonla.timebot.net/2016/01/27/Objective-c-to-Swift/#disqus_thread" class="article-comment-link">Kommentare</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/29/the-day-of-2-29/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          2016年2月29日
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/10/start-using-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Blog迁移到了Hexo</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-<nav class="pagination" role="pagination">
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+        
+          <aside id="sidebar">
+  
     
-    <a class="newer-posts" href="/2016/02/29/the-day-of-2-29/">
-        ← prev <!--2016年2月29日-->
-    </a>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ruby/">ruby</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/something/">something</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/">工具控</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
     
-    <span class="page-number">•</span>
+
+  
     
-    <a class="older-posts" href="/2015/10/10/start-using-hexo/">
-        <!--Blog迁移到了Hexo--> next →
-    </a>
+  
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/11/28/Hello-Nuphy-Halo-65/">Hello, Nuphy Halo 65</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/28/speed-up-maven/">使用阿里云加速Maven包更新</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/01/Mac-Diskspace-release/">解决 Mac OS 删除文件后磁盘空间不更新的问题</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/01/composer-and-laravel-setup/">Mac OS 安装 配置Laravel开发环境</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/13/iterm-with-powerline-theme/">iTerm2 with powerline theme</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 welsonla<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
 </nav>
-<div id="comments">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_shortname = 'welsonla';
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a target="_blank" rel="noopener" href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
+    
+<script>
+  var disqus_shortname = 'welsonla';
+  
+  var disqus_url = 'http://welsonla.timebot.net/2016/01/27/Objective-c-to-Swift/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
 
 
-        </main>
-        <footer id="footer">
-            <section id="footer-message">&copy; 2022 welsonla. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="https://github.com/guolin" target="_blank">Guo Lin</a>.</section>
-        </footer>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','/js/ga.js','ga');
-            ga('create', 'UA-19152389-6', 'auto');
-            ga('send', 'pageview');
-        </script>
-    </body>
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
 </html>
-
-

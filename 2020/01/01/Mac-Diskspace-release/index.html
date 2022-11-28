@@ -1,122 +1,278 @@
-<!doctype html>
-<html lang="en">
-    <head>
-		
-        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助">
-        <meta name="keywords" content="iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life">
-        <link rel="shortcut icon" href="/uploads/avatar.jpg"/>
-        <link rel="canonical" href="http://guolinn.com/">
-        <link rel="alternate" type="application/rss+xml" title="welsonla" href="/atom.xml">
-        <title>解决 Mac OS 删除文件后磁盘空间不更新的问题 | NSLog(&#34;Life &amp; Code&#34;);</title>
-        <!-- <meta name="description" content="{{meta_description}}"> -->
-
-        <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/styles/crisp.css">
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="MobileOptimized" content="320" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="google-site-verification" content="AlY4bsGF9vMeHg3et7af55fPyOcqfNhQUbYLSmREeE4" />
-
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    <meta name="generator" content="Hexo 6.3.0"></head>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>解决 Mac OS 删除文件后磁盘空间不更新的问题 | NSLog(&#34;Life &amp; Code&#34;);</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="这个问题存在了很久，一直也没有找到解决的办法，今天上网查询后发现，这个问题只存在于使用了Time Machine的用户，原因是因为Time Machine的快照自动生成造成的，于是试着按照解决方法查询了下本地快照 1sudo tmutil listlocalsnapshots &#x2F;  得到如下结果,确实Mac在自动的生成系统的快照 1234567com.apple.TimeMachine.2019-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决 Mac OS 删除文件后磁盘空间不更新的问题">
+<meta property="og:url" content="http://welsonla.timebot.net/2020/01/01/Mac-Diskspace-release/index.html">
+<meta property="og:site_name" content="NSLog(&quot;Life &amp; Code&quot;);">
+<meta property="og:description" content="这个问题存在了很久，一直也没有找到解决的办法，今天上网查询后发现，这个问题只存在于使用了Time Machine的用户，原因是因为Time Machine的快照自动生成造成的，于是试着按照解决方法查询了下本地快照 1sudo tmutil listlocalsnapshots &#x2F;  得到如下结果,确实Mac在自动的生成系统的快照 1234567com.apple.TimeMachine.2019-">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-01-01T07:58:37.000Z">
+<meta property="article:modified_time" content="2020-01-01T08:57:07.000Z">
+<meta property="article:author" content="welsonla">
+<meta property="article:tag" content="iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="NSLog("Life & Code");" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
     
-		<body class="post-template">
-	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-        <header id="header">
-            <a id="logo" href="/"><img src="/uploads/avatar.jpg" alt="NSLog("Life & Code");" /></a>
-            <h1><a href="/">welsonla</a></h1>
-            <p></p>
-            <div id="follow-icons">
-      <a target="_blank" rel="noopener" href="http://instagram.com/welsonla"><i class="fa fa-instagram fa-2x"></i></a>
-          <a target="_blank" rel="noopener" href="http://github.com/welsonla"><i class="fa fa-github-square fa-2x"></i></a>
-          <a target="_blank" rel="noopener" href="http://twitter.com/welsonla"><i class="fa fa-twitter-square fa-2x"></i></a>
-          <a href="/atom.xml"><i class="fa fa-rss-square fa-2x"></i></a>
-  </div>
-<h6><a href="/archives">Archives</h6>
-<h6><a href="/list">List</h6>
-<h6><a href="/categories">Categories</h6>
-<h6><a href="/about">About</a></h6>
-        </header>
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-        <main id="content">
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">NSLog(&#34;Life &amp; Code&#34;);</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://welsonla.timebot.net"></form>
+      </div>
+    </div>
+  </div>
+</header>
 
-<article class="post">
-  January 1, 2020
+      <div class="outer">
+        <section id="main"><article id="post-Mac-Diskspace-release" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/01/01/Mac-Diskspace-release/" class="article-date">
+  <time class="dt-published" datetime="2020-01-01T07:58:37.000Z" itemprop="datePublished">2020-01-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Mac/">Mac</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      解决 Mac OS 删除文件后磁盘空间不更新的问题
+    </h1>
   
 
-  <h1 class="post-title">解决 Mac OS 删除文件后磁盘空间不更新的问题</h1>
-  <section class="post-content article-entry">
-    <p>这个问题存在了很久，一直也没有找到解决的办法，今天上网查询后发现，这个问题只存在于使用了Time Machine的用户，原因是因为Time Machine的快照自动生成造成的，于是试着按照解决方法查询了下本地快照</p>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>这个问题存在了很久，一直也没有找到解决的办法，今天上网查询后发现，这个问题只存在于使用了Time Machine的用户，原因是因为Time Machine的快照自动生成造成的，于是试着按照解决方法查询了下本地快照</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo</span> tmutil listlocalsnapshots /</span><br></pre></td></tr></table></figure>
-<p>得到如下结果,确实Mac在自动的生成系统的快照<br><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">com.apple.TimeMachine<span class="number">.2019</span><span class="number">-12</span><span class="number">-31</span><span class="number">-214148.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2019</span><span class="number">-12</span><span class="number">-31</span><span class="number">-223649.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2020</span><span class="number">-01</span><span class="number">-01</span><span class="number">-103649.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2020</span><span class="number">-01</span><span class="number">-01</span><span class="number">-113743.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2020</span><span class="number">-01</span><span class="number">-01</span><span class="number">-124353.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2020</span><span class="number">-01</span><span class="number">-01</span><span class="number">-143927.</span>local</span><br><span class="line">com.apple.TimeMachine<span class="number">.2020</span><span class="number">-01</span><span class="number">-01</span><span class="number">-153651.</span>local</span><br></pre></td></tr></table></figure></p>
-<p>试着删除其中的一个快照<br><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmutil deletelocalsnapshots <span class="number">2019</span><span class="number">-12</span><span class="number">-31</span><span class="number">-214148</span></span><br></pre></td></tr></table></figure></p>
-<p>发现系统的空间立刻就释放了，猜测就是以为Time Machine的快照自动生成导致的，不知道是Mac系统的bug还是因为备份的策略,  试着写了一个Ruby的脚本来自动的删除这些快照，希望对遇到此问题的人有帮助:</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#diskspace info</span></span><br><span class="line">puts <span class="string">"Current Diskspace info:"</span> </span><br><span class="line">puts <span class="string">"---------"</span></span><br><span class="line">puts <span class="string">%x[df -lh /]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#list localsnapshots</span></span><br><span class="line">puts <span class="string">"\n\n---------"</span></span><br><span class="line">list = <span class="string">%x[tmutil listlocalsnapshots /]</span></span><br><span class="line">puts list</span><br><span class="line"></span><br><span class="line"><span class="comment">#delete snapshots</span></span><br><span class="line">puts <span class="string">"\n\n---------"</span></span><br><span class="line">puts <span class="string">"Start delete snapshots:"</span></span><br><span class="line">matches = list.scan(<span class="regexp">/\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;-\d&#123;6&#125;/</span>)</span><br><span class="line">matches.each_with_index&#123;<span class="params">|snapshoot,index|</span></span><br><span class="line">    puts <span class="string">"delete the listlocalsnapshots <span class="subst">#&#123;snapshoot&#125;</span>"</span></span><br><span class="line">    sh = <span class="string">"tmutil deletelocalsnapshots <span class="subst">#&#123;snapshoot&#125;</span>"</span></span><br><span class="line">    system(sh)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#diskspace info after delete snapshot</span></span><br><span class="line">puts puts <span class="string">"\n\n---------"</span></span><br><span class="line">puts <span class="string">"Diskspace info after delete snapshots:"</span></span><br><span class="line">puts <span class="string">%x[df -lh /]</span></span><br></pre></td></tr></table></figure>
-<p>将上面脚本保存为snapshots_clear.rb,或从我保存的gist上<a href="https://gist.github.com/welsonla/0e4c4a818abfae0400a4087b54e81c43" target="_blank" rel="noopener">下载</a><br>执行. </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby snapshots_clear.rb</span><br></pre></td></tr></table></figure>
-<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><p><a href="http://nb.zol.com.cn/671/6715453.html" target="_blank" rel="noopener">Mac瘦身技巧 删除文件后可用空间还变少了？</a><br><a href="https://forums.macrumors.com/threads/solution-reclaim-storage-back-from-system.2073174/" target="_blank" rel="noopener">Solution: Reclaim storage back from “System”</a></p>
 
-  </section>
-  <footer class="post-footer">
-    <!--
-    <section class="author">
-      <h4>welsonla</h4>
-      <p></p>
-    </section>
-    -->
-  </footer>
+<p>得到如下结果,确实Mac在自动的生成系统的快照</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">com</span>.apple.TimeMachine.<span class="number">2019</span>-<span class="number">12</span>-<span class="number">31</span>-<span class="number">214148</span>.local</span><br><span class="line"><span class="attribute">com</span>.apple.TimeMachine.<span class="number">2019</span>-<span class="number">12</span>-<span class="number">31</span>-<span class="number">223649</span>.local</span><br><span class="line"><span class="attribute">com</span>.apple.TimeMachine.<span class="number">2020</span>-<span class="number">01</span>-<span class="number">01</span>-<span class="number">103649</span>.local</span><br><span class="line"><span class="attribute">com</span>.apple.TimeMachine.<span class="number">2020</span>-<span class="number">01</span>-<span class="number">01</span>-<span class="number">113743</span>.local</span><br><span class="line"><span class="attribute">com</span>.apple.TimeMachine.<span class="number">2020</span>-<span class="number">01</span>-<span class="number">01</span>-<span class="number">124353</span>.local</span><br><span class="line"><span class="attribute">com</span>.apple.TimeMachine.<span class="number">2020</span>-<span class="number">01</span>-<span class="number">01</span>-<span class="number">143927</span>.local</span><br><span class="line"><span class="attribute">com</span>.apple.TimeMachine.<span class="number">2020</span>-<span class="number">01</span>-<span class="number">01</span>-<span class="number">153651</span>.local</span><br></pre></td></tr></table></figure>
+
+<p>试着删除其中的一个快照</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">tmutil</span> deletelocalsnapshots <span class="number">2019</span>-<span class="number">12</span>-<span class="number">31</span>-<span class="number">214148</span></span><br></pre></td></tr></table></figure>
+
+<p>发现系统的空间立刻就释放了，猜测就是以为Time Machine的快照自动生成导致的，不知道是Mac系统的bug还是因为备份的策略,  试着写了一个Ruby的脚本来自动的删除这些快照，希望对遇到此问题的人有帮助:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#diskspace info</span></span><br><span class="line">puts <span class="string">&quot;Current Diskspace info:&quot;</span> </span><br><span class="line">puts <span class="string">&quot;---------&quot;</span></span><br><span class="line">puts <span class="string">%x[df -lh /]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#list localsnapshots</span></span><br><span class="line">puts <span class="string">&quot;\n\n---------&quot;</span></span><br><span class="line">list = <span class="string">%x[tmutil listlocalsnapshots /]</span></span><br><span class="line">puts list</span><br><span class="line"></span><br><span class="line"><span class="comment">#delete snapshots</span></span><br><span class="line">puts <span class="string">&quot;\n\n---------&quot;</span></span><br><span class="line">puts <span class="string">&quot;Start delete snapshots:&quot;</span></span><br><span class="line">matches = list.scan(<span class="regexp">/\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;-\d&#123;6&#125;/</span>)</span><br><span class="line">matches.each_with_index&#123;|<span class="params">snapshoot,index</span>|</span><br><span class="line">    puts <span class="string">&quot;delete the listlocalsnapshots <span class="subst">#&#123;snapshoot&#125;</span>&quot;</span></span><br><span class="line">    sh = <span class="string">&quot;tmutil deletelocalsnapshots <span class="subst">#&#123;snapshoot&#125;</span>&quot;</span></span><br><span class="line">    system(sh)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#diskspace info after delete snapshot</span></span><br><span class="line">puts puts <span class="string">&quot;\n\n---------&quot;</span></span><br><span class="line">puts <span class="string">&quot;Diskspace info after delete snapshots:&quot;</span></span><br><span class="line">puts <span class="string">%x[df -lh /]</span></span><br></pre></td></tr></table></figure>
+
+<p>将上面脚本保存为snapshots_clear.rb,或从我保存的gist上<a target="_blank" rel="noopener" href="https://gist.github.com/welsonla/0e4c4a818abfae0400a4087b54e81c43">下载</a><br>执行. </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby snapshots_clear.rb</span><br></pre></td></tr></table></figure>
+
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><p><a target="_blank" rel="noopener" href="http://nb.zol.com.cn/671/6715453.html">Mac瘦身技巧 删除文件后可用空间还变少了？</a><br><a target="_blank" rel="noopener" href="https://forums.macrumors.com/threads/solution-reclaim-storage-back-from-system.2073174/">Solution: Reclaim storage back from “System”</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://welsonla.timebot.net/2020/01/01/Mac-Diskspace-release/" data-id="clb10nhas0025xi3kesde7g5b" data-title="解决 Mac OS 删除文件后磁盘空间不更新的问题" class="article-share-link">Teilen</a>
+      
+        <a href="http://welsonla.timebot.net/2020/01/01/Mac-Diskspace-release/#disqus_thread" class="article-comment-link">Kommentare</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/28/speed-up-maven/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          使用阿里云加速Maven包更新
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/01/composer-and-laravel-setup/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Mac OS 安装 配置Laravel开发环境</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-<nav class="pagination" role="pagination">
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+        
+          <aside id="sidebar">
+  
     
-    <a class="newer-posts" href="/2020/11/28/speed-up-maven/">
-        ← prev <!--使用阿里云加速Maven包更新-->
-    </a>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ruby/">ruby</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/something/">something</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/">工具控</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
     
-    <span class="page-number">•</span>
+
+  
     
-    <a class="older-posts" href="/2020/01/01/composer-and-laravel-setup/">
-        <!--Mac OS 安装 配置Laravel开发环境--> next →
-    </a>
+  
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/11/28/Hello-Nuphy-Halo-65/">Hello, Nuphy Halo 65</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/28/speed-up-maven/">使用阿里云加速Maven包更新</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/01/Mac-Diskspace-release/">解决 Mac OS 删除文件后磁盘空间不更新的问题</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/01/composer-and-laravel-setup/">Mac OS 安装 配置Laravel开发环境</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/13/iterm-with-powerline-theme/">iTerm2 with powerline theme</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 welsonla<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
 </nav>
-<div id="comments">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_shortname = 'welsonla';
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a target="_blank" rel="noopener" href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
+    
+<script>
+  var disqus_shortname = 'welsonla';
+  
+  var disqus_url = 'http://welsonla.timebot.net/2020/01/01/Mac-Diskspace-release/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
 
 
-        </main>
-        <footer id="footer">
-            <section id="footer-message">&copy; 2022 welsonla. All rights reserved. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. <a href="https://github.com/guolin/crisp-hexo-theme" target="_blank">crisp</a> theme by <a href="https://github.com/guolin" target="_blank">Guo Lin</a>.</section>
-        </footer>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','/js/ga.js','ga');
-            ga('create', 'UA-19152389-6', 'auto');
-            ga('send', 'pageview');
-        </script>
-    </body>
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
 </html>
-
-
