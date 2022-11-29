@@ -9,7 +9,7 @@ categories: 工具控
 ### 安装 oh-my-zsh-powerline-theme
 [https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme](https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme)
 
-```shell
+```
 cd ~/.oh-my-zsh/themes
 git clone git@github.com:jeremyFreeAgent/oh-my-zsh-powerline-theme.git
 
@@ -30,7 +30,7 @@ iTerm2 -- Preferences -- Profiles -- Text
 打开`~/.zshrc`文件，修改`ZSH_THEME"`为`powerline`
 
 添加如下配置
-```shell
+```
 POWERLINE_RIGHT_B=""  
 POWERLINE_RIGHT_A="date"  
 POWERLINE_RIGHT_A_COLOR_FRONT="black"  

@@ -8,7 +8,7 @@ categories:
 
 mac用户首先建立 `~/.m2/settings.conf` 文件，然后将阿里云的Maven配置写入到文件, 然后重新加载maven配置即可, 完整配置如下
 
-```json
+```
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
                       https://maven.apache.org/xsd/settings-1.0.0.xsd">

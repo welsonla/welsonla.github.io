@@ -44,9 +44,9 @@ post_asset_folder: false
 relative_link: false
 future: true
 prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
+  mode: 'preprocess'
   theme: 'default'
-  line_number: false    # default false
+  line_number: true
 highlight:
   enable: false
 prismjs:

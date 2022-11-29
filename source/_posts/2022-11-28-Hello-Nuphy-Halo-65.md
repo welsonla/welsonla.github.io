@@ -1,7 +1,11 @@
 title: Hello, Nuphy Halo 65
 comment: true
 date: 2022-11-28 21:48:57
-categories:
+categories: 工具控
+tags: 
+  - 机械键盘
+  - Nuphy 
+  - Halo 65
 ---
 
 ![Halo65](/uploads/Halo65.jpg)

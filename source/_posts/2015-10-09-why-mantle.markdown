@@ -10,7 +10,7 @@ categories: iOS
 
 
 ## 对比一下
-```json
+```
 # http://bubbler.labs.douban.com/j/user/wheats
 
 {
@@ -44,19 +44,19 @@ categories: iOS
 
 ## 将JSON转换为制定的Model
 
-```ruby
+```
 MDoubanUser *allModel = [MTLJSONAdapter modelOfClass:[MDoubanUser class] fromJSONDictionary:rstlDict] error:nil]
 ```
 
 ## 将JSON中的数组转换为Model的数组
 
-```ruby
+```
 NSArray *users = [MTLJSONAdapter modelsOfClass:[MDoubanUser class] fromJSONArray:userArray error:nil];
 ```
 
 
 ## 将某个字段对应到某个实体
-```ruby
+```
 +(NSValueTransformer *)JSONTransformerForKey:(NSString *)key{
 
   if ([key isEqualToString:@"stats"]) {
@@ -73,7 +73,7 @@ NSArray *users = [MTLJSONAdapter modelsOfClass:[MDoubanUser class] fromJSONArray
 ## 自定义转换
 自定义转换只要定义一个字段名+JSONTransformer结尾的方法，就会执行我们自定义的转换,比如时间格式化，对某些字符进行一些操作处理
 
-```ruby
+```
 # 将uid前面加上"Author"
 + (NSValueTransformer *)uidJSONTransformer{
     return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *uid, BOOL *success, NSError *__autoreleasing *error) {
@@ -85,7 +85,7 @@ NSArray *users = [MTLJSONAdapter modelsOfClass:[MDoubanUser class] fromJSONArray
 ## 多个字段对应
 在项目中，经常遇到，接口A返回的用户id字段说uid,接口B返回的用户字段是ID，这种情况我们只需要中Model中将两个字段存到一个数组绑定到同一个属性上就可以了
 
-```ruby
+```
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
     return @{
@@ -103,7 +103,7 @@ NSArray *users = [MTLJSONAdapter modelsOfClass:[MDoubanUser class] fromJSONArray
 
 ## 将实体中的值封装成一个dictionary，方便接口传输
 
-```ruby
+```
 #使用全部的字段
 NSDictionary *params = [user dictionaryValue];
 

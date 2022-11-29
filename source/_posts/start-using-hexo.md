@@ -1,6 +1,7 @@
 title: Blog迁移到了Hexo
 date: 2015-10-10 10:58:17
 categories: something
+keywords: hexo, github
 ---
 
 
@@ -54,6 +55,14 @@ hexo new "first blog"
 hexo new page "about"
 ```
 
+## 为页面设置多个Tag
+使用如下格式可以为文章设置多个tag
+```
+tags:
+  - hello
+  - world
+```
+
 预备部署  
 ```ruby
 #添加github部署支持
@@ -65,6 +74,11 @@ deploy:
   type: git #不要再使用github作为type
   repo: git@github.com:<yourname>/<yourname>.github.io.git
   branch: master
+```
+
+## 部署静态到github
+```
+hexo clean && hexo deploy
 ```
 
 ## 修改配置
@@ -94,4 +108,23 @@ npm install hexo-generator-feed --save
 打开`_config.yml`
 ```js
 new_post_name: :year-:month-:day-:title.md 
+```
+
+### 开启代码高亮
+其实hexo本身已经自带了代码高亮，但是我的从`2.x`的版本升级到`6.0`不知道为什么就失效了，所以使用了第三方的高亮插件来代替
+https://github.com/ele828/hexo-prism-plugin
+
+```
+npm i -S hexo-prism-plugin
+```
+
+修改`_config.xml`关闭`hilight`,替换成`prism_plugin`
+
+```
+prism_plugin:
+  mode: 'preprocess'
+  theme: 'default'
+  line_number: true
+highlight:
+  enable: false
 ```
