@@ -17,36 +17,37 @@ https://github.com/welsonla/sqlcipher/archive/v2.1.1.tar.gz
  ln -s /Users/wanyc/sqlcipher/sqlite3 /usr/bin/sqlcipher 
 
 静态库的编译方法: (replace &amp;#x2F;path.."><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="NSLog("Life & Code");" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">welsonla's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">encrypt sqlite with sqlcipher</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile is-hidden"></div><div class="column is-9"><header class="my-4"></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">encrypt sqlite with sqlcipher</h1><time class="has-text-grey" datetime="2013-08-13T10:05:00.000Z">2013-08-13</time><article class="mt-2 post-content"><p>##Get the sqlcipher SourceCode</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true">#使用2.1的版本比较稳定些</span>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">welsonla's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">encrypt sqlite with sqlcipher</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile is-hidden"></div><div class="column is-9"><header class="my-4"></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">encrypt sqlite with sqlcipher</h1><time class="has-text-grey" datetime="2013-08-13T10:05:00.000Z">2013-08-13</time><article class="mt-2 post-content"><p>##Get the sqlcipher SourceCode</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true">#使用2.1的版本比较稳定些</span>
 https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>welsonla<span class="token operator">/</span>sqlcipher<span class="token operator">/</span>archive<span class="token operator">/</span>v2<span class="token number">.1</span><span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <span id="more"></span>
 
 <p>##Complite the source code<br>动态链接的编译方法（Compiling with dynamic linking）[推荐]:</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">.</span><span class="token operator">/</span>configure <span class="token operator">--</span>enable<span class="token operator">-</span>tempstore<span class="token operator">=</span>yes <span class="token constant">CFLAGS</span><span class="token operator">=</span><span class="token string">"-DSQLITE_HAS_CODEC"</span> <span class="token constant">LDFLAGS</span><span class="token operator">=</span><span class="token string">"-lcrypto"</span>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token punctuation">.</span><span class="token operator">/</span>configure <span class="token operator">--</span>enable<span class="token operator">-</span>tempstore<span class="token operator">=</span>yes <span class="token constant">CFLAGS</span><span class="token operator">=</span><span class="token string">"-DSQLITE_HAS_CODEC"</span> <span class="token constant">LDFLAGS</span><span class="token operator">=</span><span class="token string">"-lcrypto"</span>
  make
  ln <span class="token operator">-</span>s <span class="token operator">/</span><span class="token constant">Users</span><span class="token operator">/</span>wanyc<span class="token operator">/</span>sqlcipher<span class="token operator">/</span>sqlite3 <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>sqlcipher 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><del>静态库的编译方法: (replace &#x2F;path&#x2F;to with the path to libcrypto.a)</del></p>
-<pre class=" language-ruby"><code class="language-ruby">  <span class="token comment" spellcheck="true">#./configure --enable-tempstore=yes CFLAGS="-DSQLITE_HAS_CODEC" LDFLAGS="/path/to/libcrypto.a"</span>
+<pre class="line-numbers language-ruby"><code class="language-ruby">  <span class="token comment" spellcheck="true">#./configure --enable-tempstore=yes CFLAGS="-DSQLITE_HAS_CODEC" LDFLAGS="/path/to/libcrypto.a"</span>
   <span class="token comment" spellcheck="true">#make</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>##How to encrypt a sqlite(In Shell)</p>
 <p>#加密数据库几种方式</p>
 <p>####1.shell方式加密一个sqlite</p>
-<pre class=" language-ruby"><code class="language-ruby">sqlcipher test<span class="token punctuation">.</span>db
+<pre class="line-numbers language-ruby"><code class="language-ruby">sqlcipher test<span class="token punctuation">.</span>db
 <span class="token operator">></span> <span class="token constant">PRAGMA</span> key<span class="token operator">=</span><span class="token string">'test'</span><span class="token punctuation">;</span> <span class="token operator">/</span><span class="token operator">/</span>必须在打开数据库第一步来执行
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>####2.（In shell）</p>
-<pre class=" language-ruby"><code class="language-ruby">sqlciper test<span class="token punctuation">.</span>db
+<pre class="line-numbers language-ruby"><code class="language-ruby">sqlciper test<span class="token punctuation">.</span>db
 <span class="token constant">PRAGMA</span> <span class="token constant">KEY</span><span class="token operator">=</span><span class="token string">'helloworld'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">#第一步必须执行</span>
 <span class="token constant">ATTACH</span> <span class="token constant">DATABASE</span> <span class="token string">'encrypted.db'</span> as encrypted <span class="token constant">KEY</span> <span class="token string">'SomePassword'</span><span class="token punctuation">;</span> <span class="token operator">/</span><span class="token operator">/</span>encrypted<span class="token punctuation">.</span>db是要导出的新的数据库
 <span class="token constant">SELECT</span> <span class="token function">sqlcipher_export</span><span class="token punctuation">(</span><span class="token string">'encrypted'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token constant">DETACH</span> <span class="token constant">DATABASE</span> encrypted<span class="token punctuation">;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>#####3..Object-c代码实现对一个非加密库导入到加密库的方法(已经验证)(Xcode)</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token constant">NSString</span> <span class="token operator">*</span>documentPath <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token function">NSSearchPathForDirectoriesInDomains</span><span class="token punctuation">(</span><span class="token constant">NSDocumentDirectory</span><span class="token punctuation">,</span><span class="token constant">NSUserDomainMask</span><span class="token punctuation">,</span> <span class="token constant">YES</span><span class="token punctuation">)</span> objectAtIndex<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token constant">NSString</span> <span class="token operator">*</span>documentPath <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token function">NSSearchPathForDirectoriesInDomains</span><span class="token punctuation">(</span><span class="token constant">NSDocumentDirectory</span><span class="token punctuation">,</span><span class="token constant">NSUserDomainMask</span><span class="token punctuation">,</span> <span class="token constant">YES</span><span class="token punctuation">)</span> objectAtIndex<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token constant">NSString</span> <span class="token operator">*</span>attachPath <span class="token operator">=</span> <span class="token punctuation">[</span>documentPath stringByAppendingPathComponent<span class="token punctuation">:</span>@<span class="token string">"new.db"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
 <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">sqlite3_open</span><span class="token punctuation">(</span><span class="token punctuation">[</span>path_u <span class="token constant">UTF8String</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>convert_DB<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">SQLITE_OK</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
@@ -68,29 +69,29 @@ else &amp;#123;
     sqlite3_close(convert_DB);
     NSAssert1(NO, @</span><span class="token string">"Failed to open database with message '%s'."</span><span class="token punctuation">,</span> <span class="token function">sqlite3_errmsg</span><span class="token punctuation">(</span>convert_DB<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>#为加密数据库解密<br>####1.先导出现有库的数据(In shell)</p>
-<pre class=" language-ruby"><code class="language-ruby">sqlcipher plaintext<span class="token punctuation">.</span>db
+<pre class="line-numbers language-ruby"><code class="language-ruby">sqlcipher plaintext<span class="token punctuation">.</span>db
 <span class="token punctuation">.</span>output dsa<span class="token punctuation">.</span>sql
 <span class="token punctuation">.</span>dump
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>####将新的数据库导出，并加密，之后导入非加密的库里面的数据</p>
-<pre class=" language-ruby"><code class="language-ruby">sqlcipher another<span class="token punctuation">.</span>db
+<pre class="line-numbers language-ruby"><code class="language-ruby">sqlcipher another<span class="token punctuation">.</span>db
 <span class="token constant">PRAGMA</span> key<span class="token operator">=</span><span class="token string">'aaa'</span><span class="token punctuation">;</span>
 <span class="token punctuation">.</span>read dsa<span class="token punctuation">.</span>sql
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>####2. 为加密后的sqlite执行解密(其实步骤与加密一样，只要把key设置为空就实现了不加密)</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token constant">ATTACH</span> <span class="token constant">DATABASE</span> <span class="token string">'encrypted.db'</span> as encrypted <span class="token constant">KEY</span> <span class="token string">''</span><span class="token punctuation">;</span> <span class="token operator">/</span><span class="token operator">/</span>encrypted<span class="token punctuation">.</span>db是要导出的新的数据库
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token constant">ATTACH</span> <span class="token constant">DATABASE</span> <span class="token string">'encrypted.db'</span> as encrypted <span class="token constant">KEY</span> <span class="token string">''</span><span class="token punctuation">;</span> <span class="token operator">/</span><span class="token operator">/</span>encrypted<span class="token punctuation">.</span>db是要导出的新的数据库
 <span class="token constant">SELECT</span> <span class="token function">sqlcipher_export</span><span class="token punctuation">(</span><span class="token string">'encrypted'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token constant">DETACH</span> <span class="token constant">DATABASE</span> encrypted<span class="token punctuation">;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>####3.（In shell）</p>
-<pre class=" language-ruby"><code class="language-ruby">sqlciper test<span class="token punctuation">.</span>db
+<pre class="line-numbers language-ruby"><code class="language-ruby">sqlciper test<span class="token punctuation">.</span>db
 <span class="token constant">PRAGMA</span> <span class="token constant">KEY</span><span class="token operator">=</span><span class="token string">'helloworld'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">#第一步必须执行</span>
 <span class="token constant">ATTACH</span> <span class="token constant">DATABASE</span> <span class="token string">'encrypted.db'</span> as encrypted <span class="token constant">KEY</span> <span class="token string">''</span><span class="token punctuation">;</span>
 <span class="token constant">SELECT</span> <span class="token function">sqlcipher_export</span><span class="token punctuation">(</span><span class="token string">'encrypted'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token constant">DETACH</span> <span class="token constant">DATABASE</span> encrypted<span class="token punctuation">;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>##参考</p>
 <ul>
 <li>sqlcipher配置 <a target="_blank" rel="noopener" href="http://sqlcipher.net/ios-tutorial/">http://sqlcipher.net/ios-tutorial/</a>  </li>
