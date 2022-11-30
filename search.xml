@@ -121,44 +121,6 @@ ssh<span class="token operator">-</span>keygen <span class="token operator">-</s
       </categories>
   </entry>
   <entry>
-    <title>使用RVM安装ruby</title>
-    <url>/2013/04/10/use-rvm-install-ruby/</url>
-    <content><![CDATA[<p>今天突然发现ruby版本不小心又回到了1.8.7，可能是我修改了rvm的配置文件导致的，于是开始折腾安装rvm和ruby</p>
-<p>首先还是先安装Homebrew吧<br>很简单，一行代码搞定</p>
-<pre class="line-numbers language-ruby"><code class="language-ruby">ruby <span class="token operator">-</span>e <span class="token string">"$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>安装RVM</p>
-<pre class="line-numbers language-ruby"><code class="language-ruby">curl <span class="token operator">-</span><span class="token constant">L</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>get<span class="token punctuation">.</span>rvm<span class="token punctuation">.</span>io <span class="token operator">|</span> bash <span class="token operator">-</span>s stable <span class="token operator">--</span>ruby
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>走着走着发现出错了</p>
-<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token constant">Missing</span> required packages<span class="token punctuation">:</span> autoconf<span class="token punctuation">,</span> automake<span class="token punctuation">,</span> libtool<span class="token punctuation">,</span> pkg<span class="token operator">-</span>config<span class="token punctuation">,</span> libyaml<span class="token punctuation">,</span> readline<span class="token punctuation">,</span> libxml2<span class="token punctuation">,</span> libxslt<span class="token punctuation">,</span> libksba<span class="token punctuation">,</span> openssl<span class="token punctuation">,</span> sqlite<span class="token punctuation">.</span>
-<span class="token constant">RVM</span> autolibs is now configured with mode <span class="token string">'2'</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'check and stop if missing'</span><span class="token punctuation">,</span>
-please run `rvm autolibs enable` to let <span class="token constant">RVM</span> <span class="token keyword">do</span> it's job <span class="token keyword">or</span> run <span class="token keyword">and</span> read `rvm autolibs <span class="token punctuation">[</span>help<span class="token punctuation">]</span>`
-<span class="token keyword">or</span> visit https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>rvm<span class="token punctuation">.</span>io<span class="token operator">/</span>rvm<span class="token operator">/</span>autolibs <span class="token keyword">for</span> more information<span class="token punctuation">.</span>
-<span class="token constant">There</span> were package installation errors<span class="token punctuation">,</span> make sure to read the log<span class="token punctuation">.</span>
-<span class="token constant">Check</span> <span class="token constant">Homebrew</span> requirements https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>mxcl<span class="token operator">/</span>homebrew<span class="token operator">/</span>wiki<span class="token operator">/</span><span class="token constant">Installation</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>透过错误信息，发现缺少一写依赖的包，和rvm的autolibs没打开，这时候我们就通过Homebrew先安装上（具体你要看清楚你缺少的是什么）</p>
-<pre class="line-numbers language-ruby"><code class="language-ruby">rvm autolibs enable
-rvm reload
-brew install autoconf automake libtool pkg<span class="token operator">-</span>config libyaml readline libxml2 libxslt libksba openssl sqlite
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>漫长的等带后，依赖包终于装完了<br>再次安装RVM</p>
-<pre class="line-numbers language-ruby"><code class="language-ruby">curl <span class="token operator">-</span><span class="token constant">L</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>get<span class="token punctuation">.</span>rvm<span class="token punctuation">.</span>io <span class="token operator">|</span> bash <span class="token operator">-</span>s stable <span class="token operator">--</span>ruby
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>就会安装成功，你可以rvm -v查看下版本</p>
-<p>安装并设置1.9.3为你的默认版本</p>
-<pre class="line-numbers language-ruby"><code class="language-ruby">rvm install <span class="token number">1.9</span><span class="token punctuation">.</span><span class="token number">3</span>
-rvm use <span class="token number">1.9</span><span class="token punctuation">.</span><span class="token number">3</span>
-rvm rubygems latest
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>Finish</p>
-]]></content>
-      <categories>
-        <category>技术随笔</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Cocoapods 使用</title>
     <url>/2013/04/10/use-cocoapods/</url>
     <content><![CDATA[<pre class="line-numbers language-ruby"><code class="language-ruby">gem install cocoapods
@@ -196,6 +158,44 @@ pod update <span class="token operator">--</span>verbose <span class="token oper
 ]]></content>
       <categories>
         <category>iOS</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>使用RVM安装ruby</title>
+    <url>/2013/04/10/use-rvm-install-ruby/</url>
+    <content><![CDATA[<p>今天突然发现ruby版本不小心又回到了1.8.7，可能是我修改了rvm的配置文件导致的，于是开始折腾安装rvm和ruby</p>
+<p>首先还是先安装Homebrew吧<br>很简单，一行代码搞定</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby">ruby <span class="token operator">-</span>e <span class="token string">"$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>安装RVM</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby">curl <span class="token operator">-</span><span class="token constant">L</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>get<span class="token punctuation">.</span>rvm<span class="token punctuation">.</span>io <span class="token operator">|</span> bash <span class="token operator">-</span>s stable <span class="token operator">--</span>ruby
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>走着走着发现出错了</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token constant">Missing</span> required packages<span class="token punctuation">:</span> autoconf<span class="token punctuation">,</span> automake<span class="token punctuation">,</span> libtool<span class="token punctuation">,</span> pkg<span class="token operator">-</span>config<span class="token punctuation">,</span> libyaml<span class="token punctuation">,</span> readline<span class="token punctuation">,</span> libxml2<span class="token punctuation">,</span> libxslt<span class="token punctuation">,</span> libksba<span class="token punctuation">,</span> openssl<span class="token punctuation">,</span> sqlite<span class="token punctuation">.</span>
+<span class="token constant">RVM</span> autolibs is now configured with mode <span class="token string">'2'</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'check and stop if missing'</span><span class="token punctuation">,</span>
+please run `rvm autolibs enable` to let <span class="token constant">RVM</span> <span class="token keyword">do</span> it's job <span class="token keyword">or</span> run <span class="token keyword">and</span> read `rvm autolibs <span class="token punctuation">[</span>help<span class="token punctuation">]</span>`
+<span class="token keyword">or</span> visit https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>rvm<span class="token punctuation">.</span>io<span class="token operator">/</span>rvm<span class="token operator">/</span>autolibs <span class="token keyword">for</span> more information<span class="token punctuation">.</span>
+<span class="token constant">There</span> were package installation errors<span class="token punctuation">,</span> make sure to read the log<span class="token punctuation">.</span>
+<span class="token constant">Check</span> <span class="token constant">Homebrew</span> requirements https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>mxcl<span class="token operator">/</span>homebrew<span class="token operator">/</span>wiki<span class="token operator">/</span><span class="token constant">Installation</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>透过错误信息，发现缺少一写依赖的包，和rvm的autolibs没打开，这时候我们就通过Homebrew先安装上（具体你要看清楚你缺少的是什么）</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby">rvm autolibs enable
+rvm reload
+brew install autoconf automake libtool pkg<span class="token operator">-</span>config libyaml readline libxml2 libxslt libksba openssl sqlite
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>漫长的等带后，依赖包终于装完了<br>再次安装RVM</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby">curl <span class="token operator">-</span><span class="token constant">L</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>get<span class="token punctuation">.</span>rvm<span class="token punctuation">.</span>io <span class="token operator">|</span> bash <span class="token operator">-</span>s stable <span class="token operator">--</span>ruby
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>就会安装成功，你可以rvm -v查看下版本</p>
+<p>安装并设置1.9.3为你的默认版本</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby">rvm install <span class="token number">1.9</span><span class="token punctuation">.</span><span class="token number">3</span>
+rvm use <span class="token number">1.9</span><span class="token punctuation">.</span><span class="token number">3</span>
+rvm rubygems latest
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>Finish</p>
+]]></content>
+      <categories>
+        <category>技术随笔</category>
       </categories>
   </entry>
   <entry>
@@ -517,37 +517,6 @@ d
       </categories>
   </entry>
   <entry>
-    <title>generate new host RSA key</title>
-    <url>/2013/08/06/generate-new-host-rsa-key/</url>
-    <content><![CDATA[<p>最近oschina的git服务器进行了迁移，导致了原有的git项目push不上去，总是提示</p>
-<pre class="line-numbers language-ruby"><code class="language-ruby">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@       <span class="token constant">WARNING</span><span class="token punctuation">:</span> <span class="token constant">POSSIBLE</span> <span class="token constant">DNS</span> <span class="token constant">SPOOFING</span> <span class="token constant">DETECTED!</span>          @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-<span class="token constant">The</span> <span class="token constant">RSA</span> host key <span class="token keyword">for</span> git<span class="token punctuation">.</span>oschina<span class="token punctuation">.</span>net has changed<span class="token punctuation">,</span>
-<span class="token keyword">and</span> the key <span class="token keyword">for</span> the corresponding <span class="token constant">IP</span> address <span class="token number">112.124</span><span class="token punctuation">.</span><span class="token number">6.106</span>
-is unknown<span class="token punctuation">.</span> <span class="token constant">This</span> could either mean that
-<span class="token constant">DNS</span> <span class="token constant">SPOOFING</span> is happening <span class="token keyword">or</span> the <span class="token constant">IP</span> address <span class="token keyword">for</span> the host
-<span class="token keyword">and</span> its host key have changed at the same time<span class="token punctuation">.</span>
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    <span class="token constant">WARNING</span><span class="token punctuation">:</span> <span class="token constant">REMOTE</span> <span class="token constant">HOST</span> <span class="token constant">IDENTIFICATION</span> <span class="token constant">HAS</span> <span class="token constant">CHANGED!</span>     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-<span class="token constant">IT</span> <span class="token constant">IS</span> <span class="token constant">POSSIBLE</span> <span class="token constant">THAT</span> <span class="token constant">SOMEONE</span> <span class="token constant">IS</span> <span class="token constant">DOING</span> <span class="token constant">SOMETHING</span> <span class="token constant">NASTY!</span>
-<span class="token constant">Someone</span> could be eavesdropping on you right <span class="token function">now</span> <span class="token punctuation">(</span>man<span class="token operator">-</span><span class="token keyword">in</span><span class="token operator">-</span>the<span class="token operator">-</span>middle attack<span class="token punctuation">)</span><span class="token operator">!</span>
-<span class="token constant">It</span> is also possible that a host key has just been changed<span class="token punctuation">.</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><del>第一个问题非常简单，就是修改&#x2F;etc&#x2F;hosts，添加一个IP与域名的对应关系即可</del></p>
-<p>第二个是要求你更新know_host中的RSA key，执行如下命令即可</p>
-<pre class="line-numbers language-ruby"><code class="language-ruby">ssh<span class="token operator">-</span>keygen <span class="token operator">-</span><span class="token constant">R</span> git<span class="token punctuation">.</span>oschina<span class="token punctuation">.</span>net
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-ruby"><code class="language-ruby">cat <span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>known_hosts
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>查看known_host中的数据可以看到key已经更新了</p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-  </entry>
-  <entry>
     <title>encrypt sqlite with sqlcipher</title>
     <url>/2013/08/13/encrypt-sqlite-with-sqlcipher/</url>
     <content><![CDATA[<p>##Get the sqlcipher SourceCode</p>
@@ -677,6 +646,37 @@ else &amp;#123;
       </categories>
   </entry>
   <entry>
+    <title>generate new host RSA key</title>
+    <url>/2013/08/06/generate-new-host-rsa-key/</url>
+    <content><![CDATA[<p>最近oschina的git服务器进行了迁移，导致了原有的git项目push不上去，总是提示</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@       <span class="token constant">WARNING</span><span class="token punctuation">:</span> <span class="token constant">POSSIBLE</span> <span class="token constant">DNS</span> <span class="token constant">SPOOFING</span> <span class="token constant">DETECTED!</span>          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<span class="token constant">The</span> <span class="token constant">RSA</span> host key <span class="token keyword">for</span> git<span class="token punctuation">.</span>oschina<span class="token punctuation">.</span>net has changed<span class="token punctuation">,</span>
+<span class="token keyword">and</span> the key <span class="token keyword">for</span> the corresponding <span class="token constant">IP</span> address <span class="token number">112.124</span><span class="token punctuation">.</span><span class="token number">6.106</span>
+is unknown<span class="token punctuation">.</span> <span class="token constant">This</span> could either mean that
+<span class="token constant">DNS</span> <span class="token constant">SPOOFING</span> is happening <span class="token keyword">or</span> the <span class="token constant">IP</span> address <span class="token keyword">for</span> the host
+<span class="token keyword">and</span> its host key have changed at the same time<span class="token punctuation">.</span>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    <span class="token constant">WARNING</span><span class="token punctuation">:</span> <span class="token constant">REMOTE</span> <span class="token constant">HOST</span> <span class="token constant">IDENTIFICATION</span> <span class="token constant">HAS</span> <span class="token constant">CHANGED!</span>     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<span class="token constant">IT</span> <span class="token constant">IS</span> <span class="token constant">POSSIBLE</span> <span class="token constant">THAT</span> <span class="token constant">SOMEONE</span> <span class="token constant">IS</span> <span class="token constant">DOING</span> <span class="token constant">SOMETHING</span> <span class="token constant">NASTY!</span>
+<span class="token constant">Someone</span> could be eavesdropping on you right <span class="token function">now</span> <span class="token punctuation">(</span>man<span class="token operator">-</span><span class="token keyword">in</span><span class="token operator">-</span>the<span class="token operator">-</span>middle attack<span class="token punctuation">)</span><span class="token operator">!</span>
+<span class="token constant">It</span> is also possible that a host key has just been changed<span class="token punctuation">.</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><del>第一个问题非常简单，就是修改&#x2F;etc&#x2F;hosts，添加一个IP与域名的对应关系即可</del></p>
+<p>第二个是要求你更新know_host中的RSA key，执行如下命令即可</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby">ssh<span class="token operator">-</span>keygen <span class="token operator">-</span><span class="token constant">R</span> git<span class="token punctuation">.</span>oschina<span class="token punctuation">.</span>net
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-ruby"><code class="language-ruby">cat <span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>known_hosts
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>查看known_host中的数据可以看到key已经更新了</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+  </entry>
+  <entry>
     <title>你的Mac慢了么</title>
     <url>/2014/04/12/why-my-mac-so-slow/</url>
     <content><![CDATA[<p>本子是MC700,已经陪伴我coding了三年,中间升级了内存,硬盘加了SSD,但是自从电池坏掉以后,我拆掉了电池,接电使用,发现越来越卡,经历了三个月左右的煎熬,我的mac终于又重新焕发了青春,说说遇到的问题</p>
@@ -702,6 +702,25 @@ else &amp;#123;
 ]]></content>
       <categories>
         <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Learn core animation the hard way</title>
+    <url>/2014/05/11/learn-core-animation-the-hard-way/</url>
+    <content><![CDATA[<p>###Document</p>
+<ol>
+<li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW8">CABasicAnimation Keypath</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Animation_Types_Timing/Articles/PropertyAnimations.html">Animation Types and Timing Programming Guide</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/reference/CGAffineTransform/Reference/reference.html">CGAffineTransform</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066">Quartz 2D Programming Guide</a></li>
+<li><a href="http://baike.baidu.com/view/954621.htm">放射变换</a></li>
+<li><a href="http://www.cnblogs.com/xiaodao/archive/2012/02/10/2345481.html">组合动画</a></li>
+<li><a href="http://www.cnblogs.com/v2m_/archive/2013/05/09/3070187.html">http://www.cnblogs.com/v2m_&#x2F;archive&#x2F;2013&#x2F;05&#x2F;09&#x2F;3070187.html</a></li>
+<li><a href="http://www.cnblogs.com/sell/archive/2013/02/01/2889013.html">几个常用动画代码</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>iOS</category>
       </categories>
   </entry>
   <entry>
@@ -735,25 +754,6 @@ else &amp;#123;
     <content><![CDATA[<p>之前遇到过，一直没做笔记，导致每次都要现查</p>
 <pre class="line-numbers language-ruby"><code class="language-ruby">xcode<span class="token operator">-</span>select <span class="token operator">--</span>install
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>iOS</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Learn core animation the hard way</title>
-    <url>/2014/05/11/learn-core-animation-the-hard-way/</url>
-    <content><![CDATA[<p>###Document</p>
-<ol>
-<li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW8">CABasicAnimation Keypath</a></li>
-<li><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Animation_Types_Timing/Articles/PropertyAnimations.html">Animation Types and Timing Programming Guide</a></li>
-<li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/reference/CGAffineTransform/Reference/reference.html">CGAffineTransform</a></li>
-<li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066">Quartz 2D Programming Guide</a></li>
-<li><a href="http://baike.baidu.com/view/954621.htm">放射变换</a></li>
-<li><a href="http://www.cnblogs.com/xiaodao/archive/2012/02/10/2345481.html">组合动画</a></li>
-<li><a href="http://www.cnblogs.com/v2m_/archive/2013/05/09/3070187.html">http://www.cnblogs.com/v2m_&#x2F;archive&#x2F;2013&#x2F;05&#x2F;09&#x2F;3070187.html</a></li>
-<li><a href="http://www.cnblogs.com/sell/archive/2013/02/01/2889013.html">几个常用动画代码</a></li>
-</ol>
 ]]></content>
       <categories>
         <category>iOS</category>
@@ -1196,6 +1196,12 @@ typedef <span class="token function">NS_ENUM</span><span class="token punctuatio
 ]]></content>
   </entry>
   <entry>
+    <title>2016年2月29日</title>
+    <url>/2016/02/29/the-day-of-2-29/</url>
+    <content><![CDATA[<p>仅为今天，特意发博一篇</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Mac Tips</title>
     <url>/2016/03/23/Mac-Tips/</url>
     <content><![CDATA[<p>一些常用的命令备忘</p>
@@ -1440,23 +1446,6 @@ buildNumber<span class="token operator">=</span>$<span class="token punctuation"
       </categories>
   </entry>
   <entry>
-    <title>2016年2月29日</title>
-    <url>/2016/02/29/the-day-of-2-29/</url>
-    <content><![CDATA[<p>仅为今天，特意发博一篇</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>将 ReactNative 的默认终端改为 iTerm2</title>
-    <url>/2018/05/30/let-react-native-shell-open-in-iterm/</url>
-    <content><![CDATA[<p>自己平时使用iTerm2作为主力的终端，ReactNative的默认打开终端是系统自带的Terminal，这样就会经常存在同时开启两个终端软件的情况，搜索了一下，解决方式很简单</p>
-<pre><code>open node_modules/react-native/scripts
-</code></pre>
-<p> 选中<code>launchPackager.command</code>,右键切换它的默认打开工具</p>
-<p> <img src="/uploads/react-native-open-shell.png"></p>
-<h5 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h5><p> <a href="https://stackoverflow.com/questions/37814803/how-to-get-react-native-run-ios-to-open-in-iterm-instead-of-terminal-on-a-macos">https://stackoverflow.com/questions/37814803/how-to-get-react-native-run-ios-to-open-in-iterm-instead-of-terminal-on-a-macos</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>iTerm2 with powerline theme</title>
     <url>/2019/06/13/iterm-with-powerline-theme/</url>
     <content><![CDATA[<h3 id="确保已经安装了oh-my-zsh"><a href="#确保已经安装了oh-my-zsh" class="headerlink" title="确保已经安装了oh-my-zsh"></a>确保已经安装了oh-my-zsh</h3><p><a href="https://github.com/robbyrussell/oh-my-zsh">https://github.com/robbyrussell/oh-my-zsh</a></p>
@@ -1497,6 +1486,17 @@ POWERLINE_GIT_UNMERGED=&quot;═&quot;
       <categories>
         <category>工具控</category>
       </categories>
+  </entry>
+  <entry>
+    <title>将 ReactNative 的默认终端改为 iTerm2</title>
+    <url>/2018/05/30/let-react-native-shell-open-in-iterm/</url>
+    <content><![CDATA[<p>自己平时使用iTerm2作为主力的终端，ReactNative的默认打开终端是系统自带的Terminal，这样就会经常存在同时开启两个终端软件的情况，搜索了一下，解决方式很简单</p>
+<pre><code>open node_modules/react-native/scripts
+</code></pre>
+<p> 选中<code>launchPackager.command</code>,右键切换它的默认打开工具</p>
+<p> <img src="/uploads/react-native-open-shell.png"></p>
+<h5 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h5><p> <a href="https://stackoverflow.com/questions/37814803/how-to-get-react-native-run-ios-to-open-in-iterm-instead-of-terminal-on-a-macos">https://stackoverflow.com/questions/37814803/how-to-get-react-native-run-ios-to-open-in-iterm-instead-of-terminal-on-a-macos</a></p>
+]]></content>
   </entry>
   <entry>
     <title>解决 Mac OS 删除文件后磁盘空间不更新的问题</title>
@@ -1641,8 +1641,8 @@ php -r &quot;unlink(&#39;composer-setup.php&#39;);&quot;
       </tags>
   </entry>
   <entry>
-    <title>deply nuxt ssr with pm2 and nginx</title>
-    <url>/2022/11/29/deply-nuxt-ssr-with-pm2-and-nginx/</url>
+    <title>deploy nuxt ssr with pm2 and nginx</title>
+    <url>/2022/11/29/deploy-nuxt-ssr-with-pm2-and-nginx/</url>
     <content><![CDATA[<h3 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h3><p>服务端渲染能更容易做SEO，方便每个页面单独的设置关键词以便被搜索引擎抓取，让其他人更容易在网络上搜索到。</p>
 <h3 id="测试-SEO-关键词"><a href="#测试-SEO-关键词" class="headerlink" title="测试 SEO 关键词"></a>测试 SEO 关键词</h3><p>很多但页面应用可能不能正确的让搜索引擎抓取你的页面头部keywords，一个简单的测试方法就是使用一些第三方网站来测试抓取效果</p>
 <p><a href="https://seo.chinaz.com/">https://seo.chinaz.com/</a><br><a href="https://www.aizhan.com/">https://www.aizhan.com/</a></p>
@@ -1691,6 +1691,17 @@ pm2 stop [name]
 <h3 id="启动pm2控制台，查看实时访问"><a href="#启动pm2控制台，查看实时访问" class="headerlink" title="启动pm2控制台，查看实时访问"></a>启动pm2控制台，查看实时访问</h3><pre><code>pm2 monit
 </code></pre>
 <p><img src="/uploads/pm2_monit.png" alt="pm2 monit"></p>
+<h3 id="在-packge-json-文件的-scripts-中增加pm2启动命令"><a href="#在-packge-json-文件的-scripts-中增加pm2启动命令" class="headerlink" title="在 packge.json 文件的 scripts 中增加pm2启动命令"></a>在 <code>packge.json</code> 文件的 <code>scripts</code> 中增加pm2启动命令</h3><pre><code>&quot;scripts&quot;: &#123;
+    &quot;dev&quot;: &quot;nuxt --hostname &#39;0.0.0.0&#39;&quot;,
+    &quot;build&quot;: &quot;nuxt build&quot;,
+    &quot;start&quot;: &quot;nuxt start&quot;,
+    &quot;generate&quot;: &quot;nuxt generate&quot;,
+    &quot;pm2&quot;: &quot;nuxt build &amp;&amp; pm2 start npm --name labapps -- run start&quot;
+  &#125;,
+</code></pre>
+<h3 id="部署到web服务器"><a href="#部署到web服务器" class="headerlink" title="部署到web服务器"></a>部署到web服务器</h3><p>将除了<code>node_modules</code>目录之外的所有文件复制到你的web目录下面，启动web实例</p>
+<pre><code>npm run pm2
+</code></pre>
 <h3 id="修改nginx配置，增加反向代理"><a href="#修改nginx配置，增加反向代理" class="headerlink" title="修改nginx配置，增加反向代理"></a>修改nginx配置，增加反向代理</h3><p>注意，反向代理的端口必须与你的<code>package.json</code>中设置的应用的端口相匹配，这样才能在同一台主机，运行多个pm2实例，并且互不影响</p>
 <pre><code>upstream labapps &#123;
     server 127.0.0.1:3334;
