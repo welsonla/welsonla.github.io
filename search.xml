@@ -1643,14 +1643,20 @@ php -r &quot;unlink(&#39;composer-setup.php&#39;);&quot;
   <entry>
     <title>deploy nuxt ssr with pm2 and nginx</title>
     <url>/2022/11/29/deploy-nuxt-ssr-with-pm2-and-nginx/</url>
-    <content><![CDATA[<h3 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h3><p>服务端渲染能更容易做SEO，方便每个页面单独的设置关键词以便被搜索引擎抓取，让其他人更容易在网络上搜索到。</p>
-<h3 id="测试-SEO-关键词"><a href="#测试-SEO-关键词" class="headerlink" title="测试 SEO 关键词"></a>测试 SEO 关键词</h3><p>很多但页面应用可能不能正确的让搜索引擎抓取你的页面头部keywords，一个简单的测试方法就是使用一些第三方网站来测试抓取效果</p>
-<p><a href="https://seo.chinaz.com/">https://seo.chinaz.com/</a><br><a href="https://www.aizhan.com/">https://www.aizhan.com/</a></p>
-<h3 id="切换Nuxt到ssr模式"><a href="#切换Nuxt到ssr模式" class="headerlink" title="切换Nuxt到ssr模式"></a>切换Nuxt到ssr模式</h3><p>如果你的nuxt应用之前使用的是静态站点的模式，请在nuxt.config.json里更新或删除如下配置</p>
+    <content><![CDATA[<h3 id="Why">Why</h3>
+<p>服务端渲染能更容易做SEO，方便每个页面单独的设置关键词以便被搜索引擎抓取，让其他人更容易在网络上搜索到。</p>
+<h3 id="测试-SEO-关键词">测试 SEO 关键词</h3>
+<p>很多但页面应用可能不能正确的让搜索引擎抓取你的页面头部keywords，一个简单的测试方法就是使用一些第三方网站来测试抓取效果</p>
+<p><a href="https://seo.chinaz.com/">https://seo.chinaz.com/</a><br>
+<a href="https://www.aizhan.com/">https://www.aizhan.com/</a><br>
+<a href="https://pagespeed.web.dev/">https://pagespeed.web.dev/</a></p>
+<h3 id="切换Nuxt到ssr模式">切换Nuxt到ssr模式</h3>
+<p>如果你的nuxt应用之前使用的是静态站点的模式，请在nuxt.config.json里更新或删除如下配置</p>
 <pre><code>ssr: true,
-target: &#39;server&#39;
+target: 'server'
 </code></pre>
-<h3 id="设置应用对应的端口"><a href="#设置应用对应的端口" class="headerlink" title="设置应用对应的端口"></a>设置应用对应的端口</h3><p>在<code>package.json</code>文件中增加</p>
+<h3 id="设置应用对应的端口">设置应用对应的端口</h3>
+<p>在<code>package.json</code>文件中增加</p>
 <pre><code>&quot;config&quot;: &#123;
     &quot;nuxt&quot;: &#123;
         &quot;host&quot;: &quot;0.0.0.0&quot;,
@@ -1658,26 +1664,32 @@ target: &#39;server&#39;
     &#125;
 &#125;
 </code></pre>
-<h3 id="安装pm2"><a href="#安装pm2" class="headerlink" title="安装pm2"></a>安装pm2</h3><pre><code>npm install pm2@latest -g
+<h3 id="安装pm2">安装pm2</h3>
+<pre><code>npm install pm2@latest -g
 </code></pre>
-<h3 id="生成pm2配置文件"><a href="#生成pm2配置文件" class="headerlink" title="生成pm2配置文件"></a>生成pm2配置文件</h3><p>运行一下命令，这将会在你的项目目录下生成一个名为<code>ecosystem.config.js</code>配置文件</p>
+<h3 id="生成pm2配置文件">生成pm2配置文件</h3>
+<p>运行一下命令，这将会在你的项目目录下生成一个名为<code>ecosystem.config.js</code>配置文件</p>
 <pre><code>pm2 ecosystem
 </code></pre>
-<h3 id="修改pm2配置文件-增加apps节点"><a href="#修改pm2配置文件-增加apps节点" class="headerlink" title="修改pm2配置文件, 增加apps节点"></a>修改pm2配置文件, 增加apps节点</h3><pre><code>apps : [
+<h3 id="修改pm2配置文件-增加apps节点">修改pm2配置文件, 增加apps节点</h3>
+<pre><code>apps : [
     &#123;
-        name: &#39;blog&#39;, # 修改为您的项目名称
-        exec_mode: &#39;cluster&#39;,
-        instances: &#39;2&#39;, # 按需设置进程数量
-        script: &#39;./node_modules/nuxt/bin/nuxt.js&#39;,
-        args: &#39;start&#39;
+        name: 'blog', # 修改为您的项目名称
+        exec_mode: 'cluster',
+        instances: '2', # 按需设置进程数量
+        script: './node_modules/nuxt/bin/nuxt.js',
+        args: 'start'
     &#125;
 ]
 </code></pre>
-<h3 id="启动pm2"><a href="#启动pm2" class="headerlink" title="启动pm2"></a>启动pm2</h3><pre><code>npm run pm2
+<h3 id="启动pm2">启动pm2</h3>
+<pre><code>npm run pm2
 </code></pre>
-<h3 id="查看运行实例"><a href="#查看运行实例" class="headerlink" title="查看运行实例"></a>查看运行实例</h3><pre><code>pm2 list
+<h3 id="查看运行实例">查看运行实例</h3>
+<pre><code>pm2 list
 </code></pre>
-<h3 id="常用pm2命令"><a href="#常用pm2命令" class="headerlink" title="常用pm2命令"></a>常用pm2命令</h3><pre><code># 重启应用
+<h3 id="常用pm2命令">常用pm2命令</h3>
+<pre><code># 重启应用
 pm2 restart all
 pm2 restart [name]
 
@@ -1688,21 +1700,25 @@ pm2 delete [name]
 pm2 stop all
 pm2 stop [name]
 </code></pre>
-<h3 id="启动pm2控制台，查看实时访问"><a href="#启动pm2控制台，查看实时访问" class="headerlink" title="启动pm2控制台，查看实时访问"></a>启动pm2控制台，查看实时访问</h3><pre><code>pm2 monit
+<h3 id="启动pm2控制台，查看实时访问">启动pm2控制台，查看实时访问</h3>
+<pre><code>pm2 monit
 </code></pre>
 <p><img src="/uploads/pm2_monit.png" alt="pm2 monit"></p>
-<h3 id="在-packge-json-文件的-scripts-中增加pm2启动命令"><a href="#在-packge-json-文件的-scripts-中增加pm2启动命令" class="headerlink" title="在 packge.json 文件的 scripts 中增加pm2启动命令"></a>在 <code>packge.json</code> 文件的 <code>scripts</code> 中增加pm2启动命令</h3><pre><code>&quot;scripts&quot;: &#123;
-    &quot;dev&quot;: &quot;nuxt --hostname &#39;0.0.0.0&#39;&quot;,
+<h3 id="在-packge-json-文件的-scripts-中增加pm2启动命令">在 <code>packge.json</code> 文件的 <code>scripts</code> 中增加pm2启动命令</h3>
+<pre><code>&quot;scripts&quot;: &#123;
+    &quot;dev&quot;: &quot;nuxt --hostname '0.0.0.0'&quot;,
     &quot;build&quot;: &quot;nuxt build&quot;,
     &quot;start&quot;: &quot;nuxt start&quot;,
     &quot;generate&quot;: &quot;nuxt generate&quot;,
     &quot;pm2&quot;: &quot;nuxt build &amp;&amp; pm2 start npm --name labapps -- run start&quot;
   &#125;,
 </code></pre>
-<h3 id="部署到web服务器"><a href="#部署到web服务器" class="headerlink" title="部署到web服务器"></a>部署到web服务器</h3><p>将除了<code>node_modules</code>目录之外的所有文件复制到你的web目录下面，启动web实例</p>
+<h3 id="部署到web服务器">部署到web服务器</h3>
+<p>将除了<code>node_modules</code>目录之外的所有文件复制到你的web目录下面，启动web实例</p>
 <pre><code>npm run pm2
 </code></pre>
-<h3 id="修改nginx配置，增加反向代理"><a href="#修改nginx配置，增加反向代理" class="headerlink" title="修改nginx配置，增加反向代理"></a>修改nginx配置，增加反向代理</h3><p>注意，反向代理的端口必须与你的<code>package.json</code>中设置的应用的端口相匹配，这样才能在同一台主机，运行多个pm2实例，并且互不影响</p>
+<h3 id="修改nginx配置，增加反向代理">修改nginx配置，增加反向代理</h3>
+<p>注意，反向代理的端口必须与你的<code>package.json</code>中设置的应用的端口相匹配，这样才能在同一台主机，运行多个pm2实例，并且互不影响</p>
 <pre><code>upstream labapps &#123;
     server 127.0.0.1:3334;
     keepalive 64;
@@ -1751,12 +1767,17 @@ server &#123;
     &#125;
 &#125;
 </code></pre>
-<h3 id="查看访问"><a href="#查看访问" class="headerlink" title="查看访问"></a>查看访问</h3><pre><code>pm2 monit
+<h3 id="查看访问">查看访问</h3>
+<pre><code>pm2 monit
 </code></pre>
-<h3 id="查看实时日志"><a href="#查看实时日志" class="headerlink" title="查看实时日志"></a>查看实时日志</h3><pre><code>pm2 logs
+<h3 id="查看实时日志">查看实时日志</h3>
+<pre><code>pm2 logs
 </code></pre>
-<p>另外，pm2还提供了<code>pm2 monitor</code>更强大的web端控制台，可以在web实时查看你的服务运行情况，只需要简单地配置即可.<br><a href="https://pm2.keymetrics.io/docs/usage/monitoring/">https://pm2.keymetrics.io/docs/usage/monitoring/</a></p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://nuxtjs.org/deployments/pm2/">Deploy Nuxt using PM2</a><br><a href="https://zhuanlan.zhihu.com/p/398023953">常用的seo查询工具(有哪些seo软件网站平台)</a></p>
+<p>另外，pm2还提供了<code>pm2 monitor</code>更强大的web端控制台，可以在web实时查看你的服务运行情况，只需要简单地配置即可.<br>
+<a href="https://pm2.keymetrics.io/docs/usage/monitoring/">https://pm2.keymetrics.io/docs/usage/monitoring/</a></p>
+<h3 id="参考资料">参考资料</h3>
+<p><a href="https://nuxtjs.org/deployments/pm2/">Deploy Nuxt using PM2</a><br>
+<a href="https://zhuanlan.zhihu.com/p/398023953">常用的seo查询工具(有哪些seo软件网站平台)</a></p>
 ]]></content>
       <categories>
         <category>Node</category>
@@ -1877,5 +1898,63 @@ highlight:
       <categories>
         <category>something</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Learning figma day 1 - 基本操作与Figma的一些常用快捷键</title>
+    <url>/2022/12/09/learning-figma-day-1/</url>
+    <content><![CDATA[<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><p>由于本人只有一台Macbook，以下快捷键都是在Mac系统下的，可能跟Windows系统略有不同</p>
+<p><code>K</code> 等比缩放<br><code>V</code> 移动<br><code>CMD+左键</code> 快速选中Frame或组中的子元素<br><code>Shift + R</code> 标尺<br><code>CMD+滚轮</code> 放大缩小<br><code>Shift+ 方向键</code> 每次移动4px<br><code>CMD+左键框选</code> 可以防止拖动到底部的Frame整体，只框选范围内的元素<br><code>Shift + CMD + O</code> 外轮廓描边，转换成一个矩形面积</p>
+<h4 id="图形"><a href="#图形" class="headerlink" title="图形"></a>图形</h4><p><code>R</code> 矩形<br><code>O</code> 圆形<br><code>L</code> 直线<br><code>T</code> 文字<br><code>A</code> 画框，快速选择页面原型尺寸，比如手机尺寸、桌面网页、Watch等</p>
+<p>数值增加<br>所有的数值都可以在鼠标放到属性框附近的时候，按住Opt 按键左右拖拽鼠标进行增减</p>
+<h4 id="图形属性菜单"><a href="#图形属性菜单" class="headerlink" title="图形属性菜单"></a>图形属性菜单</h4><p><img src="/uploads/figma-property.png"></p>
+<h3 id="组和Frame"><a href="#组和Frame" class="headerlink" title="组和Frame"></a>组和Frame</h3><p><code>CMD + G</code> 编组<br><code>Opt + CMD + G</code> 合并为Frame<br><code>Shift + CMD + G</code> 取消编组或取消Frame</p>
+<h3 id="AutoLayout"><a href="#AutoLayout" class="headerlink" title="AutoLayout"></a>AutoLayout</h3><p><code>Shift + A</code>  设置为AutoLayout布局</p>
+]]></content>
+      <categories>
+        <category>Design</category>
+      </categories>
+      <tags>
+        <tag>design</tag>
+        <tag>figma</tag>
+        <tag>study</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Learning-figma-day-2 自定义样式与组件</title>
+    <url>/2022/12/10/learning-figma-day-2/</url>
+    <content><![CDATA[<p>只是记录一下学习Figma过程中的一些笔记，可能会有更多更方便的使用技巧。</p>
+<h3 id="本地样式"><a href="#本地样式" class="headerlink" title="本地样式"></a>本地样式</h3><h4 id="添加本地样式"><a href="#添加本地样式" class="headerlink" title="添加本地样式"></a>添加本地样式</h4><p>在Figma 中不论是字体、颜色、样式等都可以添加为自定义的样式，操作步骤如下</p>
+<p>点击属性右上的图标，弹出窗口中点击<code>+</code>按钮即可</p>
+<p><img src="/uploads/figma-local-style@2x.png"></p>
+<h4 id="使用本地样式"><a href="#使用本地样式" class="headerlink" title="使用本地样式"></a>使用本地样式</h4><p>之后我们再次点击此处就可以看到我们添加到自定义样式, 右侧的调整按钮是我们可以对保存的本地样式进行调整，这样调整后的样式会将使用该样式的元素同步进行更新，比如统一修改App的导航栏颜色、Tabbar的选中颜色等</p>
+<p><img src="/uploads/figma-local-style-list.png"></p>
+<h4 id="取消样式关联"><a href="#取消样式关联" class="headerlink" title="取消样式关联"></a>取消样式关联</h4><p>如果我们使用了本地样式，但是想自己对该样式进行单独的修改, 如应用了阴影等设置，但是想单独调整下阴影的大小，则点击该样式右侧的断开链接图标即可</p>
+<p><img src="/uploads/figma-local-style-unlink.png"></p>
+<h4 id="本地样式列表"><a href="#本地样式列表" class="headerlink" title="本地样式列表"></a>本地样式列表</h4><p>本地样式在我们鼠标单击空白处会在右侧的属性栏中进行显示，我们可以直接在此处对本地样式进行修改与删除，假如我们需要对设计统一修改色调就可以直接修改某一个本地样式<br><img src="/uploads/figma-local-styles-list.png"></p>
+<h3 id="本地组件"><a href="#本地组件" class="headerlink" title="本地组件"></a>本地组件</h3><p>本地组件是为了更好的复用与批量修改，比如我们的新闻列表，每个条目的标题与简介、缩略图都是统一的，我们就可以做一个条目的组件来统一管理他们的样式，假如我们更新的标题的字号与颜色，所有使用到该组件的地方都会进行同步的修改，这样节省了我们每个都去单独修改的时间，也更方便让相同设计元素进行复用，降低设计更新的时间成本。</p>
+<p>一般我们在一个设计稿中将所有的组件都放在同一个Frame中集中管理，不要在页面中创建组件，这样会在后期查找父组件比较费力，我们将一个设计稿中的本地组件都放置在同一个Frame中，这样不仅方便查找，而且比较清晰。</p>
+<p>创建组件的快捷键为<code>Opt + CMD + K</code>, 也可以选中你的元素后，点击顶部的创建组件按钮</p>
+<p><img src="/uploads/figma-create-component.png"></p>
+<p>创建完毕组件之后，我们就可以按住<code>Opt</code>+拖动组件快速使用一个组件，多次复制之后，我们就能快速的完成一个新闻列表样式，我们可以单独对每个子组件的标题与描述进行修改，而不会影响父组件</p>
+<p><img src="/uploads/figma-component-list.png"></p>
+<p>当我们对父组件的属性进行修改时，子组件也会同步的更新样式, 可能这就是设计中的面向对象概念吧</p>
+<p><img src="/uploads/figma-component-update.png"></p>
+<h4 id="父组件与子组件概念"><a href="#父组件与子组件概念" class="headerlink" title="父组件与子组件概念"></a>父组件与子组件概念</h4><p>父组件与子组件的特点总结(不全面):</p>
+<ul>
+<li>更新父组件会同步将样式同步给使用到的子组件</li>
+<li>子组件可以单独更新自己的文本、高度，而不会影响父组件</li>
+<li>子组件如果想单独更新组件某些样式，可以同样断开链接之后进行单独的修改，方法同本地样式</li>
+</ul>
+<h4 id="本地库"><a href="#本地库" class="headerlink" title="本地库"></a>本地库</h4><p>本地样式与本地组件都会显示在本地资源库中，位置在Layers右侧的Assets栏目中, 从图中可以看到，我们将所有的组件放置在同一个Frame中的优势也显示出来了，这样就不会去多个页面下去寻找定义的组件，也节省了一部分的时间,本地库中的组件，我们可以直接拖动到设计页面中进行使用。</p>
+<p><img src="/uploads/figma-assets.png"></p>
+]]></content>
+      <categories>
+        <category>Design</category>
+      </categories>
+      <tags>
+        <tag>design</tag>
+        <tag>figma</tag>
+        <tag>study</tag>
+      </tags>
   </entry>
 </search>

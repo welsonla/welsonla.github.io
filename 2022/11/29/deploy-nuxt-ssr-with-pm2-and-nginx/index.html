@@ -5,25 +5,36 @@
 
 ga('create', 'UA-19152389-6', 'auto');
 ga('send', 'pageview');</script><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="Why服务端渲染能更容易做SEO，方便每个页面单独的设置关键词以便被搜索引擎抓取，让其他人更容易在网络上搜索到。
-测试 SEO 关键词很多但页面应用可能不能正确的让搜索引擎抓取你的页面头部keywords，一个简单的测试方法就是使用一些第三方网站来测试抓取效果
-https://seo.chinaz.com/https://www.aizhan.com/
-切换Nuxt到ssr模式如果你的nuxt应用之前使用的是静态站点的模式，请在nuxt.config.json里更新或删除如下配置
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="Why
+服务端渲染能更容易做SEO，方便每个页面单独的设置关键词以便被搜索引擎抓取，让其他人更容易在网络上搜索到。
+测试 SEO 关键词
+很多但页面应用可能不能正确的让搜索引擎抓取你的页面头部keywords，一个简单的测试方法就是使用一些第三方网站来测试抓取效果
+https://seo.chinaz.com/
+https://www.aizhan.com/
+https://pagespeed.web.dev/
+切换Nuxt到ssr模式
+如果你的nuxt应用之前使用的是静态站点的模式，请在nuxt.config.json里更新或删除如下配置
 ssr: true,
-target: &amp;#39;server&amp;#39;
+target: 'server'
 
-设置应用对应的端口在package.json文件中增加
-&amp;quot;config&amp;quot;: &amp;#123;
-    &amp;quot;nuxt&amp;quot;: &amp;.."><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="NSLog("Life & Code");" type="application/atom+xml">
+设置应用对应的端口
+在package.json文件中增加
+&amp;quot;config&amp;quot;: &amp;#123;.."><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="NSLog("Life & Code");" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">welsonla's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">deploy nuxt ssr with pm2 and nginx</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Why"><span class="toc-text">Why</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95-SEO-%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-text">测试 SEO 关键词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2Nuxt%E5%88%B0ssr%E6%A8%A1%E5%BC%8F"><span class="toc-text">切换Nuxt到ssr模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%BA%94%E7%94%A8%E5%AF%B9%E5%BA%94%E7%9A%84%E7%AB%AF%E5%8F%A3"><span class="toc-text">设置应用对应的端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85pm2"><span class="toc-text">安装pm2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90pm2%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">生成pm2配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9pm2%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-%E5%A2%9E%E5%8A%A0apps%E8%8A%82%E7%82%B9"><span class="toc-text">修改pm2配置文件, 增加apps节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8pm2"><span class="toc-text">启动pm2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%BF%90%E8%A1%8C%E5%AE%9E%E4%BE%8B"><span class="toc-text">查看运行实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8pm2%E5%91%BD%E4%BB%A4"><span class="toc-text">常用pm2命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8pm2%E6%8E%A7%E5%88%B6%E5%8F%B0%EF%BC%8C%E6%9F%A5%E7%9C%8B%E5%AE%9E%E6%97%B6%E8%AE%BF%E9%97%AE"><span class="toc-text">启动pm2控制台，查看实时访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8-packge-json-%E6%96%87%E4%BB%B6%E7%9A%84-scripts-%E4%B8%AD%E5%A2%9E%E5%8A%A0pm2%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">在 packge.json 文件的 scripts 中增加pm2启动命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">部署到web服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9nginx%E9%85%8D%E7%BD%AE%EF%BC%8C%E5%A2%9E%E5%8A%A0%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="toc-text">修改nginx配置，增加反向代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%AE%BF%E9%97%AE"><span class="toc-text">查看访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%9E%E6%97%B6%E6%97%A5%E5%BF%97"><span class="toc-text">查看实时日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/Nuxt"><i class="tag post-item-tag">Nuxt</i></a><a href="/tags/pm2"><i class="tag post-item-tag">pm2</i></a><a href="/tags/Nginx"><i class="tag post-item-tag">Nginx</i></a><a href="/tags/ssr"><i class="tag post-item-tag">ssr</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">deploy nuxt ssr with pm2 and nginx</h1><time class="has-text-grey" datetime="2022-11-29T03:30:55.000Z">2022-11-29</time><article class="mt-2 post-content"><h3 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h3><p>服务端渲染能更容易做SEO，方便每个页面单独的设置关键词以便被搜索引擎抓取，让其他人更容易在网络上搜索到。</p>
-<h3 id="测试-SEO-关键词"><a href="#测试-SEO-关键词" class="headerlink" title="测试 SEO 关键词"></a>测试 SEO 关键词</h3><p>很多但页面应用可能不能正确的让搜索引擎抓取你的页面头部keywords，一个简单的测试方法就是使用一些第三方网站来测试抓取效果</p>
-<p><a target="_blank" rel="noopener" href="https://seo.chinaz.com/">https://seo.chinaz.com/</a><br><a target="_blank" rel="noopener" href="https://www.aizhan.com/">https://www.aizhan.com/</a></p>
-<h3 id="切换Nuxt到ssr模式"><a href="#切换Nuxt到ssr模式" class="headerlink" title="切换Nuxt到ssr模式"></a>切换Nuxt到ssr模式</h3><p>如果你的nuxt应用之前使用的是静态站点的模式，请在nuxt.config.json里更新或删除如下配置</p>
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">welsonla's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">deploy nuxt ssr with pm2 and nginx</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">点击返回顶部</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">首页</a></h3><h3 class="is-inline-block"><a href="/about">关于</a></h3><h3 class="is-inline-block"><a href="/archives">归档</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">首页</a></h3><h3 class="is-inline-block"><a href="/about">关于</a></h3><h3 class="is-inline-block"><a href="/archives">归档</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Why"><span class="toc-text">Why</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95-SEO-%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-text">测试 SEO 关键词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2Nuxt%E5%88%B0ssr%E6%A8%A1%E5%BC%8F"><span class="toc-text">切换Nuxt到ssr模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%BA%94%E7%94%A8%E5%AF%B9%E5%BA%94%E7%9A%84%E7%AB%AF%E5%8F%A3"><span class="toc-text">设置应用对应的端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85pm2"><span class="toc-text">安装pm2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90pm2%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">生成pm2配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9pm2%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-%E5%A2%9E%E5%8A%A0apps%E8%8A%82%E7%82%B9"><span class="toc-text">修改pm2配置文件, 增加apps节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8pm2"><span class="toc-text">启动pm2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%BF%90%E8%A1%8C%E5%AE%9E%E4%BE%8B"><span class="toc-text">查看运行实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8pm2%E5%91%BD%E4%BB%A4"><span class="toc-text">常用pm2命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8pm2%E6%8E%A7%E5%88%B6%E5%8F%B0%EF%BC%8C%E6%9F%A5%E7%9C%8B%E5%AE%9E%E6%97%B6%E8%AE%BF%E9%97%AE"><span class="toc-text">启动pm2控制台，查看实时访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8-packge-json-%E6%96%87%E4%BB%B6%E7%9A%84-scripts-%E4%B8%AD%E5%A2%9E%E5%8A%A0pm2%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">在 packge.json 文件的 scripts 中增加pm2启动命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">部署到web服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9nginx%E9%85%8D%E7%BD%AE%EF%BC%8C%E5%A2%9E%E5%8A%A0%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="toc-text">修改nginx配置，增加反向代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%AE%BF%E9%97%AE"><span class="toc-text">查看访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%9E%E6%97%B6%E6%97%A5%E5%BF%97"><span class="toc-text">查看实时日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/Nuxt"><i class="tag post-item-tag">Nuxt</i></a><a href="/tags/pm2"><i class="tag post-item-tag">pm2</i></a><a href="/tags/Nginx"><i class="tag post-item-tag">Nginx</i></a><a href="/tags/ssr"><i class="tag post-item-tag">ssr</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">deploy nuxt ssr with pm2 and nginx</h1><time class="has-text-grey" datetime="2022-11-29T03:30:55.000Z">2022-11-29</time><article class="mt-2 post-content"><h3 id="Why">Why</h3>
+<p>服务端渲染能更容易做SEO，方便每个页面单独的设置关键词以便被搜索引擎抓取，让其他人更容易在网络上搜索到。</p>
+<h3 id="测试-SEO-关键词">测试 SEO 关键词</h3>
+<p>很多但页面应用可能不能正确的让搜索引擎抓取你的页面头部keywords，一个简单的测试方法就是使用一些第三方网站来测试抓取效果</p>
+<p><a target="_blank" rel="noopener" href="https://seo.chinaz.com/">https://seo.chinaz.com/</a><br>
+<a target="_blank" rel="noopener" href="https://www.aizhan.com/">https://www.aizhan.com/</a><br>
+<a target="_blank" rel="noopener" href="https://pagespeed.web.dev/">https://pagespeed.web.dev/</a></p>
+<h3 id="切换Nuxt到ssr模式">切换Nuxt到ssr模式</h3>
+<p>如果你的nuxt应用之前使用的是静态站点的模式，请在nuxt.config.json里更新或删除如下配置</p>
 <pre><code>ssr: true,
-target: &#39;server&#39;
+target: 'server'
 </code></pre>
-<h3 id="设置应用对应的端口"><a href="#设置应用对应的端口" class="headerlink" title="设置应用对应的端口"></a>设置应用对应的端口</h3><p>在<code>package.json</code>文件中增加</p>
+<h3 id="设置应用对应的端口">设置应用对应的端口</h3>
+<p>在<code>package.json</code>文件中增加</p>
 <pre><code>&quot;config&quot;: &#123;
     &quot;nuxt&quot;: &#123;
         &quot;host&quot;: &quot;0.0.0.0&quot;,
@@ -31,26 +42,32 @@ target: &#39;server&#39;
     &#125;
 &#125;
 </code></pre>
-<h3 id="安装pm2"><a href="#安装pm2" class="headerlink" title="安装pm2"></a>安装pm2</h3><pre><code>npm install pm2@latest -g
+<h3 id="安装pm2">安装pm2</h3>
+<pre><code>npm install pm2@latest -g
 </code></pre>
-<h3 id="生成pm2配置文件"><a href="#生成pm2配置文件" class="headerlink" title="生成pm2配置文件"></a>生成pm2配置文件</h3><p>运行一下命令，这将会在你的项目目录下生成一个名为<code>ecosystem.config.js</code>配置文件</p>
+<h3 id="生成pm2配置文件">生成pm2配置文件</h3>
+<p>运行一下命令，这将会在你的项目目录下生成一个名为<code>ecosystem.config.js</code>配置文件</p>
 <pre><code>pm2 ecosystem
 </code></pre>
-<h3 id="修改pm2配置文件-增加apps节点"><a href="#修改pm2配置文件-增加apps节点" class="headerlink" title="修改pm2配置文件, 增加apps节点"></a>修改pm2配置文件, 增加apps节点</h3><pre><code>apps : [
+<h3 id="修改pm2配置文件-增加apps节点">修改pm2配置文件, 增加apps节点</h3>
+<pre><code>apps : [
     &#123;
-        name: &#39;blog&#39;, # 修改为您的项目名称
-        exec_mode: &#39;cluster&#39;,
-        instances: &#39;2&#39;, # 按需设置进程数量
-        script: &#39;./node_modules/nuxt/bin/nuxt.js&#39;,
-        args: &#39;start&#39;
+        name: 'blog', # 修改为您的项目名称
+        exec_mode: 'cluster',
+        instances: '2', # 按需设置进程数量
+        script: './node_modules/nuxt/bin/nuxt.js',
+        args: 'start'
     &#125;
 ]
 </code></pre>
-<h3 id="启动pm2"><a href="#启动pm2" class="headerlink" title="启动pm2"></a>启动pm2</h3><pre><code>npm run pm2
+<h3 id="启动pm2">启动pm2</h3>
+<pre><code>npm run pm2
 </code></pre>
-<h3 id="查看运行实例"><a href="#查看运行实例" class="headerlink" title="查看运行实例"></a>查看运行实例</h3><pre><code>pm2 list
+<h3 id="查看运行实例">查看运行实例</h3>
+<pre><code>pm2 list
 </code></pre>
-<h3 id="常用pm2命令"><a href="#常用pm2命令" class="headerlink" title="常用pm2命令"></a>常用pm2命令</h3><pre><code># 重启应用
+<h3 id="常用pm2命令">常用pm2命令</h3>
+<pre><code># 重启应用
 pm2 restart all
 pm2 restart [name]
 
@@ -61,21 +78,25 @@ pm2 delete [name]
 pm2 stop all
 pm2 stop [name]
 </code></pre>
-<h3 id="启动pm2控制台，查看实时访问"><a href="#启动pm2控制台，查看实时访问" class="headerlink" title="启动pm2控制台，查看实时访问"></a>启动pm2控制台，查看实时访问</h3><pre><code>pm2 monit
+<h3 id="启动pm2控制台，查看实时访问">启动pm2控制台，查看实时访问</h3>
+<pre><code>pm2 monit
 </code></pre>
 <p><img src="/uploads/pm2_monit.png" alt="pm2 monit"></p>
-<h3 id="在-packge-json-文件的-scripts-中增加pm2启动命令"><a href="#在-packge-json-文件的-scripts-中增加pm2启动命令" class="headerlink" title="在 packge.json 文件的 scripts 中增加pm2启动命令"></a>在 <code>packge.json</code> 文件的 <code>scripts</code> 中增加pm2启动命令</h3><pre><code>&quot;scripts&quot;: &#123;
-    &quot;dev&quot;: &quot;nuxt --hostname &#39;0.0.0.0&#39;&quot;,
+<h3 id="在-packge-json-文件的-scripts-中增加pm2启动命令">在 <code>packge.json</code> 文件的 <code>scripts</code> 中增加pm2启动命令</h3>
+<pre><code>&quot;scripts&quot;: &#123;
+    &quot;dev&quot;: &quot;nuxt --hostname '0.0.0.0'&quot;,
     &quot;build&quot;: &quot;nuxt build&quot;,
     &quot;start&quot;: &quot;nuxt start&quot;,
     &quot;generate&quot;: &quot;nuxt generate&quot;,
     &quot;pm2&quot;: &quot;nuxt build &amp;&amp; pm2 start npm --name labapps -- run start&quot;
   &#125;,
 </code></pre>
-<h3 id="部署到web服务器"><a href="#部署到web服务器" class="headerlink" title="部署到web服务器"></a>部署到web服务器</h3><p>将除了<code>node_modules</code>目录之外的所有文件复制到你的web目录下面，启动web实例</p>
+<h3 id="部署到web服务器">部署到web服务器</h3>
+<p>将除了<code>node_modules</code>目录之外的所有文件复制到你的web目录下面，启动web实例</p>
 <pre><code>npm run pm2
 </code></pre>
-<h3 id="修改nginx配置，增加反向代理"><a href="#修改nginx配置，增加反向代理" class="headerlink" title="修改nginx配置，增加反向代理"></a>修改nginx配置，增加反向代理</h3><p>注意，反向代理的端口必须与你的<code>package.json</code>中设置的应用的端口相匹配，这样才能在同一台主机，运行多个pm2实例，并且互不影响</p>
+<h3 id="修改nginx配置，增加反向代理">修改nginx配置，增加反向代理</h3>
+<p>注意，反向代理的端口必须与你的<code>package.json</code>中设置的应用的端口相匹配，这样才能在同一台主机，运行多个pm2实例，并且互不影响</p>
 <pre><code>upstream labapps &#123;
     server 127.0.0.1:3334;
     keepalive 64;
@@ -124,10 +145,15 @@ server &#123;
     &#125;
 &#125;
 </code></pre>
-<h3 id="查看访问"><a href="#查看访问" class="headerlink" title="查看访问"></a>查看访问</h3><pre><code>pm2 monit
+<h3 id="查看访问">查看访问</h3>
+<pre><code>pm2 monit
 </code></pre>
-<h3 id="查看实时日志"><a href="#查看实时日志" class="headerlink" title="查看实时日志"></a>查看实时日志</h3><pre><code>pm2 logs
+<h3 id="查看实时日志">查看实时日志</h3>
+<pre><code>pm2 logs
 </code></pre>
-<p>另外，pm2还提供了<code>pm2 monitor</code>更强大的web端控制台，可以在web实时查看你的服务运行情况，只需要简单地配置即可.<br><a target="_blank" rel="noopener" href="https://pm2.keymetrics.io/docs/usage/monitoring/">https://pm2.keymetrics.io/docs/usage/monitoring/</a></p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a target="_blank" rel="noopener" href="https://nuxtjs.org/deployments/pm2/">Deploy Nuxt using PM2</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/398023953">常用的seo查询工具(有哪些seo软件网站平台)</a></p>
-</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><em></em><a class="button is-default" href="/2022/11/28/Hello-Nuphy-Halo-65/" title="Hello, Nuphy Halo 65"><span class="has-text-weight-semibold">Next: Hello, Nuphy Halo 65</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com/welsonla"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/welsonla"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/welsonla_"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--></section><p><span>Copyright ©</span><span> welsonla 2022</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>
+<p>另外，pm2还提供了<code>pm2 monitor</code>更强大的web端控制台，可以在web实时查看你的服务运行情况，只需要简单地配置即可.<br>
+<a target="_blank" rel="noopener" href="https://pm2.keymetrics.io/docs/usage/monitoring/">https://pm2.keymetrics.io/docs/usage/monitoring/</a></p>
+<h3 id="参考资料">参考资料</h3>
+<p><a target="_blank" rel="noopener" href="https://nuxtjs.org/deployments/pm2/">Deploy Nuxt using PM2</a><br>
+<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/398023953">常用的seo查询工具(有哪些seo软件网站平台)</a></p>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2022/12/09/learning-figma-day-1/" title="Learning figma day 1 - 基本操作与Figma的一些常用快捷键"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">上一页: Learning figma day 1 - 基本操作与Figma的一些常用快捷键</span></a><a class="button is-default" href="/2022/11/28/Hello-Nuphy-Halo-65/" title="Hello, Nuphy Halo 65"><span class="has-text-weight-semibold">下一页: Hello, Nuphy Halo 65</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com/welsonla"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/welsonla"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/welsonla_"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--></section><p><span>Copyright ©</span><span> welsonla 2022</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>

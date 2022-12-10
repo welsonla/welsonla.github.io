@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://welsonla.timebot.net/2022/12/09/learning-figma-day-1/</loc>
+    <lastmod>2022-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://welsonla.timebot.net/2022/12/10/learning-figma-day-2/</loc>
+    <lastmod>2022-12-10</lastmod>
+  </url>
+  <url>
     <loc>http://welsonla.timebot.net/2022/11/29/deploy-nuxt-ssr-with-pm2-and-nginx/</loc>
-    <lastmod>2022-11-30</lastmod>
+    <lastmod>2022-12-06</lastmod>
   </url>
   <url>
     <loc>http://welsonla.timebot.net/2015/07/13/application-transport-security-in-ios9/</loc>
