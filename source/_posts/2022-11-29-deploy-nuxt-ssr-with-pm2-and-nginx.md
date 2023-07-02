@@ -1,9 +1,9 @@
 ---
-title: deply nuxt ssr with pm2 and nginx
+title: deploy nuxt ssr with pm2 and nginx
 date: 2022-11-29 11:30:55
 categories: Node
 keywords: nuxt, ssr, hexo, nginx, pm2, 服务端渲染
-tags: 
+tags:
     - Nuxt
     - pm2
     - Nginx
@@ -20,6 +20,7 @@ tags:
 
 [https://seo.chinaz.com/](https://seo.chinaz.com/)
 [https://www.aizhan.com/](https://www.aizhan.com/)
+[https://pagespeed.web.dev/](https://pagespeed.web.dev/)
 
 
 ### 切换Nuxt到ssr模式
@@ -97,6 +98,24 @@ pm2 monit
 
 ![pm2 monit](/uploads/pm2_monit.png)
 
+
+### 在 `packge.json` 文件的 `scripts` 中增加pm2启动命令
+```
+"scripts": {
+    "dev": "nuxt --hostname '0.0.0.0'",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "pm2": "nuxt build && pm2 start npm --name labapps -- run start"
+  },
+```
+
+### 部署到web服务器
+将除了`node_modules`目录之外的所有文件复制到你的web目录下面，启动web实例
+```
+npm run pm2
+```
+
 ### 修改nginx配置，增加反向代理
 
 注意，反向代理的端口必须与你的`package.json`中设置的应用的端口相匹配，这样才能在同一台主机，运行多个pm2实例，并且互不影响
@@ -164,7 +183,6 @@ pm2 logs
 https://pm2.keymetrics.io/docs/usage/monitoring/
 
 
-
-###  参考资料 
+###  参考资料
 [Deploy Nuxt using PM2](https://nuxtjs.org/deployments/pm2/)
 [常用的seo查询工具(有哪些seo软件网站平台)](https://zhuanlan.zhihu.com/p/398023953)
