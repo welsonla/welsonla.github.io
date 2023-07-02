@@ -7,13 +7,6 @@
     </url>
 
     <url>
-        <loc>http://welsonla.timebot.net/categories/life/</loc>
-        <lastmod>2020-01-01T02:23:42.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://welsonla.timebot.net/categories/%25E6%258A%2580%25E6%259C%25AF%25E9%259A%258F%25E7%25AC%2594/</loc>
         <lastmod>2020-01-01T02:23:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -93,6 +86,13 @@
     <url>
         <loc>http://welsonla.timebot.net/categories/Design/</loc>
         <lastmod>2022-12-10T13:55:47.846Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://welsonla.timebot.net/categories/life/</loc>
+        <lastmod>2023-07-02T00:57:40.561Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

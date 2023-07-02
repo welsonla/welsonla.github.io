@@ -6,7 +6,7 @@
   <link href="http://welsonla.timebot.net/atom.xml" rel="self"/>
   
   <link href="http://welsonla.timebot.net/"/>
-  <updated>2022-12-10T13:55:42.671Z</updated>
+  <updated>2023-07-02T00:57:40.561Z</updated>
   <id>http://welsonla.timebot.net/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《&gt;TED演讲：我们为什么睡觉》 笔记</title>
+    <link href="http://welsonla.timebot.net/2023/07/02/Why-we-need-sleep/"/>
+    <id>http://welsonla.timebot.net/2023/07/02/Why-we-need-sleep/</id>
+    <published>2023-07-02T00:55:38.000Z</published>
+    <updated>2023-07-02T00:57:40.561Z</updated>
+    
+    
+    
+    
+    <category term="life" scheme="http://welsonla.timebot.net/categories/life/"/>
+    
+    
+    <category term="Sleep" scheme="http://welsonla.timebot.net/tags/Sleep/"/>
+    
+    <category term="Health" scheme="http://welsonla.timebot.net/tags/Health/"/>
+    
+  </entry>
   
   <entry>
     <title>Learning-figma-day-2 自定义样式与组件</title>
@@ -461,42 +480,6 @@
     
     
     <category term="something" scheme="http://welsonla.timebot.net/categories/something/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>为什么使用Mantle</title>
-    <link href="http://welsonla.timebot.net/2015/10/08/why-mantle/"/>
-    <id>http://welsonla.timebot.net/2015/10/08/why-mantle/</id>
-    <published>2015-10-08T08:06:07.000Z</published>
-    <updated>2022-11-29T07:38:27.240Z</updated>
-    
-    <content type="html"><![CDATA[<p>项目地址: <a href="https://github.com/Mantle/Mantle">https://github.com/Mantle/Mantle</a></p><p>今年上半年在两个项目中都将Model层替换为Mantle，大大减少了开发中实体转换的时间;选择mantle的初衷是因为看到了大神的blog,里面的应用场景也是在开发中我们经常遇到的情况:<br><a href="http://www.iwangke.me/2014/10/13/Why-Changba-iOS-choose-Mantle/">iWangKe.me - 为什么唱吧iOS 6.0选择了Mantle</a></p><h2 id="对比一下"><a href="#对比一下" class="headerlink" title="对比一下"></a>对比一下</h2><pre><code># http://bubbler.labs.douban.com/j/user/wheats&#123;  &quot;homepage&quot;: &quot;http://www.douban.com/people/wheats&quot;,  &quot;icon&quot;: &quot;http://img3.douban.com/icon/u46721592-5.jpg&quot;,  &quot;userid&quot;: &quot;46721592&quot;,  &quot;r&quot;: 0,  &quot;stats&quot;: &#123;    &quot;board&quot;: 0,    &quot;bub&quot;: 0,    &quot;collect&quot;: 0  &#125;,  &quot;title&quot;: &quot;welsonla&quot;,  &quot;uid&quot;: &quot;wheats&quot;&#125;</code></pre><span id="more"></span><p><img src="http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvrr4eyjj20gp0eqjvh.jpg"></p><p><img src="http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvsjo0s6j20go0f7whk.jpg"></p><h2 id="You-should-know"><a href="#You-should-know" class="headerlink" title="You should know:"></a>You should know:</h2><ul><li>使用Mantle需要继承MTLModel</li><li>如果需要将实体中的某个字段映射成一个实体或者实体的数组，需要继承MTLJSONSerializing</li><li>Mantle需要一个字典来讲字典中的字段与实体的字段进行匹配</li></ul><h2 id="将JSON转换为制定的Model"><a href="#将JSON转换为制定的Model" class="headerlink" title="将JSON转换为制定的Model"></a>将JSON转换为制定的Model</h2><pre><code>MDoubanUser *allModel = [MTLJSONAdapter modelOfClass:[MDoubanUser class] fromJSONDictionary:rstlDict] error:nil]</code></pre><h2 id="将JSON中的数组转换为Model的数组"><a href="#将JSON中的数组转换为Model的数组" class="headerlink" title="将JSON中的数组转换为Model的数组"></a>将JSON中的数组转换为Model的数组</h2><pre><code>NSArray *users = [MTLJSONAdapter modelsOfClass:[MDoubanUser class] fromJSONArray:userArray error:nil];</code></pre><h2 id="将某个字段对应到某个实体"><a href="#将某个字段对应到某个实体" class="headerlink" title="将某个字段对应到某个实体"></a>将某个字段对应到某个实体</h2><pre><code>+(NSValueTransformer *)JSONTransformerForKey:(NSString *)key&#123;  if ([key isEqualToString:@&quot;stats&quot;]) &#123;      #假设上诉到json中的stats创建了一个单独的实体类为MStats,      return [MTLJSONAdapter dictionaryTransformerWithModelClass:[MStats class]];  &#125;else if([key isEqualToString:@&quot;books&quot;])&#123;      #假设中json中有一个books数组，并有对应的实体MBook      return return [MTLJSONAdapter arrayTransformerWithModelClass:[MBook class]];;  &#125;  return nil;&#125;</code></pre><h2 id="自定义转换"><a href="#自定义转换" class="headerlink" title="自定义转换"></a>自定义转换</h2><p>自定义转换只要定义一个字段名+JSONTransformer结尾的方法，就会执行我们自定义的转换,比如时间格式化，对某些字符进行一些操作处理</p><pre><code># 将uid前面加上&quot;Author&quot;+ (NSValueTransformer *)uidJSONTransformer&#123;    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *uid, BOOL *success, NSError *__autoreleasing *error) &#123;        return [@&quot;Author: &quot; stringByAppendingString:uid];    &#125;];&#125;</code></pre><h2 id="多个字段对应"><a href="#多个字段对应" class="headerlink" title="多个字段对应"></a>多个字段对应</h2><p>在项目中，经常遇到，接口A返回的用户id字段说uid,接口B返回的用户字段是ID，这种情况我们只需要中Model中将两个字段存到一个数组绑定到同一个属性上就可以了</p><pre><code>+ (NSDictionary *)JSONKeyPathsByPropertyKey&#123;    return @&#123;        @&quot;uid&quot;:@[@&quot;uid&quot;,@&quot;ID&quot;],        @&quot;userid&quot;:@&quot;userid&quot;,        @&quot;stats&quot;:@&quot;stats&quot;,        @&quot;title&quot;:@&quot;title&quot;,        @&quot;r&quot;:@&quot;r&quot;,        @&quot;homepage&quot;:@&quot;homepage&quot;,        @&quot;icon&quot;:@&quot;icon&quot;    &#125;;&#125;</code></pre><h2 id="将实体中的值封装成一个dictionary，方便接口传输"><a href="#将实体中的值封装成一个dictionary，方便接口传输" class="headerlink" title="将实体中的值封装成一个dictionary，方便接口传输"></a>将实体中的值封装成一个dictionary，方便接口传输</h2><pre><code>#使用全部的字段NSDictionary *params = [user dictionaryValue];#使用部分的字段NSDictionary *params = [address dictionaryWithValuesForKeys:@[@&quot;uid&quot;,@&quot;stats&quot;,@&quot;homepage&quot;]];</code></pre><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>在项目的开发过程中，我抽时间做了一个小工具，可以方便的将JSON转换为Mantle支持的Model类，希望对你们有帮助</p><p>Source: <a href="https://github.com/TimeBots/ModelBot">https://github.com/TimeBots/ModelBot</a><br>Download: <a href="https://github.com/TimeBots/ModelBot/releases/download/0.3.0/ModelBot.0.3.0.zip">ModelBot Download</a></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;项目地址: &lt;a href=&quot;https://github.com/Mantle/Mantle&quot;&gt;https://github.com/Mantle/Mantle&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;今年上半年在两个项目中都将Model层替换为Mantle，大大减少了开发中实体转换的时间;选择mantle的初衷是因为看到了大神的blog,里面的应用场景也是在开发中我们经常遇到的情况:&lt;br&gt;&lt;a href=&quot;http://www.iwangke.me/2014/10/13/Why-Changba-iOS-choose-Mantle/&quot;&gt;iWangKe.me - 为什么唱吧iOS 6.0选择了Mantle&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;对比一下&quot;&gt;&lt;a href=&quot;#对比一下&quot; class=&quot;headerlink&quot; title=&quot;对比一下&quot;&gt;&lt;/a&gt;对比一下&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;# http://bubbler.labs.douban.com/j/user/wheats
-
-&amp;#123;
-  &amp;quot;homepage&amp;quot;: &amp;quot;http://www.douban.com/people/wheats&amp;quot;,
-  &amp;quot;icon&amp;quot;: &amp;quot;http://img3.douban.com/icon/u46721592-5.jpg&amp;quot;,
-  &amp;quot;userid&amp;quot;: &amp;quot;46721592&amp;quot;,
-  &amp;quot;r&amp;quot;: 0,
-  &amp;quot;stats&amp;quot;: &amp;#123;
-    &amp;quot;board&amp;quot;: 0,
-    &amp;quot;bub&amp;quot;: 0,
-    &amp;quot;collect&amp;quot;: 0
-  &amp;#125;,
-  &amp;quot;title&amp;quot;: &amp;quot;welsonla&amp;quot;,
-  &amp;quot;uid&amp;quot;: &amp;quot;wheats&amp;quot;
-&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    <category term="iOS" scheme="http://welsonla.timebot.net/categories/iOS/"/>
     
     
   </entry>
