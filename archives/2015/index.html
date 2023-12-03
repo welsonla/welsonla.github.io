@@ -1,89 +1,84 @@
-<!DOCTYPE html><html class="appearance-auto" lang="zh-Hans"><head><meta charset="UTF-8"><title>welsonla's blog</title><meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=#{theme.ga_track_id}"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html class="appearance-auto" lang="zh-Hans"><head><meta charset="UTF-8"><title>welsonla's blog</title><meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-J8R1NG8CX8"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
-gtag('config', 'UA-19152389-6');
+gtag('config', 'G-J8R1NG8CX8');
 </script><!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/widget-post-list.css"><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="NSLog("Life & Code");" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">welsonla's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><span>Archives · 2015</span></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><article class="post-container is-flex is-justify-content-center section container is-max-widescreen pt-4 px-2"><div class="columns is-variable is-1-tablet is-3-desktop-only is-2-widescreen is-full-width"><section class="column"><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/10/10/start-using-hexo/">Blog迁移到了Hexo</a></h2><time class="has-text-grey" datetime="2015-10-10T02:58:17.000Z">2015-10-10</time><p class="is-flex-grow-2 mt-2">Octopress的痛点受不了_deploy文件夹的折磨，以及AutoGenerate Disable这错误导致生成问题，rake deploy靠运气成功,今天将blog迁移到了hexo
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">welsonla's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><span>归档 · 2015</span></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">首页</a></h3><h3 class="is-inline-block"><a href="/about">关于</a></h3><h3 class="is-inline-block"><a href="/archives">归档</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">首页</a></h3><h3 class="is-inline-block"><a href="/about">关于</a></h3><h3 class="is-inline-block"><a href="/archives">归档</a></h3></header><main><article class="post-container is-flex is-justify-content-center section container is-max-widescreen pt-4 px-2"><div class="columns is-variable is-1-tablet is-3-desktop-only is-2-widescreen is-full-width"><section class="column"><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/10/10/start-using-hexo/">Blog迁移到了Hexo</a></h2><time class="has-text-grey" datetime="2015-10-10T02:58:17.000Z">2015-10-10</time><p class="is-flex-grow-2 mt-2">Octopress的痛点
+受不了_deploy文件夹的折磨，以及AutoGenerate Disable这错误导致生成问题，rake deploy靠运气成功,今天将blog迁移到了hexo
 Hexo优点
+
 更简洁的语法
 
- hexo new &quot;title&quot;
- hexo new page
- hexo g #生成
- hexo d #部署
- hexo s #运行
+12345hexo new &amp;quot;title&amp;quot;hexo new pagehexo g #生成hexo d #部署hexo s #运行
 
 
 更快的生成速度
+
 
 直观的部署结果
 
 
 安装
-安装Node  
- 参考node官方 https://nodejs.org
+
+
+安装Node
+参考node官方 https://nodejs.org
+
 
 安装hexo以及用到的东西
 
 
-npm install -g hexo-cli
-
+12npm install -g hexo-cli
 
 创建Blog
 
-hexo init blog
-cd blog
-npm install
-
-#安装Server
-npm install hexo-serv..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/10/10/start-using-hexo/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/10/10/hello-world/">Hello World</a></h2><time class="has-text-grey" datetime="2015-10-10T02:30:17.000Z">2015-10-10</time><p class="is-flex-grow-2 mt-2">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
-
+123456hexo init blogcd blognpm install#安装Servernpm instal..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/10/10/start-using-hexo/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/10/10/hello-world/">Hello World</a></h2><time class="has-text-grey" datetime="2015-10-10T02:30:17.000Z">2015-10-10</time><p class="is-flex-grow-2 mt-2">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick Start
+Create a new post
+1$ hexo new &amp;quot;My New Post&amp;quot;
 More info: Writing
-Run server$ hexo server
-
+Run server
+1$ hexo server
 More info: Server
-Generate static files$ hexo generate
-
-More info..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/10/10/hello-world/">Read more</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvrr4eyjj20gp0eqjvh.jpg" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2015/10/08/why-mantle/"><img class="post-cover-img js-img-fadeIn" src="http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvrr4eyjj20gp0eqjvh.jpg" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/10/08/why-mantle/">为什么使用Mantle</a></h2><time class="has-text-grey" datetime="2015-10-08T08:06:07.000Z">2015-10-08</time><p class="is-flex-grow-2 mt-2">项目地址: https://github.com/Mantle/Mantle
-今年上半年在两个项目中都将Model层替换为Mantle，大大减少了开发中实体转换的时间;选择mantle的初衷是因为看到了大神的blog,里面的应用场景也是在开发中我们经常遇到的情况:iWangKe.me - 为什么唱吧iOS 6.0选择了Mantle
-对比一下# http://bubbler.labs.douban.com/j/user/wheats
-
-&amp;#123;
-  &amp;quot;homepage&amp;quot;: &amp;quot;http://www.douban.com/people/wheats&amp;quot;,
-  &amp;quot;icon&amp;quot;: &amp;quot;http://img3.douban.com/icon/u4672..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/10/08/why-mantle/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/07/13/application-transport-security-in-ios9/">Application Transport Security</a></h2><time class="has-text-grey" datetime="2015-07-13T01:09:45.000Z">2015-07-13</time><p class="is-flex-grow-2 mt-2">In Xcode7 You should add follow keys in Info.plist to allow the http requestA detail discuss could fond herehttps://forums.developer.apple.com/thread/3544
-&amp;lt;key&amp;gt;NSAppTransportSecurity&amp;lt;/key&amp;gt;  
-&amp;lt;dict&amp;gt;  
-     &amp;lt;key&amp;gt;NSAllowsArbitraryLoads&amp;lt;/key&amp;gt;&amp;lt;true/&amp;gt;  
-&amp;lt;/dict&amp;gt;  
-
-</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/07/13/application-transport-security-in-ios9/">Read more</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0n47wtrj20ka0bygnf.jpg" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2015/05/04/something-about-xctest/"><img class="post-cover-img js-img-fadeIn" src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0n47wtrj20ka0bygnf.jpg" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/05/04/something-about-xctest/">关于Xcode单元测试(XCTest)的一些总结</a></h2><time class="has-text-grey" datetime="2015-05-04T02:58:17.000Z">2015-05-04</time><p class="is-flex-grow-2 mt-2">单元测试可以让我们快速检测项目接口与一些功能的可用性，这次编写了大量的单元测试，让我对之前的一些疑惑有了一个透彻的理解
+Generate static files
+1$ hexo gene..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/10/10/hello-world/">更多</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvrr4eyjj20gp0eqjvh.jpg" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2015/10/08/why-mantle/"><img class="post-cover-img js-img-fadeIn" src="http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvrr4eyjj20gp0eqjvh.jpg" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/10/08/why-mantle/">为什么使用Mantle</a></h2><time class="has-text-grey" datetime="2015-10-08T08:06:07.000Z">2015-10-08</time><p class="is-flex-grow-2 mt-2">项目地址: https://github.com/Mantle/Mantle
+今年上半年在两个项目中都将Model层替换为Mantle，大大减少了开发中实体转换的时间;选择mantle的初衷是因为看到了大神的blog,里面的应用场景也是在开发中我们经常遇到的情况:
+iWangKe.me - 为什么唱吧iOS 6.0选择了Mantle
+对比一下
+12345678910111213141516# http://bubbler.labs.douban.com/j/user/wheats&amp;#123;  &amp;quot;homepage&amp;quot;: &amp;quot;http://www.douban.com/people/wheats&amp;quot;,  &amp;quot;icon&amp;quot;: &amp;quot;http://img3...</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/10/08/why-mantle/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/07/13/application-transport-security-in-ios9/">Application Transport Security</a></h2><time class="has-text-grey" datetime="2015-07-13T01:09:45.000Z">2015-07-13</time><p class="is-flex-grow-2 mt-2">In Xcode7 You should add follow keys in Info.plist to allow the http request
+A detail discuss could fond here
+https://forums.developer.apple.com/thread/3544
+1234&amp;lt;key&amp;gt;NSAppTransportSecurity&amp;lt;/key&amp;gt;  &amp;lt;dict&amp;gt;       &amp;lt;key&amp;gt;NSAllowsArbitraryLoads&amp;lt;/key&amp;gt;&amp;lt;true/&amp;gt;  &amp;lt;/dict&amp;gt;  </p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/07/13/application-transport-security-in-ios9/">更多</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0n47wtrj20ka0bygnf.jpg" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2015/05/04/something-about-xctest/"><img class="post-cover-img js-img-fadeIn" src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0n47wtrj20ka0bygnf.jpg" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/05/04/something-about-xctest/">关于Xcode单元测试(XCTest)的一些总结</a></h2><time class="has-text-grey" datetime="2015-05-04T02:58:17.000Z">2015-05-04</time><p class="is-flex-grow-2 mt-2">单元测试可以让我们快速检测项目接口与一些功能的可用性，这次编写了大量的单元测试，让我对之前的一些疑惑有了一个透彻的理解
 
 单元测试中，可以直接import我们项目中的类
 想要执行的方法，必须使用test开头，testLogin会被执行，userLogin这样的方法名不会被执行
 单元测试没有头文件，一些变量声明，写在interface里面
 对于一些变量的初始化，放到setup里面进行
-</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/05/04/something-about-xctest/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/04/12/rails-code-snippets/">Rails code snippets</a></h2><time class="has-text-grey" datetime="2015-04-12T04:55:48.000Z">2015-04-12</time><p class="is-flex-grow-2 mt-2">(摘录来自: persie. “Ruby on Rails 教程”)
-short keyg   generate
-d   destory
-s   server
-
-脚手架以及一些常用的变量类型rails g scaffold user name:string age:int email:string description:text cash:float
-
-删除脚手架生成的代码rails d scaffold Users
-
-生成Controller与actionrails g controller TodoList list delete index
-
-删除Controllerrails d controller TodoList list delete index
-
-生成Modelrails g model..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/04/12/rails-code-snippets/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/02/01/my-2014/">我的2014</a></h2><time class="has-text-grey" datetime="2015-02-01T13:51:11.000Z">2015-02-01</time><p class="is-flex-grow-2 mt-2">生活今年完成了几件大事:三月，订婚五月，买房，成为了房奴八月，拍婚纱照九月，结婚
+</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/05/04/something-about-xctest/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/04/12/rails-code-snippets/">Rails code snippets</a></h2><time class="has-text-grey" datetime="2015-04-12T04:55:48.000Z">2015-04-12</time><p class="is-flex-grow-2 mt-2">(摘录来自: persie. “Ruby on Rails 教程”)
+short key
+123g   generated   destorys   server
+脚手架以及一些常用的变量类型
+1rails g scaffold user name:string age:int email:string description:text cash:float
+删除脚手架生成的代码
+1rails d scaffold Users
+生成Controller与action
+1rails g controller TodoList list delete index
+删除Controller
+1rails d controller TodoList list delete index
+生成Model
+1rails ..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/04/12/rails-code-snippets/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/02/01/my-2014/">我的2014</a></h2><time class="has-text-grey" datetime="2015-02-01T13:51:11.000Z">2015-02-01</time><p class="is-flex-grow-2 mt-2">生活
+今年完成了几件大事:
+三月，订婚
+五月，买房，成为了房奴
+八月，拍婚纱照
+九月，结婚
 今年生活上发生了很大的变化，与小关关组建了新的家庭，也让我肩负起了一个男人的责任，为了我们新的生活而奋斗。希望我能为家人和老婆创造更好的生活条件。
 感谢小关同志的陪伴与理解，七年长跑，我们终于走到了一起
-工作今年工作发生了变动，离开了工作三年的老东家，加入了新公司，在各方面都对自己的提升非常大，技术上有了比较明显的提升，由于产品是直接面对用户的，在各方面的细节的要求也比较高，尤其是用户体验方面。
+工作
+今年工作发生了变动，离开了工作三年的老东家，加入了新公司，在各方面都对自己的提升非常大，技术上有了比较明显的提升，由于产品是直接面对用户的，在各方面的细节的要求也比较高，尤其是用户体验方面。
 跨部门沟通上，由于团队非常大，涉及的业务部门也比较多，这一年有了不少机会与别的部门进行工作上的沟通协作，与人沟通上，也让我不再对人际交往有恐惧感。
-工作方式上，拆分复杂业务，从最小的点逐步分析整个复杂的功能系统，在功能的实现上有了更明..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/02/01/my-2014/">Read more</a></section></article></section><aside class="column is-hidden-mobile is-4-tablet is-3-widescreen"><div style="position: sticky; top: 50px;"><main class="aside-card-container archives-widget is-in-archive-page"><h3>Archives</h3><section><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li></ul></section></main></div></aside></div></article><script>$claudia.fadeInImage(null, $claudia.blurBackdropImg)
+工作方式上，拆分复杂业务，从最小的点逐步分析整个复杂的功能系统，在功能的实..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/02/01/my-2014/">更多</a></section></article></section><aside class="column is-hidden-mobile is-4-tablet is-3-widescreen"><div style="position: sticky; top: 50px;"><main class="aside-card-container archives-widget is-in-archive-page"><h3>归档</h3><section><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li></ul></section></main></div></aside></div></article><script>$claudia.fadeInImage(null, $claudia.blurBackdropImg)
 
 window.addEventListener('resize', $claudia.throttle(function () {
     var images = document.querySelectorAll('.js-img-fadeIn')

@@ -1,95 +1,53 @@
-<!DOCTYPE html><html class="appearance-auto" lang="zh-Hans"><head><meta charset="UTF-8"><title>welsonla's blog</title><meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=#{theme.ga_track_id}"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html class="appearance-auto" lang="zh-Hans"><head><meta charset="UTF-8"><title>welsonla's blog</title><meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-J8R1NG8CX8"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
-gtag('config', 'UA-19152389-6');
+gtag('config', 'G-J8R1NG8CX8');
 </script><!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/widget-post-list.css"><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="NSLog("Life & Code");" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">welsonla's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><span>Categories · 技术随笔</span></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><article class="post-container is-flex is-justify-content-center section container is-max-widescreen pt-4 px-2"><div class="columns is-variable is-1-tablet is-3-desktop-only is-2-widescreen is-full-width"><section class="column"><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/06/03/blog-with-github-4/">blog with github(4)-开始写吧，骚年</a></h2><time class="has-text-grey" datetime="2013-06-03T05:57:00.000Z">2013-06-03</time><p class="is-flex-grow-2 mt-2">Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog&amp;#x2F;categories&amp;#x2F;&amp;lt;category&amp;gt;&amp;#x2F;atom.xml中找到这些内容
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">welsonla's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><span>分类 · 技术随笔</span></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">首页</a></h3><h3 class="is-inline-block"><a href="/about">关于</a></h3><h3 class="is-inline-block"><a href="/archives">归档</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">首页</a></h3><h3 class="is-inline-block"><a href="/about">关于</a></h3><h3 class="is-inline-block"><a href="/archives">归档</a></h3></header><main><article class="post-container is-flex is-justify-content-center section container is-max-widescreen pt-4 px-2"><div class="columns is-variable is-1-tablet is-3-desktop-only is-2-widescreen is-full-width"><section class="column"><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/06/03/blog-with-github-4/">blog with github(4)-开始写吧，骚年</a></h2><time class="has-text-grey" datetime="2013-06-03T05:57:00.000Z">2013-06-03</time><p class="is-flex-grow-2 mt-2">Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/&amp;lt;category&amp;gt;/atom.xml中找到这些内容
 ####Post
-这些Post页面必须存放在Source&amp;#x2F;_posts目录下面，并且命名方式和jekyll的命名方式一样，会转换成YYYY-MM-DD-Post-title.markdown，这个文件的名字就是你的blog的url slug，日期帮助你排序这些文章
-rake new_post[&quot;Title&quot;]
-
+这些Post页面必须存放在Source/_posts目录下面，并且命名方式和jekyll的命名方式一样，会转换成YYYY-MM-DD-Post-title.markdown，这个文件的名字就是你的blog的url slug，日期帮助你排序这些文章
+1rake new_post[&amp;quot;Title&amp;quot;]
 在使用了ZSH的话，你要这样创建
-rake new_post或者rake new_post[\&quot;Title\&quot;]
-
-例如..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/06/03/blog-with-github-4/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/06/03/blog-with-github-3/">blog with github(3)-Octopress配置</a></h2><time class="has-text-grey" datetime="2013-06-03T05:46:00.000Z">2013-06-03</time><p class="is-flex-grow-2 mt-2">Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件
-_config.yml       # Main config (Jekyll's settings)
-Rakefile          # Configs for deployment
-config.rb         # Compass config
-config.ru         # Rack config
-
+1rake new_post或者rake new_post[\&amp;quot;Title\&amp;quot;]
+例如..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/06/03/blog-with-github-4/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/06/03/blog-with-github-3/">blog with github(3)-Octopress配置</a></h2><time class="has-text-grey" datetime="2013-06-03T05:46:00.000Z">2013-06-03</time><p class="is-flex-grow-2 mt-2">Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件
+12345_config.yml       # Main config (Jekyll&amp;#x27;s settings)Rakefile          # Configs for deploymentconfig.rb         # Compass configconfig.ru         # Rack config
 Rakefile大多是与部署相关的配置,如果不需要同步的话，你就不需要进行修改
 ####Blog配置
-_config.yml有三部分配置,你必须修改url，并且title，subtitle和author也要修改，还有一些第三方的服务需要..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/06/03/blog-with-github-3/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/06/03/blog-with-github-2/">blog with github(2)-部署到github</a></h2><time class="has-text-grey" datetime="2013-06-03T05:20:00.000Z">2013-06-03</time><p class="is-flex-grow-2 mt-2">###使用github pages
+_config.yml有三部分配置,你必须修改url，并且title，subtitle和author也要修改，还有一些第三..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/06/03/blog-with-github-3/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/06/03/blog-with-github-2/">blog with github(2)-部署到github</a></h2><time class="has-text-grey" datetime="2013-06-03T05:20:00.000Z">2013-06-03</time><p class="is-flex-grow-2 mt-2">###使用github pages
 如果想使用 http://username.github.io 的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io）
 用户使用的是Github Pages的master版本下面的public作为你的网站主目录，你可以通过浏览http://username.github.io 来查看。如果你想在source这个版本上面维护代码，并且把内容提交到master分支，Octopress有一个命令来帮助你完成这些
-rake setup_github_pages
-
-然后，他将 
+1rake setup_github_pages
+然后，他将
 
 询问你的github pages的url
 将远程的重‘origin’重命名为‘octopress’
-在远程的origi..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/06/03/blog-with-github-2/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/05/10/blog-with-github/">blog with github(1)-前期准备</a></h2><time class="has-text-grey" datetime="2013-05-09T17:18:00.000Z">2013-05-10</time><p class="is-flex-grow-2 mt-2">##开始之前
+在远程的origin..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/06/03/blog-with-github-2/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/05/10/blog-with-github/">blog with github(1)-前期准备</a></h2><time class="has-text-grey" datetime="2013-05-09T17:18:00.000Z">2013-05-10</time><p class="is-flex-grow-2 mt-2">##开始之前
 
 安装Git
 使用rbenv或者RVM安装ruby 1.9.3
 
 安装完后确保你的ruby版本是1.9.3
-ruby -v
-
+1ruby -v
 ##设置Octopress
-git clone git://github.com/imathis/octopress.git octopress
-cd octopress  
-
+12git clone git://github.com/imathis/octopress.git octopresscd octopress  
 接下来安装一些依赖
-gem install bundler
-rbenv rehash   
-bundle install
-
+123gem install bundlerrbenv rehash   bundle install
 安装Octopress默认主题
-rake install
-
+1rake install
 –未完待续，哥去睡觉
-</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/05/10/blog-with-github/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/05/10/different-of-class-and-category/">different of class and category</a></h2><time class="has-text-grey" datetime="2013-05-09T17:05:00.000Z">2013-05-10</time><p class="is-flex-grow-2 mt-2">当需要重写父类中的方法时，这时候定义子类
-@interface JADanSideController : JASidePanelController
-
-
-@end
-
-
-@implementation JADanSideController
-
-- (UIBarButtonItem *)leftButtonForCenterPanel&amp;amp;#123;
-    
-    UIButton *leftBarButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftBarButton setFrame:CGRectMake(0, 0, 44, 30)];
-    [leftBarButton setBackgroundImage:[UIIma..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/05/10/different-of-class-and-category/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/04/10/generate-github-ssh-keys/">生成 github SSH keys</a></h2><time class="has-text-grey" datetime="2013-04-10T14:16:00.000Z">2013-04-10</time><p class="is-flex-grow-2 mt-2">本文主要来自github官方，Generating SSH Keys
-
-cd ~/.ssh
-
-ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
-
+</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/05/10/blog-with-github/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/05/10/different-of-class-and-category/">different of class and category</a></h2><time class="has-text-grey" datetime="2013-05-09T17:05:00.000Z">2013-05-10</time><p class="is-flex-grow-2 mt-2">当需要重写父类中的方法时，这时候定义子类
+123456789101112131415161718192021@interface JADanSideController : JASidePanelController@end@implementation JADanSideController- (UIBarButtonItem *)leftButtonForCenterPanel&amp;#123;        UIButton *leftBarButton = [UIButton buttonWithType:UIButtonTypeCustom];    [leftBarButton setFrame:CGRectMake(0, 0, 44, 30)];    [leftBarButton setBackg..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/05/10/different-of-class-and-category/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/04/10/generate-github-ssh-keys/">生成 github SSH keys</a></h2><time class="has-text-grey" datetime="2013-04-10T14:16:00.000Z">2013-04-10</time><p class="is-flex-grow-2 mt-2">本文主要来自github官方，Generating SSH Keys
+12345cd ~/.sshssh-keygen -t rsa -C &amp;quot;your_email@example.com&amp;quot;
 下面的步骤可以只敲回车进行确认即可
-Creates a new ssh key using the provided email
-
-Generating public/private rsa key pair.
-
-#这里直接回车就会生成一个默认名为id_rsa
-Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
-
-
-#这里需要你输入一个你加密的key（一定要记住）
-Enter passphrase (empty for no..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/04/10/generate-github-ssh-keys/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/04/10/use-rvm-install-ruby/">使用RVM安装ruby</a></h2><time class="has-text-grey" datetime="2013-04-10T08:58:00.000Z">2013-04-10</time><p class="is-flex-grow-2 mt-2">今天突然发现ruby版本不小心又回到了1.8.7，可能是我修改了rvm的配置文件导致的，于是开始折腾安装rvm和ruby
-首先还是先安装Homebrew吧很简单，一行代码搞定
-ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;
-
+1234567891011121314151617181920212223242526272829Creates a new ssh key using the provided emailGenerating public/private rsa key pair.#这里直接回车就会生成一个默认名为id_rsaEnter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]#这里..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/04/10/generate-github-ssh-keys/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/04/10/use-rvm-install-ruby/">使用RVM安装ruby</a></h2><time class="has-text-grey" datetime="2013-04-10T08:58:00.000Z">2013-04-10</time><p class="is-flex-grow-2 mt-2">今天突然发现ruby版本不小心又回到了1.8.7，可能是我修改了rvm的配置文件导致的，于是开始折腾安装rvm和ruby
+首先还是先安装Homebrew吧
+很简单，一行代码搞定
+1ruby -e &amp;quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&amp;quot;
 安装RVM
-curl -L https://get.rvm.io | bash -s stable --ruby
-
+1curl -L https://get.rvm.io | bash -s stable --ruby
 走着走着发现出错了
-Missing required packages: autoconf, automake, libtool, pkg-config, libyaml, readline, libxml2, libxslt, libksba, openssl, sqlite.
-RVM au..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/04/10/use-rvm-install-ruby/">Read more</a></section></article></section><aside class="column is-hidden-mobile is-4-tablet is-3-widescreen"><div style="position: sticky; top: 50px;"><main class="aside-card-container categories-widget category-page"><h3>Categories</h3><section><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Design/">Design</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ruby/">ruby</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/something/">something</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/">工具控</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">1</span></li></ul></section></main></div></aside></div></article><script>$claudia.fadeInImage(null, $claudia.blurBackdropImg)
+123456Missing required packages: autoconf, automake, libtool, pkg-config, libyaml, readline, libxml2, libxslt, libksba, openss..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/04/10/use-rvm-install-ruby/">更多</a></section></article></section><aside class="column is-hidden-mobile is-4-tablet is-3-widescreen"><div style="position: sticky; top: 50px;"><main class="aside-card-container categories-widget category-page"><h3>分类</h3><section><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Design/">Design</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ruby/">ruby</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/something/">something</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/">工具控</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">1</span></li></ul></section></main></div></aside></div></article><script>$claudia.fadeInImage(null, $claudia.blurBackdropImg)
 
 window.addEventListener('resize', $claudia.throttle(function () {
     var images = document.querySelectorAll('.js-img-fadeIn')

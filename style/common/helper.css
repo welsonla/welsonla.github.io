@@ -32,7 +32,7 @@
   content: "";
   z-index: 100;
   animation: skeleton-ani 1s ease infinite;
-  background: linear-gradient(120deg, hsla(0deg, 0%, 100%, 0) 30%, hsla(0, 0%, 100%, var(--skeleton-flash-color)) 50%, hsla(0deg, 0%, 100%, 0) 70%);
+  background: linear-gradient(120deg, hsla(0, 0%, 100%, 0) 30%, hsla(0, 0%, 100%, var(--skeleton-flash-color)) 50%, hsla(0, 0%, 100%, 0) 70%);
 }
 .skeleton::after {
   content: "";
