@@ -1,281 +1,341 @@
-<!DOCTYPE html><html class="appearance-auto" lang="zh-Hans"><head><meta charset="UTF-8"><title>welsonla's blog</title><meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-J8R1NG8CX8"></script><script>window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-J8R1NG8CX8');
-</script><!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/widget-post-list.css"><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="NSLog("Life & Code");" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">welsonla's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">首页</a></h3><h3 class="is-inline-block"><a href="/about">关于</a></h3><h3 class="is-inline-block"><a href="/archives">归档</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">首页</a></h3><h3 class="is-inline-block"><a href="/about">关于</a></h3><h3 class="is-inline-block"><a href="/archives">归档</a></h3></header><main><article class="post-container is-flex is-justify-content-center section container is-max-widescreen pt-4 px-2"><div class="columns is-variable is-1-tablet is-3-desktop-only is-2-widescreen is-full-width"><section class="column"><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvrr4eyjj20gp0eqjvh.jpg" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2015/10/08/why-mantle/"><img class="post-cover-img js-img-fadeIn" src="http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvrr4eyjj20gp0eqjvh.jpg" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/10/08/why-mantle/">为什么使用Mantle</a></h2><time class="has-text-grey" datetime="2015-10-08T08:06:07.000Z">2015-10-08</time><p class="is-flex-grow-2 mt-2">项目地址: https://github.com/Mantle/Mantle
-今年上半年在两个项目中都将Model层替换为Mantle，大大减少了开发中实体转换的时间;选择mantle的初衷是因为看到了大神的blog,里面的应用场景也是在开发中我们经常遇到的情况:
-iWangKe.me - 为什么唱吧iOS 6.0选择了Mantle
-对比一下
-12345678910111213141516# http://bubbler.labs.douban.com/j/user/wheats&amp;#123;  &amp;quot;homepage&amp;quot;: &amp;quot;http://www.douban.com/people/wheats&amp;quot;,  &amp;quot;icon&amp;quot;: &amp;quot;http://img3...</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/10/08/why-mantle/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/07/13/application-transport-security-in-ios9/">Application Transport Security</a></h2><time class="has-text-grey" datetime="2015-07-13T01:09:45.000Z">2015-07-13</time><p class="is-flex-grow-2 mt-2">In Xcode7 You should add follow keys in Info.plist to allow the http request
-A detail discuss could fond here
-https://forums.developer.apple.com/thread/3544
-1234&amp;lt;key&amp;gt;NSAppTransportSecurity&amp;lt;/key&amp;gt;  &amp;lt;dict&amp;gt;       &amp;lt;key&amp;gt;NSAllowsArbitraryLoads&amp;lt;/key&amp;gt;&amp;lt;true/&amp;gt;  &amp;lt;/dict&amp;gt;  </p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/07/13/application-transport-security-in-ios9/">更多</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0n47wtrj20ka0bygnf.jpg" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2015/05/04/something-about-xctest/"><img class="post-cover-img js-img-fadeIn" src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0n47wtrj20ka0bygnf.jpg" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/05/04/something-about-xctest/">关于Xcode单元测试(XCTest)的一些总结</a></h2><time class="has-text-grey" datetime="2015-05-04T02:58:17.000Z">2015-05-04</time><p class="is-flex-grow-2 mt-2">单元测试可以让我们快速检测项目接口与一些功能的可用性，这次编写了大量的单元测试，让我对之前的一些疑惑有了一个透彻的理解
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>NSLog(&quot;Life &amp; Code&quot;);</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Code &amp; Life"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Code &amp; Life"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助"><meta property="og:type" content="blog"><meta property="og:title" content="NSLog(&quot;Life &amp; Code&quot;);"><meta property="og:url" content="http://welsonla.timebot.net/"><meta property="og:site_name" content="NSLog(&quot;Life &amp; Code&quot;);"><meta property="og:description" content="整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://welsonla.timebot.net/img/og_image.png"><meta property="article:author" content="welsonla"><meta property="article:tag" content="iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://welsonla.timebot.net/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://welsonla.timebot.net"},"headline":"NSLog(\"Life & Code\");","image":["http://welsonla.timebot.net/img/og_image.png"],"author":{"@type":"Person","name":"welsonla"},"publisher":{"@type":"Organization","name":"NSLog(\"Life & Code\");","logo":{"@type":"ImageObject","url":null}},"description":"整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助"}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?cde90d7a66933f255ded25fe7eb3f253";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-J8R1NG8CX8" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-J8R1NG8CX8');</script><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
 
-单元测试中，可以直接import我们项目中的类
-想要执行的方法，必须使用test开头，testLogin会被执行，userLogin这样的方法名不会被执行
-单元测试没有头文件，一些变量声明，写在interface里面
-对于一些变量的初始化，放到setup里面进行
-</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/05/04/something-about-xctest/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/04/12/rails-code-snippets/">Rails code snippets</a></h2><time class="has-text-grey" datetime="2015-04-12T04:55:48.000Z">2015-04-12</time><p class="is-flex-grow-2 mt-2">(摘录来自: persie. “Ruby on Rails 教程”)
-short key
-123g   generated   destorys   server
-脚手架以及一些常用的变量类型
-1rails g scaffold user name:string age:int email:string description:text cash:float
-删除脚手架生成的代码
-1rails d scaffold Users
-生成Controller与action
-1rails g controller TodoList list delete index
-删除Controller
-1rails d controller TodoList list delete index
-生成Model
-1rails ..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/04/12/rails-code-snippets/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2015/02/01/my-2014/">我的2014</a></h2><time class="has-text-grey" datetime="2015-02-01T13:51:11.000Z">2015-02-01</time><p class="is-flex-grow-2 mt-2">生活
-今年完成了几件大事:
-三月，订婚
-五月，买房，成为了房奴
-八月，拍婚纱照
-九月，结婚
-今年生活上发生了很大的变化，与小关关组建了新的家庭，也让我肩负起了一个男人的责任，为了我们新的生活而奋斗。希望我能为家人和老婆创造更好的生活条件。
-感谢小关同志的陪伴与理解，七年长跑，我们终于走到了一起
-工作
-今年工作发生了变动，离开了工作三年的老东家，加入了新公司，在各方面都对自己的提升非常大，技术上有了比较明显的提升，由于产品是直接面对用户的，在各方面的细节的要求也比较高，尤其是用户体验方面。
-跨部门沟通上，由于团队非常大，涉及的业务部门也比较多，这一年有了不少机会与别的部门进行工作上的沟通协作，与人沟通上，也让我不再对人际交往有恐惧感。
-工作方式上，拆分复杂业务，从最小的点逐步分析整个复杂的功能系统，在功能的实..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2015/02/01/my-2014/">更多</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="http://ww2.sinaimg.cn/large/6e8de9dbjw1emk7zcot3oj20880d9t95.jpg" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2014/11/22/mac-mini-show/"><img class="post-cover-img js-img-fadeIn" src="http://ww2.sinaimg.cn/large/6e8de9dbjw1emk7zcot3oj20880d9t95.jpg" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2014/11/22/mac-mini-show/">Mac Mini开箱</a></h2><time class="has-text-grey" datetime="2014-11-22T15:24:00.000Z">2014-11-22</time><p class="is-flex-grow-2 mt-2">###背景
-从3月份换了新工作，就一直在使用自己的电脑，每天背着上下班，后来自己又买了显示器和新的机械键盘。想想这时候如果上Mac mini的话，外设都已经齐全了。
-一直在等9月份的Mini新版，无奈对新版确实有些失望，一直摇摆不定，恰巧双十一的前一天，发现京东的MD387已经降价到了3588，果断决定入手了。</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2014/11/22/mac-mini-show/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2014/09/05/cocoa-tidy-write/">cocoa简洁写法笔记</a></h2><time class="has-text-grey" datetime="2014-09-05T05:14:00.000Z">2014-09-05</time><p class="is-flex-grow-2 mt-2">对cocoa的一些语法糖做的笔记</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2014/09/05/cocoa-tidy-write/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2014/07/14/xcode5-install-command-line-tools/">Xcode5 install command line tools</a></h2><time class="has-text-grey" datetime="2014-07-14T08:56:00.000Z">2014-07-14</time><p class="is-flex-grow-2 mt-2">之前遇到过，一直没做笔记，导致每次都要现查
-1xcode-select --install</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2014/07/14/xcode5-install-command-line-tools/">更多</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="http://ww4.sinaimg.cn/large/6e8de9dbgw1eice18vkrej20rs0jmgnq.jpg" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2014/07/14/instrument-start-fail/"><img class="post-cover-img js-img-fadeIn" src="http://ww4.sinaimg.cn/large/6e8de9dbgw1eice18vkrej20rs0jmgnq.jpg" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2014/07/14/instrument-start-fail/">Instruments无法启动</a></h2><time class="has-text-grey" datetime="2014-07-14T07:57:00.000Z">2014-07-14</time><p class="is-flex-grow-2 mt-2">最近在iOS7的系统上使用Instrument想检查内存的leaks，启动时候总是提示失败，花了些时间，解决了这个问题，做下笔记。</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2014/07/14/instrument-start-fail/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2014/05/11/learn-core-animation-the-hard-way/">Learn core animation the hard way</a></h2><time class="has-text-grey" datetime="2014-05-11T12:43:00.000Z">2014-05-11</time><p class="is-flex-grow-2 mt-2">###Document
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
 
-CABasicAnimation Keypath
-Animation Types and Timing Programming Guide
-CGAffineTransform
-Quartz 2D Programming Guide
-放射变换
-组合动画
-http://www.cnblogs.com/v2m_/archive/2013/05/09/3070187.html
-几个常用动画代码
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
 
-</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2014/05/11/learn-core-animation-the-hard-way/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2014/04/12/why-my-mac-so-slow/">你的Mac慢了么</a></h2><time class="has-text-grey" datetime="2014-04-12T04:56:00.000Z">2014-04-12</time><p class="is-flex-grow-2 mt-2">本子是MC700,已经陪伴我coding了三年,中间升级了内存,硬盘加了SSD,但是自从电池坏掉以后,我拆掉了电池,接电使用,发现越来越卡,经历了三个月左右的煎熬,我的mac终于又重新焕发了青春,说说遇到的问题</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2014/04/12/why-my-mac-so-slow/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2014/01/02/my-2013/">我的2013</a></h2><time class="has-text-grey" datetime="2014-01-02T00:19:00.000Z">2014-01-02</time><p class="is-flex-grow-2 mt-2">####作品
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">NSLog(&quot;Life &amp; Code&quot;);</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2015-10-08T08:06:07.000Z" title="10/8/2015, 4:06:07 PM">2015-10-08</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/iOS/">iOS</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2015/10/08/why-mantle/">为什么使用Mantle</a></p><div class="content"><p>项目地址: <a target="_blank" rel="noopener" href="https://github.com/Mantle/Mantle">https://github.com/Mantle/Mantle</a></p>
+<p>今年上半年在两个项目中都将Model层替换为Mantle，大大减少了开发中实体转换的时间;选择mantle的初衷是因为看到了大神的blog,里面的应用场景也是在开发中我们经常遇到的情况:<br><a target="_blank" rel="noopener" href="http://www.iwangke.me/2014/10/13/Why-Changba-iOS-choose-Mantle/">iWangKe.me - 为什么唱吧iOS 6.0选择了Mantle</a></p>
+<h2 id="对比一下"><a href="#对比一下" class="headerlink" title="对比一下"></a>对比一下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># http://bubbler.labs.douban.com/j/user/wheats</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;homepage&quot;: &quot;http://www.douban.com/people/wheats&quot;,</span><br><span class="line">  &quot;icon&quot;: &quot;http://img3.douban.com/icon/u46721592-5.jpg&quot;,</span><br><span class="line">  &quot;userid&quot;: &quot;46721592&quot;,</span><br><span class="line">  &quot;r&quot;: 0,</span><br><span class="line">  &quot;stats&quot;: &#123;</span><br><span class="line">    &quot;board&quot;: 0,</span><br><span class="line">    &quot;bub&quot;: 0,</span><br><span class="line">    &quot;collect&quot;: 0</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;title&quot;: &quot;welsonla&quot;,</span><br><span class="line">  &quot;uid&quot;: &quot;wheats&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><a class="article-more button is-small is-size-7" href="/2015/10/08/why-mantle/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2015-07-13T01:09:45.000Z" title="7/13/2015, 9:09:45 AM">2015-07-13</time>发表</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2015/07/13/application-transport-security-in-ios9/">Application Transport Security</a></p><div class="content"><p>In Xcode7 You should add follow keys in <code>Info.plist</code> to allow the http request<br>A detail discuss could fond here<br><a target="_blank" rel="noopener" href="https://forums.developer.apple.com/thread/3544">https://forums.developer.apple.com/thread/3544</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;  </span><br><span class="line">&lt;dict&gt;  </span><br><span class="line">     &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;&lt;true/&gt;  </span><br><span class="line">&lt;/dict&gt;  </span><br></pre></td></tr></table></figure></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2015-05-04T02:58:17.000Z" title="5/4/2015, 10:58:17 AM">2015-05-04</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/iOS/">iOS</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2015/05/04/something-about-xctest/">关于Xcode单元测试(XCTest)的一些总结</a></p><div class="content"><p>单元测试可以让我们快速检测项目接口与一些功能的可用性，这次编写了大量的单元测试，让我对之前的一些疑惑有了一个透彻的理解</p>
+<ul>
+<li>单元测试中，可以直接import我们项目中的类</li>
+<li>想要执行的方法，必须使用test开头，testLogin会被执行，userLogin这样的方法名不会被执行</li>
+<li>单元测试没有头文件，一些变量声明，写在interface里面</li>
+<li>对于一些变量的初始化，放到setup里面进行</li>
+</ul></div><a class="article-more button is-small is-size-7" href="/2015/05/04/something-about-xctest/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2015-04-12T04:55:48.000Z" title="4/12/2015, 12:55:48 PM">2015-04-12</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/ruby/">ruby</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2015/04/12/rails-code-snippets/">Rails code snippets</a></p><div class="content"><p>(摘录来自: persie. “Ruby on Rails 教程”)</p>
+<h3 id="short-key"><a href="#short-key" class="headerlink" title="short key"></a>short key</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">g   generate</span><br><span class="line">d   destory</span><br><span class="line">s   server</span><br></pre></td></tr></table></figure>
 
-对晴天进行了两次更新;
-和小伙伴们一起做了一个密码管理的软件passbox
-写了一个对SQLCipher加密数据库转换的Mac程序
 
-####读书
+<h3 id="脚手架以及一些常用的变量类型"><a href="#脚手架以及一些常用的变量类型" class="headerlink" title="脚手架以及一些常用的变量类型"></a>脚手架以及一些常用的变量类型</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails g scaffold user <span class="symbol">name:</span>string <span class="symbol">age:</span>int <span class="symbol">email:</span>string <span class="symbol">description:</span>text <span class="symbol">cash:</span>float</span><br></pre></td></tr></table></figure>
 
-《打造Facebook》
-《MacTack人生元编程》
-《写给程序员的Web设计书》
-《写给大家看的Web设计书》
-《淘宝技术这十年》
-《苹果开发之Cocoa编程》
-《代码整洁之道》
+<h3 id="删除脚手架生成的代码"><a href="#删除脚手架生成的代码" class="headerlink" title="删除脚手架生成的代码"></a>删除脚手架生成的代码</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails d scaffold <span class="title class_">Users</span></span><br></pre></td></tr></table></figure>
 
-####健康
-12年有一阵子住院，13年特别注意锻炼身体，9月份每天和几个朋友去紫竹院跑步运动。强度不是很大，天气渐冷，入冬，雾霾跟严寒，使运动停止。
-13年身体并没有什么大碍，感谢
-####技术
-感觉自己这一年的技术，进步不大，惭愧。在用户体验跟交互方面，倒是有了一些自己的心得。对Mac的编程有了越来越浓厚的兴趣。
-####济南
-从十月份，陆续跟女朋友在济南看..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2014/01/02/my-2013/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/08/13/encrypt-sqlite-with-sqlcipher/">encrypt sqlite with sqlcipher</a></h2><time class="has-text-grey" datetime="2013-08-13T10:05:00.000Z">2013-08-13</time><p class="is-flex-grow-2 mt-2">##Get the sqlcipher SourceCode
-123#使用2.1的版本比较稳定些https://github.com/welsonla/sqlcipher/archive/v2.1.1.tar.gz</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/08/13/encrypt-sqlite-with-sqlcipher/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/08/06/generate-new-host-rsa-key/">generate new host RSA key</a></h2><time class="has-text-grey" datetime="2013-08-06T15:34:00.000Z">2013-08-06</time><p class="is-flex-grow-2 mt-2">最近oschina的git服务器进行了迁移，导致了原有的git项目push不上去，总是提示
-1234567891011121314@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@       WARNING: POSSIBLE DNS SPOOFING DETECTED!          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@The RSA host key for git.oschina.net has changed,and the key for the corresponding IP address 112.124.6.106is unknow..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/08/06/generate-new-host-rsa-key/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/07/06/vim-note/">vim-note</a></h2><time class="has-text-grey" datetime="2013-07-06T09:27:00.000Z">2013-07-06</time><p class="is-flex-grow-2 mt-2">####移动到行首
-10
-####移动到行尾
-1$
-####剪切多行
-123v向下移动d
-####粘贴
-1P
-####在nerdTree光标处新建一个文件
-1m
-####删除多行(数字+dd)
-15dd #删除5行
-####多行注释
-1234561.ESC+v2.方向键向下或者向上选中多行3.Control+v4.Shift+i5.#6.Esc,Esc
-</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/07/06/vim-note/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/06/25/git-note/">git笔记</a></h2><time class="has-text-grey" datetime="2013-06-25T01:21:00.000Z">2013-06-25</time><p class="is-flex-grow-2 mt-2">一些全局配置
-123456git config --global push.default matchinggit config --global color.status autogit config --global color.diff autogit config --global color.branch autogit config --global color.interactive auto
-添加所有新文件
-1git add .
-从版本中去除一个文件
-1git rm test.html.rb
-假设有很多新文件和删除了好多文件
-1git add -A
-获取所有远程版本
-1git fetch
-创建并切换到新分支
-1git checkout -b newbranch
-切换到分支
-1git chec..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/06/25/git-note/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/06/03/blog-with-github-4/">blog with github(4)-开始写吧，骚年</a></h2><time class="has-text-grey" datetime="2013-06-03T05:57:00.000Z">2013-06-03</time><p class="is-flex-grow-2 mt-2">Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog/categories/&amp;lt;category&amp;gt;/atom.xml中找到这些内容
-####Post
-这些Post页面必须存放在Source/_posts目录下面，并且命名方式和jekyll的命名方式一样，会转换成YYYY-MM-DD-Post-title.markdown，这个文件的名字就是你的blog的url slug，日期帮助你排序这些文章
-1rake new_post[&amp;quot;Title&amp;quot;]
-在使用了ZSH的话，你要这样创建
-1rake new_post或者rake new_post[\&amp;quot;Title\&amp;quot;]
-例如..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/06/03/blog-with-github-4/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/06/03/blog-with-github-3/">blog with github(3)-Octopress配置</a></h2><time class="has-text-grey" datetime="2013-06-03T05:46:00.000Z">2013-06-03</time><p class="is-flex-grow-2 mt-2">Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件
-12345_config.yml       # Main config (Jekyll&amp;#x27;s settings)Rakefile          # Configs for deploymentconfig.rb         # Compass configconfig.ru         # Rack config
-Rakefile大多是与部署相关的配置,如果不需要同步的话，你就不需要进行修改
-####Blog配置
-_config.yml有三部分配置,你必须修改url，并且title，subtitle和author也要修改，还有一些第三..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/06/03/blog-with-github-3/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/06/03/blog-with-github-2/">blog with github(2)-部署到github</a></h2><time class="has-text-grey" datetime="2013-06-03T05:20:00.000Z">2013-06-03</time><p class="is-flex-grow-2 mt-2">###使用github pages
-如果想使用 http://username.github.io 的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io）
-用户使用的是Github Pages的master版本下面的public作为你的网站主目录，你可以通过浏览http://username.github.io 来查看。如果你想在source这个版本上面维护代码，并且把内容提交到master分支，Octopress有一个命令来帮助你完成这些
-1rake setup_github_pages
-然后，他将
+<h3 id="生成Controller与action"><a href="#生成Controller与action" class="headerlink" title="生成Controller与action"></a>生成Controller与action</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails g controller <span class="title class_">TodoList</span> list delete index</span><br></pre></td></tr></table></figure>
 
-询问你的github pages的url
-将远程的重‘origin’重命名为‘octopress’
-在远程的origin..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/06/03/blog-with-github-2/">更多</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><h2 class="mt-4 mb-0 is-family-serif"><a href="/2013/05/10/blog-with-github/">blog with github(1)-前期准备</a></h2><time class="has-text-grey" datetime="2013-05-09T17:18:00.000Z">2013-05-10</time><p class="is-flex-grow-2 mt-2">##开始之前
+<h3 id="删除Controller"><a href="#删除Controller" class="headerlink" title="删除Controller"></a>删除Controller</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails d controller <span class="title class_">TodoList</span> list delete index</span><br></pre></td></tr></table></figure>
 
-安装Git
-使用rbenv或者RVM安装ruby 1.9.3
 
-安装完后确保你的ruby版本是1.9.3
-1ruby -v
-##设置Octopress
-12git clone git://github.com/imathis/octopress.git octopresscd octopress  
-接下来安装一些依赖
-123gem install bundlerrbenv rehash   bundle install
-安装Octopress默认主题
-1rake install
-–未完待续，哥去睡觉
-</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2013/05/10/blog-with-github/">更多</a></section></article><section class="paginator is-flex is-justify-content-flex-end is-flex-wrap-wrap mt-5"><a class="extend prev" rel="prev" href="/"><i class="iconfont icon-prev has-text-grey"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="iconfont icon-next has-text-grey"></i></a></section></section><aside class="column is-hidden-mobile is-4-tablet is-3-widescreen"><style>.search-widget .search-input {
-    border: none;
-    outline: none;
-    background: transparent;
-    color: var(--second-text-color);
-}
-.search-widget .search-content {
-    position: absolute;
-    left: 0;
-    top: calc(100% - 3px);
-    z-index: 2;
+<h3 id="生成Model"><a href="#生成Model" class="headerlink" title="生成Model"></a>生成Model</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails g model <span class="title class_">User</span> <span class="symbol">name:</span>string <span class="symbol">email:</span>string</span><br></pre></td></tr></table></figure>
 
-    width: 100%;
-    height: 0;
-    max-height: 550px;
+<h3 id="删除Model"><a href="#删除Model" class="headerlink" title="删除Model"></a>删除Model</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails d model <span class="title class_">User</span> <span class="symbol">name:</span>string <span class="symbol">email:</span>string</span><br></pre></td></tr></table></figure>
 
-    overflow: auto;
-    box-sizing: border-box;
 
-    background: var(--top-bar-bg-color);
-    backdrop-filter: blur(var(--backdropFilter));
-    -webkit-backdrop-filter: blur(var(--backdropFilter));
+<h3 id="添加字段到表"><a href="#添加字段到表" class="headerlink" title="添加字段到表"></a>添加字段到表</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">“rails generate migration add_password_digest_to_users <span class="symbol">password_digest:</span>string”</span><br></pre></td></tr></table></figure>
 
-    border-bottom-left-radius: var(--borderRadius);
-    border-bottom-right-radius: var(--borderRadius);
-    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.08);
-}
+<h3 id="根据Model生成数据库表"><a href="#根据Model生成数据库表" class="headerlink" title="根据Model生成数据库表"></a>根据Model生成数据库表</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake <span class="symbol">db:</span>migrate</span><br></pre></td></tr></table></figure>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2015-02-01T13:51:11.000Z" title="2/1/2015, 9:51:11 PM">2015-02-01</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/life/">life</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2015/02/01/my-2014/">我的2014</a></p><div class="content"><h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><p>今年完成了几件大事:<br>三月，订婚<br>五月，买房，成为了房奴<br>八月，拍婚纱照<br>九月，结婚</p>
+<p>今年生活上发生了很大的变化，与小关关组建了新的家庭，也让我肩负起了一个男人的责任，为了我们新的生活而奋斗。希望我能为家人和老婆创造更好的生活条件。</p>
+<p>感谢小关同志的陪伴与理解，七年长跑，我们终于走到了一起</p>
+<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>今年工作发生了变动，离开了工作三年的老东家，加入了新公司，在各方面都对自己的提升非常大，技术上有了比较明显的提升，由于产品是直接面对用户的，在各方面的细节的要求也比较高，尤其是用户体验方面。</p>
+<p>跨部门沟通上，由于团队非常大，涉及的业务部门也比较多，这一年有了不少机会与别的部门进行工作上的沟通协作，与人沟通上，也让我不再对人际交往有恐惧感。</p>
+<p>工作方式上，拆分复杂业务，从最小的点逐步分析整个复杂的功能系统，在功能的实现上有了更明确的思路，对时间节点也有了更好的控制。抽离与重用，减少重复代码，精简了项目代码，提高了可扩展性。</p>
+<p>通过龙哥的处理问题的方式跟思路，也让我积累到了很多宝贵的编程经验：</p>
+<ul>
+<li>清晰的调试思路与正确的分析，在一些棘手的问题上，不再是猜和逃避，而要找到出错的地方进行修复；</li>
+<li>对公共资源的全局封装，自定义的Color使用Category方法封装，比用宏定义更优雅；</li>
+<li>对业务的不同状态进行枚举化，使用起来更可读</li>
+<li>对Notification的name常量化，更易查找</li>
+<li>接口都继承自同一基类，公共的处理由基类完成，在较大变动的情况下，只需要在基类做出理，就能兼容新需求</li>
+<li>特定符号写成常量，如接口返回值，在接口变动时只需要修改下常量即可</li>
+</ul>
+<h2 id="推荐的书"><a href="#推荐的书" class="headerlink" title="推荐的书"></a>推荐的书</h2><ul>
+<li>《我编程，我快乐》</li>
+<li>《大教堂与集市》</li>
+<li>《重来》</li>
+</ul>
+<p>bye, 2014</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2014-11-22T15:24:00.000Z" title="11/22/2014, 11:24:00 PM">2014-11-22</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/life/">life</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2014/11/22/mac-mini-show/">Mac Mini开箱</a></p><div class="content"><p>###背景<br>从3月份换了新工作，就一直在使用自己的电脑，每天背着上下班，后来自己又买了显示器和新的机械键盘。想想这时候如果上Mac mini的话，外设都已经齐全了。<br>一直在等9月份的Mini新版，无奈对新版确实有些失望，一直摇摆不定，恰巧双十一的前一天，发现京东的MD387已经降价到了3588，果断决定入手了。</p></div><a class="article-more button is-small is-size-7" href="/2014/11/22/mac-mini-show/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2014-09-05T05:14:00.000Z" title="9/5/2014, 1:14:00 PM">2014-09-05</time>发表</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2014/09/05/cocoa-tidy-write/">cocoa简洁写法笔记</a></p><div class="content"><p>对cocoa的一些语法糖做的笔记</p></div><a class="article-more button is-small is-size-7" href="/2014/09/05/cocoa-tidy-write/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2014-07-14T08:56:00.000Z" title="7/14/2014, 4:56:00 PM">2014-07-14</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/iOS/">iOS</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2014/07/14/xcode5-install-command-line-tools/">Xcode5 install command line tools</a></p><div class="content"><p>之前遇到过，一直没做笔记，导致每次都要现查</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2014-07-14T07:57:00.000Z" title="7/14/2014, 3:57:00 PM">2014-07-14</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/iOS/">iOS</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2014/07/14/instrument-start-fail/">Instruments无法启动</a></p><div class="content"><p>最近在iOS7的系统上使用Instrument想检查内存的leaks，启动时候总是提示失败，花了些时间，解决了这个问题，做下笔记。</p></div><a class="article-more button is-small is-size-7" href="/2014/07/14/instrument-start-fail/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2014-05-11T12:43:00.000Z" title="5/11/2014, 8:43:00 PM">2014-05-11</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/iOS/">iOS</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2014/05/11/learn-core-animation-the-hard-way/">Learn core animation the hard way</a></p><div class="content"><p>###Document</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW8">CABasicAnimation Keypath</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Animation_Types_Timing/Articles/PropertyAnimations.html">Animation Types and Timing Programming Guide</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.apple.com/library/mac/documentation/graphicsimaging/reference/CGAffineTransform/Reference/reference.html">CGAffineTransform</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.apple.com/library/mac/documentation/graphicsimaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066">Quartz 2D Programming Guide</a></li>
+<li><a target="_blank" rel="noopener" href="http://baike.baidu.com/view/954621.htm">放射变换</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/xiaodao/archive/2012/02/10/2345481.html">组合动画</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/v2m_/archive/2013/05/09/3070187.html">http://www.cnblogs.com/v2m_&#x2F;archive&#x2F;2013&#x2F;05&#x2F;09&#x2F;3070187.html</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/sell/archive/2013/02/01/2889013.html">几个常用动画代码</a></li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2014-04-12T04:56:00.000Z" title="4/12/2014, 12:56:00 PM">2014-04-12</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2014/04/12/why-my-mac-so-slow/">你的Mac慢了么</a></p><div class="content"><p>本子是MC700,已经陪伴我coding了三年,中间升级了内存,硬盘加了SSD,但是自从电池坏掉以后,我拆掉了电池,接电使用,发现越来越卡,经历了三个月左右的煎熬,我的mac终于又重新焕发了青春,说说遇到的问题</p></div><a class="article-more button is-small is-size-7" href="/2014/04/12/why-my-mac-so-slow/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2014-01-02T00:19:00.000Z" title="1/2/2014, 8:19:00 AM">2014-01-02</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/life/">life</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2014/01/02/my-2013/">我的2013</a></p><div class="content"><p>####作品</p>
+<ol>
+<li>对晴天进行了两次更新;</li>
+<li>和小伙伴们一起做了一个密码管理的软件<a target="_blank" rel="noopener" href="https://itunes/">passbox</a></li>
+<li>写了一个对SQLCipher加密数据库转换的Mac程序</li>
+</ol>
+<p>####读书</p>
+<ol>
+<li>《打造Facebook》</li>
+<li>《MacTack人生元编程》</li>
+<li>《写给程序员的Web设计书》</li>
+<li>《写给大家看的Web设计书》</li>
+<li>《淘宝技术这十年》</li>
+<li>《苹果开发之Cocoa编程》</li>
+<li>《代码整洁之道》</li>
+</ol>
+<p>####健康<br>12年有一阵子住院，13年特别注意锻炼身体，9月份每天和几个朋友去紫竹院跑步运动。强度不是很大，天气渐冷，入冬，雾霾跟严寒，使运动停止。</p>
+<p>13年身体并没有什么大碍，感谢</p>
+<p>####技术<br>感觉自己这一年的技术，进步不大，惭愧。在用户体验跟交互方面，倒是有了一些自己的心得。对Mac的编程有了越来越浓厚的兴趣。</p>
+<p>####济南<br>从十月份，陆续跟女朋友在济南看了几套房子。主要参考的房子是90平米以上可以落户的房子，现在我女人已经开始考虑学区的问题了，经十路沿线现在也越来越多的高楼在崛起，房价也在逐渐的攀高，房价是每个年轻人心里的痛。</p>
+<p>####2014</p>
+<ol>
+<li>多读书</li>
+<li>更多的iOS上的作品</li>
+<li>更多的Mac应用</li>
+<li>深入Object-c，并继续强化Ruby on Rails</li>
+<li>锻炼身体</li>
+<li>从AppStore赚多一点钱</li>
+<li>与几个朋友的小工作室，希望我们能成为TapBot</li>
+<li>换新工作 </li>
+<li>买房结婚(房子已买)</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2013-08-13T10:05:00.000Z" title="8/13/2013, 6:05:00 PM">2013-08-13</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/iOS/">iOS</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2013/08/13/encrypt-sqlite-with-sqlcipher/">encrypt sqlite with sqlcipher</a></p><div class="content"><p>##Get the sqlcipher SourceCode</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用2.1的版本比较稳定些</span></span><br><span class="line"><span class="symbol">https:</span>/<span class="regexp">/github.com/welsonla</span><span class="regexp">/sqlcipher/archive</span><span class="regexp">/v2.1.1.tar.gz</span></span><br><span class="line"><span class="regexp"></span></span><br></pre></td></tr></table></figure></div><a class="article-more button is-small is-size-7" href="/2013/08/13/encrypt-sqlite-with-sqlcipher/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2013-08-06T15:34:00.000Z" title="8/6/2013, 11:34:00 PM">2013-08-06</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/git/">git</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2013/08/06/generate-new-host-rsa-key/">generate new host RSA key</a></p><div class="content"><p>最近oschina的git服务器进行了迁移，导致了原有的git项目push不上去，总是提示</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span><br><span class="line">@       <span class="variable constant_">WARNING</span>: <span class="variable constant_">POSSIBLE</span> <span class="variable constant_">DNS</span> <span class="variable constant_">SPOOFING</span> <span class="variable constant_">DETECTED</span>!          @</span><br><span class="line">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span><br><span class="line"><span class="title class_">The</span> <span class="variable constant_">RSA</span> host key <span class="keyword">for</span> git.oschina.net has changed,</span><br><span class="line"><span class="keyword">and</span> the key <span class="keyword">for</span> the corresponding <span class="variable constant_">IP</span> address <span class="number">112.124</span>.<span class="number">6.106</span></span><br><span class="line">is unknown. <span class="title class_">This</span> could either mean that</span><br><span class="line"><span class="variable constant_">DNS</span> <span class="variable constant_">SPOOFING</span> is happening <span class="keyword">or</span> the <span class="variable constant_">IP</span> address <span class="keyword">for</span> the host</span><br><span class="line"><span class="keyword">and</span> its host key have changed at the same time.</span><br><span class="line">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span><br><span class="line">@    <span class="variable constant_">WARNING</span>: <span class="variable constant_">REMOTE</span> <span class="variable constant_">HOST</span> <span class="variable constant_">IDENTIFICATION</span> <span class="variable constant_">HAS</span> <span class="variable constant_">CHANGED</span>!     @</span><br><span class="line">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span><br><span class="line"><span class="variable constant_">IT</span> <span class="variable constant_">IS</span> <span class="variable constant_">POSSIBLE</span> <span class="variable constant_">THAT</span> <span class="variable constant_">SOMEONE</span> <span class="variable constant_">IS</span> <span class="variable constant_">DOING</span> <span class="variable constant_">SOMETHING</span> <span class="variable constant_">NASTY</span>!</span><br><span class="line"><span class="title class_">Someone</span> could be eavesdropping on you right now (man-<span class="keyword">in</span>-the-middle attack)!</span><br><span class="line"><span class="title class_">It</span> is also possible that a host key has just been changed.</span><br></pre></td></tr></table></figure>
 
-.search-widget .search-content a:hover h5 {
-    color: #3273dc!important;
-}
-</style><main class="aside-card-container search-widget is-relative"><label for="searchInput"><div class="is-flex px-4" id="searchButton"><i class="iconfont icon--search1 mr-1"></i><input class="search-input is-flex-grow-1" id="searchInput" placeholder="搜索内容.."></div></label><section class="search-content content" id="searchContent"></section></main><script>var searchDatabase = []
-var searchInputEl = document.getElementById('searchInput')
-var searchButtonEl = document.getElementById('searchButton')
-var searchResultEl = document.getElementById('searchContent')
+<p><del>第一个问题非常简单，就是修改&#x2F;etc&#x2F;hosts，添加一个IP与域名的对应关系即可</del></p>
+<p>第二个是要求你更新know_host中的RSA key，执行如下命令即可</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -R git.oschina.net</span><br></pre></td></tr></table></figure>
 
-searchInputEl.oninput = function (evt) {
-    var searchValue = evt.srcElement.value
-    var haveSearchValue = Boolean(searchValue.trim())
-    if (!haveSearchValue) {
-        searchResultEl.style.height = 0
-        searchResultEl.innerHTML = null
-        return
-    }
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /.ssh/known_hosts</span><br></pre></td></tr></table></figure>
+<p>查看known_host中的数据可以看到key已经更新了</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2013-07-06T09:27:00.000Z" title="7/6/2013, 5:27:00 PM">2013-07-06</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/">工具控</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2013/07/06/vim-note/">vim-note</a></p><div class="content"><p>####移动到行首</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
 
-    var searchResults = searching(searchValue)
+<p>####移动到行尾</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$</span><br></pre></td></tr></table></figure>
 
-    if (searchResults.length > 0) {
-        renderSearchResults(searchResults)
-    }
-}
+<p>####剪切多行</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">v</span><br><span class="line">向下移动</span><br><span class="line">d</span><br></pre></td></tr></table></figure>
 
-function renderSearchResults(results) {
-    searchResultEl.innerHTML = null
-    var fragment = document.createDocumentFragment()
+<p>####粘贴</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P</span><br></pre></td></tr></table></figure>
 
-    results.forEach(function (item) {
-        var link = document.createElement('a')
-        var title = document.createElement('h5')
-        var content = document.createElement('p')
+<p>####在nerdTree光标处新建一个文件</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m</span><br></pre></td></tr></table></figure>
 
-        title.className = 'mb-1'
-        title.innerText = item.title
-        content.innerText = item.content
+<p>####删除多行(数字+dd)</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5dd <span class="comment">#删除5行</span></span><br></pre></td></tr></table></figure>
 
-        link.href = item.link
-        link.appendChild(title)
-        link.appendChild(content)
-        link.className = 'p-4 is-block'
+<p>####多行注释</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.<span class="variable constant_">ESC</span>+v</span><br><span class="line"><span class="number">2</span>.方向键向下或者向上选中多行</span><br><span class="line"><span class="number">3</span>.<span class="title class_">Control</span>+v</span><br><span class="line"><span class="number">4</span>.<span class="title class_">Shift</span>+i</span><br><span class="line"><span class="number">5</span>.<span class="comment">#</span></span><br><span class="line"><span class="number">6</span>.<span class="title class_">Esc</span>,<span class="title class_">Esc</span></span><br></pre></td></tr></table></figure>
 
-        fragment.appendChild(link)
-    })
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2013-06-25T01:21:00.000Z" title="6/25/2013, 9:21:00 AM">2013-06-25</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/git/">git</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2013/06/25/git-note/">git笔记</a></p><div class="content"><h4 id="一些全局配置"><a href="#一些全局配置" class="headerlink" title="一些全局配置"></a>一些全局配置</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git config --global push.default matching</span><br><span class="line"></span><br><span class="line">git config --global color.status auto</span><br><span class="line">git config --global color.diff auto</span><br><span class="line">git config --global color.branch auto</span><br><span class="line">git config --global color.interactive auto</span><br></pre></td></tr></table></figure>
+<h4 id="添加所有新文件"><a href="#添加所有新文件" class="headerlink" title="添加所有新文件"></a>添加所有新文件</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
 
-    searchResultEl.appendChild(fragment)
-    searchResultEl.style.height = 'auto'
-}
+<h4 id="从版本中去除一个文件"><a href="#从版本中去除一个文件" class="headerlink" title="从版本中去除一个文件"></a>从版本中去除一个文件</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm test.html.rb</span><br></pre></td></tr></table></figure>
 
-function searching(inputText) {
-    var inputTexts = inputText.split(' ')
-    var searchResults = []
-    inputTexts.forEach(function (searchKey) {
-        var haveSearchValue = Boolean(searchKey.trim())
-        if (!haveSearchValue) return
+<h4 id="假设有很多新文件和删除了好多文件"><a href="#假设有很多新文件和删除了好多文件" class="headerlink" title="假设有很多新文件和删除了好多文件"></a>假设有很多新文件和删除了好多文件</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br></pre></td></tr></table></figure>
+<h4 id="获取所有远程版本"><a href="#获取所有远程版本" class="headerlink" title="获取所有远程版本"></a>获取所有远程版本</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch</span><br></pre></td></tr></table></figure>
 
-        var key = searchKey.toLowerCase()
+<h4 id="创建并切换到新分支"><a href="#创建并切换到新分支" class="headerlink" title="创建并切换到新分支"></a>创建并切换到新分支</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b newbranch</span><br></pre></td></tr></table></figure>
 
-        for (var entry of searchDatabase) {
-            var title = entry.getElementsByTagName('title')[0].textContent
-            var link = entry.getElementsByTagName('link')[0].getAttribute('href')
-            var contentWithTags = entry.getElementsByTagName('content')[0].textContent
-            var rawContent = contentWithTags.trim().replace(/<[^>]+>/g, '').toLowerCase()
+<h4 id="切换到分支"><a href="#切换到分支" class="headerlink" title="切换到分支"></a>切换到分支</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
 
-            var LENGTH = 80
-            var finalContent = ''
-            var contentLength = rawContent.length
-            var searchResultIdx = rawContent.indexOf(key)
+<h4 id="迁移原有git项目到新得项目地址"><a href="#迁移原有git项目到新得项目地址" class="headerlink" title="迁移原有git项目到新得项目地址"></a>迁移原有git项目到新得项目地址</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin git<span class="variable">@git</span>.github.<span class="symbol">com:</span>welsonla/studio.git</span><br></pre></td></tr></table></figure>
 
-            var startIdx = searchResultIdx - 20,
-                endIdx = startIdx + LENGTH
+<h4 id="查看当前git分支"><a href="#查看当前git分支" class="headerlink" title="查看当前git分支"></a>查看当前git分支</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -r</span><br></pre></td></tr></table></figure>
+<h4 id="查看git-log"><a href="#查看git-log" class="headerlink" title="查看git log"></a>查看git log</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
 
-            if (startIdx < 0) {
-                startIdx = 0
-                endIdx = 100
+<h4 id="查看当前tag"><a href="#查看当前tag" class="headerlink" title="查看当前tag"></a>查看当前tag</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag</span><br></pre></td></tr></table></figure>
+<h4 id="创建一个新的tag"><a href="#创建一个新的tag" class="headerlink" title="创建一个新的tag"></a>创建一个新的tag</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="降当前tag推送到服务器"><a href="#降当前tag推送到服务器" class="headerlink" title="降当前tag推送到服务器"></a>降当前tag推送到服务器</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git push origin --tags</span><br><span class="line"></span><br><span class="line">推送单个</span><br><span class="line">git push origin v1.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="将现有svn项目转换成git项目，并保留所有commit-log"><a href="#将现有svn项目转换成git项目，并保留所有commit-log" class="headerlink" title="将现有svn项目转换成git项目，并保留所有commit log"></a>将现有svn项目转换成git项目，并保留所有commit log</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git svn clone [<span class="variable constant_">SVN</span>-<span class="title class_">Path</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="回滚"><a href="#回滚" class="headerlink" title="回滚"></a>回滚</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#http://stackoverflow.com/questions/1338728/delete-commits-from-a-branch-in-git</span></span><br><span class="line">git reset --hard commitid</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="ignore"><a href="#ignore" class="headerlink" title="ignore"></a>ignore</h4><h5 id="gitignore-新文件使用正则匹配"><a href="#gitignore-新文件使用正则匹配" class="headerlink" title=".gitignore 新文件使用正则匹配"></a>.gitignore 新文件使用正则匹配</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*.file_extension</span><br><span class="line">.idea/*</span><br></pre></td></tr></table></figure>
+
+<h5 id="remove-exist-files-现有文件需要软删除"><a href="#remove-exist-files-现有文件需要软删除" class="headerlink" title="remove exist files(现有文件需要软删除)"></a>remove exist files(现有文件需要软删除)</h5><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached . /<span class="regexp">/soft delete</span></span><br><span class="line"><span class="regexp">git add .</span></span><br><span class="line"><span class="regexp">git commit -m &#x27;remove ignore files&#x27;</span></span><br></pre></td></tr></table></figure></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2013-06-03T05:57:00.000Z" title="6/3/2013, 1:57:00 PM">2013-06-03</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2013/06/03/blog-with-github-4/">blog with github(4)-开始写吧，骚年</a></p><div class="content"><p>Octopress提供很多的Rake任务去创建post和pages，他还会根据你的posts来生成Category，你可以在atom.xml或者blog&#x2F;categories&#x2F;&lt;category&gt;&#x2F;atom.xml中找到这些内容</p>
+<p>####Post</p>
+<p>这些Post页面必须存放在Source&#x2F;_posts目录下面，并且命名方式和jekyll的命名方式一样，会转换成YYYY-MM-DD-Post-title.markdown，这个文件的名字就是你的blog的url slug，日期帮助你排序这些文章</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake new_post[<span class="string">&quot;Title&quot;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>在使用了ZSH的话，你要这样创建</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake new_post或者rake new_post[\<span class="string">&quot;Title\&quot;]</span></span><br></pre></td></tr></table></figure>
+
+<p>例如</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rake new_post[<span class="string">&quot;Zombie Ninjas Attack: A survivor&#x27;s retrospective&quot;</span>]</span><br><span class="line"> <span class="title class_">Creates</span> source/_posts/<span class="number">2011</span>-<span class="number">07</span>-<span class="number">03</span>-zombie-ninjas-attack-a-survivors-retrospective.markdown</span><br></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/Code/rails</span><span class="regexp">/octopress(branch:source) » rake new_post                        </span></span><br><span class="line"><span class="regexp">Enter a title for your post: blog-with-github-4</span></span><br><span class="line"><span class="regexp">mkdir -p source/</span>_posts</span><br><span class="line"><span class="title class_">Creating</span> new <span class="symbol">post:</span> source/_posts/<span class="number">2013</span>-<span class="number">06</span>-<span class="number">03</span>-blog-with-github-<span class="number">4</span>.markdown</span><br></pre></td></tr></table></figure>
+
+
+<p>生成的内容大致如下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="symbol">layout:</span> post</span><br><span class="line"><span class="symbol">title:</span> <span class="string">&quot;Zombie Ninjas Attack: A survivor&#x27;s retrospective&quot;</span></span><br><span class="line"><span class="symbol">date:</span> <span class="number">2011</span>-<span class="number">07</span>-<span class="number">03</span> <span class="number">5</span><span class="symbol">:</span><span class="number">59</span></span><br><span class="line"><span class="symbol">comments:</span> <span class="literal">true</span></span><br><span class="line">external-<span class="symbol">url:</span></span><br><span class="line"><span class="symbol">categories:</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>你可以关闭comments，或者为他添加categories的tag，并且你还可以添加<code>author: Your Name</code>与<code>published: false</code>来控制是否发布</p>
+<p>####Page</p>
+<p>生成Page的命令</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rake new_page[<span class="variable language_">super</span>-awesome]</span><br><span class="line"><span class="comment"># creates /source/super-awesome/index.markdown</span></span><br><span class="line"></span><br><span class="line">rake new_page[<span class="variable language_">super</span>-awesome/page.html]</span><br></pre></td></tr></table></figure>
+
+<p>如果使用了zsh的话，方法要参照post的创建方式</p>
+<p>生成的pages的默认内如大致如下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="symbol">layout:</span> page</span><br><span class="line"><span class="symbol">title:</span> <span class="string">&quot;Super Awesome&quot;</span></span><br><span class="line"><span class="symbol">date:</span> <span class="number">2011</span>-<span class="number">07</span>-<span class="number">03</span> <span class="number">5</span><span class="symbol">:</span><span class="number">59</span></span><br><span class="line"><span class="symbol">comments:</span> <span class="literal">true</span></span><br><span class="line"><span class="symbol">sharing:</span> <span class="literal">true</span></span><br><span class="line"><span class="symbol">footer:</span> <span class="literal">true</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>####Content</p>
+<p>如果列表中不想显示全文内容的话，可以添加<code>&lt;!-- more --&gt;</code>标签，这将在文章下面生成一个“Continue →” 链接，链接到全文的地址</p>
+<p>###Generate &amp; Preview</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rake generate   <span class="comment"># Generates posts and pages into the public directory</span></span><br><span class="line">rake watch      <span class="comment"># Watches source/ and sass/ for changes and regenerates</span></span><br><span class="line">rake preview    <span class="comment"># Watches, and mounts a webserver at http://localhost:4000</span></span><br></pre></td></tr></table></figure>
+
+<p>本地使用<a href="http://localhost:4000就可以访问了">http://localhost:4000就可以访问了</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2013-06-03T05:46:00.000Z" title="6/3/2013, 1:46:00 PM">2013-06-03</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2013/06/03/blog-with-github-3/">blog with github(3)-Octopress配置</a></p><div class="content"><p>Octopress的配置相当的简单，并且一般配置完成后，你不需要再对Rakefile和_config文件进行修改，下面这些是Octopress的配置文件</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">_config.yml       <span class="comment"># Main config (Jekyll&#x27;s settings)</span></span><br><span class="line"><span class="title class_">Rakefile</span>          <span class="comment"># Configs for deployment</span></span><br><span class="line">config.rb         <span class="comment"># Compass config</span></span><br><span class="line">config.ru         <span class="comment"># Rack config</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Rakefile大多是与部署相关的配置,如果不需要同步的话，你就不需要进行修改</p>
+<p>####Blog配置</p>
+<p>_config.yml有三部分配置,你必须修改url，并且title，subtitle和author也要修改，还有一些第三方的服务需要启用</p>
+<p>#####主配置</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">url:</span>                <span class="comment"># For rewriting urls for RSS, etc</span></span><br><span class="line"><span class="symbol">title:</span>              <span class="comment"># Used in the header and title tags</span></span><br><span class="line"><span class="symbol">subtitle:</span>           <span class="comment"># A description used in the header</span></span><br><span class="line"><span class="symbol">author:</span>             <span class="comment"># Your name, for RSS, Copyright, Metadata</span></span><br><span class="line"><span class="symbol">simple_search:</span>      <span class="comment"># Search engine for simple site search</span></span><br><span class="line"><span class="symbol">description:</span>        <span class="comment"># A default meta description for your site</span></span><br><span class="line"><span class="symbol">date_format:</span>        <span class="comment"># Format dates using Ruby&#x27;s date strftime syntax</span></span><br><span class="line"><span class="symbol">subscribe_rss:</span>      <span class="comment"># Url for your blog&#x27;s feed, defauts to /atom.xml</span></span><br><span class="line"><span class="symbol">subscribe_email:</span>    <span class="comment"># Url to subscribe by email (service required)</span></span><br><span class="line"><span class="symbol">category_feeds:</span>     <span class="comment"># Enable per category RSS feeds (defaults to false in 2.1)</span></span><br><span class="line"><span class="symbol">email:</span>              <span class="comment"># Email address for the RSS feed if you want it.</span></span><br></pre></td></tr></table></figure>
+
+
+<p>#####Jekyll&amp;Plugins</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">root:</span>               <span class="comment"># Mapping for relative urls (default: /)</span></span><br><span class="line"><span class="symbol">permalink:</span>          <span class="comment"># Permalink structure for blog posts</span></span><br><span class="line"><span class="symbol">source:</span>             <span class="comment"># Directory for site source files</span></span><br><span class="line"><span class="symbol">destination:</span>        <span class="comment"># Directory for generated site files</span></span><br><span class="line"><span class="symbol">plugins:</span>            <span class="comment"># Directory for Jekyll plugins</span></span><br><span class="line"><span class="symbol">code_dir:</span>           <span class="comment"># Directory for code snippets (for include_code plugin)</span></span><br><span class="line"><span class="symbol">category_dir:</span>       <span class="comment"># Directory for generated blog category pages</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">pygments:</span>           <span class="comment"># Toggle python pygments syntax highlighting</span></span><br><span class="line"><span class="symbol">paginate:</span>           <span class="comment"># Posts per page on the blog index</span></span><br><span class="line"><span class="symbol">pagination_dir:</span>     <span class="comment"># Directory base for pagination URLs eg. /blog/page/2/</span></span><br><span class="line"><span class="symbol">recent_posts:</span>       <span class="comment"># Number of recent posts to appear in the sidebar</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">default_asides:</span>     <span class="comment"># Configure what shows up in the sidebar and in what order</span></span><br><span class="line"><span class="symbol">blog_index_asides:</span>  <span class="comment"># Optional sidebar config for blog index page</span></span><br><span class="line"><span class="symbol">post_asides:</span>        <span class="comment"># Optional sidebar config for post layout</span></span><br><span class="line"><span class="symbol">page_asides:</span>        <span class="comment"># Optional sidebar config for page layout</span></span><br></pre></td></tr></table></figure>
+
+
+<p>#####第三方配置</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Github</span> - <span class="title class_">List</span> your github repositories <span class="keyword">in</span> the sidebar</span><br><span class="line"><span class="title class_">Twitter</span> - <span class="title class_">Setup</span> a sidebar twitter feed, follow button, <span class="keyword">and</span> tweet button (<span class="keyword">for</span> sharing posts <span class="keyword">and</span> pages).</span><br><span class="line"><span class="title class_">Google</span> <span class="title class_">Plus</span> <span class="title class_">One</span> - <span class="title class_">Setup</span> sharing <span class="keyword">for</span> posts <span class="keyword">and</span> pages on <span class="title class_">Google</span>’s plus one network.</span><br><span class="line"><span class="title class_">Pinboard</span> - <span class="title class_">Share</span> your recent <span class="title class_">Pinboard</span> bookmarks <span class="keyword">in</span> the sidebar.</span><br><span class="line"><span class="title class_">Delicious</span> - <span class="title class_">Share</span> your recent <span class="title class_">Delicious</span> bookmarks <span class="keyword">in</span> the sidebar.</span><br><span class="line"><span class="title class_">Disqus</span> <span class="title class_">Comments</span> - <span class="title class_">Add</span> your disqus short name to enable disqus comments on your site.</span><br><span class="line"><span class="title class_">Google</span> <span class="title class_">Analytics</span> - <span class="title class_">Add</span> your tracking id to enable <span class="title class_">Google</span> <span class="title class_">Analytics</span> tracking <span class="keyword">for</span> your site.</span><br><span class="line"><span class="title class_">Facebook</span> - <span class="title class_">Add</span> a <span class="title class_">Facebook</span> like button</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2013-06-03T05:20:00.000Z" title="6/3/2013, 1:20:00 PM">2013-06-03</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2013/06/03/blog-with-github-2/">blog with github(2)-部署到github</a></p><div class="content"><p>###使用github pages</p>
+<p>如果想使用 <a target="_blank" rel="noopener" href="http://username.github.io/">http://username.github.io</a> 的域名作为你的blog地址的话，首先要创建一个仓库，名字为你的用户id.github.io（比如我的是welsonla.github.io）</p>
+<p>用户使用的是Github Pages的master版本下面的public作为你的网站主目录，你可以通过浏览<a target="_blank" rel="noopener" href="http://username.github.io/">http://username.github.io</a> 来查看。如果你想在source这个版本上面维护代码，并且把内容提交到master分支，Octopress有一个命令来帮助你完成这些</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake setup_github_pages</span><br></pre></td></tr></table></figure>
+
+<p>然后，他将 </p>
+<ol>
+<li>询问你的github pages的url</li>
+<li>将远程的重‘origin’重命名为‘octopress’</li>
+<li>在远程的origin讲你的github pages仓库添加进去</li>
+<li>切换当前branch从master切换到source</li>
+<li>根据你的仓库名，重新配置你的blog地址</li>
+<li>在_deploy目录下面设置master分支，用于部署</li>
+</ol>
+<p>接下来执行</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rake generate</span><br><span class="line">rake deploy</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这将生成你的blog，并将生成的文件copy到_deploy目录下面,并添加到git，将他们commit和push到master分支上面，稍后，你会收到一份来自github的email告诉你，你的提交已经收到，并且很快将发不到你的web上面</p>
+<p>并且，不要忘记提交你的代码到source分支</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;your message&#x27;</span></span><br><span class="line">git push origin source</span><br></pre></td></tr></table></figure>
+
+
+
+<p>####自定义域名绑定</p>
+<p>首先你要source目录下面创建一个CNAME，</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">&#x27;your-domain.com&#x27;</span> &gt;&gt; source/<span class="variable constant_">CNAME</span></span><br></pre></td></tr></table></figure>
+
+
+<p>之后去你的域名服务商或者你的dns服务商那里创建一条CNAME记录，记录指向的IP为<br>(不要使用顶级域名指向到pages,要使用二级域名)</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">207.97</span>.<span class="number">227.245</span></span><br></pre></td></tr></table></figure>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2013-05-09T17:18:00.000Z" title="5/10/2013, 1:18:00 AM">2013-05-10</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2013/05/10/blog-with-github/">blog with github(1)-前期准备</a></p><div class="content"><p>##开始之前</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="http://git-scm.com/">安装Git</a></li>
+<li>使用<a target="_blank" rel="noopener" href="http://octopress.org/docs/setup/rbenv">rbenv</a>或者<a target="_blank" rel="noopener" href="http://octopress.org/docs/setup/rvm">RVM</a>安装ruby 1.9.3</li>
+</ol>
+<p>安装完后确保你的ruby版本是1.9.3</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -v</span><br></pre></td></tr></table></figure>
+
+
+<p>##设置Octopress</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="symbol">git:</span>/<span class="regexp">/github.com/imathis</span><span class="regexp">/octopress.git octopress</span></span><br><span class="line"><span class="regexp">cd octopress  </span></span><br></pre></td></tr></table></figure>
+
+<p>接下来安装一些依赖</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gem install bundler</span><br><span class="line">rbenv rehash   </span><br><span class="line">bundle install</span><br></pre></td></tr></table></figure>
+
+<p>安装Octopress默认主题</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake install</span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>–未完待续，哥去睡觉</p>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/">上一页</a></div><div class="pagination-next"><a href="/page/3/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link is-current" href="/page/2/">2</a></li><li><a class="pagination-link" href="/page/3/">3</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://www.gravatar.com/avatar/73f98d85baa7976075738595f758050b?s=128" alt="welsonla"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">welsonla</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China, Beijing</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">45</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://twitter.com/welsonla" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/welsonla"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/welsonla"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://maimaimai.xyz/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">maimaimai</span></span><span class="level-right"><span class="level-item tag">maimaimai.xyz</span></span></a></li></ul></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/"><span class="level-start"><span class="level-item">2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/"><span class="level-start"><span class="level-item">2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/"><span class="level-start"><span class="level-item">2017</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/"><span class="level-start"><span class="level-item">2016</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2015/"><span class="level-start"><span class="level-item">2015</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2014/"><span class="level-start"><span class="level-item">2014</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2013/"><span class="level-start"><span class="level-item">2013</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Halo-65/"><span class="tag">Halo 65</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Health/"><span class="tag">Health</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nginx/"><span class="tag">Nginx</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nuphy/"><span class="tag">Nuphy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nuxt/"><span class="tag">Nuxt</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Sleep/"><span class="tag">Sleep</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/design/"><span class="tag">design</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/figma/"><span class="tag">figma</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pm2/"><span class="tag">pm2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ssr/"><span class="tag">ssr</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/study/"><span class="tag">study</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/"><span class="tag">机械键盘</span><span class="tag">1</span></a></div></div></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Design/"><span class="level-start"><span class="level-item">Design</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Mac/"><span class="level-start"><span class="level-item">Mac</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Node/"><span class="level-start"><span class="level-item">Node</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/PHP/"><span class="level-start"><span class="level-item">PHP</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/git/"><span class="level-start"><span class="level-item">git</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/iOS/"><span class="level-start"><span class="level-item">iOS</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/life/"><span class="level-start"><span class="level-item">life</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/ruby/"><span class="level-start"><span class="level-item">ruby</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/something/"><span class="level-start"><span class="level-item">something</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/"><span class="level-start"><span class="level-item">工具控</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">技术随笔</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/"><span class="level-start"><span class="level-item">自动化</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-02T00:55:38.000Z">2023-07-02</time></p><p class="title"><a href="/2023/07/02/Why-we-need-sleep/">《TED演讲：我们为什么睡觉》 笔记</a></p><p class="categories"><a href="/categories/life/">life</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-12-10T09:02:15.000Z">2022-12-10</time></p><p class="title"><a href="/2022/12/10/learning-figma-day-2/">Learning-figma-day-2 自定义样式与组件</a></p><p class="categories"><a href="/categories/Design/">Design</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-12-09T03:10:57.000Z">2022-12-09</time></p><p class="title"><a href="/2022/12/09/learning-figma-day-1/">Learning figma day 1 - 基本操作与Figma的一些常用快捷键</a></p><p class="categories"><a href="/categories/Design/">Design</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-11-29T03:30:55.000Z">2022-11-29</time></p><p class="title"><a href="/2022/11/29/deploy-nuxt-ssr-with-pm2-and-nginx/">deploy nuxt ssr with pm2 and nginx</a></p><p class="categories"><a href="/categories/Node/">Node</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2022/11/28/Hello-Nuphy-Halo-65/"><img src="/uploads/Halo65.jpg" alt="Hello, Nuphy Halo 65"></a></figure><div class="media-content"><p class="date"><time dateTime="2022-11-28T13:48:57.000Z">2022-11-28</time></p><p class="title"><a href="/2022/11/28/Hello-Nuphy-Halo-65/">Hello, Nuphy Halo 65</a></p><p class="categories"><a href="/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/">工具控</a></p></div></article></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">NSLog(&quot;Life &amp; Code&quot;);</a><p class="is-size-7"><span>&copy; 2023 welsonla</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">Tiembot © 2023</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
             }
-
-            endIdx > contentLength && (endIdx = contentLength)
-
-            finalContent = rawContent.substring(startIdx, endIdx)
-
-            if (title.indexOf(key) > -1 || searchResultIdx > -1) {
-                searchResults.push({
-                    link: link,
-                    title: title,
-                    content: finalContent
-                })
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
             }
-        }
-    })
-    return searchResults
-}
-
-searchButtonEl.onclick = function () {
-    if (searchDatabase.length > 0) return;
-
-    fetch(window.location.href + '/search.xml').then(res => res.text()).then(res => {
-        var domparser = new DOMParser
-        var doc = domparser.parseFromString(res, 'application/xml')
-        searchDatabase = doc.getElementsByTagName('search')[0].children
-    })
-}</script><main class="aside-card-container profile-widget"><!-- todo: 使用取色工具动态阴影--><section class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center"><section class="is-flex is-justify-content-center avatar is-clipped skeleton"><!-- debug images "https://api.ixiaowai.cn/gqapi/gqapi.php"--><img class="js-img-fadeIn" src="/uploads/avatar.jpg" alt="user avatar"></section><h3 class="user-name">welsonla</h3><blockquote class="has-text-centered is-relative"><span style="margin-bottom: 5px;">Done is better then perfect</span></blockquote><address class="has-text-centered has-text-grey"><i class="iconfont icon-location" style="margin-right: 5px;"></i><span class="has-text-grey">Beijing, China</span></address></section><section class="sns-container is-flex is-justify-content-center is-align-items-center"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com/welsonla"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/welsonla"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/welsonla_"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--></section></main><main class="aside-card-container recent-widget"><h3>最近</h3><ul><li class="is-flex"><!-- change to element replace image placeholder--><img class="js-img-fadeIn" src="http://ww1.sinaimg.cn/large/6e8de9dbjw1ewtvrr4eyjj20gp0eqjvh.jpg" alt="cover"><!--else--><!--    div.post-img-placeholder--><section class="is-flex-grow-2"><p class="has-text-weight-semibold" style="line-height: 20px; font-size: 14px"><a href="/2015/10/08/why-mantle/">为什么使用Mantle</a></p><time class="has-text-weight-semibold has-text-grey" datetime="2015-10-08T08:06:07.000Z">2015-10-08</time></section></li><li class="is-flex"><!-- change to element replace image placeholder--><img class="js-img-fadeIn" src="https://ui-avatars.com/api/?background=f5f5f5&amp;name=Ap" alt="cover"><!--else--><!--    div.post-img-placeholder--><section class="is-flex-grow-2"><p class="has-text-weight-semibold" style="line-height: 20px; font-size: 14px"><a href="/2015/07/13/application-transport-security-in-ios9/">Application Transport Security</a></p><time class="has-text-weight-semibold has-text-grey" datetime="2015-07-13T01:09:45.000Z">2015-07-13</time></section></li><li class="is-flex"><!-- change to element replace image placeholder--><img class="js-img-fadeIn" src="http://ww1.sinaimg.cn/large/6e8de9dbgw1ers0n47wtrj20ka0bygnf.jpg" alt="cover"><!--else--><!--    div.post-img-placeholder--><section class="is-flex-grow-2"><p class="has-text-weight-semibold" style="line-height: 20px; font-size: 14px"><a href="/2015/05/04/something-about-xctest/">关于Xcode单元测试(XCTest)的一些总结</a></p><time class="has-text-weight-semibold has-text-grey" datetime="2015-05-04T02:58:17.000Z">2015-05-04</time></section></li><li class="is-flex"><!-- change to element replace image placeholder--><img class="js-img-fadeIn" src="https://ui-avatars.com/api/?background=f5f5f5&amp;name=Ra" alt="cover"><!--else--><!--    div.post-img-placeholder--><section class="is-flex-grow-2"><p class="has-text-weight-semibold" style="line-height: 20px; font-size: 14px"><a href="/2015/04/12/rails-code-snippets/">Rails code snippets</a></p><time class="has-text-weight-semibold has-text-grey" datetime="2015-04-12T04:55:48.000Z">2015-04-12</time></section></li><li class="is-flex"><!-- change to element replace image placeholder--><img class="js-img-fadeIn" src="https://ui-avatars.com/api/?background=f5f5f5&amp;name=我的" alt="cover"><!--else--><!--    div.post-img-placeholder--><section class="is-flex-grow-2"><p class="has-text-weight-semibold" style="line-height: 20px; font-size: 14px"><a href="/2015/02/01/my-2014/">我的2014</a></p><time class="has-text-weight-semibold has-text-grey" datetime="2015-02-01T13:51:11.000Z">2015-02-01</time></section></li><li class="is-flex"><!-- change to element replace image placeholder--><img class="js-img-fadeIn" src="http://ww2.sinaimg.cn/large/6e8de9dbjw1emk7zcot3oj20880d9t95.jpg" alt="cover"><!--else--><!--    div.post-img-placeholder--><section class="is-flex-grow-2"><p class="has-text-weight-semibold" style="line-height: 20px; font-size: 14px"><a href="/2014/11/22/mac-mini-show/">Mac Mini开箱</a></p><time class="has-text-weight-semibold has-text-grey" datetime="2014-11-22T15:24:00.000Z">2014-11-22</time></section></li></ul></main><main class="aside-card-container categories-widget category-page"><h3>分类</h3><section><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Design/">Design</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ruby/">ruby</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/something/">something</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/">工具控</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">1</span></li></ul></section></main><main class="aside-card-container archives-widget"><h3>归档</h3><section><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li></ul></section></main><main class="aside-card-container tag-widget"><h3>标签</h3><section><a href="/tags/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98"><span class="tag post-item-tag" style="margin-bottom: 5px;">机械键盘</span></a><a href="/tags/Nuphy"><span class="tag post-item-tag" style="margin-bottom: 5px;">Nuphy</span></a><a href="/tags/Halo%2065"><span class="tag post-item-tag" style="margin-bottom: 5px;">Halo 65</span></a><a href="/tags/Nuxt"><span class="tag post-item-tag" style="margin-bottom: 5px;">Nuxt</span></a><a href="/tags/pm2"><span class="tag post-item-tag" style="margin-bottom: 5px;">pm2</span></a><a href="/tags/Nginx"><span class="tag post-item-tag" style="margin-bottom: 5px;">Nginx</span></a><a href="/tags/ssr"><span class="tag post-item-tag" style="margin-bottom: 5px;">ssr</span></a><a href="/tags/design"><span class="tag post-item-tag" style="margin-bottom: 5px;">design</span></a><a href="/tags/figma"><span class="tag post-item-tag" style="margin-bottom: 5px;">figma</span></a><a href="/tags/study"><span class="tag post-item-tag" style="margin-bottom: 5px;">study</span></a><a href="/tags/Sleep"><span class="tag post-item-tag" style="margin-bottom: 5px;">Sleep</span></a><a href="/tags/Health"><span class="tag post-item-tag" style="margin-bottom: 5px;">Health</span></a></section></main><main class="aside-card-container friend-widget"><h3>友链</h3><section><a target="_blank" rel="noopener" href="https://www.google.com/"><span class="tag post-item-tag" style="margin-bottom: 5px;">Google</span></a><a target="_blank" rel="noopener" href="https://www.github.com/welsonla"><span class="tag post-item-tag" style="margin-bottom: 5px;">Github</span></a><a target="_blank" rel="noopener" href="https://v2ex.com/"><span class="tag post-item-tag" style="margin-bottom: 5px;">V2EX</span></a><a target="_blank" rel="noopener" href="https://twitter.com/welsonla"><span class="tag post-item-tag" style="margin-bottom: 5px;">Twitter</span></a></section></main></aside></div></article><script>$claudia.fadeInImage(null, $claudia.blurBackdropImg)
-
-window.addEventListener('resize', $claudia.throttle(function () {
-    var images = document.querySelectorAll('.js-img-fadeIn')
-
-    images.forEach($claudia.blurBackdropImg)
-}, 150))</script></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com/welsonla"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/welsonla"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/welsonla_"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--></section><p><span>Copyright ©</span><span> welsonla 2023</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script>$claudia.fadeInImage(null, $claudia.blurBackdropImg)
-
-window.addEventListener('resize', $claudia.throttle(function () {
-    var images = document.querySelectorAll('.js-img-fadeIn')
-
-    images.forEach($claudia.blurBackdropImg)
-}, 150))</script></body></html>
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
