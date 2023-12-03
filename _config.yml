@@ -1,42 +1,30 @@
-# Hexo Configuration
-## Docs: http://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
-# Site
 title: NSLog("Life & Code");
-subtitle:
+subtitle: null
 description: 整理开发中遇到的问题与平时的一些技术积累，希望在备忘的同时能对别人有帮助
 keywords: iOS,Laravel,Ruby on Rails,React Native,Mac, Linux, Life
 author: welsonla
 language: zh-Hans
 timezone: ''
-
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://welsonla.timebot.net
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink: ':year/:month/:day/:title/'
+permalink_defaults: null
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
-
-# Directory
+  trailing_index: true
+  trailing_html: true
 source_dir: source
 public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
-
-# Writing
-new_post_name: :year-:month-:day-:title.md #:title.md # File name of new posts
+i18n_dir: ':lang'
+skip_render: null
+new_post_name: ':year-:month-:day-:title.md'
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: false
 external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
+  enable: true
+  field: site
   exclude: ''
 filename_case: 0
 render_drafts: false
@@ -44,69 +32,40 @@ post_asset_folder: false
 relative_link: false
 future: true
 prism_plugin:
-  mode: 'preprocess'
-  theme: 'default'
+  mode: preprocess
+  theme: default
   line_number: true
 highlight:
-  enable: false
+  enable: true
 prismjs:
   enable: false
-  preprocess: true
-  line_number: true
-  line_threshold: 0
-  tab_replace: ''
-# Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
-
-#
-# local_search:
-#   enable: true
-  
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
+category_map: null
+tag_map: null
 index_generator:
   path: ''
   per_page: 20
-  order_by: -date
-
-# Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+  order_by: '-date'
 meta_generator: true
-
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
-
-# Pagination
-## Set per_page to 0 to disable pagination
+updated_option: mtime
 per_page: 20
 pagination_dir: page
-
-google_analytics: UA-19152389-6
-
-# Extensions
-## Plugins: http://hexo.io/plugins/
-## Themes: http://hexo.io/themes/
-theme: claudia
-# theme: apollo
-
+ga_track_id: G-J8R1NG8CX8
+theme: icarus
 since: 2013
-
-disqus_shortname: welsonla
-
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
-deploy: 
+disqus_shortname: welsonlablog
+deploy:
   type: git
   repo: git@github.com:welsonla/welsonla.github.com.git
   branch: master
-  
 sitemap:
-	path: sitemap.xml
+  path: sitemap.xml
 baidusitemap:
-	path: baidusitemap.xml
+  path: baidusitemap.xml
+browsersync:
+  logLevel: warn
+  ghostMode:
+    scroll: true
+  instanceName: uniqueString
